@@ -1,5 +1,35 @@
 <?php
 
+// video tutorial - https://youtu.be/TdDFEi7CmOk
+
+// Firestore Database rules
+// rules_version = '2';
+// service cloud.firestore {
+//   match /databases/{database}/documents {
+//     match /users/{document} {
+//       allow create: if request.auth.uid == document;
+//       allow read: if true;
+//       allow write: if request.auth.uid == document;
+//       allow delete: if false;
+//     }
+
+//     match /{document=**} {
+//       allow read, write: if true;
+//     }
+//   }
+// }
+
+// Firebase Storage rules
+// rules_version = '2';
+// service firebase.storage {
+//   match /b/{bucket}/o {
+//     match /{allPaths=**} {
+//       allow read, write: if request.auth != null;
+//     }
+//   }
+// }
+
+
 require 'flutterflowdata.php';
 
 function convertImg(String $source, int $id, String $path) : String {

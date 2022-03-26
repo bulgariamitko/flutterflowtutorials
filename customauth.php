@@ -1,5 +1,7 @@
 <?php
 
+// video tutorial - https://youtu.be/xIeub_UjGys
+
 //no password! as in this case the password is managed by FB
 if (!empty($data['pushUser']) && !empty($data['email']) && !empty($data['name'])) {
 	$userDB = $_ENV['Mysql']->MSelectOnly('Users', 'UserID', "WHERE Email = '" . $data['email'] . "'");

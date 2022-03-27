@@ -1,5 +1,7 @@
 <?php
 
+// video tutorial - https://youtu.be/WusdpvoIDh4
+
 // execute this file every 10 minutes if you want to check for some new event and send a notification
 
 // command to execute the cron job, it is important to execute this file with PHP7.4 as firebase composer do not support PHP8 yet - php74 notifications.php

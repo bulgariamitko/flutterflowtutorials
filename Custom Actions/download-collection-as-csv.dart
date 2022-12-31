@@ -1,24 +1,20 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 
+import 'dart:convert' show utf8;
 import 'package:download/download.dart';
-import 'dart:convert';
 
-Future downloadCollectionAsCSV(List<WordsRecord>? query) async {
-  query = query ?? [];
+Future downloadCollectionAsCSV(List<CarsRecord>? docs) async {
+  docs = docs ?? [];
 
-  String fileContent = "name, phone, word, datetime";
+  String fileContent = "name, brand";
 
-  query.asMap().forEach((index, record) => fileContent = fileContent +
+  docs.asMap().forEach((index, record) => fileContent = fileContent +
       "\n" +
       record.name.toString() +
       "," +
-      record.phone.toString() +
-      "," +
-      record.word.toString() +
-      "," +
-      record.datetime.toString());
+      record.brand.toString());
 
-  final fileName = "Yettel" + DateTime.now().toString() + ".csv";
+  final fileName = "FF" + DateTime.now().toString() + ".csv";
 
   // Encode the string as a List<int> of UTF-8 bytes
   var bytes = utf8.encode(fileContent);

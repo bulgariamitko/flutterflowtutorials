@@ -1,10 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_quill/flutter_quill.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import '../../flutter_flow/flutter_flow_theme.dart';
-import '../../flutter_flow/flutter_flow_util.dart';
-import '../../flutter_flow/flutter_flow_widgets.dart';
+// code created by https://www.youtube.com/@flutterflowexpert
 
 class ReachText2 extends StatefulWidget {
   const ReachText2({

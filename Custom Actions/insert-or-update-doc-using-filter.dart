@@ -1,19 +1,16 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 
-Future updateOrInsertDoc(
+Future updateOrInsertDocUsingFilter(
   String? field1,
   DateTime? field2,
   String? field3,
   String? collectionName,
-  DocumentReference? documentRef,
 ) async {
   // null check
   field1 = field1 ?? '';
   field2 = field2 ?? DateTime.now();
   field3 = field3 ?? '';
   collectionName = collectionName ?? '';
-  documentRef = documentRef ??
-      FirebaseFirestore.instance.doc('/orders/ILiVSV2hnKOkzviPV7rr');
 
   // Get a reference to the Firestore database
   final firestore = FirebaseFirestore.instance;
@@ -21,17 +18,17 @@ Future updateOrInsertDoc(
   // Get a reference to the collection
   final collectionRef = firestore.collection(collectionName);
 
-  // final doc = createWalletsRecordData(balance: field1[i]);
+  // TODO: change fields - name, date, orderid
   final doc =
       createOrdersRecordData(name: field1, date: field2, orderid: field3);
 
-  // Check if a document with the given order ID already exists in the collection
-  final docRef = collectionRef.doc(documentRef.id);
-  final docSnapshot = await docRef.get();
+  // TODO: change fields you want to search for
+  final docFilter =
+      await collectionRef.where('orderid', isEqualTo: field3).get();
 
-  if (docSnapshot.exists) {
+  if (docFilter.docs.isNotEmpty) {
     // Update the existing document with the new data
-    await docRef.update(doc);
+    await docFilter.docs.first.reference.update(doc);
   } else {
     // Add a new document to the collection
     await collectionRef.add(doc);

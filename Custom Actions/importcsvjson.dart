@@ -1,12 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 
-import 'dart:io';
-import 'dart:convert';
-import 'package:csv/csv.dart';
-import '../../backend/firebase_storage/storage.dart';
-import '../../flutter_flow/flutter_flow_widgets.dart';
-import '../../flutter_flow/upload_media.dart';
-
 Future importFromCsvOrJson(BuildContext context, String? divider) async {
   // null safety check
   divider = divider ?? ',';

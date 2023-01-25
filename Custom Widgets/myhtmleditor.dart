@@ -69,12 +69,25 @@ class _MyHtmlEditorState extends State<MyHtmlEditor> {
                 }
               });
 
+              // nav to a new page
+              //   context.pushNamed(
+              //     'actions',
+              //     queryParams: {
+              //       // TODO: Change the name of the parameter - 'id'
+              //       'id': serializeParam(
+              //         33,
+              //         ParamType.String,
+              //       ),
+              //     }.withoutNulls,
+              //   );
+              // });
+
               // Update local state
               FFAppState().update(() {
                 setState(() => FFAppState().textFromHtmlEditor = data);
               });
             },
-            child: Text("SAVE TEXT *"))
+            child: Text("SAVE TEXT *"));
       ],
     ));
   }

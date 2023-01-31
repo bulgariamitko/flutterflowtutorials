@@ -1,5 +1,7 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 
+import '../../flutter_flow/flutter_flow_widgets.dart';
+
 import 'package:html_editor_enhanced/html_editor.dart';
 
 class MyHtmlEditor extends StatefulWidget {
@@ -52,22 +54,21 @@ class _MyHtmlEditorState extends State<MyHtmlEditor> {
             height: 400,
           ),
         ),
-        ElevatedButton(
-            onPressed: () async {
-              String data = await controller.getText();
-              // save to Firebase
-              final doc = createHtmleditorRecordData(text: data);
+        FFButtonWidget(
+          onPressed: () async {
+            String data = await controller.getText();
+            // save to Firebase
+            final doc = createHtmleditorRecordData(text: data);
 
-              collectionRef.limit(1).get().then((snapshot) {
-                if (snapshot.docs.isNotEmpty) {
-                  // update document
-                  final docRef = snapshot.docs[0].reference;
-                  docRef.update(doc);
-                } else {
-                  // create document
-                  collectionRef.add(doc);
-                }
-              });
+            collectionRef.limit(1).get().then((snapshot) {
+              if (snapshot.docs.isNotEmpty) {
+                // update document
+                final docRef = snapshot.docs[0].reference;
+                docRef.update(doc);
+              } else {
+                // create document
+                collectionRef.add(doc);
+              }
 
               // nav to a new page
               //   context.pushNamed(
@@ -86,8 +87,24 @@ class _MyHtmlEditorState extends State<MyHtmlEditor> {
               FFAppState().update(() {
                 setState(() => FFAppState().textFromHtmlEditor = data);
               });
-            },
-            child: Text("SAVE TEXT *"));
+            });
+          },
+          text: 'SAVE TEXT *',
+          options: FFButtonOptions(
+            width: 130,
+            height: 40,
+            color: FlutterFlowTheme.of(context).primaryColor,
+            textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                  fontFamily: 'Poppins',
+                  color: FlutterFlowTheme.of(context).primaryBackground,
+                ),
+            borderSide: BorderSide(
+              color: Colors.transparent,
+              width: 1,
+            ),
+            borderRadius: BorderRadius.circular(8),
+          ),
+        ),
       ],
     ));
   }

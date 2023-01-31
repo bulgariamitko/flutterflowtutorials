@@ -1,4 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
+// video - https://www.youtube.com/watch?v=_ik4paDX6VI
 
 class ReachText2 extends StatefulWidget {
   const ReachText2({

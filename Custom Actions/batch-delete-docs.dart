@@ -1,4 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
+// video -
 
 Future batchDelete(String? collectionName) async {
   collectionName = collectionName ?? '';

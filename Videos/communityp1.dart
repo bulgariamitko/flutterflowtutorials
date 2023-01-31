@@ -1,4 +1,5 @@
-// custom registration
+// code created by https://www.youtube.com/@flutterflowexpert
+// video -
 
 import '../../auth/email_auth.dart';
 import '../../welcome/welcome_widget.dart';

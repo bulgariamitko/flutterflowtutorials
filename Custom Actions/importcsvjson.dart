@@ -64,15 +64,15 @@ Future importFromCsvOrJson(
         final dateFormat = DateFormat("yyyy/MM/dd HH:mm:ss");
         DateTime createdTime = dateFormat.parse(row['My DateTime']);
 
-        // Get a reference to the `userRef` document
-        DocumentReference userRef = firestore.doc(row['My Ref']);
+        // Get a reference to the `docRef` document
+        DocumentReference docRef = firestore.doc(row['My Ref']);
 
         await collectionRef.add({
           fieldName1: row['Username'],
           fieldName2: row['Identifier'],
           fieldName3: accessBlock,
           fieldName4: createdTime,
-          fieldName5: userRef,
+          fieldName5: docRef,
         });
 
         // TODO: Chnage createUsersdataRecordData, FIELDS and KEYS
@@ -87,7 +87,7 @@ Future importFromCsvOrJson(
         //   location: row['Location'],
         //   myBool: accessBlock,
         //   myDate: createdTime,
-        //   myRef: userRef,
+        //   myRef: docRef,
         // );
 
         // await collectionRef.add(doc);
@@ -113,15 +113,15 @@ Future importFromCsvOrJson(
         final dateFormat = DateFormat("yyyy/MM/dd HH:mm:ss");
         DateTime createdTime = dateFormat.parse(fields[3]);
 
-        // Get a reference to the `userRef` document
-        DocumentReference userRef = firestore.doc(fields[4]);
+        // Get a reference to the `docRef` document
+        DocumentReference docRef = firestore.doc(fields[4]);
 
         await collectionRef.add({
           fieldName1: fields[0],
           fieldName2: int.parse(fields[1]),
           fieldName3: accessBlock,
           fieldName4: createdTime,
-          fieldName5: userRef,
+          fieldName5: docRef,
         });
 
         // TODO: Chnage createUsersdataRecordData, FIELDS

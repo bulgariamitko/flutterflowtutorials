@@ -1,5 +1,6 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=89KO7T-PeMM
+// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 Future nullSafety(
   String? str,

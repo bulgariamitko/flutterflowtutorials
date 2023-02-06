@@ -35,9 +35,9 @@ Future batchUpdateOrInsertDocs(
 
     // new code
     final doc = {
-      fieldName1: fieldValue1,
-      fieldName2: fieldValue2,
-      fieldName3: fieldValue3,
+      fieldName1: fieldValue1[i],
+      fieldName2: fieldValue2[i],
+      fieldName3: fieldValue3[i],
     };
 
     // Check if a document with the given order ID already exists in the collection

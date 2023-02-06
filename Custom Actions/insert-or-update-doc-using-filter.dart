@@ -27,7 +27,7 @@ Future updateOrInsertDocUsingFilter(
   final collectionRef = firestore.collection(collectionName);
 
   // old code
-  // final doc = createOrdersRecordData(name: fieldValue1, date: fieldValue2, orderid: field3);
+  // final doc = createOrdersRecordData(name: fieldValue1, date: fieldValue2, orderid: fieldValue3);
 
   // new code
   final doc = {
@@ -38,7 +38,7 @@ Future updateOrInsertDocUsingFilter(
 
   // TODO: change fields you want to search for
   final docFilter =
-      await collectionRef.where('orderid', isEqualTo: field3).get();
+      await collectionRef.where('orderid', isEqualTo: fieldValue3).get();
 
   if (docFilter.docs.isNotEmpty) {
     // Update the existing document with the new data

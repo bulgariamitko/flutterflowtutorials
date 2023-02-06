@@ -67,15 +67,7 @@ Future importFromCsvOrJson(
         // Get a reference to the `docRef` document
         DocumentReference docRef = firestore.doc(row['My Ref']);
 
-        await collectionRef.add({
-          fieldName1: row['Username'],
-          fieldName2: row['Identifier'],
-          fieldName3: accessBlock,
-          fieldName4: createdTime,
-          fieldName5: docRef,
-        });
-
-        // TODO: Chnage createUsersdataRecordData, FIELDS and KEYS
+        // old code
         // doc = createUsersdataRecordData(
         //   username: row['Username'],
         //   identifier: row['Identifier'],
@@ -89,8 +81,16 @@ Future importFromCsvOrJson(
         //   myDate: createdTime,
         //   myRef: docRef,
         // );
-
         // await collectionRef.add(doc);
+
+        // new code
+        await collectionRef.add({
+          fieldName1: row['Username'],
+          fieldName2: row['Identifier'],
+          fieldName3: accessBlock,
+          fieldName4: createdTime,
+          fieldName5: docRef,
+        });
       }
     } else {
       rows = fileString.split('\n');
@@ -116,15 +116,7 @@ Future importFromCsvOrJson(
         // Get a reference to the `docRef` document
         DocumentReference docRef = firestore.doc(fields[4]);
 
-        await collectionRef.add({
-          fieldName1: fields[0],
-          fieldName2: int.parse(fields[1]),
-          fieldName3: accessBlock,
-          fieldName4: createdTime,
-          fieldName5: docRef,
-        });
-
-        // TODO: Chnage createUsersdataRecordData, FIELDS
+        // old code
         // doc = createUsersdataRecordData(
         //   username: fields[0],
         //   identifier: int.parse(fields[1]),
@@ -135,8 +127,16 @@ Future importFromCsvOrJson(
         //   departament: fields[6],
         //   location: fields[7],
         // );
-
         // await collectionRef.add(doc);
+
+        // new code
+        await collectionRef.add({
+          fieldName1: fields[0],
+          fieldName2: int.parse(fields[1]),
+          fieldName3: accessBlock,
+          fieldName4: createdTime,
+          fieldName5: docRef,
+        });
       }
     }
 

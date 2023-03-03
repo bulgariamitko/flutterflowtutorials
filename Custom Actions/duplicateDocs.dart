@@ -1,5 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// video - https://www.youtube.com/watch?v=1FKlfexT9Zw
+// video - https://youtu.be/sCS3MfRuEUY
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 Future<void> duplicateDocuments(

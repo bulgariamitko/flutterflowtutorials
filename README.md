@@ -13,5 +13,6 @@ You can book me as FF mentor or support my work
 https://calendly.com/bulgaria_mitko
 
 # Contributors
-
-Contributors are much appreciated 
+Contributors are much appreciated. Contributors so far:
+- @thruthesky
+- @adrianbruegger

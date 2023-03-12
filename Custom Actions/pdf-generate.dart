@@ -27,7 +27,7 @@ Future pdfInvoiceDownload(
   // add network image
   final netImage = await networkImage('https://www.nfet.net/nfet.jpg');
 
-  // add asset image
+  // add asset image, IMPORTANT! Using assets will not work in Test/Run mode you can only test it using Web Publishing mode or using an actual device!
   final bytes =
       (await rootBundle.load('assets/images/demo.png')).buffer.asUint8List();
   final image = pw.MemoryImage(bytes);

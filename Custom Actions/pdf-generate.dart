@@ -1,12 +1,20 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=9HngDsCIJPY
+// video 2 include images - https://youtu.be/YcHR_bMSIPw
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
+import 'dart:io';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
+import 'package:flutter/services.dart' show rootBundle;
+// import 'dart:typed_data';
+
+import '../../backend/firebase_storage/storage.dart';
+import '../../flutter_flow/upload_media.dart';
 
 Future pdfInvoiceDownload(
+  BuildContext context,
   String? title,
   String? body,
 ) async {
@@ -15,6 +23,14 @@ Future pdfInvoiceDownload(
   body = body ?? '';
 
   final pdf = pw.Document();
+
+  // add network image
+  final netImage = await networkImage('https://www.nfet.net/nfet.jpg');
+
+  // add asset image
+  final bytes =
+      (await rootBundle.load('assets/images/demo.png')).buffer.asUint8List();
+  final image = pw.MemoryImage(bytes);
 
   pdf.addPage(pw.Page(
       pageFormat: PdfPageFormat.a4,
@@ -55,6 +71,8 @@ Future pdfInvoiceDownload(
                   pw.Text('Date:'),
                   pw.Text('Invoice #'),
                   pw.Text('Hello World'),
+                  pw.Image(netImage),
+                  pw.Image(image),
                 ],
               ),
             ),
@@ -67,6 +85,7 @@ Future pdfInvoiceDownload(
         ]);
       }));
 
-  await Printing.layoutPdf(
-      onLayout: (PdfPageFormat format) async => pdf.save());
+  final pdfSaved = await pdf.save();
+
+  await Printing.layoutPdf(onLayout: (PdfPageFormat format) async => pdfSaved);
 }

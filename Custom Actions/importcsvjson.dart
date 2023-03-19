@@ -11,7 +11,7 @@ import 'dart:convert';
 import 'package:csv/csv.dart';
 import '../../backend/firebase_storage/storage.dart';
 import '../../flutter_flow/flutter_flow_widgets.dart';
-import '../../flutter_flow/upload_media.dart';
+import '../../flutter_flow/upload_data.dart';
 
 Future importFromCsvOrJson(
   BuildContext context,

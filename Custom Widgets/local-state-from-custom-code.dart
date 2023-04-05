@@ -1,4 +1,6 @@
 // code created by https://www.youtube.com/@flutterflowexpert
+// video - https://www.youtube.com/watch?v=_ik4paDX6VI
+// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 class ReachText2 extends StatefulWidget {
   const ReachText2({

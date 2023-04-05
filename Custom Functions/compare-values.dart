@@ -1,7 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 
-import 'dart:math' as math;
-
 bool compareValues(
   String? value1,
   String? value2,

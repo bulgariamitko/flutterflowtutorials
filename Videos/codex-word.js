@@ -1,3 +1,7 @@
+// code created by https://www.youtube.com/@flutterflowexpert
+// video -
+// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
+
 $("#run").click(() => tryCatch(run));
 async function run() {
     await Word.run(async (context) => {

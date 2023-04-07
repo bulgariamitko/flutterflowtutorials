@@ -9,10 +9,73 @@
   <link rel="stylesheet" href="gh-pages/css/styles.css">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="#">Dimitar Klaturov</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="tutorials.html" target="_blank"><i class="fas fa-chalkboard text-light"></i> Tutorials</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 search-centered">
+        <li class="mx-3 w-100 nav-item">
+          <div class="search-fake">
+            <input class="form-control fake-input" type="search" placeholder="Search">
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav nav-links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://calendly.com/bulgaria_mitko" target="_blank"><i class="far fa-calendar-alt text-primary"></i> Book Mentoring Session</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/@flutterflowexpert/" target="_blank"><i class="fab fa-youtube text-danger"></i> YouTube</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/bulgariamitko/flutterflowtutorials/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" id="modeToggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon d-none"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
   <header class="container text-center mt-5">
     <h1>Dimitar Klaturov</h1>
     <h3>FlutterFlow tutorials</h3>
   </header>
+  <main class="container text-center mt-5">
+    <div id="searchResults" class="container mt-5"></div>
+    <div class="text-center pb-4">
+      <p>Book me:</p>
+      <a href="https://calendly.com/bulgaria_mitko" target="_blank" class="btn btn-success btn-lg mb-3">
+        <i class="far fa-calendar-alt"></i> Calendly
+      </a>
+    </div>
+    <p>Follow me on:</p>
+    <div class="d-flex justify-content-center mb-5">
+      <a href="https://www.youtube.com/@flutterflowexpert/" target="_blank" class="btn btn-danger mx-2">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+      <a href="https://github.com/bulgariamitko/flutterflowtutorials/" target="_blank" class="btn btn-dark mx-2">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+    <div>
+      <p>Tutorials:</p>
+      <div id="tutorials" class="row">
+        <!-- loading tutorials -->
+      </div>
+    </div>
+  </main>
   <main class="container text-center mt-5">
     <div class="text-center pb-4">
       <p>Book me:</p>
@@ -36,6 +99,30 @@
       </div>
     </div>
   </main>
+  <main class="container text-center mt-5">
+    <div class="text-center pb-4">
+      <p>Book me:</p>
+      <a href="https://calendly.com/bulgaria_mitko" target="_blank" class="btn btn-success btn-lg mb-3">
+        <i class="far fa-calendar-alt"></i> Calendly
+      </a>
+    </div>
+    <p>Follow me on:</p>
+    <div class="d-flex justify-content-center mb-5">
+      <a href="https://www.youtube.com/@flutterflowexpert/" target="_blank" class="btn btn-danger mx-2">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+      <a href="https://github.com/bulgariamitko/flutterflowtutorials/" target="_blank" class="btn btn-dark mx-2">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+    <div>
+      <p>Tutorials:</p>
+      <div id="tutorials" class="row">
+        <!-- loading tutorials -->
+      </div>
+    </div>
+  </main>
+
   <input type="text" id="text-to-copy" value="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" style="position: absolute; left: -9999px;">
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

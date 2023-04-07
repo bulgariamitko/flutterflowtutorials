@@ -14,6 +14,7 @@ List<PostsRecord>? filterINdocs(
   posts ??= [];
 
   List<PostsRecord> filteredPosts = posts.where((postDoc) {
+    // TODO change field "follow" to your own field
     bool hasUserFollowing =
         users!.any((user) => user.reference == postDoc.follow);
     return hasUserFollowing;

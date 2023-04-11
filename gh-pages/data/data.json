@@ -1,14 +1,176 @@
 [
-  {
-    "title": "@FlutterFlow AI Gen: First look. Creating Dashboard, Products and Social pages",
-    "url": "https://www.youtube.com/embed/d6tHOdpJUuc"
-  },
-  {
-    "title": "[Update-0323] @FlutterFlow: Theme Widgets, Searchable Dropdown and Action Upgrades",
-    "url": "https://www.youtube.com/embed/75ZmsqokpAM"
-  },
-  {
-    "title": "Transform Your App: Integrate Speech-to-Text and Text-to-Speech using @FlutterFlow",
-    "url": "https://www.youtube.com/embed/6BCOl4w0mcI"
-  }
+    {
+        "video": "https://www.youtube.com/watch?v=1FKlfexT9Zw",
+        "title": "Exporting @Firebase Collections to CSV Files in @FlutterFlow",
+        "desc": "Hi and welcome to this tutorial on how to export a Firebase collection to a CSV file in Flutter.\n\nExporting data from a Firebase collection to a CSV file can be a useful way to backup or analyze your data. CSV, or Comma Separated Values, is a simple and widely supported file format that can be opened in a variety of applications, including spreadsheets and databases.\n\nIn this tutorial, we will show you how to use the Flutter framework to export a Firebase collection to a CSV file. This process involves retrieving the data from the Firebase collection, extracting the data that you want to include in the CSV file, creating a CSV string, and writing the string to a file.\n\nWe will start by installing the necessary dependencies and importing them in your Flutter code. Then, we will retrieve the data from the Firebase collection and extract the relevant data for each document.\n\nFinally, we will demonstrate how to display a message or perform some other action to let the user know that the export was successful.\n\nBy the end of this tutorial, you will have learned how to export a Firebase collection to a CSV file in Flutter and will have the knowledge and tools to do so in your own projects.\n\n\nCode used in the video\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/download-collection-as-csv.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/1FKlfexT9Zw",
+        "widgets": "Cg9Db2x1bW5fa3lsY2xoMWoSxAIKD0J1dHRvbl9oZjYzZnFzdhgJIqwBSn0KKQoRRG93bmxvYWQgQ1NWIGZpbGU6Bgj/////D0AFegoSCDRsenNybjZuGQAAAAAAAABAKQAAAAAAAPB/MQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQFokCQAAAAAAACRAEQAAAAAAACRAGQAAAAAAACRAIQAAAAAAACRAegIYA/oDAGIAigF9EncKCHEyZ3d6ZWxrEhCqAgg1bTBpeGUwabIDAggDKlkKCDV0b3k3N282Ek3SAT8KIAoXZG93bmxvYWRDb2xsZWN0aW9uQXNDU1YSBTdmOHVwEhsSGQgEEhFTY2FmZm9sZF9wdTRnczAwbEICEgCqAgg1MGpqbGJyeRoCCAEYBCIFIgD6AwA=",
+        "replace": [
+            {
+                "Collection name": "Cars"
+            },
+            {
+                "Field name 1": "name"
+            },
+            {
+                "Field name 2": "brand"
+            }
+        ],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/download-collection-as-csv.dart",
+        "id": 1
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
+        "title": "Retrieving Lists and Single Documents from Custom Actions in @FlutterFlow",
+        "desc": "Welcome to my video on how to use FlutterFlow to get a single or list of documents in a Custom Action! If you've been struggling with this, don't worry \u2013 I've got you covered.\n\nIn this tutorial, I'll show you how to use FlutterFlow to retrieve a single or list of documents, and then how to use that information in an On Page Load Action. It's a quick and easy process, and once you know how to do it, you'll be able to use this technique to streamline your workflow and make your projects more efficient.\n\nI'll start by showing you how to set up a Custom Action in FlutterFlow, and then I'll walk you through the process of retrieving a single or list of documents using that Action. I'll also show you how to use that information in an On Page Load Action, so you can see just how useful this technique can be.\n\nBy the end of this video, you'll be a pro at using FlutterFlow to get a single or list of documents, and you'll be able to use that information to make your projects even more dynamic and powerful. So let's get started!\n\nCode used:\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-docs.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/HtvtwLmaI0w",
+        "widgets": "Cg9Db2x1bW5faTEyYXd6dWESWgoNVGV4dF9iZ2U5cGowOBgCIkUSJwoLSGVsbG8gV29ybGQRAAAAAAAANkBABnoKEgh3NjQxOGtzMagBAJoBFgoCAgEqEAgMQgwiCgoGCgRuYW1lEAH6AwBiABKnAQoNVGV4dF92cDBzZGYxMxgCIlMSHgoLSGVsbG8gV29ybGRABnoKEghxcHhpd3VybqgBAJoBKAoCAgEqIggEEg1UZXh0X3ZwMHNkZjEzQgISAEoLggEICgYKBG5hbWX6AwDyBAIKAFI9CgwQBxoGCgRjYXJzIAAaLQoGCgRjYXJzGiMIAxIRU2NhZmZvbGRfaDA2OGY3YjhCDDIKCggKBmRvY1JlZmIAGAQiBSIA+gMA",
+        "replace": [
+            {
+                "Collection name": "Cars"
+            }
+        ],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/fetch-fb-doc.dart",
+        "id": 2
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
+        "title": "Retrieving Lists and Single Documents from Custom Actions in @FlutterFlow",
+        "desc": "Welcome to my video on how to use FlutterFlow to get a single or list of documents in a Custom Action! If you've been struggling with this, don't worry \u2013 I've got you covered.\n\nIn this tutorial, I'll show you how to use FlutterFlow to retrieve a single or list of documents, and then how to use that information in an On Page Load Action. It's a quick and easy process, and once you know how to do it, you'll be able to use this technique to streamline your workflow and make your projects more efficient.\n\nI'll start by showing you how to set up a Custom Action in FlutterFlow, and then I'll walk you through the process of retrieving a single or list of documents using that Action. I'll also show you how to use that information in an On Page Load Action, so you can see just how useful this technique can be.\n\nBy the end of this video, you'll be a pro at using FlutterFlow to get a single or list of documents, and you'll be able to use that information to make your projects even more dynamic and powerful. So let's get started!\n\nCode used:\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-docs.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/HtvtwLmaI0w",
+        "widgets": "Cg9Db2x1bW5faTEyYXd6dWESWgoNVGV4dF9iZ2U5cGowOBgCIkUSJwoLSGVsbG8gV29ybGQRAAAAAAAANkBABnoKEgh3NjQxOGtzMagBAJoBFgoCAgEqEAgMQgwiCgoGCgRuYW1lEAH6AwBiABKnAQoNVGV4dF92cDBzZGYxMxgCIlMSHgoLSGVsbG8gV29ybGRABnoKEghxcHhpd3VybqgBAJoBKAoCAgEqIggEEg1UZXh0X3ZwMHNkZjEzQgISAEoLggEICgYKBG5hbWX6AwDyBAIKAFI9CgwQBxoGCgRjYXJzIAAaLQoGCgRjYXJzGiMIAxIRU2NhZmZvbGRfaDA2OGY3YjhCDDIKCggKBmRvY1JlZmIAGAQiBSIA+gMA",
+        "replace": [
+            {
+                "Collection name": "Car"
+            }
+        ],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-random-doc.dart",
+        "id": 3
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=-PbOmjEsKxE",
+        "title": "@FlutterFlow Custom Routing And Navigation",
+        "desc": "In this video I'll show you how to implement custom routing and navigation in FlutterFlow. With clear explanations and hands-on tutorials, I take you through the process of building seamless and intuitive navigation systems for your apps.\n\nStarting with the basics, I'll show you how to set up routes and navigate between different pages in your app. I'll also demonstrate how to use FlutterFlow's powerful navigation tools to create custom animations and transitions that enhance the user experience.\n\nMoving on to advanced topics, I'll cover how to pass data between pages, how to handle navigation errors, and how to create reusable navigation components. With these skills, you'll be able to build complex and dynamic navigation systems that meet the needs of your users.\n\nWhether you're just starting out with app development or you're an experienced developer looking to improve your skills, this video has something for you. So join me as I guide you through the world of FlutterFlow and help you create custom routing and navigation systems that are both functional and beautiful.\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/nav-to-page.dart\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/-PbOmjEsKxE",
+        "widgets": "Cg9Db2x1bW5fMHZ4dzJ5ZzUS0gEKEURyb3BEb3duXzl4cDVxZm52GCIiuAGqArEBGhYKCQkAAAAAAIBmQBIJCQAAAAAAAElAKgYI/////w8xAAAAAAAAAEA5AAAAAAAAAABCAggASQAAAAAAAAAAUgo6BgiAgID4D0AGWiQJAAAAAAAAKEARAAAAAAAAEEAZAAAAAAAAKEAhAAAAAAAAEEBgAXoWCghPcHRpb24gMXoKEghvdzczanZiaIIBHgoQUGxlYXNlIHNlbGVjdC4uLnoKEgg0YnJuY3cyb4oBAhIA+gMAYgASLQoRQ2hlY2tib3hfbGx1aThxYmUYSSIU+gMAigUOCAESBgj169f/DyICEAFiABIiCg9Td2l0Y2hfcTg5MDR4OHgYSCILiAMC+gMAggUCCAFiABJjChdTd2l0Y2hMaXN0VGlsZV9uaGp0dGQ5bxgdIkT6ATsIARIVCgVUaXRsZUADegoSCHZzdHE5ODBpGhgKCFN1YnRpdGxlQAV6ChIIMWVrbXcwdWEyBgj169f/D4gDAvoDAGIAEtABChRDaG9pY2VDaGlwc18xemF0ZWE2MRgyIrMBugOsARI/EiUI2OgDEg1NYXRlcmlhbEljb25zIAAyDnRyYWluX291dGxpbmVkGhYKCE9wdGlvbiAxegoSCG5sNGl6OHVrGi4KBgjF9sj5DxIKOgYI/////w9ABhoGCP////8PIQAAAAAAADJAMQAAAAAAABBAIi4KBgj/////DxIKOgYIxfbI+Q9ABxoGCMX2yPkPIQAAAAAAADJAMQAAAAAAABBAKQAAAAAAADRAUAb6AwBiABLSAgoYQ291bnRDb250cm9sbGVyXzJmcWNucndpGDAisQKqA6oCCAAQABgBMlEKPgjo4AMSEEZvbnRBd2Vzb21lU29saWQaFGZvbnRfYXdlc29tZV9mbHV0dGVyIAAqBwoFbWludXMyBW1pbnVzEQAAAAAAADRAIgYIgICA6A06TQo6CCsSEEZvbnRBd2Vzb21lU29saWQaFGZvbnRfYXdlc29tZV9mbHV0dGVyIAAqBgoEcGx1czIEcGx1cxEAAAAAAAA0QCIGCPOthvkPQgYI7t27/w9KGxEAAAAAAAAwQBoGUm9ib3RvKAY6BgiAgID4D1JbChYKCQkAAAAAAABkQBIJCQAAAAAAAElAEkESJAkAAAAAAAA5QBEAAAAAAAA5QBkAAAAAAAA5QCEAAAAAAAA5QCgBOQAAAAAAAPA/QgYI/////w9KBgievfr8D/oDAGIAEo4BCg1UZXh0X2I2cDM3a2x1GAIieRInCgtIZWxsbyBXb3JsZBEAAAAAAABBQEAGegoSCGphY255bXI3qAEAWgkRAAAAAAAANECaAT8KAgIBKjkIClI1CgASDgoMEgpUaGUgSUQgaXMgEiESHwgDEhFTY2FmZm9sZF9zMTJhOWc5OUIIMgYKBAoCaWT6AwBiABJkChJUZXh0RmllbGRfZWlyMnJmMTIYECJKigFECgJABhImCAKCASEKE1tTb21lIGhpbnQgdGV4dC4uLl16ChIIbzdzbjJpbzYYAUoREQAAAAAAADZAIgYI9erV+w+AAQH6AwBiABgEIgUiAPoDAA==",
+        "replace": [
+            {
+                "Page parameter name": "id"
+            }
+        ],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/nav-to-page.dart",
+        "id": 4
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=89KO7T-PeMM",
+        "title": "Learn How to Implement Null Safety in @FlutterFlow and Improve Your Custom Code Quality",
+        "desc": "In this video, I will explore the benefits of implementing null safety in your FlutterFlow applications. Null safety is a feature that helps you avoid common runtime errors in your code by ensuring that values are never null when they're not supposed to be. By adding null safety annotations to your code, you can catch potential errors early, and make it easier to maintain and update your code over time.\n\nI'll start by covering the basics of null safety and the different ways it can be implemented in FlutterFlow. From there, I'll dive into the process of adding null safety annotations to your existing code and working with nullable and non-nullable types. You'll learn how to handle null values correctly, and how to use the ?? operator and other null safety features to make your code more concise and readable.\n\nWhether you're a beginner or an experienced FlutterFlow developer, this video will help you improve your code quality and write more robust and maintainable applications. You'll learn how to take advantage of the benefits of null safety, and how to implement it effectively in your own projects. So, if you want to write high-quality code that is less prone to bugs and more maintainable over time, be sure to watch this video and start implementing null safety in your FlutterFlow projects today!\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/null-safety.dart\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/89KO7T-PeMM",
+        "widgets": "Cg9Db2x1bW5feGhwZXRqYTISWgoNVGV4dF9hZ3VwMW1scBgCIkUSEgoLSGVsbG8gV29ybGRABqgBAJoBKwoCAgEqJQgGEg9Db2x1bW5feGhwZXRqYTJCAioASgwiCgoIJC5uYW1lSXT6AwBiABgEIgoiAPoDAPIEAgoAUhMKBBARIAAiCQoHCgV1c2VyczoAai4KBgoEdXNlchIkCAUSD0NvbHVtbl94aHBldGphMkICOgBKBGoCCAFKBSIDCgEk",
+        "replace": [],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/null-safety.dart",
+        "id": 5
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=9HngDsCIJPY",
+        "title": "Create Your Own PDF Files in @FlutterFlow with Just a Few Clicks + Amazing bonus content \ud83d\udca5\ud83d\udd25\ud83d\udca8",
+        "desc": "In this video, we'll show you how to easily create your own PDF files using FlutterFlow. With just a few clicks, you'll be able to generate professional-quality PDF documents for any purpose. And as a bonus, we'll also show you some amazing content that will take your PDF creation skills to the next level. Whether you're a business owner, freelancer, or student, this tutorial is perfect for you. So don't wait any longer, start creating your own PDFs today!\n\nCode used for the pdf\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/pdf-generate.dart\n\nCode used for uploading any file type\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/upload-multi-any-file-type.dart\n\nYou can book me as FF mentor\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/9HngDsCIJPY",
+        "widgets": "Cg9Db2x1bW5fN3Q4cWpyaHgSgAIKD0J1dHRvbl8xMXY5YmZjNBgJIo0BSnQKIAoIRG93bmxvYWQ6Bgj/////D0AFegoSCGR6em9xdGplGQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQFoSEQAAAAAAADRAIQAAAAAAADRA+gMAYgCKAVgSUgoIeW1qamxqYjcSRtIBOAobChJwZGZJbnZvaWNlRG93bmxvYWQSBTR3bXg2EgwKChIITXkgdGl0bGUSCwoJEgdNeSBib2R5qgIIMTd6cWVsNW8aAggBEncKEkNvbnRhaW5lcl8yNGNiODhjaRgBIgP6AwBiSxI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGY3VrcmltMhgiFgoJEQAAAAAAAFlAEgkJAAAAAAAAeUAaCUFzc2V0c0ltZ4IBCUFzc2V0c0ltZ5gBARJcChJQZGZWaWV3ZXJfeGtmM2cxdDQYOSJC8gM8CiVodHRwOi8vd3d3LnBkZjk5NS5jb20vc2FtcGxlcy9wZGYucGRmEAEaDQoAEgkJAAAAAADAckAgACgA+gMAYgAYBCIFIgD6AwA=",
+        "replace": [],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/pdf-generate.dart",
+        "id": 6
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=M7lfNCY3aB0",
+        "title": "@FlutterFlow Community Q&A Live Session - Week 2 - Create Custom Tab Bar and Updating Data Types",
+        "desc": "In this session video you will see:\n- Create Custom Tab Bar \n- Updating Data Types\n\nIn this video, we will be exploring two exciting topics in FlutterFlow. First, we will be showing you how to create a custom tab bar for your app. This will allow you to add a unique touch to your app and make it stand out from the competition. Next, we will be demonstrating how to update data types in FlutterFlow. This is a crucial skill to have when working with databases and ensuring that your data is accurate and up-to-date. Whether you are a beginner or an experienced developer, this video is sure to have something for you. So sit back, grab a coffee, and let's dive in!\n\nWelcome to the FlutterFlow Community Q&A Live Session! This is your chance to ask me anything related to FlutterFlow and get expert answers. Whether you have a specific problem you need help with, or you just want to learn more about the platform, this is the place to be. So bring your questions, and let's dive in! I'm looking forward to answering your questions and helping you succeed with FlutterFlow.\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/update-data-type.dart\n\nYou can book me as FF mentor\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/M7lfNCY3aB0",
+        "widgets": "Cg9Db2x1bW5fbjVoeXY1c3ISxAEKEkNvbnRhaW5lcl96cDlremhueRgBIgdyAHoA+gMAYo0BEjMKCWNhck9uU2FsZRImCgsKCWNhck9uU2FsZSIXCAYSD0NvbHVtbl9uNWh5djVzckICKgASQgoMY2FyUG5TYWxlUmVmEjIKDgoMY2FyUG5TYWxlUmVmIiAIBBIRU2NhZmZvbGRfdnNiNWE2ajNCAhIASgWCAQIQASoSQ29udGFpbmVyXzVwMDZieXdhsgESQ29udGFpbmVyXzVwMDZieXdhGAQiCiIA+gMA8gQCCgBqLwoFCgNjYXISJggEEhFTY2FmZm9sZF92c2I1YTZqM0ICEgBKC4IBCAoGCgRjYXJz",
+        "replace": [
+            {
+                "Name of Data Type": "Car"
+            }
+        ],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/update-data-type.dart",
+        "id": 7
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=H4YBcAb7XxY",
+        "title": "@FlutterFlow makes it easy to upload any file type to @Firebase",
+        "desc": "In this video, I will show you how to upload any file type to Firebase using Flutterflow. By the end of this session, you will have learned how to easily and efficiently store files in your Firebase database using Flutterflow. This is a valuable skill to have as it allows you to store and access a wide range of file types, including images, audio, video, and more. Whether you are a beginner or an experienced developer, you will find this tutorial helpful in getting started with uploading files to Firebase using Flutterflow.\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/upload-any-file-type.dart\n\nYou can book me as FF mentor\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/H4YBcAb7XxY",
+        "widgets": "Cg9Db2x1bW5fOG95emxwMTQS7gEKD0J1dHRvbl92djM1emhrdxgJInxKdwojCgtVcGxvYWQgZmlsZToGCP////8PQAV6ChIINWdhYnJyMTQZAAAAAAAAAEApAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKAVgSUgoIcXNmMGg3NjMSRtIBOAoaChF1cGxvYWRBbnlGaWxlVHlwZRIFaDhhMnESGhIYCAxCFCISCg4KDGFyZ0ZpbGVUeXBlcxABqgIIeWc4cXg1em4aAggBGAQiGyICEAFyEgkAAAAAAAAAABEAAAAAAAAAAPoDAA==",
+        "replace": [],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/upload-any-file-type.dart",
+        "id": 8
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=H4YBcAb7XxY",
+        "title": "@FlutterFlow makes it easy to upload any file type to @Firebase",
+        "desc": "In this video, I will show you how to upload any file type to Firebase using Flutterflow. By the end of this session, you will have learned how to easily and efficiently store files in your Firebase database using Flutterflow. This is a valuable skill to have as it allows you to store and access a wide range of file types, including images, audio, video, and more. Whether you are a beginner or an experienced developer, you will find this tutorial helpful in getting started with uploading files to Firebase using Flutterflow.\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/upload-any-file-type.dart\n\nYou can book me as FF mentor\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/H4YBcAb7XxY",
+        "widgets": "Cg9Db2x1bW5fOG95emxwMTQS7gEKD0J1dHRvbl92djM1emhrdxgJInxKdwojCgtVcGxvYWQgZmlsZToGCP////8PQAV6ChIINWdhYnJyMTQZAAAAAAAAAEApAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKAVgSUgoIcXNmMGg3NjMSRtIBOAoaChF1cGxvYWRBbnlGaWxlVHlwZRIFaDhhMnESGhIYCAxCFCISCg4KDGFyZ0ZpbGVUeXBlcxABqgIIeWc4cXg1em4aAggBGAQiGyICEAFyEgkAAAAAAAAAABEAAAAAAAAAAPoDAA==",
+        "replace": [],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/upload-multi-any-file-type.dart",
+        "id": 9
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
+        "title": "Retrieving Lists and Single Documents from Custom Actions in @FlutterFlow",
+        "desc": "Welcome to my video on how to use FlutterFlow to get a single or list of documents in a Custom Action! If you've been struggling with this, don't worry \u2013 I've got you covered.\n\nIn this tutorial, I'll show you how to use FlutterFlow to retrieve a single or list of documents, and then how to use that information in an On Page Load Action. It's a quick and easy process, and once you know how to do it, you'll be able to use this technique to streamline your workflow and make your projects more efficient.\n\nI'll start by showing you how to set up a Custom Action in FlutterFlow, and then I'll walk you through the process of retrieving a single or list of documents using that Action. I'll also show you how to use that information in an On Page Load Action, so you can see just how useful this technique can be.\n\nBy the end of this video, you'll be a pro at using FlutterFlow to get a single or list of documents, and you'll be able to use that information to make your projects even more dynamic and powerful. So let's get started!\n\nCode used:\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-docs.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/HtvtwLmaI0w",
+        "widgets": "Cg9Db2x1bW5fdmZ3aGF4YjgSYQoNVGV4dF94ajhtNTcyMhgCIkwSJwoLSGVsbG8gV29ybGQRAAAAAAAANkBABnoKEghpc2w3eDhtOagBAJoBHQoCAgEqFwgGEg9Db2x1bW5fdmZ3aGF4YjhCAioA+gMAYgAYBCIFIgD6AwBqIQoHCgVicmFuZBIWCAxCEiIQCgwKCmJyYW5kTmFtZXMQAQ==",
+        "replace": [
+            {
+                "Collection name": "Cars"
+            }
+        ],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-docs.dart",
+        "id": 10
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
+        "title": "Retrieving Lists and Single Documents from Custom Actions in @FlutterFlow",
+        "desc": "Welcome to my video on how to use FlutterFlow to get a single or list of documents in a Custom Action! If you've been struggling with this, don't worry \u2013 I've got you covered.\n\nIn this tutorial, I'll show you how to use FlutterFlow to retrieve a single or list of documents, and then how to use that information in an On Page Load Action. It's a quick and easy process, and once you know how to do it, you'll be able to use this technique to streamline your workflow and make your projects more efficient.\n\nI'll start by showing you how to set up a Custom Action in FlutterFlow, and then I'll walk you through the process of retrieving a single or list of documents using that Action. I'll also show you how to use that information in an On Page Load Action, so you can see just how useful this technique can be.\n\nBy the end of this video, you'll be a pro at using FlutterFlow to get a single or list of documents, and you'll be able to use that information to make your projects even more dynamic and powerful. So let's get started!\n\nCode used:\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-docs.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/HtvtwLmaI0w",
+        "widgets": "Cg9Db2x1bW5faTEyYXd6dWESWgoNVGV4dF9iZ2U5cGowOBgCIkUSJwoLSGVsbG8gV29ybGQRAAAAAAAANkBABnoKEgh3NjQxOGtzMagBAJoBFgoCAgEqEAgMQgwiCgoGCgRuYW1lEAH6AwBiABKnAQoNVGV4dF92cDBzZGYxMxgCIlMSHgoLSGVsbG8gV29ybGRABnoKEghxcHhpd3VybqgBAJoBKAoCAgEqIggEEg1UZXh0X3ZwMHNkZjEzQgISAEoLggEICgYKBG5hbWX6AwDyBAIKAFI9CgwQBxoGCgRjYXJzIAAaLQoGCgRjYXJzGiMIAxIRU2NhZmZvbGRfaDA2OGY3YjhCDDIKCggKBmRvY1JlZmIAGAQiBSIA+gMA",
+        "replace": [
+            {
+                "Collection name": "Cars"
+            }
+        ],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc.dart",
+        "id": 11
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=_ik4paDX6VI",
+        "title": "@FlutterFlow Extracting Data from Custom Widgets in FlutterFlow",
+        "desc": "In this tutorial, I will show you how to output or \"return\" information from a custom widget in Flutter using local state.\n\nLocal state refers to data that is specific to a particular widget and is not shared with other widgets or parts of the app. It can be useful for storing and manipulating data that is used exclusively within the widget and is not needed outside of it.\n\nIn this tutorial, we will see how to use local state in a custom widget to output or \"return\" information to the widget's parent or other parts of the app. We will start by creating a custom widget that has a stateful component and a state object.\n\nNext, we will see how to use the setState method to update the widget's state and trigger a rebuild, and how to use the widget.state property to access the widget's state from outside the widget.\n\nFinally, we will see how to use the widget's state to output or \"return\" information to the widget's parent or other parts of the app, using a callback function or some other method of communication.\n\nBy the end of this tutorial, you will have learned how to output or \"return\" information from a custom widget in Flutter using local state and will have the knowledge and tools to do so in your own projects. So, stay tuned and thanks for watching!\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/_ik4paDX6VI",
+        "widgets": "Cg9Db2x1bW5fazRncjZ2bnoSRQoNVGV4dF92ZXV1b2xsaxgCIjASEgoLSGVsbG8gV29ybGRABqgBAJoBFgoCAgEqEAgMQgwiCgoGCgRuYW1lEAH6AwBiABK3AQoPQnV0dG9uXzNyM3VoMmJpGAkiYkpdChIKBkJ1dHRvbjoGCP////8PQAUpAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKATsSNQoIZXdueTY5MzYSKeIBG0IVCgYKBG5hbWUSCwoJEgdkZW1vMTIzUAJYAaoCCDIxMWlzdTRtGgIIARgEIgUiAPoDAA==",
+        "replace": [],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Widgets/local-state-from-custom-code.dart",
+        "id": 12
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=mHN0iDPb4oY",
+        "title": "Integrating the Html Rich Text Editor with @Firebase in @FlutterFlow",
+        "desc": "Hi and welcome to this tutorial on how to implement a HTML rich text editor in Flutter and connect it to Firebase.\n\nA rich text editor is a tool that allows users to create and edit formatted text, including bold, italic, and underlined text, as I'll as insert images, links, and other media. Implementing a rich text editor in Flutter can be a useful way to allow users to create and edit formatted content in your app.\n\nIn this tutorial, I will show you how to use the Flutter framework to implement a HTML rich text editor and connect it to Firebase. This process involves creating a text editor using a package like html_editor_enhanced, setting up a Firebase project and database, and using the cloud_firestore package to read and write data to the database.\n\nI will start by installing the necessary dependencies and creating a text editor using the html_editor_enhanced package. Then, I will set up a Firebase project and database and import the cloud_firestore package in our Flutter code.\n\nNext, I will demonstrate how to use the cloud_firestore package to read and write data to the database, including retrieving data for display in the text editor and saving user-generated content to the database.\n\nFinally, I will show you how to use the html_editor_enhanced package to format and style the text in the editor and how to insert images, links, and other media.\n\nBy the end of this tutorial, you will have learned how to implement a HTML rich text editor in Flutter and connect it to Firebase, and will have the knowledge and tools to do so in your own projects. So, stay tuned and thanks for watching!\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Widgets/myhtmleditor.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/mHN0iDPb4oY",
+        "widgets": "",
+        "replace": [],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Widgets/myhtmleditor.dart",
+        "id": 13
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=_TCVr5R_i78",
+        "title": "@FlutterFlow Community Q&A Live Session",
+        "desc": "Turn your videos into live streams with Restream https://restre.am/ANIm\n\nWelcome to my FlutterFlow Community Q&A Live Session!\n\nIn this session, I will be answering your questions about FlutterFlow, a powerful platform for building mobile and web apps with Flutter. Whether you are a beginner or an experienced developer, I am here to help you learn and grow with FlutterFlow.\n\nDuring this session, you can ask me anything about FlutterFlow, from basic concepts to advanced techniques. I will do my best to answer your questions and provide guidance and resources to help you succeed with FlutterFlow.\n\nSo don't be shy, bring your questions and let's learn together! I look forward to answering your questions and helping you get the most out of FlutterFlow. See you in the session!",
+        "embed": "https://www.youtube.com/embed/_TCVr5R_i78",
+        "widgets": "",
+        "replace": [],
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Videos/230301-live.dart",
+        "id": 14
+    }
 ]

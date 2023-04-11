@@ -1,10 +1,10 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// video - https://youtu.be/rAw5riRVHuc
+// video - https://youtube.com/watch?v=rAw5riRVHuc
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 import 'dart:convert';
 
-import '../../auth/auth_util.dart';
+import '../../auth/firebase_auth/auth_util.dart';
 import '../../backend/firebase_storage/storage.dart';
 
 Future uploadRawFileToFB(String bytes) async {

@@ -1,7 +1,7 @@
 <?php
 
 // code created by https://www.youtube.com/@flutterflowexpert
-// video tutorial - https://youtu.be/TdDFEi7CmOk
+// video tutorial - https://youtube.com/watch?v=TdDFEi7CmOk
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 // Firestore Database rules

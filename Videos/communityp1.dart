@@ -25,7 +25,7 @@ Future customRegistration(BuildContext context, String email) async {
 
 // custom login
 
-import '../../auth/auth_util.dart';
+import '../../auth/firebase_auth/auth_util.dart';
 import '../../auth/email_auth.dart';
 import '../../welcome/welcome_widget.dart';
 import '../../backend/api_requests/api_calls.dart';
@@ -55,7 +55,7 @@ Future customLogin(BuildContext context, String email) async {
 
 import 'package:demoo998899/upload_succ/upload_succ_widget.dart';
 // import '../../upload_succ/upload_succ_widget.dart';
-import '../../auth/auth_util.dart';
+import '../../auth/firebase_auth/auth_util.dart';
 
 Future ifAdmin(BuildContext context, bool admin) async {
   if (currentUserDocument.admin != null && currentUserDocument.admin) {

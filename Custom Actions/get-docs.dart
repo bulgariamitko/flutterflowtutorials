@@ -1,5 +1,7 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=HtvtwLmaI0w
+// widgets - Cg9Db2x1bW5fdmZ3aGF4YjgSYQoNVGV4dF94ajhtNTcyMhgCIkwSJwoLSGVsbG8gV29ybGQRAAAAAAAANkBABnoKEghpc2w3eDhtOagBAJoBHQoCAgEqFwgGEg9Db2x1bW5fdmZ3aGF4YjhCAioA+gMAYgAYBCIFIgD6AwBqIQoHCgVicmFuZBIWCAxCEiIQCgwKCmJyYW5kTmFtZXMQAQ==
+// replace - [{"Collection name": "Cars"}]
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 Future<List<CarsRecord>> getDocs(List<DocumentReference> docRefs) async {

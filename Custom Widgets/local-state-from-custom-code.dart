@@ -1,5 +1,6 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=_ik4paDX6VI
+// widgets - Cg9Db2x1bW5fazRncjZ2bnoSRQoNVGV4dF92ZXV1b2xsaxgCIjASEgoLSGVsbG8gV29ybGRABqgBAJoBFgoCAgEqEAgMQgwiCgoGCgRuYW1lEAH6AwBiABK3AQoPQnV0dG9uXzNyM3VoMmJpGAkiYkpdChIKBkJ1dHRvbjoGCP////8PQAUpAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKATsSNQoIZXdueTY5MzYSKeIBG0IVCgYKBG5hbWUSCwoJEgdkZW1vMTIzUAJYAaoCCDIxMWlzdTRtGgIIARgEIgUiAPoDAA==
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 class ReachText2 extends StatefulWidget {

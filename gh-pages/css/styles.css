@@ -3,11 +3,11 @@
 }
 
 .navbar-custom {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .bg-dark .navbar-custom {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 .nav-search {
@@ -23,4 +23,8 @@
   display: flex;
   justify-content: center;
   flex-grow: 1;
+}
+
+.embed-responsive-item {
+    height: 22rem;
 }

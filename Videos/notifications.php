@@ -1,7 +1,7 @@
 <?php
 
 // code created by https://www.youtube.com/@flutterflowexpert
-// video tutorial - https://youtu.be/WusdpvoIDh4
+// video tutorial - https://youtube.com/watch?v=WusdpvoIDh4
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 // execute this file every 10 minutes if you want to check for some new event and send a notification

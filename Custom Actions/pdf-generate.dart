@@ -1,7 +1,8 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=9HngDsCIJPY
-// video 2 include images - https://youtu.be/YcHR_bMSIPw
-// video 3 save custom pdf to firebase storage - https://youtu.be/y5GfG-eX1QM
+// video 2 include images - https://youtube.com/watch?v=YcHR_bMSIPw
+// video 3 save custom pdf to firebase storage - https://youtube.com/watch?v=y5GfG-eX1QM
+// widgets - Cg9Db2x1bW5fN3Q4cWpyaHgSgAIKD0J1dHRvbl8xMXY5YmZjNBgJIo0BSnQKIAoIRG93bmxvYWQ6Bgj/////D0AFegoSCGR6em9xdGplGQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQFoSEQAAAAAAADRAIQAAAAAAADRA+gMAYgCKAVgSUgoIeW1qamxqYjcSRtIBOAobChJwZGZJbnZvaWNlRG93bmxvYWQSBTR3bXg2EgwKChIITXkgdGl0bGUSCwoJEgdNeSBib2R5qgIIMTd6cWVsNW8aAggBEncKEkNvbnRhaW5lcl8yNGNiODhjaRgBIgP6AwBiSxI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGY3VrcmltMhgiFgoJEQAAAAAAAFlAEgkJAAAAAAAAeUAaCUFzc2V0c0ltZ4IBCUFzc2V0c0ltZ5gBARJcChJQZGZWaWV3ZXJfeGtmM2cxdDQYOSJC8gM8CiVodHRwOi8vd3d3LnBkZjk5NS5jb20vc2FtcGxlcy9wZGYucGRmEAEaDQoAEgkJAAAAAADAckAgACgA+gMAYgAYBCIFIgD6AwA=
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
 
 import 'dart:io';
@@ -10,7 +11,7 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
-import '../../auth/auth_util.dart';
+import '../../auth/firebase_auth/auth_util.dart';
 import '../../backend/firebase_storage/storage.dart';
 
 Future pdfInvoiceDownload(
@@ -32,58 +33,62 @@ Future pdfInvoiceDownload(
       (await rootBundle.load('assets/images/demo.png')).buffer.asUint8List();
   final image = pw.MemoryImage(bytes);
 
-  pdf.addPage(pw.Page(
+  pdf.addPage(
+    pw.Page(
       pageFormat: PdfPageFormat.a4,
       build: (pw.Context context) {
-        return pw.Column(children: [
-          pw.Text(title ?? '',
-              style: const pw.TextStyle(
-                color: PdfColors.cyan,
-                fontSize: 40,
-              )),
-          pw.Divider(thickness: 4),
-          pw.Text("Hello World"),
-          pw.SizedBox(height: 10),
-          pw.Row(
-            crossAxisAlignment: pw.CrossAxisAlignment.start,
-            children: [
-              pw.SizedBox(width: 10),
-              pw.Text(body ?? ''),
-            ],
-          ),
-          pw.Container(
-            decoration: pw.BoxDecoration(
-              borderRadius: const pw.BorderRadius.all(pw.Radius.circular(2)),
-            ),
-            padding: const pw.EdgeInsets.only(
-                left: 40, top: 10, bottom: 10, right: 20),
-            alignment: pw.Alignment.centerLeft,
-            height: 50,
-            child: pw.DefaultTextStyle(
-              style: pw.TextStyle(
-                fontSize: 12,
-              ),
-              child: pw.GridView(
-                crossAxisCount: 2,
-                children: [
-                  pw.Text('Invoice #'),
-                  pw.Text('Invoice #'),
-                  pw.Text('Date:'),
-                  pw.Text('Invoice #'),
-                  pw.Text('Hello World'),
-                  pw.Image(netImage),
-                  pw.Image(image),
+        return pw.Column(
+          crossAxisAlignment: pw.CrossAxisAlignment.start,
+          children: [
+            pw.Text('Invoice', style: pw.TextStyle(fontSize: 24)),
+            pw.SizedBox(height: 20),
+            pw.Text('Invoice No.: 00123'),
+            pw.Text('Date: 2023-03-14'),
+            pw.SizedBox(height: 20),
+            pw.Text('Bill To:', style: pw.TextStyle(fontSize: 18)),
+            pw.Text('John Doe'),
+            pw.Text('123 Main Street'),
+            pw.Text('City, State 12345'),
+            pw.SizedBox(height: 20),
+            pw.Text('Items:', style: pw.TextStyle(fontSize: 18)),
+            pw.Container(
+              child: pw.Table.fromTextArray(
+                headerStyle: pw.TextStyle(fontWeight: pw.FontWeight.bold),
+                data: [
+                  ['Item', 'Qty', 'Price', 'Total'],
+                  ['Item 1', '1', '50', '50'],
+                  ['Item 2', '2', '20', '40'],
+                  ['Item 3', '3', '10', '30'],
                 ],
               ),
             ),
-          ),
-          pw.Container(
-            width: 100,
-            height: 100,
-            child: pw.Text('Hello World', style: pw.TextStyle(fontSize: 35)),
-          ),
-        ]);
-      }));
+            pw.SizedBox(height: 20),
+            pw.Row(
+              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+              children: [
+                pw.Text('Subtotal:'),
+                pw.Text('120'),
+              ],
+            ),
+            pw.Row(
+              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+              children: [
+                pw.Text('Tax (5%):'),
+                pw.Text('6'),
+              ],
+            ),
+            pw.Row(
+              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+              children: [
+                pw.Text('Total:'),
+                pw.Text('126'),
+              ],
+            ),
+          ],
+        );
+      },
+    ),
+  );
 
   final pdfSaved = await pdf.save();
 

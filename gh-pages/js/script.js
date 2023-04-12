@@ -78,7 +78,7 @@ $(document).ready(function() {
           </div>
           <p class="mt-2 text-center">
             <span class="d-block">${fileName}</span>
-	          <button class="btn btn-secondary show-dart-code" data-filename='${fileName}' data-localpath='${localFilePath}' data-replace='${JSON.stringify(video.replace)}'>1. Get Code</button>
+	          <button class="btn btn-primary show-dart-code" data-filename='${fileName}' data-localpath='${localFilePath}' data-replace='${JSON.stringify(video.replace)}'>1. Get Code</button>
             <button class="btn btn-primary copy-widgets" data-widgets='${video.widgets}'>2. Copy All Widgets</button>
           </p>
         </div>

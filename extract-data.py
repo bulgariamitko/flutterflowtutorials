@@ -3,9 +3,8 @@ import re
 import json
 from googleapiclient.discovery import build
 
-api_key = os.environ["YOUTUBE_API_KEY"]
-
 id_counter = 1
+api_key = os.environ["YOUTUBE_API_KEY"]
 
 def extract_info_from_dart_file(dart_file):
     with open(dart_file, 'r') as file:
@@ -39,13 +38,17 @@ def extract_info_from_dart_file(dart_file):
                 desc = response['items'][0]['snippet']['description']
                 embed = f'https://www.youtube.com/embed/{video_id}'
 
+    # Extract folder name from dart_file path
+    folder = os.path.split(os.path.dirname(dart_file))[-1]
+
     result = {
         "video": video,
         "title": title,
         "desc": desc,
         "embed": embed,
         "widgets": widgets,
-        "replace": replace
+        "replace": replace,
+        "folder": folder
     }
 
     return result
@@ -63,6 +66,10 @@ def main():
     # Load existing JSON data
     with open('gh-pages/data/data.json', 'r') as json_file:
         existing_data = json.load(json_file)
+
+    # Update id_counter if existing_data is not empty
+    if existing_data:
+        id_counter = max(item.get('id', 0) for item in existing_data) + 1
 
     for dart_file in dart_files:
         info = extract_info_from_dart_file(dart_file)

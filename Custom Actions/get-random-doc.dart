@@ -7,7 +7,7 @@
 import 'dart:math';
 
 Future<CarsRecord> getRandomDoc(List<DocumentReference> docRefs) async {
-  int randomIndex = Random().nextInt(docRefs.length);
+int randomIndex = Random().nextInt(docRefs.length);
   CarsRecord randomDoc = await CarsRecord.getDocumentOnce(docRefs[randomIndex]);
 
   return randomDoc;

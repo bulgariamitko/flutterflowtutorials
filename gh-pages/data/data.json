@@ -1,5 +1,27 @@
 [
     {
+        "video": "https://www.youtube.com/watch?v=z7psjaiWHC0",
+        "title": "Batch Inserting Documents in @Firebase with @FlutterFlow",
+        "desc": "In this tutorial, I will demonstrate how you can use Flutter to perform a batch insert of documents into a Firebase collection.\n\nBatch inserts can be useful when you need to add multiple documents to a Firebase collection at once. Rather than making separate calls for each document, you can use the batch method to perform the inserts in a single request.\n\nI will start by showing you how to import the necessary dependencies and setting up a Firebase project and database. Then, I will demonstrate how to use the cloud_firestore package to create a WriteBatch object and add inserts to it using the setData method.\n\nFinally, I will show you how to commit the batch of inserts using the commit method and handle any errors that may occur.\n\nBy the end of this tutorial, you will have learned how to perform a batch insert of documents into a Firebase collection using Flutter and will have the knowledge and tools to do so in your own projects.\n\nUPDATE\nhttps://youtu.be/tWsr7dMKPcA\n\nCode used in this video:\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/batch-insert-docs.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/z7psjaiWHC0",
+        "widgets": "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",
+        "replace": [],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/batch-insert-docs.dart",
+        "id": 1
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=JyrYGzr-zyU",
+        "title": "Batch Updating and Inserting Documents in @Firebase with @FlutterFlow",
+        "desc": "In this tutorial, I will show you how to use Flutter to perform a batch update or insert of documents in Firebase.\n\nBatch updates and inserts can be useful when you need to modify or add multiple documents in a Firebase collection at once. Rather than making separate calls for each document, you can use the batch method to perform the updates or inserts in a single request.\n\nI will start by showing you how to import the necessary dependencies and setting up a Firebase project and database. Then, I will demonstrate how to use the cloud_firestore package to create a WriteBatch object and add updates or inserts to it using the updateData and setData methods.\n\nFinally, I will show you how to commit the batch of updates or inserts using the commit method and handle any errors that may occur.\n\nBy the end of this tutorial, you will have learned how to perform a batch update or insert of documents in Firebase using Flutter and will have the knowledge and tools to do so in your own projects.\n\nUPDATE\nhttps://youtu.be/tWsr7dMKPcA\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/batch-insert-or-update-docs.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/insert-or-update-doc.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/JyrYGzr-zyU",
+        "widgets": "Cg9Db2x1bW5fZ2drZTFvNWQS8wwKD0NvbHVtbl9oajExN2JkMRL5AQoPQnV0dG9uX3Q4YzVxNWZwGAkinAFKcQodCgliYXRjaCBkZWw6AhAFQAV6ChIIZGRiYXp0OXAZAAAAAAAAAEApAAAAAAAA8H8xAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBAWiQJAAAAAAAAFEARAAAAAAAAFEAZAAAAAAAAFEAhAAAAAAAAFED6AwBiAIoBQhI8CghpNnp4bm0zORIw0gEiChQKC2JhdGNoRGVsZXRlEgV3YndobxIKCggSBm9yZGVyc6oCCDEzdmdneXRtGgIIARLjAgoPQnV0dG9uX2VhMzQ4dXJwGAkinwFKdAogCgxiYXRjaCBpbnNlcnQ6AhAFQAV6ChIIa3gzZWFjdWMZAAAAAAAAAEApAAAAAAAA8H8xAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBAWiQJAAAAAAAAFEARAAAAAAAAFEAZAAAAAAAAFEAhAAAAAAAAFED6AwBiAIoBqAESoQEKCHRvenhnN29oEpQB0gGFAQoYCg9iYXRjaEluc2VydERvY3MSBWp3NmdwEggKBhIEbmFtZRIICgYSBGRhdGUSCwoJEgdvcmRlcmlkEhMSEQgMQg0iCwoHCgVuYW1lcxABEhMSEQgMQg0iCwoHCgVkYXRlcxABEhISEAgQQgxyChgBIAMoA0ICCAESCgoIEgZvcmRlcnOqAgh2bmZmdjg2cxoCCAESiwUKEkNvbnRhaW5lcl9teDIxeTNkMBKXBAoPQ29sdW1uX2J5NTYxYXQ4Eo4BCg1UZXh0X21iZGlqeGZjGAIieRIeCgtIZWxsbyBXb3JsZEAGegoSCHdwbGV2ZHpmqAEAWiQJAAAAAAAALkARAAAAAAAALkAZAAAAAAAALkAhAAAAAAAALkCaAS0KAgIBKicIBBISQ29udGFpbmVyX214MjF5M2QwQgISAEoLggEICgYKBG5hbWX6AwBiABLpAgoPQnV0dG9uX3RndzdsMzExGAkirwFKfworChdzaW5nbGUgdXBkYXRlIG9yIGluc2VydDoCEAVABXoKEghxaHppbmxlZBkAAAAAAAAAQCkAAAAAAADwfzEAAAAAAABEQEkAAAAAAADwP1ICEAFaAggAciQJAAAAAAAAIEARAAAAAAAAIEAZAAAAAAAAIEAhAAAAAAAAIEBaJAkAAAAAAAAuQBEAAAAAAAAuQBkAAAAAAAAuQCEAAAAAAAAuQPoDAPIEAgoAYgCKAZ4BEpcBCghwNWdwZGd6dBKKAdIBfAoaChF1cGRhdGVPckluc2VydERvYxIFYjF0dG4SDhIMCBBCCHIGGABCAggBEgoSCAgBQgQaAggBEhEKDxINY3VzdG9tIGFjdGlvbhIKCggSBm9yZGVycxIjEiEIBBISQ29udGFpbmVyX214MjF5M2QwQgISAEoFggECEAGqAgh0Ym95aW1scRoCCAEYBCIFIgD6AwAYASI3Ci0KFgoJCQAAAAAAAPB/EgkJAAAAAADAYkASCEICEAZaAGIAIgBJAAAAAAAAWUD6AwDyBAIKAFIeCg4QBxoICgZvcmRlcnMgABIMCggKBm9yZGVycygBYgAS4QIKD0J1dHRvbl9zYm8xMm51cxgJIrUBSoQBCjAKHHNpbmdsZSB1cGRhdGUgb3IgaW5zZXJ0IG5vbmU6AhAFQAV6ChIIbzl6bmdzbjcZAAAAAAAAAEApAAAAAAAA8H8xAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBAWiQJAAAAAACAQUARAAAAAAAALkAZAAAAAACAQUAhAAAAAACAQUD6AwDyBAIKAGIAigGQARKJAQoIdWgwMHMwNWoSfdIBbwoaChF1cGRhdGVPckluc2VydERvYxIFYjF0dG4SDhIMCBBCCHIGGABCAggBEgoSCAgBQgQaAggBEhEKDxINY3VzdG9tIGFjdGlvbhIKCggSBm9yZGVycxIWEhQIDEIQIg4KCgoIb3JkZXJSZWYQAaoCCDd0Mnc1czVpGgIIARgEIgoiAPoDAPIEAgoAEtwDCg9Db2x1bW5fY3I0cDduYm4SugMKD0J1dHRvbl9qNmRva2NodBgJIq4BSn4KKgoWYmF0Y2ggdXBkYXRlIG9yIGluc2VydDoCEAVABXoKEgg0b3l6Z3kwNxkAAAAAAAAAQCkAAAAAAADwfzEAAAAAAABEQEkAAAAAAADwP1ICEAFaAggAciQJAAAAAAAAIEARAAAAAAAAIEAZAAAAAAAAIEAhAAAAAAAAIEBaJAkAAAAAAAAuQBEAAAAAAAAuQBkAAAAAAAAuQCEAAAAAAAAuQPoDAPIEAgoAYgCKAfABEukBCggwdWphM3EweBLcAdIBzQEKIAoXYmF0Y2hVcGRhdGVPckluc2VydERvY3MSBThkdzJzEggKBhIEbmFtZRIICgYSBGRhdGUSCwoJEgdvcmRlcmlkEhMSEQgMQg0iCwoHCgVuYW1lcxABEhMSEQgMQg0iCwoHCgVkYXRlcxABEhISEAgQQgxyChgBIAMoA0ICCAESCgoIEgZvcmRlcnMSPhI8CAQSEVNjYWZmb2xkXzhyZXFsNW4yQgISAEoheh8KHQgNQhJ6EAoOEAcaCAoGb3JkZXJzIAFKBYIBAhABqgIIZzQyOXU1ZjMaAggBGAQiCiIA+gMA8gQCCgAYBCIKIgD6AwDyBAIKAA==",
+        "replace": [],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/batch-insert-or-update-docs.dart",
+        "id": 2
+    },
+    {
         "video": "https://www.youtube.com/watch?v=1FKlfexT9Zw",
         "title": "Exporting @Firebase Collections to CSV Files in @FlutterFlow",
         "desc": "Hi and welcome to this tutorial on how to export a Firebase collection to a CSV file in Flutter.\n\nExporting data from a Firebase collection to a CSV file can be a useful way to backup or analyze your data. CSV, or Comma Separated Values, is a simple and widely supported file format that can be opened in a variety of applications, including spreadsheets and databases.\n\nIn this tutorial, we will show you how to use the Flutter framework to export a Firebase collection to a CSV file. This process involves retrieving the data from the Firebase collection, extracting the data that you want to include in the CSV file, creating a CSV string, and writing the string to a file.\n\nWe will start by installing the necessary dependencies and importing them in your Flutter code. Then, we will retrieve the data from the Firebase collection and extract the relevant data for each document.\n\nFinally, we will demonstrate how to display a message or perform some other action to let the user know that the export was successful.\n\nBy the end of this tutorial, you will have learned how to export a Firebase collection to a CSV file in Flutter and will have the knowledge and tools to do so in your own projects.\n\n\nCode used in the video\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/download-collection-as-csv.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
@@ -16,8 +38,9 @@
                 "Field name 2": "brand"
             }
         ],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/download-collection-as-csv.dart",
-        "id": 1
+        "id": 3
     },
     {
         "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
@@ -30,8 +53,9 @@
                 "Collection name": "Cars"
             }
         ],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/fetch-fb-doc.dart",
-        "id": 2
+        "id": 4
     },
     {
         "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
@@ -44,8 +68,42 @@
                 "Collection name": "Car"
             }
         ],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-random-doc.dart",
-        "id": 3
+        "id": 5
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=4Ir1j6L48Lg",
+        "title": "Easily Sync Your CSV or JSON Files with @Firebase Using @FlutterFlow",
+        "desc": "Looking for an easy way to sync your CSV or JSON files with Firebase? Look no further! In this video tutorial, we'll show you step by step how to use FlutterFlow to upload your files straight from the app and use them for in-app admin or other user roles. With FlutterFlow, it's never been easier to manage and organize your data in Firebase. So why wait? Try it out now and streamline your data management process.\n\nLinks used in the video\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Resorses/import.csv\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Resorses/import.json\nhttps://csvjson.com/csv2json\n\nUPDATE\nhttps://youtu.be/tWsr7dMKPcA\n\nCode used in the video\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/import-csv-or-json.dart\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/4Ir1j6L48Lg",
+        "widgets": "Cg9Db2x1bW5fODAwN3Y4ZnoSqQIKD0J1dHRvbl9oYmR6c3F6ahgJIndKcgoeCgZJbXBvcnQ6Bgj/////D0AFegoSCHpnam1kNmhuGQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQPoDAGIAigGXARKQAQoIZHJvNW00ZGMSgwHSAXUKHAoTaW1wb3J0RnJvbUNzdk9ySnNvbhIFZ3Z3NnUSBQoDEgE7Eg0KCxIJdXNlcnNkYXRhEgwKChIIdXNlcm5hbWUSDgoMEgppZGVudGlmaWVyEgoKCBIGbXlCb29sEgoKCBIGbXlEYXRlEgkKBxIFbXlSZWaqAggxOTF3cWptdxoCCAES1gEKD0J1dHRvbl82N3c3Z2RoMBgJIndKcgoeCgZEZWxldGU6Bgj/////D0AFegoSCGU3dHNvbGk4GQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQPoDAGIAigFFEj8KCGttYXozZnZhEjPSASUKFAoLYmF0Y2hEZWxldGUSBXdid2hvEg0KCxIJdXNlcnNkYXRhqgIIM3N3dWhiOGgaAggBGAQiBSIA+gMA",
+        "replace": [],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/import-csv-or-json.dart",
+        "id": 6
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=nHz5o78L0x0",
+        "title": "Optimize Your @Firebase Database using @FlutterFlow - Insert or Update Document",
+        "desc": "In this tutorial, I'll show you how to optimize your Firebase database using FlutterFlow by creating a custom function that can check if a document already exists in the database by a specific field. If it does exist, the function will update it, and if it doesn't, it will add it to the database. This is a powerful tool that can make managing your Firebase database much more efficient and streamlined. I'll walk you through the process step-by-step, so you can easily implement this technique in your own projects. Whether you're a beginner or an experienced developer, this tutorial is perfect for anyone looking to take their Firebase skills to the next level.\n\nUPDATE\nhttps://youtu.be/tWsr7dMKPcA\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/insert-or-update-doc-using-filter.dart\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/nHz5o78L0x0",
+        "widgets": "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",
+        "replace": [],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/insert-or-update-doc-using-filter.dart",
+        "id": 7
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=nHz5o78L0x0",
+        "title": "Optimize Your @Firebase Database using @FlutterFlow - Insert or Update Document",
+        "desc": "In this tutorial, I'll show you how to optimize your Firebase database using FlutterFlow by creating a custom function that can check if a document already exists in the database by a specific field. If it does exist, the function will update it, and if it doesn't, it will add it to the database. This is a powerful tool that can make managing your Firebase database much more efficient and streamlined. I'll walk you through the process step-by-step, so you can easily implement this technique in your own projects. Whether you're a beginner or an experienced developer, this tutorial is perfect for anyone looking to take their Firebase skills to the next level.\n\nUPDATE\nhttps://youtu.be/tWsr7dMKPcA\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/insert-or-update-doc-using-filter.dart\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/nHz5o78L0x0",
+        "widgets": "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",
+        "replace": [],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/insert-or-update-doc.dart",
+        "id": 8
     },
     {
         "video": "https://www.youtube.com/watch?v=-PbOmjEsKxE",
@@ -58,8 +116,9 @@
                 "Page parameter name": "id"
             }
         ],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/nav-to-page.dart",
-        "id": 4
+        "id": 9
     },
     {
         "video": "https://www.youtube.com/watch?v=89KO7T-PeMM",
@@ -68,8 +127,9 @@
         "embed": "https://www.youtube.com/embed/89KO7T-PeMM",
         "widgets": "Cg9Db2x1bW5feGhwZXRqYTISWgoNVGV4dF9hZ3VwMW1scBgCIkUSEgoLSGVsbG8gV29ybGRABqgBAJoBKwoCAgEqJQgGEg9Db2x1bW5feGhwZXRqYTJCAioASgwiCgoIJC5uYW1lSXT6AwBiABgEIgoiAPoDAPIEAgoAUhMKBBARIAAiCQoHCgV1c2VyczoAai4KBgoEdXNlchIkCAUSD0NvbHVtbl94aHBldGphMkICOgBKBGoCCAFKBSIDCgEk",
         "replace": [],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/null-safety.dart",
-        "id": 5
+        "id": 10
     },
     {
         "video": "https://www.youtube.com/watch?v=9HngDsCIJPY",
@@ -78,8 +138,20 @@
         "embed": "https://www.youtube.com/embed/9HngDsCIJPY",
         "widgets": "Cg9Db2x1bW5fN3Q4cWpyaHgSgAIKD0J1dHRvbl8xMXY5YmZjNBgJIo0BSnQKIAoIRG93bmxvYWQ6Bgj/////D0AFegoSCGR6em9xdGplGQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQFoSEQAAAAAAADRAIQAAAAAAADRA+gMAYgCKAVgSUgoIeW1qamxqYjcSRtIBOAobChJwZGZJbnZvaWNlRG93bmxvYWQSBTR3bXg2EgwKChIITXkgdGl0bGUSCwoJEgdNeSBib2R5qgIIMTd6cWVsNW8aAggBEncKEkNvbnRhaW5lcl8yNGNiODhjaRgBIgP6AwBiSxI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGY3VrcmltMhgiFgoJEQAAAAAAAFlAEgkJAAAAAAAAeUAaCUFzc2V0c0ltZ4IBCUFzc2V0c0ltZ5gBARJcChJQZGZWaWV3ZXJfeGtmM2cxdDQYOSJC8gM8CiVodHRwOi8vd3d3LnBkZjk5NS5jb20vc2FtcGxlcy9wZGYucGRmEAEaDQoAEgkJAAAAAADAckAgACgA+gMAYgAYBCIFIgD6AwA=",
         "replace": [],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/pdf-generate.dart",
-        "id": 6
+        "id": 11
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=nHz5o78L0x0",
+        "title": "Optimize Your @Firebase Database using @FlutterFlow - Insert or Update Document",
+        "desc": "In this tutorial, I'll show you how to optimize your Firebase database using FlutterFlow by creating a custom function that can check if a document already exists in the database by a specific field. If it does exist, the function will update it, and if it doesn't, it will add it to the database. This is a powerful tool that can make managing your Firebase database much more efficient and streamlined. I'll walk you through the process step-by-step, so you can easily implement this technique in your own projects. Whether you're a beginner or an experienced developer, this tutorial is perfect for anyone looking to take their Firebase skills to the next level.\n\nUPDATE\nhttps://youtu.be/tWsr7dMKPcA\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/insert-or-update-doc-using-filter.dart\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/nHz5o78L0x0",
+        "widgets": "",
+        "replace": [],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/update-all-docs-in-collection.dart",
+        "id": 12
     },
     {
         "video": "https://www.youtube.com/watch?v=M7lfNCY3aB0",
@@ -92,8 +164,9 @@
                 "Name of Data Type": "Car"
             }
         ],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/update-data-type.dart",
-        "id": 7
+        "id": 13
     },
     {
         "video": "https://www.youtube.com/watch?v=H4YBcAb7XxY",
@@ -102,8 +175,9 @@
         "embed": "https://www.youtube.com/embed/H4YBcAb7XxY",
         "widgets": "Cg9Db2x1bW5fOG95emxwMTQS7gEKD0J1dHRvbl92djM1emhrdxgJInxKdwojCgtVcGxvYWQgZmlsZToGCP////8PQAV6ChIINWdhYnJyMTQZAAAAAAAAAEApAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKAVgSUgoIcXNmMGg3NjMSRtIBOAoaChF1cGxvYWRBbnlGaWxlVHlwZRIFaDhhMnESGhIYCAxCFCISCg4KDGFyZ0ZpbGVUeXBlcxABqgIIeWc4cXg1em4aAggBGAQiGyICEAFyEgkAAAAAAAAAABEAAAAAAAAAAPoDAA==",
         "replace": [],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/upload-any-file-type.dart",
-        "id": 8
+        "id": 14
     },
     {
         "video": "https://www.youtube.com/watch?v=H4YBcAb7XxY",
@@ -112,8 +186,9 @@
         "embed": "https://www.youtube.com/embed/H4YBcAb7XxY",
         "widgets": "Cg9Db2x1bW5fOG95emxwMTQS7gEKD0J1dHRvbl92djM1emhrdxgJInxKdwojCgtVcGxvYWQgZmlsZToGCP////8PQAV6ChIINWdhYnJyMTQZAAAAAAAAAEApAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKAVgSUgoIcXNmMGg3NjMSRtIBOAoaChF1cGxvYWRBbnlGaWxlVHlwZRIFaDhhMnESGhIYCAxCFCISCg4KDGFyZ0ZpbGVUeXBlcxABqgIIeWc4cXg1em4aAggBGAQiGyICEAFyEgkAAAAAAAAAABEAAAAAAAAAAPoDAA==",
         "replace": [],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/upload-multi-any-file-type.dart",
-        "id": 9
+        "id": 15
     },
     {
         "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
@@ -126,8 +201,9 @@
                 "Collection name": "Cars"
             }
         ],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-docs.dart",
-        "id": 10
+        "id": 16
     },
     {
         "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
@@ -140,8 +216,9 @@
                 "Collection name": "Cars"
             }
         ],
+        "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc.dart",
-        "id": 11
+        "id": 17
     },
     {
         "video": "https://www.youtube.com/watch?v=_ik4paDX6VI",
@@ -150,8 +227,9 @@
         "embed": "https://www.youtube.com/embed/_ik4paDX6VI",
         "widgets": "Cg9Db2x1bW5fazRncjZ2bnoSRQoNVGV4dF92ZXV1b2xsaxgCIjASEgoLSGVsbG8gV29ybGRABqgBAJoBFgoCAgEqEAgMQgwiCgoGCgRuYW1lEAH6AwBiABK3AQoPQnV0dG9uXzNyM3VoMmJpGAkiYkpdChIKBkJ1dHRvbjoGCP////8PQAUpAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKATsSNQoIZXdueTY5MzYSKeIBG0IVCgYKBG5hbWUSCwoJEgdkZW1vMTIzUAJYAaoCCDIxMWlzdTRtGgIIARgEIgUiAPoDAA==",
         "replace": [],
+        "folder": "Custom Widgets",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Widgets/local-state-from-custom-code.dart",
-        "id": 12
+        "id": 18
     },
     {
         "video": "https://www.youtube.com/watch?v=mHN0iDPb4oY",
@@ -160,8 +238,20 @@
         "embed": "https://www.youtube.com/embed/mHN0iDPb4oY",
         "widgets": "",
         "replace": [],
+        "folder": "Custom Widgets",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Widgets/myhtmleditor.dart",
-        "id": 13
+        "id": 19
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=IwhSbx1yN1M",
+        "title": "\u200b@FlutterFlow  From Beginner to Pro: Building a Completed App with Custom Actions in FlutterFlow",
+        "desc": "FF App of Yettel\n- review the app\n- how to \"register\" users without Firebase Auth\n- how to dynamically refresh a screen when something is change on other screen\n- word-cloud - using a package\n- word-cloud - build our own\n- Lottie animations\n- shuffle list and choose a winner\n- download CSV file of a Firebase collection\n- delete all data in a Firebase collection\n- get document from custom action\n\nWelcome to this tutorial on the Yettel app, built with Flutter and Firebase.\n\nIn this video, we will review the features of the Yettel app and see how it can be used to manage a list of users and randomly select a winner. We will also explore some advanced topics, such as how to refresh a screen dynamically, create a word cloud using a package or custom code, and use Lottie animations to add some visual flair to the app.\n\nFirst, we will take a look at the app's user interface and see how it is organized to make it easy to add and manage users. We will also see how to \"register\" users without using Firebase Auth, by storing their data in a Firebase collection and generating a unique ID for each user.\n\nNext, we will see how to dynamically refresh a screen when something is changed on another screen, using the setState method and the StreamBuilder widget. We will also see how to create a word cloud using the word_cloud package, and how to build our own word cloud using custom code.\n\nThen, we will explore the use of Lottie animations to add some visual interest to the app. We will see how to use the lottie package to display JSON-based animations and how to customize their appearance and behavior.\n\nFinally, we will see how to shuffle the list of users and choose a winner, using the shuffle function from the dart:math library and the random function from the dart:math library. We will also see how to download a CSV file of the Firebase collection and how to delete all data in the collection using the clear method.\n\nBy the end of this tutorial, you will have a good understanding of the features and capabilities of the Yettel app and will have learned how to use Flutter and Firebase to create a dynamic and interactive app. Thanks for watching!\n\nSome of the code used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Apps/Yettel/yettel-christmas-2022.dart\n\nBook me for consultations\nhttps://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/IwhSbx1yN1M",
+        "widgets": "Cg9Db2x1bW5feDUweThqaWcSmgIKEkNvbnRhaW5lcl9ybW93OG12aRLYAQoSQ29udGFpbmVyX29hcnpqejB0GAEiHHISCQAAAAAAAAAAEQAAAAAAAAAA+gMA8gQCCgBilgESNgoKZGltZW5zaW9ucxIoCgwKCmRpbWVuc2lvbnMyGCIWCgkRAAAAAAAAWUASCREAAAAAAABZQBJVCgV3b3JkcxJMCgcKBXdvcmRzIkEIBBIRU2NhZmZvbGRfaWNmeWp1N2ZCAhIASiZ6JAoiCA1CEXoPCg0QBxoHCgV3b3JkcyABSguCAQgKBgoEd29yZBoFV29yZHOCAQVXb3Jkc5gBARgBIiUKIAoWCgkRAAAAAAAAWUASCREAAAAAAABZQBIEWgBiACIA+gMAYgAYBCIOIgQIABgF+gMA8gQCCgA=",
+        "replace": [],
+        "folder": "Custom Widgets",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Widgets/word-cloud.dart",
+        "id": 20
     },
     {
         "video": "https://www.youtube.com/watch?v=_TCVr5R_i78",
@@ -170,7 +260,8 @@
         "embed": "https://www.youtube.com/embed/_TCVr5R_i78",
         "widgets": "",
         "replace": [],
+        "folder": "Videos",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Videos/230301-live.dart",
-        "id": 14
+        "id": 21
     }
 ]

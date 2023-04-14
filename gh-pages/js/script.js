@@ -146,7 +146,7 @@ $(document).ready(function() {
   });
 
   // Add click event handler for copy widgets buttons
-  $('.copy-widgets').on('click', function() {
+  $(document).on('click', '.copy-widgets', function() {
     // const widgetsData = $(this).attr('data-widgets');
     let widgetsData = $(this).attr('data-widgets');
 
@@ -172,7 +172,7 @@ $(document).ready(function() {
   });
 
   // Add click event handler for show-dart-code buttons
-  $('.show-dart-code').on('click', async function() {
+  $(document).on('click', '.show-dart-code', async function() {
     const fileName = $(this).data('filename');
     const localFilePath = $(this).data('localpath');
     const replace = $(this).data('replace');
@@ -240,7 +240,7 @@ $(document).ready(function() {
     dartCodeModal.show();
   });
 
-  $('#copy-code, #copy-code-header').on('click', function() {
+  $(document).on('click', '#copy-code, #copy-code-header', function() {
 	  const codeElement = document.getElementById('code');
 	  const selection = window.getSelection();
 	  const range = document.createRange();
@@ -261,7 +261,7 @@ $(document).ready(function() {
 	  selection.removeAllRanges();
 	});
 
-	$("#copy-text-btn").click(function() {
+  $(document).on('click', '#copy-text-btn', function() {
 	  var textToCopy = $("#text-to-copy");
 	  textToCopy.focus();
 	  textToCopy.select();

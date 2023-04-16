@@ -4,7 +4,7 @@ import json
 from googleapiclient.discovery import build
 
 id_counter = 1
-api_key = os.environ["YOUTUBE_API_KEY"]
+api_key = os.getenv("YOUTUBE_API_KEY")
 
 def extract_info_from_dart_file(dart_file):
     with open(dart_file, 'r') as file:

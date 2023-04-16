@@ -30,5 +30,6 @@ jobs:
 
     - name: Run Python script
       run: python extract_info.py
+      working-directory: ${{ github.workspace }}
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

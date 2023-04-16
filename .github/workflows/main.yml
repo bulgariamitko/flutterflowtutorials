@@ -29,7 +29,11 @@ jobs:
         pip install google-api-python-client
 
     - name: Run Python script
-      run: python -v extract_info.py
+      run: |
+        python --version
+        pwd
+        ls
+        python extract_info.py
       working-directory: ${{ github.workspace }}
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

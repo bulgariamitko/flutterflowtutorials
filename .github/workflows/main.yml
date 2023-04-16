@@ -33,7 +33,7 @@ jobs:
         python --version
         pwd
         ls
-        python extract_info.py
+        python extract-data.py
       working-directory: ${{ github.workspace }}
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

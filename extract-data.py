@@ -23,7 +23,7 @@ def extract_info_from_dart_file(dart_file):
 
     title, desc, embed = '', '', ''
     if video:
-        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+        youtube = build('youtube', 'v3', developerKey=api_key)
         video_id = re.search(r'(?<=v=)[^&#]+', video)
         video_id = video_id.group(0) if video_id else None
 

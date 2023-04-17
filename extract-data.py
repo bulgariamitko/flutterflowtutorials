@@ -21,7 +21,7 @@ def extract_info_from_dart_file(dart_file):
     widgets = widgets.group(1).strip() if widgets else ''
     replace = json.loads(replace.group(1).strip()) if replace else []
 
-    title, desc, embed, status = '', '', '', ''
+    title, desc, embed = '', '', ''
     if video:
         youtube = build('youtube', 'v3', developerKey=api_key)
         video_id = re.search(r'(?<=v=)[^&#]+', video)
@@ -29,7 +29,7 @@ def extract_info_from_dart_file(dart_file):
 
         if video_id:
             response = youtube.videos().list(
-                part='snippet,status',
+                part='snippet',
                 id=video_id
             ).execute()
 
@@ -37,7 +37,6 @@ def extract_info_from_dart_file(dart_file):
                 title = response['items'][0]['snippet']['title']
                 desc = response['items'][0]['snippet']['description']
                 embed = f'https://www.youtube.com/embed/{video_id}'
-                status = response['items'][0]['status']['privacyStatus']
 
     # Extract folder name from dart_file path
     folder = os.path.split(os.path.dirname(dart_file))[-1]
@@ -49,8 +48,7 @@ def extract_info_from_dart_file(dart_file):
         "embed": embed,
         "widgets": widgets,
         "replace": replace,
-        "folder": folder,
-        "status": status
+        "folder": folder
     }
 
     return result

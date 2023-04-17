@@ -21,7 +21,7 @@ def extract_info_from_dart_file(dart_file):
     widgets = widgets.group(1).strip() if widgets else ''
     replace = json.loads(replace.group(1).strip()) if replace else []
 
-    title, desc, embed = '', '', ''
+    title, desc, embed, status = '', '', '', ''
     if video:
         youtube = build('youtube', 'v3', developerKey=api_key)
         video_id = re.search(r'(?<=v=)[^&#]+', video)

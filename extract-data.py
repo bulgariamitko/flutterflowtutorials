@@ -37,6 +37,7 @@ def extract_info_from_dart_file(dart_file):
                 title = response['items'][0]['snippet']['title']
                 desc = response['items'][0]['snippet']['description']
                 embed = f'https://www.youtube.com/embed/{video_id}'
+                status = response['items'][0]['status']['privacyStatus']
 
     # Extract folder name from dart_file path
     folder = os.path.split(os.path.dirname(dart_file))[-1]
@@ -48,7 +49,8 @@ def extract_info_from_dart_file(dart_file):
         "embed": embed,
         "widgets": widgets,
         "replace": replace,
-        "folder": folder
+        "folder": folder,
+        "status": status
     }
 
     return result

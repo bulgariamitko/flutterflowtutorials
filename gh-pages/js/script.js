@@ -118,6 +118,8 @@ $(document).ready(function() {
   });
 
   $.getJSON('gh-pages/data/data.json', async function(data) {
+    // Sort data in descending order
+    data.sort((a, b) => b.id - a.id);
     $.each(data, async function(index, video) {
       const baseUrl = 'https://github.com/bulgariamitko/flutterflowtutorials/blob/main/';
       const localFilePath = video.file_path.replace(baseUrl, '');

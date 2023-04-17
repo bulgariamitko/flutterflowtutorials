@@ -29,7 +29,7 @@ def extract_info_from_dart_file(dart_file):
 
         if video_id:
             response = youtube.videos().list(
-                part='snippet',
+                part='snippet,status',
                 id=video_id
             ).execute()
 

@@ -37,3 +37,11 @@ jobs:
       working-directory: ${{ github.workspace }}
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Update data.json from GitHub Action" || echo "No changes to commit"
+        git push

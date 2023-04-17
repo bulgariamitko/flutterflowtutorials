@@ -263,5 +263,20 @@
         "folder": "Videos",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Videos/230301-live.dart",
         "id": 21
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=HtvtwLmaI0w",
+        "title": "Retrieving Lists and Single Documents from Custom Actions in @FlutterFlow",
+        "desc": "Welcome to my video on how to use FlutterFlow to get a single or list of documents in a Custom Action! If you've been struggling with this, don't worry \u2013 I've got you covered.\n\nIn this tutorial, I'll show you how to use FlutterFlow to retrieve a single or list of documents, and then how to use that information in an On Page Load Action. It's a quick and easy process, and once you know how to do it, you'll be able to use this technique to streamline your workflow and make your projects more efficient.\n\nI'll start by showing you how to set up a Custom Action in FlutterFlow, and then I'll walk you through the process of retrieving a single or list of documents using that Action. I'll also show you how to use that information in an On Page Load Action, so you can see just how useful this technique can be.\n\nBy the end of this video, you'll be a pro at using FlutterFlow to get a single or list of documents, and you'll be able to use that information to make your projects even more dynamic and powerful. So let's get started!\n\nCode used:\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-docs.dart\n\nYou can book me as FF mentor - https://calendly.com/bulgaria_mitko",
+        "embed": "https://www.youtube.com/embed/HtvtwLmaI0w",
+        "widgets": "",
+        "replace": [
+            {
+                "Collection name": "Cars"
+            }
+        ],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc-from-uid.dart",
+        "id": 22
     }
 ]

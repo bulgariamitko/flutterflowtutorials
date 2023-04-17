@@ -6,7 +6,7 @@ from googleapiclient.discovery import build
 id_counter = 1
 api_key = os.getenv("YOUTUBE_API_KEY")
 
-def extract_info_from_dart_file(dart_file):
+def extract_info_from_file(dart_file):
     with open(dart_file, 'r') as file:
         content = file.read()
 
@@ -60,7 +60,7 @@ def main():
 
     for root, dirs, files in os.walk('.'):
         for file in files:
-            if file.endswith('.dart'):
+            if file.endswith('.dart') or file.endswith('.js'):
                 dart_files.append(os.path.join(root, file))
 
     # Load existing JSON data
@@ -72,7 +72,7 @@ def main():
         id_counter = max(item.get('id', 0) for item in existing_data) + 1
 
     for dart_file in dart_files:
-        info = extract_info_from_dart_file(dart_file)
+        info = extract_info_from_file(dart_file)
 
         if info.get('video') and info['video'].lower() != 'no' and 'www.youtube' in info['video']:
             # Convert the local path to a public GitHub path

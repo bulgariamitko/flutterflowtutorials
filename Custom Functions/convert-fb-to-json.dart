@@ -1,5 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// video -
+// video - https://www.youtube.com/watch?v=sauJPpZZ1G0
 // widgets - Cg9Db2x1bW5feDR3ZDdsM28SkQIKEUxpc3RWaWV3XzhsbHRmcGltEtIBCgxSb3dfdGh6Z2dpdDASWwoNVGV4dF9ieG1zMXhjMhgCIkYSEgoLSGVsbG8gV29ybGRABqgBAJoBLAoCAgEqJggGEhFMaXN0Vmlld184bGx0ZnBpbUICKgBKCyIJCgckLmJyYW5k+gMAYgASWgoNVGV4dF8xcXkwMnlvdhgCIkUSEgoLSGVsbG8gV29ybGRABqgBAJoBKwoCAgEqJQgGEhFMaXN0Vmlld184bGx0ZnBpbUICKgBKCiIICgYkLm5hbWX6AwBiABgDIgcaAhAD+gMAGAYiCUIECAEQAvoDAGoaCgUKA2NhchIRCAxCDSILCgcKBWpzb25zEAEYBCIFIgD6AwA=
 // replace - [{"Collection name": "Cars"}, {"Field name 1": "name"}, {"Field name 2": "brand"}]
 // if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko

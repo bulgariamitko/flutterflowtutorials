@@ -2,7 +2,7 @@
 
 // code created by https://www.youtube.com/@flutterflowexpert
 // video tutorial - https://youtube.com/watch?v=TdDFEi7CmOk
-// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
+// support my work - https://github.com/sponsors/bulgariamitko
 
 // Firestore Database rules
 // rules_version = '2';

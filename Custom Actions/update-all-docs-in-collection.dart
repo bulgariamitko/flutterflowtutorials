@@ -1,7 +1,7 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=nHz5o78L0x0
 // update code video - https://youtube.com/watch?v=tWsr7dMKPcA
-// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
+// support my work - https://github.com/sponsors/bulgariamitko
 
 Future updateAllDocsInCollection(
   String? fieldName,

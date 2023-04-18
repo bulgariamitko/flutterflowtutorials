@@ -1,6 +1,6 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://youtube.com/watch?v=Lt0irFF_NpE
-// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
+// support my work - https://github.com/sponsors/bulgariamitko
 
 // TODO change the name of the collection from CarsRecord to yuor collection, lets say UsersRecord
 Future<List<CarsRecord>> getDocsFromCollection(

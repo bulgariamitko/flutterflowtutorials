@@ -1,6 +1,6 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://youtube.com/watch?v=rAw5riRVHuc
-// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
+// support my work - https://github.com/sponsors/bulgariamitko
 
 import 'dart:convert';
 

@@ -1,6 +1,6 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://youtube.com/watch?v=sCS3MfRuEUY
-// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
+// support my work - https://github.com/sponsors/bulgariamitko
 
 Future<void> duplicateDocuments(
     String? collectionName, List<DocumentReference>? documentIds) async {

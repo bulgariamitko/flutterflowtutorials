@@ -1,6 +1,6 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://youtube.com/watch?v=y5GfG-eX1QM
-// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
+// support my work - https://github.com/sponsors/bulgariamitko
 
 import 'dart:convert';
 import 'package:http/http.dart' as http;

@@ -1,6 +1,6 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=mHN0iDPb4oY
-// if you have problem implementing this code you can hire me as a mentor - https://calendly.com/bulgaria_mitko
+// support my work - https://github.com/sponsors/bulgariamitko
 
 // UPDATE! Currently this code is not working because of package dependancy of the FF source code
 // Because html_editor_enhanced >=2.5.1 depends on file_picker ^5.2.0+1 and whats_new depends on file_picker 4.5.1, html_editor_enhanced >=2.5.1 is forbidden.

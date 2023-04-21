@@ -1,5 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// future video - https://www.youtube.com/watch?v=wg4s9hE8N4k
+// video - https://www.youtube.com/watch?v=wg4s9hE8N4k
 // widgets - Cg9Db2x1bW5fZ2g4ZGtyODMSjQIKD0J1dHRvbl9tMnFwZHkxZxgJImtKZgoSCgZSZWNvcmQ6Bgj/////D0AFGQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQPoDAGIAigGHARKAAQoIN2Z2Z2NqaGISdOIBZkJgCg0KC2lzUmVjb3JkaW5nEk8STQgKUkk6RwokChcIDEITIhEKDQoLaXNSZWNvcmRpbmcQARIJCgcSBWZhbHNlEggKBhIEdHJ1ZRoVCg0KC2lzUmVjb3JkaW5nEAUaACAAUAJYAaoCCHpiYm5uc3VsGgIIARKFAQoNVGV4dF91cWk5c3p3dRgCInASEgoLSGVsbG8gV29ybGRABqgBAJoBVgoCAgEqUAgKUkw6Sgo5Ci0IClIpEhkSFwgMQhMiEQoNCgtpc1JlY29yZGluZxABEggKBhIEdHJ1ZSICCAESCAoGEgR0cnVlEgkKBxIFZmFsc2UaAhAD+gMAYgASpgEKEkNvbnRhaW5lcl92bzM3OWN3ORgBIgP6AwBidxI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGMXJqcjY4MhgiFgoJEQAAAAAAAFlAEgkJAAAAAABAf0ASJwoNcmVjb3JkaW5nVGltZRIWCg8KDXJlY29yZGluZ1RpbWUSAxIBNRoMQ2FtZXJhUmVjb3JkggEMQ2FtZXJhUmVjb3JkmAEBGAQiByICIAH6AwA=
 // replace - [{"App State name to start and end video recording": "isRecording"}, {"App State name to the path when video is recording in FB storage": "recordVideoFBStorage"}]
 // support my work - https://github.com/sponsors/bulgariamitko

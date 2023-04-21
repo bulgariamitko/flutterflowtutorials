@@ -13,7 +13,7 @@ Future downloadCollectionAsCSV(List<CarsRecord>? docs) async {
   // Add the company name and address as a header
   String companyName = "Your Company Name";
   String companyAddress = "Your Company Address";
-  String header = "Company Name,Company Address\n$companyName,$companyAddress\n\n";
+  String header = "$companyName,$companyAddress\n\n";
 
   String fileContent = header + "name, brand";
 

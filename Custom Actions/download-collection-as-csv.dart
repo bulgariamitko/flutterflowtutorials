@@ -18,6 +18,12 @@ Future downloadCollectionAsCSV(List<CarsRecord>? docs) async {
       "," +
       record.brand.toString());
 
+  // Example of date formating thanks to Edmund Ong
+  // DateFormat('dd-MM-yyyy').format(record.attendanceDate!) +
+  //     "," +
+  //     DateFormat('HH:mm').format(record.timeIn!) +
+  //     "," +
+
   final fileName = "FF" + DateTime.now().toString() + ".csv";
 
   // Encode the string as a List<int> of UTF-8 bytes

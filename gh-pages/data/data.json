@@ -311,5 +311,44 @@
         "folder": "html_editor_enhanced",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/html_editor_enhanced/rich-text-editor.dart",
         "id": 25
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=wg4s9hE8N4k",
+        "title": "@FlutterFlow One-Click Wonders: Capture Photos & Videos Effortlessly in Your App",
+        "desc": "Hey everyone! Welcome to \"@FlutterFlow One-Click Wonders: Capture Photos & Videos Effortlessly in Your App,\" an exciting tutorial that will guide you through the process of integrating seamless camera functionality into your app. With just one click, your users will be able to capture photos and record videos with ease.\n\nIn this comprehensive tutorial, we'll cover the following key topics:\n\nAppState Integration: Learn how to utilize AppState to take a picture within your app, streamlining the process for a smooth user experience.\nStoring Photos in Firebase Storage: I'll show you how to store the captured photos in Firebase Storage and create a document, ensuring efficient data management and easy retrieval.\nOrganizing Photos in Folders: Discover how to create folders for organizing your pictures, making it easier for users to manage their captured memories.\nRecording Videos with a Button: Find out how to record videos when a button is pressed, providing users with a seamless and straightforward way to capture videos.\nStoring Videos in Firebase Storage: I'll guide you through the process of storing the recorded videos in Firebase Storage, allowing for secure storage and easy access.\nBy the end of this tutorial, you'll have the skills and knowledge needed to effortlessly integrate one-click photo and video capturing functionality into your app. You'll understand how to use AppState, store media in Firebase Storage, and organize your content effectively.\n\nJoin me on this thrilling journey as we explore the world of one-click wonders, capturing photos and videos effortlessly in your app, and taking your app development skills to new heights!\n\nCode Used\nhttps://github.com/bulgariamitko/flutterflowtutorials/tree/main/Packages/camera\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/str-to-img-path.dart\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
+        "embed": "https://www.youtube.com/embed/wg4s9hE8N4k",
+        "widgets": "Cg9Db2x1bW5fMGU0aGRrZ3ISpAQKD0J1dHRvbl94dm40aWJodRgJImpKZQoRCgVTbWlsZToGCP////8PQAUZAAAAAAAAAEApAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKAZ8DEpgDCghreDZ3aDV2ZxIr4gEdQhcKCwoJbWFrZVBob3RvEggKBhIEdHJ1ZVACWAGqAgh2MHNqbXdqeireAgoIcGE0Zm1zaTYSEfoBAwiIJ6oCCGg3dnVqM2RhKr4CCgg3MWx6OHZmbhKxAiKjAgqgAgoICgZwaG90b3MSkwIKGgoEZGF0ZRISCgYKBGRhdGUyCAgBQgQaAggBCkAKBG5hbWUSOAoGCgRuYW1lMi4IClIqCgASBwoFEgNwaWMSExIRCAxCDSILCgcKBWluZGV4EAESCAoGEgQuanBnCiAKB3VzZXJSZWYSFQoJCgd1c2VyUmVmMggIAkIECgIICAoeCgZ1c2VyaWQSFAoICgZ1c2VyaWQyCAgCQgQKAggCCioKCmZvbGRlck5hbWUSHAoMCgpmb2xkZXJOYW1lEgwSCk5ldyBmb2xkZXIKRQoEcGF0aBI9CgYKBHBhdGgyMwgKUi8SFhIUCAxCECIOCgoKCGZpbGVQYXRoEAEaFQoMc3RyVG9JbWdQYXRoEgVvN2Vxa6oCCHIzdTg4anFjGgIIARKFAQoNVGV4dF96bDloMGdmcRgCInASEgoLSGVsbG8gV29ybGRABqgBAJoBVgoCAgEqUAgKUkw6Sgo5Ci0IClIpEhkSFwgMQhMiEQoNCgtpc1JlY29yZGluZxABEggKBhIEdHJ1ZSICCAESCAoGEgR0cnVlEgkKBxIFZmFsc2UaAhAD+gMAYgASewoSQ29udGFpbmVyX2p5Y2d5bnFkGAEiA/oDAGJNEj4KCmRpbWVuc2lvbnMSMAoUCgpkaW1lbnNpb25zEgYxcmpyNjgyGCIWCgkRAAAAAAAAWUASCQkAAAAAAEB/QBoLQ2FtZXJhUGhvdG+CAQtDYW1lcmFQaG90b5gBARKqAgoPQ29sdW1uXzIxcWRjbGhoEiwKDVRleHRfYm51OTE3a3kYAiIXEhIKC0ZvbGRlciBuYW1lQAaoAQD6AwBiABLfAQoMUm93X2Y5a3JqZjFwEoUBCg5JbWFnZV81YWR5YXI4cBgHIm8yQAoiaHR0cHM6Ly9waWNzdW0ucGhvdG9zL3NlZWQvMzMyLzYwMBABGAMiFgoJCQAAAAAAAFlAEgkJAAAAAAAAWUCaAScKAgYBKiEIBBIMUm93X2Y5a3JqZjFwQgISAEoLggEICgYKBHBhdGj6AwBiABgDIgoaAPoDAPIEAgoAUjkKDhAHGggKBnBob3RvcyABEiUKCAoGcGhvdG9zEhcKCQoHdXNlclJlZhABSggIAkIECgIICCgAOgAYBCIFIgD6AwAYBCIHIgIgAfoDAA==",
+        "replace": [
+            {
+                "App State name to take picture": "makePhoto"
+            },
+            {
+                "App State name to index the picture": "index"
+            },
+            {
+                "App State name to the file path in FB storage": "filePath"
+            }
+        ],
+        "folder": "camera",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/camera/camera-pictures.dart",
+        "id": 26
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=wg4s9hE8N4k",
+        "title": "@FlutterFlow One-Click Wonders: Capture Photos & Videos Effortlessly in Your App",
+        "desc": "Hey everyone! Welcome to \"@FlutterFlow One-Click Wonders: Capture Photos & Videos Effortlessly in Your App,\" an exciting tutorial that will guide you through the process of integrating seamless camera functionality into your app. With just one click, your users will be able to capture photos and record videos with ease.\n\nIn this comprehensive tutorial, we'll cover the following key topics:\n\nAppState Integration: Learn how to utilize AppState to take a picture within your app, streamlining the process for a smooth user experience.\nStoring Photos in Firebase Storage: I'll show you how to store the captured photos in Firebase Storage and create a document, ensuring efficient data management and easy retrieval.\nOrganizing Photos in Folders: Discover how to create folders for organizing your pictures, making it easier for users to manage their captured memories.\nRecording Videos with a Button: Find out how to record videos when a button is pressed, providing users with a seamless and straightforward way to capture videos.\nStoring Videos in Firebase Storage: I'll guide you through the process of storing the recorded videos in Firebase Storage, allowing for secure storage and easy access.\nBy the end of this tutorial, you'll have the skills and knowledge needed to effortlessly integrate one-click photo and video capturing functionality into your app. You'll understand how to use AppState, store media in Firebase Storage, and organize your content effectively.\n\nJoin me on this thrilling journey as we explore the world of one-click wonders, capturing photos and videos effortlessly in your app, and taking your app development skills to new heights!\n\nCode Used\nhttps://github.com/bulgariamitko/flutterflowtutorials/tree/main/Packages/camera\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/str-to-img-path.dart\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
+        "embed": "https://www.youtube.com/embed/wg4s9hE8N4k",
+        "widgets": "Cg9Db2x1bW5fZ2g4ZGtyODMSjQIKD0J1dHRvbl9tMnFwZHkxZxgJImtKZgoSCgZSZWNvcmQ6Bgj/////D0AFGQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQPoDAGIAigGHARKAAQoIN2Z2Z2NqaGISdOIBZkJgCg0KC2lzUmVjb3JkaW5nEk8STQgKUkk6RwokChcIDEITIhEKDQoLaXNSZWNvcmRpbmcQARIJCgcSBWZhbHNlEggKBhIEdHJ1ZRoVCg0KC2lzUmVjb3JkaW5nEAUaACAAUAJYAaoCCHpiYm5uc3VsGgIIARKFAQoNVGV4dF91cWk5c3p3dRgCInASEgoLSGVsbG8gV29ybGRABqgBAJoBVgoCAgEqUAgKUkw6Sgo5Ci0IClIpEhkSFwgMQhMiEQoNCgtpc1JlY29yZGluZxABEggKBhIEdHJ1ZSICCAESCAoGEgR0cnVlEgkKBxIFZmFsc2UaAhAD+gMAYgASpgEKEkNvbnRhaW5lcl92bzM3OWN3ORgBIgP6AwBidxI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGMXJqcjY4MhgiFgoJEQAAAAAAAFlAEgkJAAAAAABAf0ASJwoNcmVjb3JkaW5nVGltZRIWCg8KDXJlY29yZGluZ1RpbWUSAxIBNRoMQ2FtZXJhUmVjb3JkggEMQ2FtZXJhUmVjb3JkmAEBGAQiByICIAH6AwA=",
+        "replace": [
+            {
+                "App State name to start and end video recording": "isRecording"
+            },
+            {
+                "App State name to the path when video is recording in FB storage": "recordVideoFBStorage"
+            }
+        ],
+        "folder": "camera",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/camera/camera-videos.dart",
+        "id": 27
     }
 ]

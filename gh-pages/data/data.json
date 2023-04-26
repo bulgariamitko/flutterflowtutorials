@@ -350,5 +350,26 @@
         "folder": "camera",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/camera/camera-videos.dart",
         "id": 27
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=sauJPpZZ1G0",
+        "title": "Efficient Data Management: Store Document Lists in @FlutterFlow App State",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/cVd9dfXF\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\n\nHey everyone! Welcome to \"Efficient Data Management: Store Document Lists in FlutterFlow App State,\" a comprehensive tutorial that will guide you through the process of storing lists of documents in your FlutterFlow App State for seamless data management and enhanced app functionality.\n\nThroughout this tutorial, we'll cover essential steps and techniques to help you effectively manage your data, including:\n\nRetrieving Lists of Documents: Learn how to fetch lists of documents from Firebase by simply using the name of the collection, streamlining your data retrieval process.\nConverting Lists to JSON: I'll show you how to use a custom function to convert the retrieved lists of documents into JSON format, allowing for easier data manipulation and storage.\nStoring Data in App State: Discover how to store the JSON data in your FlutterFlow App State, enabling you to access and manage this data across your entire app.\nBy the end of this tutorial, you'll have a thorough understanding of how to efficiently store and manage document lists within your FlutterFlow App State. This knowledge will empower you to create more dynamic and data-driven apps, enhancing the overall user experience.\n\nJoin me on this exciting journey as we dive into the world of efficient data management, mastering the art of storing document lists in FlutterFlow App State and taking your app development skills to new heights!\n\nhttps://bulgariamitko.github.io/flutterflowtutorials/",
+        "embed": "https://www.youtube.com/embed/sauJPpZZ1G0",
+        "widgets": "Cg9Db2x1bW5feDR3ZDdsM28SkQIKEUxpc3RWaWV3XzhsbHRmcGltEtIBCgxSb3dfdGh6Z2dpdDASWwoNVGV4dF9ieG1zMXhjMhgCIkYSEgoLSGVsbG8gV29ybGRABqgBAJoBLAoCAgEqJggGEhFMaXN0Vmlld184bGx0ZnBpbUICKgBKCyIJCgckLmJyYW5k+gMAYgASWgoNVGV4dF8xcXkwMnlvdhgCIkUSEgoLSGVsbG8gV29ybGRABqgBAJoBKwoCAgEqJQgGEhFMaXN0Vmlld184bGx0ZnBpbUICKgBKCiIICgYkLm5hbWX6AwBiABgDIgcaAhAD+gMAGAYiCUIECAEQAvoDAGoaCgUKA2NhchIRCAxCDSILCgcKBWpzb25zEAEYBCIFIgD6AwA=",
+        "replace": [
+            {
+                "Collection name": "Cars"
+            },
+            {
+                "Field name 1": "name"
+            },
+            {
+                "Field name 2": "brand"
+            }
+        ],
+        "folder": "Custom Functions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/convert-fb-to-json.dart",
+        "id": 28
     }
 ]

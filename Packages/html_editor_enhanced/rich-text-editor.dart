@@ -1,9 +1,8 @@
 // code created by https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=mHN0iDPb4oY
+// widgets - Cg9Db2x1bW5fcHc3OTlqazMSxgEKEkNvbnRhaW5lcl9pY2U0eHE3NBgBIgP6AwBilgESPgoKZGltZW5zaW9ucxIwChQKCmRpbWVuc2lvbnMSBnltbzllbDIYIhYKCREAAAAAAABZQBIJEQAAAAAAAFRAEkYKC2N1cnJlbnRIdG1sEjcKFQoLY3VycmVudEh0bWwSBmoxdTlncCIeCAxCGiIYChQKEnRleHRGcm9tSHRtbEVkaXRvchABGgxNeUh0bWxFZGl0b3KCAQxNeUh0bWxFZGl0b3KYAQEYBCIFIgD6AwA=
+// replace - [{"Collection name": "htmleditor"}, {"Field name": "htmltext"}, {"App State name": "textFromHtmlEditor"}]
 // support my work - https://github.com/sponsors/bulgariamitko
-
-// UPDATE! Currently this code is not working because of package dependancy of the FF source code
-// Because html_editor_enhanced >=2.5.1 depends on file_picker ^5.2.0+1 and whats_new depends on file_picker 4.5.1, html_editor_enhanced >=2.5.1 is forbidden.
 
 import '../../flutter_flow/flutter_flow_widgets.dart';
 
@@ -63,8 +62,7 @@ class _MyHtmlEditorState extends State<MyHtmlEditor> {
           onPressed: () async {
             String data = await controller.getText();
             // save to Firebase
-            final doc = createHtmleditorRecordData(text: data);
-
+            final doc = {'htmltext': data};
             collectionRef.limit(1).get().then((snapshot) {
               if (snapshot.docs.isNotEmpty) {
                 // update document

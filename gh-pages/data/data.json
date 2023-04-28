@@ -349,5 +349,26 @@
         "folder": "Custom Functions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/convert-fb-to-json.dart",
         "id": 26
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=mHN0iDPb4oY",
+        "title": "Integrating the Html Rich Text Editor with @Firebase in @FlutterFlow",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\n\nHi and welcome to this tutorial on how to implement a HTML rich text editor in Flutter and connect it to Firebase.\n\nA rich text editor is a tool that allows users to create and edit formatted text, including bold, italic, and underlined text, as I'll as insert images, links, and other media. Implementing a rich text editor in Flutter can be a useful way to allow users to create and edit formatted content in your app.\n\nIn this tutorial, I will show you how to use the Flutter framework to implement a HTML rich text editor and connect it to Firebase. This process involves creating a text editor using a package like html_editor_enhanced, setting up a Firebase project and database, and using the cloud_firestore package to read and write data to the database.\n\nI will start by installing the necessary dependencies and creating a text editor using the html_editor_enhanced package. Then, I will set up a Firebase project and database and import the cloud_firestore package in our Flutter code.\n\nNext, I will demonstrate how to use the cloud_firestore package to read and write data to the database, including retrieving data for display in the text editor and saving user-generated content to the database.\n\nFinally, I will show you how to use the html_editor_enhanced package to format and style the text in the editor and how to insert images, links, and other media.\n\nBy the end of this tutorial, you will have learned how to implement a HTML rich text editor in Flutter and connect it to Firebase, and will have the knowledge and tools to do so in your own projects. So, stay tuned and thanks for watching!\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/html_editor_enhanced/rich-text-editor.dart\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
+        "embed": "https://www.youtube.com/embed/mHN0iDPb4oY",
+        "widgets": "Cg9Db2x1bW5fcHc3OTlqazMSxgEKEkNvbnRhaW5lcl9pY2U0eHE3NBgBIgP6AwBilgESPgoKZGltZW5zaW9ucxIwChQKCmRpbWVuc2lvbnMSBnltbzllbDIYIhYKCREAAAAAAABZQBIJEQAAAAAAAFRAEkYKC2N1cnJlbnRIdG1sEjcKFQoLY3VycmVudEh0bWwSBmoxdTlncCIeCAxCGiIYChQKEnRleHRGcm9tSHRtbEVkaXRvchABGgxNeUh0bWxFZGl0b3KCAQxNeUh0bWxFZGl0b3KYAQEYBCIFIgD6AwA=",
+        "replace": [
+            {
+                "Collection name": "htmleditor"
+            },
+            {
+                "Field name": "htmltext"
+            },
+            {
+                "App State name": "textFromHtmlEditor"
+            }
+        ],
+        "folder": "html_editor_enhanced",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/html_editor_enhanced/rich-text-editor.dart",
+        "id": 27
     }
 ]

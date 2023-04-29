@@ -371,28 +371,4 @@
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/html_editor_enhanced/rich-text-editor.dart",
         "id": 27
     },
-    {
-        "video": "https://www.youtube.com/watch?v=zVc4UuIT6Gk",
-        "title": "Kickstart Your @Firebase Cloud Functions Journey with @FlutterFlow: Step-by-Step Tutorial",
-        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\n\nHey everyone! Welcome to \"Kickstart Your @Firebase Cloud Functions Journey with @FlutterFlow: Step-by-Step Tutorial,\" where I'll be guiding you through the exciting world of Firebase Cloud Functions in your FlutterFlow projects, providing you with the knowledge and skills needed to elevate your app development experience.\n\nIn this comprehensive tutorial, we'll cover the following key topics:\n\nSeven Triggers of Firebase Cloud Functions: I'll introduce you to the seven different triggers that can be utilized with Firebase Cloud Functions, ensuring you have a thorough understanding of how to harness these powerful tools effectively in your FlutterFlow projects.\nConnecting Your Computer to Firebase: Learn the step-by-step process of establishing a connection between your computer and Firebase, providing you with the necessary setup to start working with Cloud Functions.\nDeploying Your First Cloud Function: I'll walk you through the process of creating and deploying your very first Cloud Function, giving you a solid foundation to build upon as you explore the full potential of Firebase Cloud Functions in your app development journey.\nBy the end of this step-by-step tutorial, you'll be well-equipped with the knowledge and skills needed to implement Firebase Cloud Functions into your FlutterFlow projects seamlessly. You'll have a deeper understanding of the different triggers, how to connect your computer to Firebase, and how to deploy your first Cloud Function, empowering you to create more powerful and dynamic apps.\n\nJoin me on this exciting adventure as we kickstart your Firebase Cloud Functions journey with FlutterFlow and take your app development skills to the next level!\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
-        "embed": "https://www.youtube.com/embed/zVc4UuIT6Gk",
-        "widgets": "",
-        "replace": [
-            {
-                "Main domain": "mail.example.com"
-            },
-            {
-                "Sender email": "demo@example.com"
-            },
-            {
-                "Email password": "myPassword"
-            },
-            {
-                "Field name to display name": "displayName"
-            }
-        ],
-        "folder": "Cloud Functions",
-        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/send-welcome-email.js",
-        "id": 28
-    }
 ]

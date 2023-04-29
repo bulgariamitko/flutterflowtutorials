@@ -1,5 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// video - https://www.youtube.com/watch?v=zVc4UuIT6Gk
+// video - https://www.youtube.com/watch?v=ZVCAw2JHZ_Y
 // replace - [{"Main domain": "mail.example.com"}, {"Sender email": "demo@example.com"}, {"Email password": "myPassword"}, {"Field name to display name": "displayName"}]
 // support my work - https://github.com/sponsors/bulgariamitko
 

@@ -370,5 +370,29 @@
         "folder": "html_editor_enhanced",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/html_editor_enhanced/rich-text-editor.dart",
         "id": 27
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=ZVCAw2JHZ_Y",
+        "title": "Automate User Registration Emails with @Firebase Cloud Functions: Step-by-Step Guide",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\n\nHey everyone! Welcome to \"Automate User Registration Emails with Firebase Cloud Functions: Step-by-Step Guide,\" a comprehensive tutorial designed to help you streamline your app's user registration process by automatically sending emails when a user registers in your app.\n\nIn this in-depth tutorial, we'll cover the essential steps and techniques to help you effectively manage your app's user registration process, including:\n\nUnderstanding Firebase Cloud Functions: Get a solid grasp of Firebase Cloud Functions and how they can be used to automate your app's user registration process.\nSetting up the Email Functionality: Learn how to create the necessary functions to automatically send an email when a user registers in your app.\nWriting the Actual Code: I'll guide you through the process of writing the actual code needed for automating email notifications during user registration.\nDeploying to Firebase: Discover how to deploy your custom code to your Firebase project, enabling the automatic email functionality for your app.\nBy the end of this tutorial, you'll have a thorough understanding of how to automate user registration emails using Firebase Cloud Functions. This knowledge will empower you to create a more streamlined and user-friendly registration process for your app, enhancing the overall user experience.\n\nJoin me on this exciting journey as we dive into the world of Firebase Cloud Functions, mastering the art of automating user registration emails, and taking your app development skills to new heights!\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
+        "embed": "https://www.youtube.com/embed/ZVCAw2JHZ_Y",
+        "widgets": "",
+        "replace": [
+            {
+                "Main domain": "mail.example.com"
+            },
+            {
+                "Sender email": "demo@example.com"
+            },
+            {
+                "Email password": "myPassword"
+            },
+            {
+                "Field name to display name": "displayName"
+            }
+        ],
+        "folder": "Cloud Functions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/send-welcome-email.js",
+        "id": 28
     }
 ]

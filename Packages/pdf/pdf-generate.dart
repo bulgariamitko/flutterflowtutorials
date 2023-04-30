@@ -82,6 +82,8 @@ Future pdfInvoiceDownload(
               children: [
                 pw.Text('Total:'),
                 pw.Text('126'),
+                pw.Image(netImage),
+                pw.Image(image),
               ],
             ),
           ],

@@ -1,5 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// future video - https://www.youtube.com/watch?v=_2KJuCccuhg
+// future video - https://www.youtube.com/watch?v=0J6EJAhIius
 // replace - [{"Name of json auth file": "auth.json"}, {"Push notification title": "Your Title"}, {"Push notification description": "Your Description"}, {"The UID of the user you want to send the push notification to": "user-id"}, {"Collection name": "notifications"}, {"Person's name": "John Doe"}, {"Person's email": "johndoe@example.com"}, {"FCM token of the device (can take it from production db)": "very-long-fcm-token"}]
 // support my work - https://github.com/sponsors/bulgariamitko
 

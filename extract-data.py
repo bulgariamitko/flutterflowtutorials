@@ -20,7 +20,7 @@ def extract_info_from_file(dart_file):
     video = video.group(1).strip() if video else ''
     widgets = widgets.group(1).strip() if widgets else ''
     # try:
-        replace = json.loads(replace.group(1).strip()) if replace else []
+    replace = json.loads(replace.group(1).strip()) if replace else []
     # except json.JSONDecodeError as e:
     #     print("Error decoding JSON:", e)
     #     print("Invalid JSON object:", replace.group(1).strip())

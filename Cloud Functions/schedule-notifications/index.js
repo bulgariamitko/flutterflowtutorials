@@ -56,7 +56,6 @@ exports.sendNotification = functions.https.onRequest(async (req, res) => {
   res.status(200).send('Notification sent successfully.');
 });
 
-// sample webhook url
 // https://us-central1-[PROJECT-ID].cloudfunctions.net/sendNotification?userId=[USERID]&title=demo&desc=my.desc
 // http://127.0.0.1:5001/[PROJECT-ID]/us-central1/sendNotification?userId=[USERID]&title=demo&desc=my.desc
 
@@ -151,26 +150,34 @@ exports.calculateServerTime = functions.firestore
 
 
 // PART 3 - check every min for serverCron and if it is true send the notification
+function doCronExpressionsMatch(cron1, currentTime) {
+  const cron1NextRun = cronParser.parseExpression(cron1).next().toDate();
+
+  // Round down the milliseconds of both the cron1NextRun and currentTime to the nearest minute
+  const roundedCron1NextRun = new Date(Math.floor(cron1NextRun.getTime() / 60000) * 60000);
+  const roundedCurrentTime = new Date(Math.floor(currentTime.getTime() / 60000) * 60000);
+
+  return roundedCron1NextRun.getTime() === roundedCurrentTime.getTime();
+}
+
 const checkAndSendNotifications = new CronJob('* * * * *', async function () {
   const notificationsRef = admin.firestore().collection('notifications');
-  const currentTime = moment.utc().format('m H D M d');
-  const currentTimeArray = currentTime.split(' ');
+  const currentTime = moment.utc();
+  const currentTimeFormatted = currentTime.format('m H D M d');
 
   const snapshot = await notificationsRef.get();
 
+
   snapshot.forEach(async (doc) => {
     const { serverCron, userRef, title, desc } = doc.data();
-    const serverCronArray = serverCron.split(' ');
 
     // Check if current time matches serverCron
-    const interval = cronParser.parseExpression(serverCron, { utc: true });
-    const previousDate = interval.prev().toDate();
-    const nextDate = interval.next().toDate();
-    const currentTime = moment.utc();
-    const isMatch = currentTime.isBetween(previousDate, nextDate);
+     const currentTime = new Date();
+      const currentTimeFormatted = moment(currentTime).format('m H D M d');
+      const isMatch = doCronExpressionsMatch(serverCron, currentTime);
 
 
-    if (isMatch) {
+      if (isMatch) {
       // Check if userRef is a DocumentReference object
       if (userRef instanceof admin.firestore.DocumentReference) {
         const fcmTokensSnapshot = await userRef.collection('fcm_tokens').get();

@@ -269,17 +269,6 @@
         "id": 21
     },
     {
-        "video": "https://www.youtube.com/watch?v=zVc4UuIT6Gk",
-        "title": "Kickstart Your @Firebase Cloud Functions Journey with @FlutterFlow: Step-by-Step Tutorial",
-        "desc": "Hey everyone! Welcome to \"Kickstart Your @Firebase Cloud Functions Journey with @FlutterFlow: Step-by-Step Tutorial,\" where I'll be guiding you through the exciting world of Firebase Cloud Functions in your FlutterFlow projects, providing you with the knowledge and skills needed to elevate your app development experience.\n\nIn this comprehensive tutorial, we'll cover the following key topics:\n\nSeven Triggers of Firebase Cloud Functions: I'll introduce you to the seven different triggers that can be utilized with Firebase Cloud Functions, ensuring you have a thorough understanding of how to harness these powerful tools effectively in your FlutterFlow projects.\nConnecting Your Computer to Firebase: Learn the step-by-step process of establishing a connection between your computer and Firebase, providing you with the necessary setup to start working with Cloud Functions.\nDeploying Your First Cloud Function: I'll walk you through the process of creating and deploying your very first Cloud Function, giving you a solid foundation to build upon as you explore the full potential of Firebase Cloud Functions in your app development journey.\nBy the end of this step-by-step tutorial, you'll be well-equipped with the knowledge and skills needed to implement Firebase Cloud Functions into your FlutterFlow projects seamlessly. You'll have a deeper understanding of the different triggers, how to connect your computer to Firebase, and how to deploy your first Cloud Function, empowering you to create more powerful and dynamic apps.\n\nJoin me on this exciting adventure as we kickstart your Firebase Cloud Functions journey with FlutterFlow and take your app development skills to the next level!\n\nhttps://bulgariamitko.github.io/flutterflowtutorials/",
-        "embed": "https://www.youtube.com/embed/zVc4UuIT6Gk",
-        "widgets": "",
-        "replace": [],
-        "folder": "Cloud Functions",
-        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/hello-world.js",
-        "id": 22
-    },
-    {
         "video": "https://www.youtube.com/watch?v=9HngDsCIJPY",
         "title": "Create Your Own PDF Files in @FlutterFlow with Just a Few Clicks + Amazing bonus content \ud83d\udca5\ud83d\udd25\ud83d\udca8",
         "desc": "In this video, we'll show you how to easily create your own PDF files using FlutterFlow. With just a few clicks, you'll be able to generate professional-quality PDF documents for any purpose. And as a bonus, we'll also show you some amazing content that will take your PDF creation skills to the next level. Whether you're a business owner, freelancer, or student, this tutorial is perfect for you. So don't wait any longer, start creating your own PDFs today!\n\nCode used for the pdf\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/pdf-generate.dart\n\nCode used for uploading any file type\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/upload-multi-any-file-type.dart\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
@@ -288,7 +277,7 @@
         "replace": [],
         "folder": "pdf",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/pdf/pdf-generate.dart",
-        "id": 23
+        "id": 22
     },
     {
         "video": "https://www.youtube.com/watch?v=wg4s9hE8N4k",
@@ -309,7 +298,7 @@
         ],
         "folder": "camera",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/camera/camera-pictures.dart",
-        "id": 24
+        "id": 23
     },
     {
         "video": "https://www.youtube.com/watch?v=wg4s9hE8N4k",
@@ -327,7 +316,7 @@
         ],
         "folder": "camera",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/camera/camera-videos.dart",
-        "id": 25
+        "id": 24
     },
     {
         "video": "https://www.youtube.com/watch?v=sauJPpZZ1G0",
@@ -348,7 +337,7 @@
         ],
         "folder": "Custom Functions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/convert-fb-to-json.dart",
-        "id": 26
+        "id": 25
     },
     {
         "video": "https://www.youtube.com/watch?v=mHN0iDPb4oY",
@@ -369,31 +358,7 @@
         ],
         "folder": "html_editor_enhanced",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/html_editor_enhanced/rich-text-editor.dart",
-        "id": 27
-    },
-    {
-        "video": "https://www.youtube.com/watch?v=ZVCAw2JHZ_Y",
-        "title": "Automate User Registration Emails with @Firebase Cloud Functions: Step-by-Step Guide",
-        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\n\nHey everyone! Welcome to \"Automate User Registration Emails with Firebase Cloud Functions: Step-by-Step Guide,\" a comprehensive tutorial designed to help you streamline your app's user registration process by automatically sending emails when a user registers in your app.\n\nIn this in-depth tutorial, we'll cover the essential steps and techniques to help you effectively manage your app's user registration process, including:\n\nUnderstanding Firebase Cloud Functions: Get a solid grasp of Firebase Cloud Functions and how they can be used to automate your app's user registration process.\nSetting up the Email Functionality: Learn how to create the necessary functions to automatically send an email when a user registers in your app.\nWriting the Actual Code: I'll guide you through the process of writing the actual code needed for automating email notifications during user registration.\nDeploying to Firebase: Discover how to deploy your custom code to your Firebase project, enabling the automatic email functionality for your app.\nBy the end of this tutorial, you'll have a thorough understanding of how to automate user registration emails using Firebase Cloud Functions. This knowledge will empower you to create a more streamlined and user-friendly registration process for your app, enhancing the overall user experience.\n\nJoin me on this exciting journey as we dive into the world of Firebase Cloud Functions, mastering the art of automating user registration emails, and taking your app development skills to new heights!\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
-        "embed": "https://www.youtube.com/embed/ZVCAw2JHZ_Y",
-        "widgets": "",
-        "replace": [
-            {
-                "Main domain": "mail.example.com"
-            },
-            {
-                "Sender email": "demo@example.com"
-            },
-            {
-                "Email password": "myPassword"
-            },
-            {
-                "Field name to display name": "displayName"
-            }
-        ],
-        "folder": "Cloud Functions",
-        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/send-welcome-email.js",
-        "id": 28
+        "id": 26
     },
     {
         "video": "https://www.youtube.com/watch?v=_2KJuCccuhg",
@@ -404,7 +369,7 @@
         "replace": [],
         "folder": "Custom Functions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/create-dynamic-link.dart",
-        "id": 29
+        "id": 27
     },
     {
         "video": "https://www.youtube.com/watch?v=K-Xbub484lA",
@@ -422,7 +387,7 @@
         ],
         "folder": "Custom Widgets",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Widgets/re-order-list.dart",
-        "id": 30
+        "id": 28
     },
     {
         "video": "https://www.youtube.com/watch?v=K-Xbub484lA",
@@ -433,7 +398,7 @@
         "replace": [],
         "folder": "Custom Functions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/json-to-string-reorder.dart",
-        "id": 31
+        "id": 29
     },
     {
         "video": "https://www.youtube.com/watch?v=ZVCAw2JHZ_Y",
@@ -457,7 +422,7 @@
         ],
         "folder": "welcome-email",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/welcome-email/index.js",
-        "id": 32
+        "id": 30
     },
     {
         "video": "https://www.youtube.com/watch?v=zVc4UuIT6Gk",
@@ -468,6 +433,6 @@
         "replace": [],
         "folder": "hello-world",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/hello-world/index.js",
-        "id": 33
+        "id": 31
     }
 ]

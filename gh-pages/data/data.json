@@ -382,7 +382,7 @@
                 "Argument name": "list"
             },
             {
-                "App state name - list of JSON's": "citiesJson"
+                "App state name - list of JSONs": "citiesJson"
             }
         ],
         "folder": "Custom Widgets",

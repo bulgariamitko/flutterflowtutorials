@@ -163,8 +163,6 @@ function doCronExpressionsMatch(cron1, currentTime) {
 const checkAndSendNotifications = new CronJob('* * * * *', async function () {
   const notificationsRef = admin.firestore().collection('notifications');
   const currentTime = moment.utc();
-  const currentTimeFormatted = currentTime.format('m H D M d');
-
   const snapshot = await notificationsRef.get();
 
 
@@ -173,7 +171,6 @@ const checkAndSendNotifications = new CronJob('* * * * *', async function () {
 
     // Check if current time matches serverCron
      const currentTime = new Date();
-      const currentTimeFormatted = moment(currentTime).format('m H D M d');
       const isMatch = doCronExpressionsMatch(serverCron, currentTime);
 
 

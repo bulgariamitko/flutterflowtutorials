@@ -455,5 +455,16 @@
         "folder": "password-reset",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/password-reset/index.js",
         "id": 32
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=QOIbdhPrNuE",
+        "title": "",
+        "desc": "",
+        "embed": "",
+        "widgets": "",
+        "replace": [],
+        "folder": "Firebase",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Firebase/add-new-doc.js",
+        "id": 33
     }
 ]

@@ -1,5 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// future video - https://www.youtube.com/watch?v=QOIbdhPrNuE
+// video - https://www.youtube.com/watch?v=QOIbdhPrNuE
 // replace - [{"Name of json auth file": "auth.json"}, {"Collection name": "demo"}, {"Text": "Sample text"}, {"Number": "42"}, {"Bool": "true"}, {"Array": "['item1', 'item2', 'item3']"}, {"GeoPoint": "37.421999, -122.084057"}, {"DocID": "exampleCollection/exampleDoc"} ]
 // support my work - https://github.com/sponsors/bulgariamitko
 

@@ -177,7 +177,7 @@ const checkAndSendNotifications = new CronJob('* * * * *', async function () {
       if (isMatch) {
       // Check if userRef is a DocumentReference object
       if (userRef instanceof admin.firestore.DocumentReference) {
-        const fcmTokensSnapshot = await userRef.collection('fcm_tokens').get();
+        const fcmTokensSnapshot = await userRef.collection('fcm_tokens').orderBy('created_at', 'desc').limit(1).get();
 
         fcmTokensSnapshot.forEach(async (tokenDoc) => {
           const tokenData = tokenDoc.data();

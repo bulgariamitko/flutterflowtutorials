@@ -455,5 +455,16 @@
         "folder": "password-reset",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/password-reset/index.js",
         "id": 32
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=QOIbdhPrNuE",
+        "title": "Effortless Firebase Testing: Automate New Document Creation",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nWelcome to \"Effortless Firebase Testing: Automate New Document Creation,\" an insightful tutorial designed to help you automate the process of creating new documents in Firebase using Node, firebase-admin, and a simple JavaScript file from your own computer.\n\nIn this comprehensive tutorial, we will cover the essential steps to streamline your Firebase testing workflow, including:\n\nSetting Up Your Environment: Learn how to configure your computer with Node and firebase-admin, ensuring a smooth and hassle-free experience.\nCreating a JavaScript File: I'll guide you through the process of creating a simple JavaScript file, which will be the foundation for automating new document creation.\nConnecting to Firebase: Discover how to establish a connection between your JavaScript file and Firebase, allowing seamless communication for automated document creation.\nWriting and Deploying the Script: Understand how to write a script to create new documents in Firebase automatically, and then deploy it using Node and firebase-admin.\nEnhancing Your Firebase Testing Workflow: Learn how automated document creation can significantly improve the efficiency and effectiveness of your Firebase testing process.\nBy the end of this tutorial, you'll have a thorough understanding of how to automate the creation of new documents in Firebase using Node, firebase-admin, and a simple JavaScript file. This knowledge will empower you to streamline your Firebase testing process, save time, and ensure a more efficient workflow.\n\nJoin me on this exciting journey as we master the art of automating Firebase document creation and take your app development skills to new heights!",
+        "embed": "https://www.youtube.com/embed/QOIbdhPrNuE",
+        "widgets": "",
+        "replace": [],
+        "folder": "Firebase",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Firebase/add-new-doc.js",
+        "id": 33
     }
 ]

@@ -5,7 +5,7 @@
 
 import '../../backend/firebase_storage/storage.dart';
 import '../../flutter_flow/flutter_flow_widgets.dart';
-import '../../flutter_flow/upload_media.dart';
+import '../../flutter_flow/upload_data.dart';
 
 Future uploadAnyFileType(BuildContext context, List<String>? fileType) async {
   fileType = fileType ?? ['pdf'];

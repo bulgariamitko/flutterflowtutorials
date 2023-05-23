@@ -134,30 +134,30 @@ Future importFromCsvOrJson(
         // find the House
         final collectionHouseRef = firestore.collection('House');
         final houseDocs = await collectionHouseRef
-            .where('Nombre', isEqualTo: fields[8])
+            .where('Name', isEqualTo: fields[8])
             .where('Hotel', isEqualTo: hotelRef)
             .get();
         HouseRecord houseDoc = await houseDocs.docs.isNotEmpty
-            ? houseDocs.docs[0] as HouseRecord
+            ? HouseRecord.fromSnapshot(houseDocs.docs[0])
             : backupHouse;
 
         // find the Villa
         final collectionVillaRef = firestore.collection('Villa');
         final villaDocs = await collectionVillaRef
-            .where('Nombre', isEqualTo: fields[7])
+            .where('Name', isEqualTo: fields[7])
             .where('House', isEqualTo: houseDoc.reference)
             .get();
         VillaRecord villaDoc = villaDocs.docs.isNotEmpty
-            ? villaDocs.docs[0] as VillaRecord
+            ? VillaRecord.fromSnapshot(villaDocs.docs[0])
             : backupVilla;
 
         // find the Hotel
         final collectionHotelRef = firestore.collection('Hotel');
-        final querySnapshot = await collectionHotelRef
-            .where('Nombre', isEqualTo: fields[9])
+        final gotelDocs = await collectionHotelRef
+            .where('Name', isEqualTo: fields[9])
             .get();
-        HotelRecord hotelDoc = await querySnapshot.docs.isNotEmpty
-            ? querySnapshot.docs[0] as HotelRecord
+        HotelRecord hotelDoc = await gotelDocs.docs.isNotEmpty
+            ? HotelRecord.fromSnapshot(gotelDocs.docs[0])
             : backupHotel;
 
         // new code

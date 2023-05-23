@@ -36,9 +36,15 @@ Future nullSafety(
   color = color ?? Colors.cyan;
   orderRef = orderRef ??
       FirebaseFirestore.instance.doc('/orders/20JprcSZFZjielfi1CA8');
-  orderDoc = orderDoc ??
-      createOrdersRecordData(name: 'demo', date: DateTime.now(), orderid: '0')
-          as OrdersRecord;
+  // create a fake doc
+  final data = createOrdersRecordData(
+    userRef: FirebaseFirestore.instance.doc('/cars/123'),
+  );
+  final docRef =
+      FirebaseFirestore.instance.collection('Orders').doc('randomID');
+  OrdersRecord doc = OrdersRecord.getDocumentFromData(data, docRef);
+  orderDoc = orderDoc ?? doc;
+
   jsonIt = jsonIt ?? {};
   timestamp = timestamp ?? DateTime.now();
   timestampRange = timestampRange ?? RangeValues(0.0, 0.0) as DateTimeRange;

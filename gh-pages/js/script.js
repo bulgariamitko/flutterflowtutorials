@@ -180,11 +180,9 @@ $(document).ready(function() {
     const replace = $(this).data('replace');
     const dartCodeModal = new bootstrap.Modal(document.getElementById('dartCodeModal'), {});
     const code = await getFileContent(localFilePath);
-    // let codeWithoutComments = code.split('\n').filter(line => !line.trim().startsWith('//')).join('\n');
 
     let initialCodeWithoutComments = code.split('\n').filter(line => !line.trim().startsWith('//')).join('\n');
 		let codeWithoutComments = initialCodeWithoutComments;
-
 
     // Set the modal title to the fileName
     $('#dartCodeModalLabel').text(fileName);
@@ -199,8 +197,6 @@ $(document).ready(function() {
     replace.forEach((item, index) => {
       const key = Object.keys(item)[0];
       const value = item[key];
-
-      console.log([key, value]);
 
       const label = $('<label>').text(key);
       const input = $('<input>').attr('type', 'text').attr('data-index', index).addClass('form-control mb-2');

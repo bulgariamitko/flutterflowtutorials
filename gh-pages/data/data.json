@@ -466,16 +466,5 @@
         "folder": "Firebase",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Firebase/add-new-doc.js",
         "id": 33
-    },
-    {
-        "video": "https://www.youtube.com/watch?v=nHz5o78L0x0",
-        "title": "Optimize Your @Firebase Database using @FlutterFlow - Insert or Update Document",
-        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\n\nIn this tutorial, I'll show you how to optimize your Firebase database using FlutterFlow by creating a custom function that can check if a document already exists in the database by a specific field. If it does exist, the function will update it, and if it doesn't, it will add it to the database. This is a powerful tool that can make managing your Firebase database much more efficient and streamlined. I'll walk you through the process step-by-step, so you can easily implement this technique in your own projects. Whether you're a beginner or an experienced developer, this tutorial is perfect for anyone looking to take their Firebase skills to the next level.\n\nUPDATE\nhttps://youtu.be/tWsr7dMKPcA\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/insert-or-update-doc-using-filter.dart\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
-        "embed": "https://www.youtube.com/embed/nHz5o78L0x0",
-        "widgets": "",
-        "replace": [],
-        "folder": "Custom Actions",
-        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc-using-filter.dart",
-        "id": 34
     }
 ]

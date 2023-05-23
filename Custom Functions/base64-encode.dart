@@ -1,13 +1,15 @@
-import 'dart:convert';
-import 'dart:math' as math;
+// code created by https://www.youtube.com/@flutterflowexpert
+// video - no
+// support my work - https://github.com/sponsors/bulgariamitko
 
+String? toBase64(String? input) {
+  /// MODIFY CODE ONLY BELOW THIS LINE
 
-String base64Encodefunction(
-  String username,
-  String password,
-) {
+  // null safety
+  input ??= '';
 
-  String base64 = base64Encode(utf8.encode('$username:$password'));
-  return base64;
+  var bytes = utf8.encode(input);
+  return base64.encode(bytes);
 
+  /// MODIFY CODE ONLY ABOVE THIS LINE
 }

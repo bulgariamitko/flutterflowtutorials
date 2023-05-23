@@ -11,7 +11,7 @@ Future changeDataType(
   // Add your function code here!
   carRef = carRef ?? FirebaseFirestore.instance.doc('/cars/4343t34t3434r');
 
-  CarStruct myCar = createCarStruct(
+  CarStruct myCar = CarStruct(
       onSale: true,
       brand: "Brand",
       color: Color.fromARGB(74, 15, 209, 129),
@@ -21,7 +21,7 @@ Future changeDataType(
     FieldValue.arrayRemove([myCar]),
   };
 
-  CarStruct myNewCar = createCarStruct(
+  CarStruct myNewCar = CarStruct(
       onSale: true,
       brand: "New Car",
       color: Color.fromRGBO(45, 45, 45, 0.3),

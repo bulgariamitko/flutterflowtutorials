@@ -40,7 +40,7 @@ Future updateOrInsertDocUsingFilter(
 
   // TODO: change fields you want to search for
   final docFilter =
-      await collectionRef.where('orderid', isEqualTo: fieldValue3).get();
+      await collectionRef.where(fieldName1, isEqualTo: fieldValue1).get();
 
   if (docFilter.docs.isNotEmpty) {
     // Update the existing document with the new data

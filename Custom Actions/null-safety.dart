@@ -53,7 +53,7 @@ Future nullSafety(
           state: 'Sofia',
           zipCode: '1000');
   dt = dt ??
-      createCarStruct(
+      CarStruct(
           brand: 'Kia',
           clearUnsetFields: true,
           color: Colors.blue,

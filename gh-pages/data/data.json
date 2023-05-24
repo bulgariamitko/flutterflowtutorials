@@ -484,5 +484,70 @@
         "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/get-doc-using-filter.dart",
         "id": 34
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=aBC7A2oFsdM",
+        "title": "Explore the World of Firebase Emulator: Local Testing for Cloud Functions, Notifications and DB",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nUsed code\nhttps://github.com/bulgariamitko/flutterflowtutorials/tree/main/Firebase/Emulator\n\nWelcome to \"Explore the World of Firebase Emulator: Local Testing for Cloud Functions, Notifications, and Database,\" a comprehensive tutorial that will guide you through setting up your Firebase emulator and using it to optimize your app development process.\n\nIn this tutorial, we'll dive into the following topics to ensure you have a solid grasp of the Firebase emulator and its capabilities:\n\nSetting Up Your Firebase Emulator: Learn how to configure and install the emulator on your computer, preparing you for local testing of your cloud functions, push notifications, and database.\nAutomating Document and Collection Creation: Discover how to automatically create documents and collections in Firebase by simply running a JavaScript file, making your testing process more efficient.\nCreating and Testing Cloud Functions Locally: Understand how to develop and test your cloud functions locally using the Firebase emulator, allowing for faster debugging and more precise results.\nSending Push Notifications to Actual Devices: I'll show you how to send push notifications within the emulator to real devices, ensuring that your notifications work seamlessly before deploying your app.\nBy the end of this tutorial, you'll have a deep understanding of the Firebase emulator and its functionalities, allowing you to test and debug your app more efficiently. You'll know how to set up the emulator, automatically create documents and collections, test cloud functions locally, and send push notifications to actual devices.\n\nJoin me as we explore the world of Firebase emulator and elevate your app development skills by harnessing the power of local testing for cloud functions, notifications, and databases.",
+        "embed": "https://www.youtube.com/embed/aBC7A2oFsdM",
+        "widgets": "",
+        "replace": [
+            {
+                "Name of json auth file": "auth.json"
+            },
+            {
+                "Push notification title": "Your Title"
+            },
+            {
+                "Push notification description": "Your Description"
+            },
+            {
+                "The UID of the user you want to send the push notification to": "user-id"
+            },
+            {
+                "Collection name": "notifications"
+            },
+            {
+                "Person's name": "John Doe"
+            },
+            {
+                "Person's email": "johndoe@example.com"
+            },
+            {
+                "FCM token of the device (can take it from production db)": "very-long-fcm-token"
+            }
+        ],
+        "folder": "Emulator",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Firebase/Emulator/test-add-notifications.js",
+        "id": 35
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=aBC7A2oFsdM",
+        "title": "Explore the World of Firebase Emulator: Local Testing for Cloud Functions, Notifications and DB",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nUsed code\nhttps://github.com/bulgariamitko/flutterflowtutorials/tree/main/Firebase/Emulator\n\nWelcome to \"Explore the World of Firebase Emulator: Local Testing for Cloud Functions, Notifications, and Database,\" a comprehensive tutorial that will guide you through setting up your Firebase emulator and using it to optimize your app development process.\n\nIn this tutorial, we'll dive into the following topics to ensure you have a solid grasp of the Firebase emulator and its capabilities:\n\nSetting Up Your Firebase Emulator: Learn how to configure and install the emulator on your computer, preparing you for local testing of your cloud functions, push notifications, and database.\nAutomating Document and Collection Creation: Discover how to automatically create documents and collections in Firebase by simply running a JavaScript file, making your testing process more efficient.\nCreating and Testing Cloud Functions Locally: Understand how to develop and test your cloud functions locally using the Firebase emulator, allowing for faster debugging and more precise results.\nSending Push Notifications to Actual Devices: I'll show you how to send push notifications within the emulator to real devices, ensuring that your notifications work seamlessly before deploying your app.\nBy the end of this tutorial, you'll have a deep understanding of the Firebase emulator and its functionalities, allowing you to test and debug your app more efficiently. You'll know how to set up the emulator, automatically create documents and collections, test cloud functions locally, and send push notifications to actual devices.\n\nJoin me as we explore the world of Firebase emulator and elevate your app development skills by harnessing the power of local testing for cloud functions, notifications, and databases.",
+        "embed": "https://www.youtube.com/embed/aBC7A2oFsdM",
+        "widgets": "",
+        "replace": [
+            {
+                "Name of json auth file": "auth.json"
+            },
+            {
+                "Firebase project ID": "project-id"
+            }
+        ],
+        "folder": "Emulator",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Firebase/Emulator/index.js",
+        "id": 36
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=aBC7A2oFsdM",
+        "title": "Explore the World of Firebase Emulator: Local Testing for Cloud Functions, Notifications and DB",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nUsed code\nhttps://github.com/bulgariamitko/flutterflowtutorials/tree/main/Firebase/Emulator\n\nWelcome to \"Explore the World of Firebase Emulator: Local Testing for Cloud Functions, Notifications, and Database,\" a comprehensive tutorial that will guide you through setting up your Firebase emulator and using it to optimize your app development process.\n\nIn this tutorial, we'll dive into the following topics to ensure you have a solid grasp of the Firebase emulator and its capabilities:\n\nSetting Up Your Firebase Emulator: Learn how to configure and install the emulator on your computer, preparing you for local testing of your cloud functions, push notifications, and database.\nAutomating Document and Collection Creation: Discover how to automatically create documents and collections in Firebase by simply running a JavaScript file, making your testing process more efficient.\nCreating and Testing Cloud Functions Locally: Understand how to develop and test your cloud functions locally using the Firebase emulator, allowing for faster debugging and more precise results.\nSending Push Notifications to Actual Devices: I'll show you how to send push notifications within the emulator to real devices, ensuring that your notifications work seamlessly before deploying your app.\nBy the end of this tutorial, you'll have a deep understanding of the Firebase emulator and its functionalities, allowing you to test and debug your app more efficiently. You'll know how to set up the emulator, automatically create documents and collections, test cloud functions locally, and send push notifications to actual devices.\n\nJoin me as we explore the world of Firebase emulator and elevate your app development skills by harnessing the power of local testing for cloud functions, notifications, and databases.",
+        "embed": "https://www.youtube.com/embed/aBC7A2oFsdM",
+        "widgets": "",
+        "replace": [],
+        "folder": "Emulator",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Firebase/Emulator/trigger.js",
+        "id": 37
     }
 ]

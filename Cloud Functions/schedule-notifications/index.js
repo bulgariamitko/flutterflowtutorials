@@ -164,15 +164,11 @@ async function checkNotifications() {
   const currentTime = moment.utc();
   const snapshot = await notificationsRef.get();
 
-  console.log(`Function checkNotifications started at: ${currentTime.toISOString()}`);
-
   for (let i = 0; i < snapshot.docs.length; i++) {
     const doc = snapshot.docs[i];
     const { serverCron, userRef, title, desc, lastSend } = doc.data();
-    console.log(`Checking document with serverCron: ${serverCron} and userRef: ${userRef.path}`);
 
     const isMatch = doCronExpressionsMatch(serverCron, currentTime);
-    console.log(`doCronExpressionsMatch returned: ${isMatch}`);
 
     if (isMatch) {
       // Check if a notification was already sent in the same minute
@@ -182,7 +178,6 @@ async function checkNotifications() {
       }
 
       if (lastSendMoment && currentTime.diff(lastSendMoment, 'minutes') < 1) {
-        console.log('Notification already sent in the current minute. Skipping...');
         continue;
       }
 
@@ -191,7 +186,6 @@ async function checkNotifications() {
 
         fcmTokensSnapshot.forEach(async (tokenDoc) => {
           const tokenData = tokenDoc.data();
-          console.log(`Preparing to send message to token: ${tokenData.fcm_token}`);
 
           if (tokenData && tokenData.fcm_token) {
             const message = {
@@ -204,8 +198,6 @@ async function checkNotifications() {
 
             try {
               const response = await admin.messaging().send(message);
-              console.log(`Message sent successfully: ${JSON.stringify(response)}`);
-              console.log(`Notification sent at: ${currentTime.toISOString()} with serverCron: ${serverCron}`);
 
               // Update lastSend in Firestore
               await doc.ref.update({ lastSend: admin.firestore.Timestamp.fromDate(currentTime.toDate()) });
@@ -218,14 +210,8 @@ async function checkNotifications() {
       }
     }
   }
-
-  console.log(`Function checkNotifications finished at: ${currentTime.toISOString()}`);
 }
 
-
-// Create the CronJob object that runs the function every minute
-const checkAndSendNotifications = new CronJob('* * * * *', checkNotifications, null, true, 'UTC');
-
-exports.checkAndSendNotifications = functions.pubsub.schedule('* * * * *').onRun(async (context) => {
-  await checkNotifications();
+exports.scheduledFunction = functions.pubsub.schedule('every 10 minutes').onRun(async (context) => {
+   await checkNotifications();
 });

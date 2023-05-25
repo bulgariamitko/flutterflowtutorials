@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Spotify API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://accounts.spotify.com"
+    }
+  ],
+  "paths": {
+    "/api/token": {
+      "post": {
+        "summary": "Access Token",
+        "operationId": "getAccessToken",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "grant_type": {
+                    "type": "string",
+                    "enum": [
+                      "authorization_code"
+                    ]
+                  },
+                  "code": {
+                    "type": "string",
+                    "description": "The authorization code returned from the initial request."
+                  },
+                  "redirect_uri": {
+                    "type": "string",
+                    "description": "The URI to redirect to after the user grants/denies permission."
+                  }
+                },
+                "required": [
+                  "grant_type",
+                  "code",
+                  "redirect_uri"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Access token and refresh token"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+// source - https://developer.simprogroup.com/apidoc/?page=ccdb7bf9d93e5652b57cabcc8c41e061#operation/1e26bec2889a4a629e178d71d4b48ce2
+
+{
+  "ID": 0,
+  "TotalHours": 1.57,
+  "Notes": "string",
+  "IsLocked": true,
+  "RecurringScheduleID": 0,
+  "Staff": {
+    "ID": 123,
+    "Name": "John Smith",
+    "Type": "employee",
+    "TypeId": 0
+  },
+  "Date": "2021-04-22",
+  "Blocks": [
+    {
+      "Hrs": 8,
+      "StartTime": "08:00",
+      "ISO8601StartTime": "2018-05-21T19:53:39+10:00",
+      "EndTime": "16:00",
+      "ISO8601EndTime": "2018-05-21T19:53:39+10:00",
+      "ScheduleRate": {
+        "ID": 12345,
+        "Name": "Overtime"
+      }
+    }
+  ],
+  "DateModified": "2018-05-21T19:53:39+10:00"
+}

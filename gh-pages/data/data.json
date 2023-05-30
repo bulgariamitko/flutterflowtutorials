@@ -564,5 +564,16 @@
         "folder": "schedule-notifications",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/schedule-notifications/index.js",
         "id": 38
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=4Ir1j6L48Lg",
+        "title": "Easily Sync Your CSV or JSON Files with @Firebase Using @FlutterFlow",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\n\nLooking for an easy way to sync your CSV or JSON files with Firebase? Look no further! In this video tutorial, we'll show you step by step how to use FlutterFlow to upload your files straight from the app and use them for in-app admin or other user roles. With FlutterFlow, it's never been easier to manage and organize your data in Firebase. So why wait? Try it out now and streamline your data management process.\n\nLinks used in the video\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Resources/import.csv\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Resources/import.json\nhttps://csvjson.com/csv2json\n\nUPDATE\nhttps://youtu.be/tWsr7dMKPcA\n\nCode used in the video\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/import-csv-or-json.dart\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko",
+        "embed": "https://www.youtube.com/embed/4Ir1j6L48Lg",
+        "widgets": "Cg9Db2x1bW5fODAwN3Y4ZnoSqQIKD0J1dHRvbl9oYmR6c3F6ahgJIndKcgoeCgZJbXBvcnQ6Bgj/////D0AFegoSCHpnam1kNmhuGQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQPoDAGIAigGXARKQAQoIZHJvNW00ZGMSgwHSAXUKHAoTaW1wb3J0RnJvbUNzdk9ySnNvbhIFZ3Z3NnUSBQoDEgE7Eg0KCxIJdXNlcnNkYXRhEgwKChIIdXNlcm5hbWUSDgoMEgppZGVudGlmaWVyEgoKCBIGbXlCb29sEgoKCBIGbXlEYXRlEgkKBxIFbXlSZWaqAggxOTF3cWptdxoCCAES1gEKD0J1dHRvbl82N3c3Z2RoMBgJIndKcgoeCgZEZWxldGU6Bgj/////D0AFegoSCGU3dHNvbGk4GQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQPoDAGIAigFFEj8KCGttYXozZnZhEjPSASUKFAoLYmF0Y2hEZWxldGUSBXdid2hvEg0KCxIJdXNlcnNkYXRhqgIIM3N3dWhiOGgaAggBGAQiBSIA+gMA",
+        "replace": [],
+        "folder": "csv",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/csv/import-csv-or-json.dart",
+        "id": 39
     }
 ]

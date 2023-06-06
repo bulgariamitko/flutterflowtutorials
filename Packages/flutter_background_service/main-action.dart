@@ -3,7 +3,12 @@
 // widgets - Cg9Db2x1bW5fd2ZjOWVlcHUS0AEKD0J1dHRvbl9qNTZ4MTN4bhgJIn1KeAoZCg1HZXQgUGhvbmUgbG9nOgYI/////w9ABRkAAAAAAAAIQDEAAAAAAABEQEkAAAAAAADwP1ICEAFaAggAciQJAAAAAAAAIEARAAAAAAAAIEAZAAAAAAAAIEAhAAAAAAAAIEB6EgkAAAAAAAA4QBkAAAAAAAA4QPoDAGIAigE5EjMKCHRvbDhyaDF2EifSARkKFQoMcmVhZFBob25lTG9nEgV4ZDhyYiIAqgIIN3ZiZmlxY2waAggBEkUKDVRleHRfdzkxNDVtMngYAiIwEhIKC0hlbGxvIFdvcmxkQAaoAQCaARYKAgIBKhAIDEIMIgoKBgoEdHlwZRAB+gMAYgASRwoNVGV4dF9jcW4zY241YRgCIjISEgoLSGVsbG8gV29ybGRABqgBAJoBGAoCAgEqEggMQg4iDAoICgZudW1iZXIQAfoDAGIAEkkKDVRleHRfamZ6bTc5cDQYAiI0EhIKC0hlbGxvIFdvcmxkQAaoAQCaARoKAgIBKhQIDEIQIg4KCgoIZHVyYXRpb24QAfoDAGIAEkoKDVRleHRfY2FsNHZ5N2QYAiI1EhIKC0hlbGxvIFdvcmxkQAaoAQCaARsKAgIBKhUIDEIRIg8KCwoJdGltZXN0YW1wEAH6AwBiABKfBAoPQnV0dG9uX2xrbDJldzdzGAkijgJKggEKIwoXc3RhcnQgYmFja2dyb3VuZCBhY3Rpb246Bgj/////D0AFGQAAAAAAAAhAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQHoSCQAAAAAAADhAGQAAAAAAADhAmgGCAQoDCQEBKnsIClJ3OnUKUAowCApSLBIcEhoIDEIWIhQKEAoOc2VydmljZVJ1bm5pbmcQARIICgYSBHRydWUiAggBEhwKGhIYU3RvcCBiYWNrZ3JvdW5kIHNlcnZpY2VzEh0KGxIZU3RhcnQgYmFja2dyb3VuZCBzZXJ2aWNlcxoCEAP6AwBiAIoB9QES7gEKCGNhdzdmeXVkGq4BGjwKCG54eXJrMWtyEjDiASJCHAoQCg5zZXJ2aWNlUnVubmluZxIICgYSBHRydWVQAlgBqgIIMjZhYXIzcTYibAoyCjAIClIsEhwSGggMQhYiFAoQCg5zZXJ2aWNlUnVubmluZxABEggKBhIEdHJ1ZSICCAESNgoIenE0OGJobGkSKuIBHEIWChAKDnNlcnZpY2VSdW5uaW5nEgIKAFACWAGqAgh0NzRmaWtseCgAKjEKCHJjOHczeGYxEiXSARcKEwoKbWFpbkFjdGlvbhIFNXV3amciAKoCCHR6a2l6cWN5GgIIARgEIgciAhAB+gMA
 // support my work - https://github.com/sponsors/bulgariamitko
 
-import '../../backend/api_requests/api_calls.dart';
+import 'dart:isolate';
+import 'dart:ui';
+
+// import '../../backend/api_requests/api_calls.dart';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:call_log/call_log.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -60,6 +65,17 @@ Future<void> initializeService() async {
 }
 
 Future<void> onStart(ServiceInstance service) async {
+  ReceivePort receivePort = ReceivePort();
+  IsolateNameServer.removePortNameMapping('ServiceRunningPort');
+  IsolateNameServer.registerPortWithName(
+      receivePort.sendPort, 'ServiceRunningPort');
+  receivePort.listen((message) {
+    if (message == 'STOP') {
+      service.stopSelf();
+      IsolateNameServer.removePortNameMapping('ServiceRunningPort');
+    }
+  });
+
   while (true) {
     final now = DateTime.now();
     if (now.hour >= 8 && now.hour <= 19) {
@@ -69,7 +85,11 @@ Future<void> onStart(ServiceInstance service) async {
   }
 }
 
-List<String> phoneLogSet = [];
+List<String> phoneLogs = [];
+List<String> types = [];
+List<String> numbers = [];
+List<String> durations = [];
+List<String> timestamps = [];
 
 Future readPhoneLog() async {
   Iterable<CallLogEntry> entries = await CallLog.get();
@@ -89,10 +109,13 @@ Future readPhoneLog() async {
         callType + (entry.number ?? '') + entry.duration.toString() + timestamp;
 
     // If this phone log is not in the set yet, add it to the set and process it.
-    if (!phoneLogSet.contains(phoneLog)) {
-      phoneLogSet.add(phoneLog);
+    if (!phoneLogs.contains(phoneLog)) {
+      phoneLogs.add(phoneLog);
 
-      // await SendPhoneCallsCall.call(call: phoneLog);
+      types.add(callType);
+      numbers.add(entry.number ?? '');
+      durations.add(entry.duration.toString());
+      timestamps.add(timestamp);
 
       FFAppState().update(() {
         FFAppState().type = callType;
@@ -102,8 +125,23 @@ Future readPhoneLog() async {
       });
     }
   }
+  if (types.isNotEmpty) {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String phone = prefs.getString('phone') ?? '';
 
-  // await SendPhoneCallsCall.call(callsList: phoneLogSet);
+    // await SendPhoneCallsCall.call(
+    //     typesList: types,
+    //     numbersList: numbers,
+    //     durationsList: durations,
+    //     timestampsList: timestamps,
+    //     phone: phone);
+
+  }
+
+  types = [];
+  numbers = [];
+  durations = [];
+  timestamps = [];
 }
 
 Future<void> requestPhonePermission() async {

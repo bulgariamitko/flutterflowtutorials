@@ -1,0 +1,30 @@
+name: Automated Code Export
+
+on:
+  schedule:
+    # This will run the job every day at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  export-code:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Dart
+      uses: dart-lang/setup-dart@v1
+      with:
+        sdk: stable
+
+    - name: Install FlutterFlow CLI
+      run: dart pub global activate flutterflow_cli
+
+    - name: Export code
+      run: flutterflow export-code --project <project id> --dest <output folder> --[no-]include-assets --token <token>
+      env:
+        PROJECT_ID: ${{ secrets.PROJECT_ID }}
+        OUTPUT_FOLDER: ${{ secrets.OUTPUT_FOLDER }}
+        TOKEN: ${{ secrets.TOKEN }}

@@ -23,7 +23,7 @@ jobs:
       run: dart pub global activate flutterflow_cli
 
     - name: Export code
-      run: flutterflow export-code --project <project id> --dest <output folder> --[no-]include-assets --token <token>
+      run: flutterflow export-code --project $PROJECT_ID --dest $OUTPUT_FOLDER --[no-]include-assets --token $TOKEN
       env:
         PROJECT_ID: ${{ secrets.PROJECT_ID }}
         OUTPUT_FOLDER: ${{ secrets.OUTPUT_FOLDER }}

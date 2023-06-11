@@ -575,5 +575,37 @@
         "folder": "csv",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/csv/import-csv-or-json.dart",
         "id": 39
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=9ATIaW58DGA",
+        "title": "Master Stripe Recurring Payments: User Dashboard & Active Subscription Checks using @FlutterFlow",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nWelcome to \"Master Stripe Recurring Payments: User Dashboard & Active Subscription Checks,\" a comprehensive tutorial designed to help you set up a no-code Stripe subscription manager dashboard for your users and verify their active subscription status using the Stripe API.\n\nIn this two-part tutorial, we will dive into the following topics to ensure you have a solid understanding of managing subscriptions with Stripe:\n\nPart 1: Setting up a No-Code Stripe Subscription Manager Dashboard\n\nConfiguring Your Dashboard: Learn how to create a user-friendly dashboard that allows your users to manage their subscriptions with ease.\nIntegrating Stripe: Discover how to seamlessly integrate Stripe into your dashboard, enabling hassle-free subscription management for your users.\nPart 2: Checking Active Subscription Status Using Stripe API\n\nUnderstanding the Stripe API: Gain insight into the Stripe API and its capabilities in verifying active subscriptions.\nImplementing the API: Follow a step-by-step guide on implementing the Stripe API to check if your current app user has an active subscription.\nBy the end of this tutorial, you'll have a deep understanding of how to manage recurring payments with Stripe, enabling you to provide a seamless subscription experience for your users. You'll know how to set up a no-code Stripe subscription manager dashboard and verify active subscription status using the Stripe API.\n\nJoin me in this exciting tutorial as we master the world of Stripe recurring payments, and elevate your app's subscription management capabilities to new heights!\n\nIn this video\n00:00 Instruction\n02:25 How it works\n06:25 Setting up a subscription dashboard\n08:45 Check if the user has an active subscription\n27:25 Thank you",
+        "embed": "https://www.youtube.com/embed/9ATIaW58DGA",
+        "widgets": "",
+        "replace": [
+            {
+                "Name of App State for email": "useremail"
+            },
+            {
+                "Name of App State for Stripe Sub ID": "stripeSubId"
+            },
+            {
+                "Name of App State for Stripe Active sub (bool)": "sub"
+            }
+        ],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/manage-stripe-subs.dart",
+        "id": 40
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=yoiVwVOZW74",
+        "title": "@FlutterFlow Say Goodbye to Duplicates: Show Only Unique Values in Your List",
+        "desc": "Support my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nWelcome to \"Say Goodbye to Duplicates: Show Only Unique Values in Your List,\" a comprehensive tutorial designed to help you effectively remove duplicate values from lists containing strings, integers, or doubles using API calls or Firebase database.\n\nIn this in-depth tutorial, we'll cover the essential steps and techniques to help you create a clean and streamlined list, free of duplicate values, including:\n\nUnderstanding List Data Types: Get a solid grasp of different list data types, such as strings, integers, and doubles, and how to work with them effectively.\nRemoving Duplicates with API Calls: Learn how to leverage API calls to eliminate duplicate values from your lists for a more organized and simplified user experience.\nUtilizing Firebase Database: Discover how to use Firebase database to filter out duplicate values from your lists, ensuring a clean and clutter-free presentation.\nImplementing List Cleanup Techniques: I'll guide you through the process of applying various techniques to remove duplicate values from your lists, resulting in a more streamlined and user-friendly display.\nEnhancing List Usability: Learn how to improve the usability of your lists by displaying only unique values, providing a better experience for your users.\nBy the end of this tutorial, you'll have a thorough understanding of how to remove duplicates from lists of strings, integers, or doubles using API calls or Firebase database. This knowledge will empower you to create cleaner, more organized lists for your app users, resulting in a more satisfying and efficient user experience.\n\nJoin me on this exciting journey as we master the art of removing duplicate values from lists and take your app development skills to new heights!",
+        "embed": "https://www.youtube.com/embed/yoiVwVOZW74",
+        "widgets": "",
+        "replace": [],
+        "folder": "Custom Functions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/unique-list.dart",
+        "id": 41
     }
 ]

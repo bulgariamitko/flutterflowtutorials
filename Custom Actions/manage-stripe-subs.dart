@@ -1,5 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// future video - ...
+// video - https://www.youtube.com/watch?v=9ATIaW58DGA
 // replace - [{"Name of App State for email": "useremail"}, {"Name of App State for Stripe Sub ID": "stripeSubId"}, {"Name of App State for Stripe Active sub (bool)": "sub"}]
 // support my work - https://github.com/sponsors/bulgariamitko
 

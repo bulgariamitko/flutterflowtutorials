@@ -1,5 +1,5 @@
 // code created by https://www.youtube.com/@flutterflowexpert
-// future video - https://www.youtube.com/watch?v=rrgw84My5tw
+// paid video - https://www.youtube.com/watch?v=rrgw84My5tw
 // widgets - Cg9Db2x1bW5fams0eDgwdjISiQEKEkNvbnRhaW5lcl9hNHB3MHlveBgBIgP6AwBiVBI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGZ2Nka2U4MhgiFgoJEQAAAAAAAFlAEgkJAAAAAADAYkAaElNvdW5kUmVjb3JkQW5kUGxheYIBElNvdW5kUmVjb3JkQW5kUGxheZgBARJJCg1UZXh0X24zenUxbXd2GAIiNBISCgtIZWxsbyBXb3JsZEAGqAEAmgEaCgICASoUCAxCECIOCgoKCGZpbGVQYXRoEAH6AwBiABI9Cg1UZXh0X2FyaTNjYTRoGAIiKBISCgtIZWxsbyBXb3JsZEAGqAEAmgEOCgICASoICAJCBAoCCAL6AwBiABgEIgUiAPoDAA==
 // replace - [{"App State name": "filePath"}, {"File audio extention": "opus"}]
 // support my work - https://github.com/sponsors/bulgariamitko

@@ -4,6 +4,11 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'auth/firebase_auth/firebase_user_provider.dart';
+import 'auth/firebase_auth/auth_util.dart';
+
+import 'backend/firebase/firebase_config.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
@@ -13,6 +18,7 @@ import 'index.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
+  await initFirebase();
 
   await FlutterFlowTheme.initialize();
 
@@ -38,6 +44,8 @@ class _MyAppState extends State<MyApp> {
   Locale? _locale;
   ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
+  late Stream<BaseAuthUser> userStream;
+
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
 
@@ -46,6 +54,13 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
+    userStream = ffSourceCodeFirebaseUserStream()
+      ..listen((user) => _appStateNotifier.update(user));
+    jwtTokenStream.listen((_) {});
+    Future.delayed(
+      Duration(seconds: 1),
+      () => _appStateNotifier.stopShowingSplashImage(),
+    );
   }
 
   void setLocale(String language) {

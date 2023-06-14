@@ -37,5 +37,9 @@ jobs:
     - name: Commit and push
       run: |
         git add .
-        git commit -m "Add ff source code"
-        git push
+        if ! git diff --cached --quiet; then
+          git commit -m "Add ff source code"
+          git push
+        else
+          echo "No changes to commit"
+        fi

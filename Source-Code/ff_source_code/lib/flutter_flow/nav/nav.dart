@@ -6,6 +6,7 @@ import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
 import '/backend/backend.dart';
 
+import '/backend/supabase/supabase.dart';
 import '../../auth/base_auth_user_provider.dart';
 
 import '../../index.dart';

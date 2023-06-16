@@ -11,7 +11,7 @@ The goal of this project is to make it easier for users to find and use code tha
 
 If you are interested in contributing to this repository, please feel free to submit your own code or to improve existing code. All contributions are welcome, and we encourage you to share your knowledge and experience with others. With your help, we can make this repository an even more valuable resource for the entire FlutterFlow community.
 
-# YuoTube Paid members
+# YouTube Paid Members
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 

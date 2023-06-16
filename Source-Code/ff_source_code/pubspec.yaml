@@ -31,6 +31,9 @@ dependencies:
   cloud_firestore: 4.2.0
   cloud_firestore_platform_interface: 5.9.1
   cloud_firestore_web: 3.1.1
+  cloud_functions: 4.0.6
+  cloud_functions_platform_interface: 5.1.25
+  cloud_functions_web: 4.3.14
   equatable: 2.0.3
   file_picker: 5.2.6
   firebase_auth: 4.2.0
@@ -39,6 +42,9 @@ dependencies:
   firebase_core: 2.4.0
   firebase_core_platform_interface: 4.5.2
   firebase_core_web: 2.0.2
+  firebase_messaging: 14.1.4
+  firebase_messaging_platform_interface: 4.2.8
+  firebase_messaging_web: 3.2.9
   firebase_storage: 11.0.7
   firebase_storage_platform_interface: 4.1.25
   firebase_storage_web: 3.3.17

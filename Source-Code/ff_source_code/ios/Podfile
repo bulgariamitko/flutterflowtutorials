@@ -28,6 +28,7 @@ require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelpe
 flutter_ios_podfile_setup
 
 target 'Runner' do
+  pod 'GoogleUtilities'
   use_frameworks!
   use_modular_headers!
 
@@ -42,4 +43,10 @@ post_install do |installer|
       
     end
   end
+end
+
+target 'ImageNotification' do
+  use_frameworks!
+  pod 'Firebase/Messaging'
+  pod 'GoogleUtilities'
 end

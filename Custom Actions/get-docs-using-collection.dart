@@ -2,6 +2,8 @@
 // video - https://youtube.com/watch?v=Lt0irFF_NpE
 // support my work - https://github.com/sponsors/bulgariamitko
 
+// IMPORTANT you no longer need to use this custom code, more info - https://www.youtube.com/watch?v=yGggMqY0peY
+
 // TODO change the name of the collection from CarsRecord to yuor collection, lets say UsersRecord
 Future<List<CarsRecord>> getDocsFromCollection(
   String? collectionName,

@@ -3,6 +3,8 @@
 // replace - [{"Collection name": "Cars"}]
 // support my work - https://github.com/sponsors/bulgariamitko
 
+// IMPORTANT you no longer need to use this custom code, more info - https://www.youtube.com/watch?v=yGggMqY0peY
+
 Future<CarsRecord> getDoc(DocumentReference docRef) async {
   return CarsRecord.getDocumentOnce(docRef);
 }

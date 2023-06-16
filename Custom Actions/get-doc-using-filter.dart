@@ -4,6 +4,8 @@
 // replace - [{"Collection name": "Cars"}, {"Collection path in Firebase": "/cars/"}]
 // support my work - https://github.com/sponsors/bulgariamitko
 
+// IMPORTANT you no longer need to use this custom code, more info - https://www.youtube.com/watch?v=yGggMqY0peY
+
 Future<CarsRecord> getDocUsingFilter(
   String? fieldSearch,
   String? fieldValue,

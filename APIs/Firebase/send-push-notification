@@ -1,0 +1,19 @@
+// code created by https://www.youtube.com/@flutterflowexpert
+// paid video - https://www.youtube.com/watch?v=YcnKiZpo8ro
+// support my work - https://github.com/sponsors/bulgariamitko
+
+curl --request POST \
+  --url https://fcm.googleapis.com/fcm/send \
+  --header 'Authorization: key=<server-key>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+        "to":"<token>",
+  "notification":
+    {
+      "title": "<title>",
+        "body": "<body>",
+        "badge": 1,
+        "sound": "Default",
+        "image": "<image>"
+    }
+}'

@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -28,26 +28,26 @@ dependencies:
   app_links: 3.4.1
   auto_size_text: 3.0.0
   cached_network_image: 3.2.1
-  cloud_firestore: 4.2.0
-  cloud_firestore_platform_interface: 5.9.1
-  cloud_firestore_web: 3.1.1
-  cloud_functions: 4.0.6
-  cloud_functions_platform_interface: 5.1.25
-  cloud_functions_web: 4.3.14
-  equatable: 2.0.3
+  cloud_firestore: 4.8.0
+  cloud_firestore_platform_interface: 5.15.0
+  cloud_firestore_web: 3.6.0
+  cloud_functions: 4.3.2
+  cloud_functions_platform_interface: 5.4.2
+  cloud_functions_web: 4.5.2
+  equatable: 2.0.5
   file_picker: 5.2.6
-  firebase_auth: 4.2.0
-  firebase_auth_platform_interface: 6.11.4
-  firebase_auth_web: 5.2.0
-  firebase_core: 2.4.0
-  firebase_core_platform_interface: 4.5.2
-  firebase_core_web: 2.0.2
-  firebase_messaging: 14.1.4
-  firebase_messaging_platform_interface: 4.2.8
-  firebase_messaging_web: 3.2.9
-  firebase_storage: 11.0.7
-  firebase_storage_platform_interface: 4.1.25
-  firebase_storage_web: 3.3.17
+  firebase_auth: 4.6.2
+  firebase_auth_platform_interface: 6.15.2
+  firebase_auth_web: 5.5.2
+  firebase_core: 2.13.1
+  firebase_core_platform_interface: 4.8.0
+  firebase_core_web: 2.5.0
+  firebase_messaging: 14.6.2
+  firebase_messaging_platform_interface: 4.5.2
+  firebase_messaging_web: 3.5.2
+  firebase_storage: 11.2.2
+  firebase_storage_platform_interface: 4.4.2
+  firebase_storage_web: 3.6.2
   flutter_animate: 4.1.1+1
   flutter_cache_manager: 3.3.0
   flutter_plugin_android_lifecycle: 2.0.9
@@ -66,7 +66,7 @@ dependencies:
   image_picker_for_web: 2.1.10
   image_picker_ios: 0.8.6+1
   image_picker_platform_interface: 2.6.2
-  intl: 0.17.0
+  intl: 0.18.0
   json_path: 0.4.1
   mime_type: 1.0.0
   page_transition: 2.0.4

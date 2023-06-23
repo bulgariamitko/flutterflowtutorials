@@ -76,7 +76,7 @@ class MycollectionRecord extends FirestoreRecord {
 
   void _initializeFields() {
     _name = snapshotData['name'] as String?;
-    _age = snapshotData['age'] as int?;
+    _age = castToType<int>(snapshotData['age']);
     _weight = castToType<double>(snapshotData['weight']);
     _height = castToType<double>(snapshotData['height']);
     _eyeColor = snapshotData['eyeColor'] as String?;

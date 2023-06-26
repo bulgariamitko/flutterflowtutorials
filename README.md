@@ -15,6 +15,18 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Q tech
+Klaturov Cadet
+
+Sebastián Escobar
+Klaturov Fanatic
+
+Grayman
+Klaturov Fanatic
+
+Benjamin
+Klaturov Cadet
+
 Daniel Andrade
 Klaturov Fanatic
 

@@ -236,7 +236,17 @@ bool validateFileFormat(String filePath, BuildContext context) {
   return false;
 }
 
-Future<List<SelectedMedia>?> selectFile({
+Future<SelectedMedia?> selectFile({
+  String? storageFolderPath,
+  List<String>? allowedExtensions,
+}) =>
+    selectFiles(
+      storageFolderPath: storageFolderPath,
+      allowedExtensions: allowedExtensions,
+      multiFile: false,
+    ).then((value) => value?.first);
+
+Future<List<SelectedMedia>?> selectFiles({
   String? storageFolderPath,
   List<String>? allowedExtensions,
   bool multiFile = false,

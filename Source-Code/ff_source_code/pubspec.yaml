@@ -99,6 +99,10 @@ dependencies:
   video_player_avfoundation: 2.4.2
   video_player_platform_interface: 6.1.0
   video_player_web: 2.0.15
+  webview_flutter: 4.0.5
+  webview_flutter_android: 3.3.1
+  webview_flutter_platform_interface: 2.0.2
+  webview_flutter_wkwebview: 3.1.1
 
 
   # The following adds the Cupertino Icons font to your application.

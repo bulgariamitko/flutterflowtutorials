@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:collection/collection.dart';
+
 import '/backend/schema/util/firestore_util.dart';
 import '/backend/schema/util/schema_util.dart';
 
@@ -155,4 +157,44 @@ Map<String, dynamic> createMycollectionRecordData({
   );
 
   return firestoreData;
+}
+
+class MycollectionRecordDocumentEquality
+    implements Equality<MycollectionRecord> {
+  const MycollectionRecordDocumentEquality();
+
+  @override
+  bool equals(MycollectionRecord? e1, MycollectionRecord? e2) {
+    return e1?.name == e2?.name &&
+        e1?.age == e2?.age &&
+        e1?.weight == e2?.weight &&
+        e1?.height == e2?.height &&
+        e1?.eyeColor == e2?.eyeColor &&
+        e1?.hairColor == e2?.hairColor &&
+        e1?.imagePath == e2?.imagePath &&
+        e1?.videoPath == e2?.videoPath &&
+        e1?.audioPath == e2?.audioPath &&
+        e1?.dateTime == e2?.dateTime &&
+        e1?.latLng == e2?.latLng &&
+        e1?.color == e2?.color;
+  }
+
+  @override
+  int hash(MycollectionRecord? e) => const ListEquality().hash([
+        e?.name,
+        e?.age,
+        e?.weight,
+        e?.height,
+        e?.eyeColor,
+        e?.hairColor,
+        e?.imagePath,
+        e?.videoPath,
+        e?.audioPath,
+        e?.dateTime,
+        e?.latLng,
+        e?.color
+      ]);
+
+  @override
+  bool isValidKey(Object? o) => o is MycollectionRecord;
 }

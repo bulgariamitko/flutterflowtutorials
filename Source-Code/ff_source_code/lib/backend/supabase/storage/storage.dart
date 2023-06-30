@@ -1,30 +1,30 @@
-import '../../../flutter_flow/upload_data.dart';
+import '/flutter_flow/upload_data.dart';
 import '../supabase.dart';
 
 Future<List<String>> uploadSupabaseStorageFiles({
   required String bucketName,
-  required List<SelectedMedia> selectedMedia,
+  required List<SelectedFile> selectedFiles,
 }) =>
     Future.wait(
-      selectedMedia.map(
+      selectedFiles.map(
         (media) => uploadSupabaseStorageFile(
           bucketName: bucketName,
-          selectedMedia: media,
+          selectedFile: media,
         ),
       ),
     );
 
 Future<String> uploadSupabaseStorageFile({
   required String bucketName,
-  required SelectedMedia selectedMedia,
+  required SelectedFile selectedFile,
 }) async {
   final storageBucket = SupaFlow.client.storage.from(bucketName);
   await storageBucket.uploadBinary(
-    selectedMedia.storagePath,
-    selectedMedia.bytes,
+    selectedFile.storagePath,
+    selectedFile.bytes,
     fileOptions: FileOptions(contentType: null),
   );
-  return storageBucket.getPublicUrl(selectedMedia.storagePath);
+  return storageBucket.getPublicUrl(selectedFile.storagePath);
 }
 
 Future deleteSupabaseFileFromPublicUrl(String publicUrl) async {

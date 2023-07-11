@@ -7,22 +7,26 @@ import '/backend/api_requests/api_calls.dart';
 
 Future<void> checkSub() async {
   // If the email is not provided, return a custom response or error message.
-  if (FFAppState().useremail.isEmpty) {
+  print(['App', FFAppState().email]);
+  if (FFAppState().email.isEmpty) {
+    print(['Email not provided 3 ' + FFAppState().email]);
     return;
   }
 
   dynamic customerRes = await StripeAPIGroup.getCustomerCall.call(
-    email: FFAppState().useremail,
+    email: FFAppState().email,
   );
 
+  // Initialize sub as false
+  FFAppState().sub = false;
+
   if (customerRes != null && customerRes.jsonBody.isNotEmpty) {
-    // var jsonResponse = jsonDecode(customerRes.jsonBody);
+    print(['customerRes', customerRes.jsonBody]);
     dynamic jsonResponse = customerRes.jsonBody;
     List<dynamic> customers = jsonResponse['data'];
 
     for (var customer in customers) {
       String customerId = customer['id'];
-
       dynamic activeSub;
 
       if (FFAppState().stripeSubId.isNotEmpty &&
@@ -36,11 +40,11 @@ Future<void> checkSub() async {
         );
       } else {
         // Break out of the loop if the customerId doesn't contain 'cus_'
+        print('Customer ID does not contain "cus_". Skipping this customer.');
         continue;
       }
 
       if (activeSub != null && activeSub.jsonBody.isNotEmpty) {
-        // var subResponse = jsonDecode(activeSub.jsonBody);
         dynamic subResponse = activeSub.jsonBody;
         List<dynamic> subscriptions = subResponse['data'];
 
@@ -48,7 +52,9 @@ Future<void> checkSub() async {
           String subStatus = subscription['status'];
           if (subStatus == 'active') {
             FFAppState().stripeSubId = subscription['id'];
+            // Set sub as true if active subscription is found
             FFAppState().sub = true;
+            print(['Sub', FFAppState().stripeSubId, FFAppState().sub]);
             return;
           }
         }

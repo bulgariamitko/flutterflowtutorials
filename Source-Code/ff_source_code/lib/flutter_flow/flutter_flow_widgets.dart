@@ -175,7 +175,7 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
       ),
     );
 
-    if (widget.icon != null || widget.iconData != null) {
+    if ((widget.icon != null || widget.iconData != null) && !loading) {
       return Container(
         height: widget.options.height,
         width: widget.options.width,

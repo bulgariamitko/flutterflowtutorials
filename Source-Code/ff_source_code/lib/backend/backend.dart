@@ -52,21 +52,6 @@ Future<List<MycollectionRecord>> queryMycollectionRecordOnce({
       singleRecord: singleRecord,
     );
 
-Future<FFFirestorePage<MycollectionRecord>> queryMycollectionRecordPage({
-  Query Function(Query)? queryBuilder,
-  DocumentSnapshot? nextPageMarker,
-  required int pageSize,
-  required bool isStream,
-}) =>
-    queryCollectionPage(
-      MycollectionRecord.collection,
-      MycollectionRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      nextPageMarker: nextPageMarker,
-      pageSize: pageSize,
-      isStream: isStream,
-    );
-
 Future<int> queryCollectionCount(
   Query collection, {
   Query Function(Query)? queryBuilder,

@@ -53,6 +53,7 @@ dependencies:
   flutter_plugin_android_lifecycle: 2.0.9
   font_awesome_flutter: 10.1.0
   from_css_color: 2.0.0
+  functions_client: 1.3.2
   go_router: 7.1.1
   google_fonts: 4.0.3
   google_sign_in: 6.0.2
@@ -60,6 +61,7 @@ dependencies:
   google_sign_in_ios: 5.6.1
   google_sign_in_platform_interface: 2.4.0
   google_sign_in_web: 0.11.0+2
+  gotrue: 1.11.0
   hive: 2.2.3
   image_picker: 0.8.5+3
   image_picker_android: 0.8.5+3
@@ -75,7 +77,9 @@ dependencies:
   path_provider_foundation: 2.2.2
   path_provider_platform_interface: 2.0.6
   plugin_platform_interface: 2.1.3
+  postgrest: 1.3.2
   provider: 6.0.4
+  realtime_client: 1.1.1
   rxdart: 0.27.7
   shared_preferences: 2.0.15
   shared_preferences_android: 2.1.0
@@ -86,6 +90,7 @@ dependencies:
   sign_in_with_apple_platform_interface: 1.0.0
   sign_in_with_apple_web: 1.0.1
   sqflite: 2.2.6
+  storage_client: 1.5.1
   stream_transform: 2.1.0
   supabase: 1.6.3
   supabase_flutter: 1.7.0

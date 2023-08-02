@@ -16,30 +16,27 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Devotees
+JP
 ActiveHub Molatech
 Manni M
-Jean-Pierre Last
 
 Klaturov Fanatic
-Joel Jesusi
-Erich Benevides Diniz
-Sebastián Escobar
-Grayman
-Daniel Andrade
-Carrilho, Rubens
-Tony Sims
-Luciano Pacheco
-Johnson Wu
-Shockzzz z
 Yulian Diaz Leon
+Luciano Pacheco
+Carrilho, Rubens
+Daniel Andrade
+Sebastián Escobar
+Erich Benevides Diniz
+Joel Jesusi
+P. H.
+Vernon Penny
 
 Klaturov Cadet
-DeSof sistemas
-Josué Figueredo Delfino
-Q tech
-Benjamin
-Jaco Laubscher
-Ellendon Tingon
 Helen Ronnenbergh
+Jaco Laubscher
+Benjamin
+Q tech
+Josué Figueredo Delfino
+DeSof sistemas
 Ali Kibao
-Andrew Isabirye
+Ellendon Tingon

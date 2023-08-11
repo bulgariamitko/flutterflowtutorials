@@ -16,25 +16,28 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Devotees
-| JP
-| ActiveHub Molatech
 | Manni M
+| ActiveHub Molatech
+| JP
 
 Klaturov Fanatic
-| Yulian Diaz Leon
-| Luciano Pacheco
-| Carrilho, Rubens
-| Daniel Andrade
-| Sebastián Escobar
-| P. H.
+| Maximiliano Bacchini
+| Erich Benevides Diniz
+| Michael Reynolds
 | Vernon Penny
+| P. H.
+| Sebastián Escobar
+| "Carrilho, Rubens"
+| Daniel Andrade
+| Luciano Pacheco
+| Yulian Diaz Leon
 
 Klaturov Cadet
-| Helen Ronnenbergh
-| Jaco Laubscher
-| Benjamin
-| Q tech
+| Daniel Gomes
+| Daniel Habibi
 | Josué Figueredo Delfino
 | DeSof sistemas
-| Ellendon Tingon
-| Daniel Habibi
+| Q tech
+| Benjamin
+| Jaco Laubscher
+| Helen Ronnenbergh

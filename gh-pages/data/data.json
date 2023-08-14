@@ -631,5 +631,23 @@
         "folder": "supabase",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/supabase/sb-download-collection-as-csv.dart",
         "id": 42
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=K-Xbub484lA",
+        "title": "@FlutterFlow Drag & Drop Mastery: Reorder String Lists",
+        "desc": "Be a paid member. Support my work. Join the Klaturov army! \nhttps://www.youtube.com/@flutterflowexpert/join\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nWelcome to \"FlutterFlow Drag & Drop Mastery: Reorder String Lists,\" a comprehensive tutorial designed to help you effortlessly manage and reorder lists of strings within your FlutterFlow app, without relying on any packages or dependencies.\n\nIn this in-depth tutorial, we'll cover the essential steps and techniques to help you effectively manage your lists of strings, including:\n\nCreating a Drag & Drop Interface: Learn how to set up a user-friendly interface for reordering your string lists using drag and drop functionality, without the need for external packages.\nImplementing the Drag & Drop Logic: I'll guide you through the process of implementing the logic needed to enable smooth drag and drop reordering for your lists of strings.\nSaving the Reordered List: Discover how to save the reordered list within your app, either in the app state or in Firebase, ensuring that your list updates are preserved for future use.\nAdding a Save Button: Learn how to integrate a save button into your app, allowing users to easily save their reordered lists and maintain the desired list order.\nBy the end of this tutorial, you'll have a thorough understanding of how to reorder lists of strings using drag and drop functionality in FlutterFlow, without any packages or dependencies. This knowledge will empower you to create a more streamlined and user-friendly app experience, simplifying list management and organization for your users.\n\nJoin me on this exciting journey as we master the art of drag and drop list reordering in FlutterFlow, and elevate your app development skills to new heights!\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/json-to-string-reorder.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Widgets/re-order-list.dart",
+        "embed": "https://www.youtube.com/embed/K-Xbub484lA",
+        "widgets": "Cg9Db2x1bW5fNmxmcjk3aHESvwEKEkNvbnRhaW5lcl85bmI5cndhZRgBIgP6AwBikAESPgoKZGltZW5zaW9ucxIwChQKCmRpbWVuc2lvbnMSBnQyZHI5ZTIYIhYKCREAAAAAAABZQBIJEQAAAAAAAFRAEkEKBGxpc3QSOQoOCgRsaXN0EgY1Yms1czgiJwgEEhFTY2FmZm9sZF9zaWtqY3IxdEICEgBKDIIBCQoHCgVvcmRlchoLUmVvcmRlckxpc3SCAQtSZW9yZGVyTGlzdJgBARKwAgoPQnV0dG9uX3hqZmV3bWZsGAkiZkphChYKClNhdmUgb3JkZXI6Bgj/////D0AFKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQPoDAGIAigGvARKoAQoIOGpoZHlvcTMSmwEijQESigESZgpkCgVvcmRlchJbCgcKBW9yZGVyKlAIBRpMCgcKBW9yZGVyMkEIClI9EhgSFggMQhIiEAoMCgpjaXRpZXNKc29uEAEaIQoYY3JlYXRlU3RyaW5nTGlzdEZyb21Kc29uEgV6NmNnZRogCAQSEVNjYWZmb2xkX3Npa2pjcjF0QgISAEoFggECEAGqAggzNXl1NmplbBoCCAES/AEKD0J1dHRvbl9mMHZ5eXNyaRgJIm1KaAodChFTYXZlIHRvIEFwcCBTdGF0ZToGCP////8PQAUpAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKAXUSbwoIcnRqOGQxcnMSY+IBVUJPCggKBmNpdGllcxJDEkEIClI9EhgSFggMQhIiEAoMCgpjaXRpZXNKc29uEAEaIQoYY3JlYXRlU3RyaW5nTGlzdEZyb21Kc29uEgV6NmNnZVACWAGqAghzMHkzMHBtbhoCCAEYBCIFIgD6AwA=",
+        "replace": [
+            {
+                "Argument name": "list"
+            },
+            {
+                "App state name - list of JSON's": "citiesJson"
+            }
+        ],
+        "folder": "Examples",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Examples/re-order-list-images.dart",
+        "id": 43
     }
 ]

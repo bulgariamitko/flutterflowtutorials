@@ -16,6 +16,7 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Devotees
+| PABLO CESAR TRONCOSO RIVILLO
 | Manni M
 | ActiveHub Molatech
 | JP
@@ -26,8 +27,9 @@ Klaturov Fanatic
 | Michael Reynolds
 | Vernon Penny
 | P. H.
+| Josué Figueredo Delfino
 | Sebastián Escobar
-| "Carrilho, Rubens"
+| Carrilho Rubens
 | Daniel Andrade
 | Luciano Pacheco
 | Yulian Diaz Leon
@@ -35,7 +37,6 @@ Klaturov Fanatic
 Klaturov Cadet
 | Daniel Gomes
 | Daniel Habibi
-| Josué Figueredo Delfino
 | DeSof sistemas
 | Q tech
 | Benjamin

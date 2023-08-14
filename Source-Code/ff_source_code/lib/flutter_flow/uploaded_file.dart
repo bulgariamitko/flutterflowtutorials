@@ -41,7 +41,7 @@ class FFUploadedFile {
     };
     return FFUploadedFile(
       name: data['name'] as String,
-      bytes: data['bytes'] as Uint8List,
+      bytes: Uint8List.fromList(data['bytes'].cast<int>().toList()),
       height: data['height'] as double?,
       width: data['width'] as double?,
       blurHash: data['blurHash'] as String?,

@@ -212,7 +212,8 @@ class FirebaseAuthManager extends AuthManager
     // * Finally modify verificationCompleted below as instructed.
     await FirebaseAuth.instance.verifyPhoneNumber(
       phoneNumber: phoneNumber,
-      timeout: Duration(seconds: 5),
+      timeout:
+          Duration(seconds: 0), // Skips Android's default auto-verification
       verificationCompleted: (phoneAuthCredential) async {
         await FirebaseAuth.instance.signInWithCredential(phoneAuthCredential);
         phoneAuthManager.update(() {

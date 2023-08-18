@@ -46,23 +46,36 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#1d2428">
 
   <link rel="manifest" href="manifest.json">
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = null;
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
-      });
-    }
     
+    window.addEventListener('load', function (ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        entrypointUrl: 'main.dart.js',
+        serviceWorker: {
+          serviceWorkerUrl: 'flutter_service_worker.js?v=',
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: async function(engineInitializer) {
+          // Initialize the Flutter engine
+          let appRunner = await engineInitializer.initializeEngine();
+          // Run the app
+          await appRunner.runApp();
+        }
+      });
+    });
   </script>
   
   
   
   
-  <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>

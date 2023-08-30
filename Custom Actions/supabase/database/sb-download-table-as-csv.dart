@@ -5,7 +5,7 @@
 import 'dart:convert' show utf8;
 import 'package:download/download.dart';
 
-Future downloadCollectionAsCSVSB(List<ViewersRow>? docs) async {
+Future downloadTableAsCSVSB(List<ViewersRow>? docs) async {
   // null check
   docs = docs ?? [];
 

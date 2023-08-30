@@ -825,5 +825,38 @@
         "folder": "database",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/firebase/database/fb-update-all-docs-in-collection.dart",
         "id": 56
+    },
+    {
+        "video": "// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join",
+        "title": "",
+        "desc": "",
+        "embed": "",
+        "widgets": "",
+        "replace": [],
+        "folder": "Videos",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Videos/codex-word.js",
+        "id": 57
+    },
+    {
+        "video": "// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join",
+        "title": "",
+        "desc": "",
+        "embed": "",
+        "widgets": "",
+        "replace": [],
+        "folder": "Videos",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Videos/rowy-cloud-function-tutorial.js",
+        "id": 58
+    },
+    {
+        "video": "// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join",
+        "title": "",
+        "desc": "",
+        "embed": "",
+        "widgets": "",
+        "replace": [],
+        "folder": "Videos",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Videos/communityp1.dart",
+        "id": 59
     }
 ]

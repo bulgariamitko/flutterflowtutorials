@@ -1,7 +1,12 @@
-// code created by https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=aBC7A2oFsdM
 // replace - [{"Name of json auth file": "auth.json"}, {"Push notification title": "Your Title"}, {"Push notification description": "Your Description"}, {"The UID of the user you want to send the push notification to": "user-id"}, {"Collection name": "notifications"}, {"Person's name": "John Doe"}, {"Person's email": "johndoe@example.com"}, {"FCM token of the device (can take it from production db)": "very-long-fcm-token"}]
-// support my work - https://github.com/sponsors/bulgariamitko
+// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Support my work - https://github.com/sponsors/bulgariamitko
+// Website - https://bulgariamitko.github.io/flutterflowtutorials/
+// You can book me as FF mentor - https://calendly.com/bulgaria_mitko
+// GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
+// Discord channel - https://discord.gg/ERDVFBkJmY
 
 const admin = require('firebase-admin');
 const serviceAccount = require('./auth.json');

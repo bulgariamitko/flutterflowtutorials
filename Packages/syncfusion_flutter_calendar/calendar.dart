@@ -1,6 +1,11 @@
-// code created by https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@flutterflowexpert
 // video - no
-// support my work - https://github.com/sponsors/bulgariamitko
+// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Support my work - https://github.com/sponsors/bulgariamitko
+// Website - https://bulgariamitko.github.io/flutterflowtutorials/
+// You can book me as FF mentor - https://calendly.com/bulgaria_mitko
+// GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
+// Discord channel - https://discord.gg/ERDVFBkJmY
 
 // source - https://developer.simprogroup.com/apidoc/?page=ccdb7bf9d93e5652b57cabcc8c41e061#operation/1e26bec2889a4a629e178d71d4b48ce2
 

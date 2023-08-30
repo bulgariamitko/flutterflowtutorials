@@ -1,8 +1,13 @@
-// code created by https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@flutterflowexpert
 // paid video - https://www.youtube.com/watch?v=rrgw84My5tw
 // widgets - Cg9Db2x1bW5fams0eDgwdjISiQEKEkNvbnRhaW5lcl9hNHB3MHlveBgBIgP6AwBiVBI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGZ2Nka2U4MhgiFgoJEQAAAAAAAFlAEgkJAAAAAADAYkAaElNvdW5kUmVjb3JkQW5kUGxheYIBElNvdW5kUmVjb3JkQW5kUGxheZgBARJJCg1UZXh0X24zenUxbXd2GAIiNBISCgtIZWxsbyBXb3JsZEAGqAEAmgEaCgICASoUCAxCECIOCgoKCGZpbGVQYXRoEAH6AwBiABI9Cg1UZXh0X2FyaTNjYTRoGAIiKBISCgtIZWxsbyBXb3JsZEAGqAEAmgEOCgICASoICAJCBAoCCAL6AwBiABgEIgUiAPoDAA==
 // replace - [{"App State name": "filePath"}, {"File audio extention": "opus"}]
-// support my work - https://github.com/sponsors/bulgariamitko
+// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Support my work - https://github.com/sponsors/bulgariamitko
+// Website - https://bulgariamitko.github.io/flutterflowtutorials/
+// You can book me as FF mentor - https://calendly.com/bulgaria_mitko
+// GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
+// Discord channel - https://discord.gg/ERDVFBkJmY
 
 import '../../auth/firebase_auth/auth_util.dart';
 import '../../backend/firebase_storage/storage.dart';

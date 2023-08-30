@@ -1,4 +1,4 @@
-// code created by https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@flutterflowexpert
 
 bool valueNotEmpty(String? value) {
   // if value not empty return true else return false

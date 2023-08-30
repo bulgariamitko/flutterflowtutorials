@@ -1,7 +1,12 @@
-// code created by https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@flutterflowexpert
 // video - https://www.youtube.com/watch?v=nHz5o78L0x0
 // update code video - https://youtube.com/watch?v=tWsr7dMKPcA
-// support my work - https://github.com/sponsors/bulgariamitko
+// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Support my work - https://github.com/sponsors/bulgariamitko
+// Website - https://bulgariamitko.github.io/flutterflowtutorials/
+// You can book me as FF mentor - https://calendly.com/bulgaria_mitko
+// GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
+// Discord channel - https://discord.gg/ERDVFBkJmY
 
 Future updateAllDocsInCollection(
   String? fieldName,

@@ -17,9 +17,9 @@ Future updateOrInsertDocUsingFilter(
   fieldName1 ??= 'error';
   fieldName2 ??= 'error';
   fieldName3 ??= 'error';
-  fieldValue1 = fieldValue1 ?? '';
-  fieldValue2 = fieldValue2 ?? DateTime.now();
-  fieldValue3 = fieldValue3 ?? '';
+  fieldValue1 ??= '';
+  fieldValue2 ??= DateTime.now();
+  fieldValue3 ??= '';
   collectionName = collectionName ?? '';
 
   // Get a reference to the Firestore database

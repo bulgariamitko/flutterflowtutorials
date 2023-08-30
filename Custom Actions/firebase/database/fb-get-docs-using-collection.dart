@@ -4,7 +4,7 @@
 
 // IMPORTANT you no longer need to use this custom code, more info - https://www.youtube.com/watch?v=yGggMqY0peY
 
-// TODO change the name of the collection from CarsRecord to yuor collection, lets say UsersRecord
+// TODO change the name of the collection from CarsRecord to your collection, lets say UsersRecord
 Future<List<CarsRecord>> getDocsFromCollection(
   String? collectionName,
   int? limit,

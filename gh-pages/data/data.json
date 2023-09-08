@@ -858,5 +858,27 @@
         "folder": "Videos",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Videos/communityp1.dart",
         "id": 59
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=H4YBcAb7XxY",
+        "title": "@FlutterFlow makes it easy to upload any file type to @Firebase",
+        "desc": "Be a paid member. Support my work. Join the Klaturov army! \nhttps://www.youtube.com/@flutterflowexpert/join\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nIn this video, I will show you how to upload any file type to Firebase using Flutterflow. By the end of this session, you will have learned how to easily and efficiently store files in your Firebase database using Flutterflow. This is a valuable skill to have as it allows you to store and access a wide range of file types, including images, audio, video, and more. Whether you are a beginner or an experienced developer, you will find this tutorial helpful in getting started with uploading files to Firebase using Flutterflow.\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/firebase/storage/fb-upload-any-file-type.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/firebase/storage/fb-upload-multi-any-file-type.dart\n\nIn this video\n00:00 Working demo\n02:30 Upload any file type\n07:45 Thank you for watching",
+        "embed": "https://www.youtube.com/embed/H4YBcAb7XxY",
+        "widgets": "Cg9Db2x1bW5fOG95emxwMTQS7gEKD0J1dHRvbl92djM1emhrdxgJInxKdwojCgtVcGxvYWQgZmlsZToGCP////8PQAV6ChIINWdhYnJyMTQZAAAAAAAAAEApAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKAVgSUgoIcXNmMGg3NjMSRtIBOAoaChF1cGxvYWRBbnlGaWxlVHlwZRIFaDhhMnESGhIYCAxCFCISCg4KDGFyZ0ZpbGVUeXBlcxABqgIIeWc4cXg1em4aAggBGAQiGyICEAFyEgkAAAAAAAAAABEAAAAAAAAAAPoDAA==",
+        "replace": [],
+        "folder": "storage",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/supabase/storage/sb-upload-any-file-type.dart",
+        "id": 60
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=H4YBcAb7XxY",
+        "title": "@FlutterFlow makes it easy to upload any file type to @Firebase",
+        "desc": "Be a paid member. Support my work. Join the Klaturov army! \nhttps://www.youtube.com/@flutterflowexpert/join\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nIn this video, I will show you how to upload any file type to Firebase using Flutterflow. By the end of this session, you will have learned how to easily and efficiently store files in your Firebase database using Flutterflow. This is a valuable skill to have as it allows you to store and access a wide range of file types, including images, audio, video, and more. Whether you are a beginner or an experienced developer, you will find this tutorial helpful in getting started with uploading files to Firebase using Flutterflow.\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/firebase/storage/fb-upload-any-file-type.dart\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/firebase/storage/fb-upload-multi-any-file-type.dart\n\nIn this video\n00:00 Working demo\n02:30 Upload any file type\n07:45 Thank you for watching",
+        "embed": "https://www.youtube.com/embed/H4YBcAb7XxY",
+        "widgets": "Cg9Db2x1bW5fOG95emxwMTQS7gEKD0J1dHRvbl92djM1emhrdxgJInxKdwojCgtVcGxvYWQgZmlsZToGCP////8PQAV6ChIINWdhYnJyMTQZAAAAAAAAAEApAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKAVgSUgoIcXNmMGg3NjMSRtIBOAoaChF1cGxvYWRBbnlGaWxlVHlwZRIFaDhhMnESGhIYCAxCFCISCg4KDGFyZ0ZpbGVUeXBlcxABqgIIeWc4cXg1em4aAggBGAQiGyICEAFyEgkAAAAAAAAAABEAAAAAAAAAAPoDAA==",
+        "replace": [],
+        "folder": "storage",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/supabase/storage/sb-upload-multi-any-file-type.dart",
+        "id": 61
     }
 ]

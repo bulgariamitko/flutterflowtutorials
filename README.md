@@ -16,22 +16,26 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Daniel Andrade
+| Antônio
+| The Rapid Bot
+| Yash SRIVASTAVA
+| Travis Cullen
 | Natural Mood Music
 | Efarash Faster
 | MRVNTTT
 | Sławomir Kicka
 | Maximiliano Bacchini
-| Erich Benevides Diniz
-| Michael Reynolds
 | Vernon Penny
 | P. H.
 | Josué Figueredo Delfino
 | Sebastián Escobar
 | Carrilho Rubens
-| Luciano Pacheco
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Matheus Pina
+| Sergii Shpak
 | Benjamin
 | Ahmet Urel
 | Daniel Gomes
@@ -39,9 +43,9 @@ Klaturov Cadet
 | DeSof sistemas
 | Q tech
 | Jaco Laubscher
-| Helen Ronnenbergh
 
 Klaturov Devotees
+| Koya Mikami
 | Manni M
 | PABLO CESAR TRONCOSO RIVILLO
 | ActiveHub Molatech

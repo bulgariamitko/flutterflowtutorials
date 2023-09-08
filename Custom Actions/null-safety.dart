@@ -75,5 +75,9 @@ Future nullSafety(
           onSale: true);
   sbRow = sbRow ?? UsersRow({});
 
+  // more data types null safety
+  Uint8List emptyBytes = Uint8List(0);
+  SelectedFile selectedFile = SelectedFile(bytes: emptyBytes);
+
   // add your code
 }

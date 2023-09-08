@@ -8,6 +8,8 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
+// NOTE! You do not need a custom code for that anymore using FF native actions
+
 import '../../backend/firebase_storage/storage.dart';
 import '../../flutter_flow/flutter_flow_widgets.dart';
 import '../../flutter_flow/upload_data.dart';

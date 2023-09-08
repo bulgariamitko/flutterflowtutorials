@@ -287,4 +287,8 @@ extension ListDivideExt<T extends Widget> on Iterable<T> {
 
   List<Widget> addToEnd(Widget t) =>
       enumerate.map((e) => e.value).toList()..add(t);
+
+  List<Padding> paddingTopEach(double val) =>
+      map((w) => Padding(padding: EdgeInsets.only(top: val), child: w))
+          .toList();
 }

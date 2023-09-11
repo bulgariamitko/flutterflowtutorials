@@ -1,5 +1,5 @@
 // YouTube channel - https://www.youtube.com/@flutterflowexpert
-// sb video - https://www.youtube.com/watch?v=HtvtwLmaI0w
+// paid video - https://www.youtube.com/watch?v=0_TIH7xT5_Y&t=1s
 // replace - [{"Collection name": "Cars"}]
 // Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
 // Support my work - https://github.com/sponsors/bulgariamitko

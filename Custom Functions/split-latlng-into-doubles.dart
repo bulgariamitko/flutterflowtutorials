@@ -7,8 +7,11 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
-String toLower(String? input) {
-  input = input ?? '';
+List<double> splitLongLatIntoTwoDoubles(LatLng? location)  {
+  /// MODIFY CODE ONLY BELOW THIS LINE
 
-  return input.toLowerCase();
+  location ??= LatLng(0.0, 0.0);
+
+  return [location.latitude, location.longitude];
+  /// MODIFY CODE ONLY ABOVE THIS LINE
 }

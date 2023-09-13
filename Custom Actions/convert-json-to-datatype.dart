@@ -7,6 +7,8 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
+// Note: This code can be used as a custom function as well
+
 Future<List<UserStruct>> convertJSONtoDT(List<dynamic>? data) async {
   // null safety
   data ??= [];

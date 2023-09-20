@@ -292,3 +292,13 @@ extension ListDivideExt<T extends Widget> on Iterable<T> {
       map((w) => Padding(padding: EdgeInsets.only(top: val), child: w))
           .toList();
 }
+
+extension StatefulWidgetExtensions on State<StatefulWidget> {
+  /// Check if the widget exist before safely setting state.
+  void safeSetState(VoidCallback fn) {
+    if (mounted) {
+      // ignore: invalid_use_of_protected_member
+      setState(fn);
+    }
+  }
+}

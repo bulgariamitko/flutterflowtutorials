@@ -24,7 +24,6 @@ class WidgetToImage extends StatefulWidget {
   final double? height;
   // final String? data;
 
-
   @override
   _WidgetToImageState createState() => _WidgetToImageState();
 }

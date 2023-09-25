@@ -17,12 +17,12 @@ class WidgetToImage extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
-    this.data,
+    // this.data,
   }) : super(key: key);
 
   final double? width;
   final double? height;
-  final String? data;
+  // final String? data;
 
   @override
   _WidgetToImageState createState() => _WidgetToImageState();

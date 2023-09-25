@@ -7,11 +7,13 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
-String decodeUrl(String? url) {
-  url = url ?? '';
+List<String> splitAndTrim(String input) {
+  if (input.isEmpty) {
+    return [];
+  }
 
-  String decoded = Uri.decodeFull(url);
-  String withoutSpaces = decoded.replaceAll(' ', '-');
+  final parts = input.split(',');
+  final trimmedParts = parts.map((part) => part.trim()).toList();
 
-  return withoutSpaces;
+  return trimmedParts;
 }

@@ -15,38 +15,36 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Devotees
+| David Mayne
+| Koya Mikami
+| Manni M
+| ActiveHub Molatech
+| JP
+
 Klaturov Fanatic
+| Saigin Govender
+| Herbert Riener
+| Maximiliano Bacchini
+| vnhg
 | Daniel Andrade
-| Antônio
 | The Rapid Bot
 | Yash SRIVASTAVA
 | Travis Cullen
 | Natural Mood Music
 | Efarash Faster
 | MRVNTTT
-| Sławomir Kicka
-| Maximiliano Bacchini
 | Vernon Penny
-| P. H.
-| Josué Figueredo Delfino
 | Sebastián Escobar
 | Carrilho Rubens
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Fabian andres Correcha Marin
+| Rafael Borchardt
 | Matheus Pina
 | Sergii Shpak
-| Benjamin
-| Ahmet Urel
-| Daniel Gomes
 | Daniel Habibi
 | DeSof sistemas
 | Q tech
 | Jaco Laubscher
-
-Klaturov Devotees
-| Koya Mikami
-| Manni M
-| PABLO CESAR TRONCOSO RIVILLO
-| ActiveHub Molatech
-| JP

@@ -169,7 +169,7 @@ Future<List<SelectedFile>?> selectMedia({
       imageQuality: imageQuality,
     );
     final pickedMedia = await pickedMediaFuture;
-    if (pickedMedia == null || pickedMedia.isEmpty) {
+    if (pickedMedia.isEmpty) {
       return null;
     }
     return Future.wait(pickedMedia.asMap().entries.map((e) async {

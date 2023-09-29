@@ -285,7 +285,7 @@ class ApiManager {
         ApiCallRecord(callName, apiUrl, headers, params, body, bodyType);
     // Modify for your specific needs if this differs from your API.
     if (_accessToken != null) {
-      headers[HttpHeaders.authorizationHeader] = 'Token $_accessToken';
+      headers[HttpHeaders.authorizationHeader] = 'Bearer $_accessToken';
     }
     if (!apiUrl.startsWith('http')) {
       apiUrl = 'https://$apiUrl';
@@ -298,38 +298,46 @@ class ApiManager {
     }
 
     ApiCallResponse result;
-    switch (callType) {
-      case ApiCallType.GET:
-      case ApiCallType.DELETE:
-        result = await urlRequest(
-          callType,
-          apiUrl,
-          headers,
-          params,
-          returnBody,
-          decodeUtf8,
-        );
-        break;
-      case ApiCallType.POST:
-      case ApiCallType.PUT:
-      case ApiCallType.PATCH:
-        result = await requestWithBody(
-          callType,
-          apiUrl,
-          headers,
-          params,
-          body,
-          bodyType,
-          returnBody,
-          encodeBodyUtf8,
-          decodeUtf8,
-        );
-        break;
-    }
+    try {
+      switch (callType) {
+        case ApiCallType.GET:
+        case ApiCallType.DELETE:
+          result = await urlRequest(
+            callType,
+            apiUrl,
+            headers,
+            params,
+            returnBody,
+            decodeUtf8,
+          );
+          break;
+        case ApiCallType.POST:
+        case ApiCallType.PUT:
+        case ApiCallType.PATCH:
+          result = await requestWithBody(
+            callType,
+            apiUrl,
+            headers,
+            params,
+            body,
+            bodyType,
+            returnBody,
+            encodeBodyUtf8,
+            decodeUtf8,
+          );
+          break;
+      }
 
-    // If caching is on, cache the result (if present).
-    if (cache) {
-      _apiCache[callRecord] = result;
+      // If caching is on, cache the result (if present).
+      if (cache) {
+        _apiCache[callRecord] = result;
+      }
+    } catch (e) {
+      result = ApiCallResponse(
+        null,
+        {},
+        -1,
+      );
     }
 
     return result;

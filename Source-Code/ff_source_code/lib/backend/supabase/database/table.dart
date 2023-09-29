@@ -26,6 +26,7 @@ abstract class SupabaseTable<T extends SupabaseDataRow> {
           .limit(1)
           .select<PostgrestMap?>()
           .maybeSingle()
+          .catchError((e) => print('Error querying row: $e'))
           .then((r) => [if (r != null) createRow(r)]);
 
   Future<T> insert(Map<String, dynamic> data) => SupaFlow.client

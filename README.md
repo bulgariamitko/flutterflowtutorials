@@ -15,14 +15,8 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Devotees
-| David Mayne
-| Koya Mikami
-| Manni M
-| ActiveHub Molatech
-| JP
-
 Klaturov Fanatic
+| Martin Brennan
 | Saigin Govender
 | Herbert Riener
 | Maximiliano Bacchini
@@ -31,13 +25,19 @@ Klaturov Fanatic
 | The Rapid Bot
 | Yash SRIVASTAVA
 | Travis Cullen
-| Natural Mood Music
 | Efarash Faster
 | MRVNTTT
 | Vernon Penny
 | Sebastián Escobar
 | Carrilho Rubens
 | Yulian Diaz Leon
+
+Klaturov Devotees
+| David Mayne
+| Koya Mikami
+| Manni M
+| ActiveHub Molatech
+| JP
 
 Klaturov Cadet
 | Fabian andres Correcha Marin

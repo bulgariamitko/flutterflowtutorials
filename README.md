@@ -16,13 +16,15 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| VOLROD
+| Igor Santos
+| Ewerton Rodrigues Colhado
 | Martin Brennan
 | Saigin Govender
 | Herbert Riener
 | Maximiliano Bacchini
 | vnhg
 | Daniel Andrade
-| The Rapid Bot
 | Yash SRIVASTAVA
 | Travis Cullen
 | Efarash Faster
@@ -32,19 +34,18 @@ Klaturov Fanatic
 | Carrilho Rubens
 | Yulian Diaz Leon
 
+Klaturov Cadet
+| Arvin
+| Fabian andres Correcha Marin
+| Rafael Borchardt
+| Sergii Shpak
+| Daniel Habibi
+| Q tech
+| Jaco Laubscher
+
 Klaturov Devotees
 | David Mayne
 | Koya Mikami
 | Manni M
 | ActiveHub Molatech
 | JP
-
-Klaturov Cadet
-| Fabian andres Correcha Marin
-| Rafael Borchardt
-| Matheus Pina
-| Sergii Shpak
-| Daniel Habibi
-| DeSof sistemas
-| Q tech
-| Jaco Laubscher

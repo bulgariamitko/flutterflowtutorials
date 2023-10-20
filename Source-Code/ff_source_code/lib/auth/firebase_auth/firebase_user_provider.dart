@@ -23,7 +23,13 @@ class FfSourceCodeFirebaseUser extends BaseAuthUser {
   Future? delete() => user?.delete();
 
   @override
-  Future? updateEmail(String email) async => await user?.updateEmail(email);
+  Future? updateEmail(String email) async {
+    try {
+      await user?.updateEmail(email);
+    } catch (_) {
+      await user?.verifyBeforeUpdateEmail(email);
+    }
+  }
 
   @override
   Future? sendEmailVerification() => user?.sendEmailVerification();

@@ -68,7 +68,7 @@ dependencies:
   image_picker_for_web: 3.0.1
   image_picker_ios: 0.8.8+2
   image_picker_platform_interface: 2.9.1
-  intl: 0.18.0
+  intl: 0.18.1
   json_path: 0.6.2
   mime_type: 1.0.0
   page_transition: 2.0.4
@@ -142,8 +142,6 @@ flutter:
     - assets/lottie_animations/
     - assets/rive_animations/
     - assets/pdfs/
-
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

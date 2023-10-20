@@ -124,14 +124,17 @@ class ApiManager {
     Map<String, dynamic> headers,
     Map<String, dynamic> params,
     bool returnBody,
-    bool decodeUtf8,
-  ) async {
+    bool decodeUtf8, {
+    http.Client? client,
+  }) async {
     if (params.isNotEmpty) {
       final specifier =
           Uri.parse(apiUrl).queryParameters.isNotEmpty ? '&' : '?';
       apiUrl = '$apiUrl$specifier${asQueryParams(params)}';
     }
-    final makeRequest = callType == ApiCallType.GET ? http.get : http.delete;
+    final makeRequest = callType == ApiCallType.GET
+        ? (client != null ? client.get : http.get)
+        : (client != null ? client.delete : http.delete);
     final response =
         await makeRequest(Uri.parse(apiUrl), headers: toStringMap(headers));
     return ApiCallResponse.fromHttpResponse(response, returnBody, decodeUtf8);
@@ -146,8 +149,9 @@ class ApiManager {
     BodyType? bodyType,
     bool returnBody,
     bool encodeBodyUtf8,
-    bool decodeUtf8,
-  ) async {
+    bool decodeUtf8, {
+    http.Client? client,
+  }) async {
     assert(
       {ApiCallType.POST, ApiCallType.PUT, ApiCallType.PATCH}.contains(type),
       'Invalid ApiCallType $type for request with body',
@@ -161,9 +165,9 @@ class ApiManager {
     }
 
     final requestFn = {
-      ApiCallType.POST: http.post,
-      ApiCallType.PUT: http.put,
-      ApiCallType.PATCH: http.patch,
+      ApiCallType.POST: client != null ? client.post : http.post,
+      ApiCallType.PUT: client != null ? client.put : http.put,
+      ApiCallType.PATCH: client != null ? client.patch : http.patch,
     }[type]!;
     final response = await requestFn(Uri.parse(apiUrl),
         headers: toStringMap(headers), body: postBody);
@@ -280,6 +284,7 @@ class ApiManager {
     bool encodeBodyUtf8 = false,
     bool decodeUtf8 = false,
     bool cache = false,
+    http.Client? client,
   }) async {
     final callRecord =
         ApiCallRecord(callName, apiUrl, headers, params, body, bodyType);
@@ -309,6 +314,7 @@ class ApiManager {
             params,
             returnBody,
             decodeUtf8,
+            client: client,
           );
           break;
         case ApiCallType.POST:
@@ -324,6 +330,7 @@ class ApiManager {
             returnBody,
             encodeBodyUtf8,
             decodeUtf8,
+            client: client,
           );
           break;
       }

@@ -16,36 +16,47 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
-| VOLROD
+| Yusuf A B Kuki
+| Richard Hennessey III
+| María López
+| Robert Bartelt
+| Gijs van Laarhoven
+| Sebastián Escobar
+| jose pacheco
+| Kyle Mabaso
+| Peter Anyaogu
+| Francisco Lercari
+| Michal Kovarcik
+| Edgard
+| Håkon Ulven (Goli)
+| Ken Martin
+| Rony Baruch
+| André Dias
+| Lohit Soundarajan
+| reima
+| Craig Wyhs
+| Gregor Melhorn
 | Igor Santos
-| Ewerton Rodrigues Colhado
-| Martin Brennan
 | Saigin Govender
 | Herbert Riener
-| Maximiliano Bacchini
-| vnhg
 | Daniel Andrade
 | Yash SRIVASTAVA
 | Travis Cullen
-| Efarash Faster
 | MRVNTTT
 | Vernon Penny
-| Sebastián Escobar
 | Carrilho Rubens
 | Yulian Diaz Leon
 
 Klaturov Cadet
-| Arvin
-| Fabian andres Correcha Marin
-| Rafael Borchardt
+| Marcin Wojcicki
+| Thomas Anderson
 | Sergii Shpak
 | Daniel Habibi
 | Q tech
 | Jaco Laubscher
 
 Klaturov Devotees
+| Manni M
 | David Mayne
 | Koya Mikami
-| Manni M
-| ActiveHub Molatech
 | JP

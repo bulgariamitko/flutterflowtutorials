@@ -15,7 +15,20 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Cadet
+| Heictor Hsiao
+| Marcin Wojcicki
+| Thomas Anderson
+| Sergii Shpak
+| Daniel Habibi
+| Q tech
+| Jaco Laubscher
+
 Klaturov Fanatic
+| Mindset Theory Show
+| Sezgin Cetinkol
+| Automation in 30
+| Diego Dotta
 | Yusuf A B Kuki
 | Richard Hennessey III
 | María López
@@ -30,7 +43,6 @@ Klaturov Fanatic
 | Edgard
 | Håkon Ulven (Goli)
 | Ken Martin
-| Rony Baruch
 | André Dias
 | Lohit Soundarajan
 | reima
@@ -41,19 +53,9 @@ Klaturov Fanatic
 | Herbert Riener
 | Daniel Andrade
 | Yash SRIVASTAVA
-| Travis Cullen
-| MRVNTTT
 | Vernon Penny
 | Carrilho Rubens
 | Yulian Diaz Leon
-
-Klaturov Cadet
-| Marcin Wojcicki
-| Thomas Anderson
-| Sergii Shpak
-| Daniel Habibi
-| Q tech
-| Jaco Laubscher
 
 Klaturov Devotees
 | Manni M

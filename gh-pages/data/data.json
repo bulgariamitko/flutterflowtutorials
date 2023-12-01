@@ -1064,5 +1064,16 @@
         "folder": "Custom Actions",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/countDownTimer.dart",
         "id": 74
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=5VtUTZ5nyDU",
+        "title": "Implementing a Countdown Timer in @FlutterFlow",
+        "desc": "Be a paid member. Support my work. Join the Klaturov army! \nhttps://www.youtube.com/@flutterflowexpert/join\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nIn this video\n00:00 Introduction\n01:37 How it works\n04:57 Building the count down timer\n26:15 Hiding and showing buttons\n31:07 Change the timer time\n34:57 Running timer on background\n35:46 4k Subs Goal\n37:17 Thank you!",
+        "embed": "https://www.youtube.com/embed/5VtUTZ5nyDU",
+        "widgets": "",
+        "replace": [],
+        "folder": "Custom Actions",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Actions/count-down-timer.dart",
+        "id": 75
     }
 ]

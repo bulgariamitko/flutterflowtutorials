@@ -16,6 +16,9 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Cadet
+| Rainfall Studio
+| Romário Torres
+| Alex Pedreros
 | Heictor Hsiao
 | Marcin Wojcicki
 | Thomas Anderson
@@ -25,6 +28,11 @@ Klaturov Cadet
 | Jaco Laubscher
 
 Klaturov Fanatic
+| Eduardo Petenasi
+| xzatech
+| Fernando Mendes
+| Thomas Coiner
+| Elli Grossman
 | Mindset Theory Show
 | Sezgin Cetinkol
 | Automation in 30
@@ -37,9 +45,7 @@ Klaturov Fanatic
 | Sebastián Escobar
 | jose pacheco
 | Kyle Mabaso
-| Peter Anyaogu
 | Francisco Lercari
-| Michal Kovarcik
 | Edgard
 | Håkon Ulven (Goli)
 | Ken Martin

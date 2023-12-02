@@ -27,6 +27,17 @@ Future saveFileFromUrl(
   );
   final Uint8List bytes = fileAsBytes.response!.bodyBytes;
 
+  // Get file size
+  int fileSize = bytes.length;
+
+  print(['File size', fileSize]);
+
+  // Check the file size here (example: limit to 10MB)
+  if (fileSize > 10 * 1024 * 1024) {
+    // File is too large, handle accordingly
+    return FFUploadedFile(bytes: bytes, name: 'error');
+  }
+
   SelectedFile selectedFile =
       SelectedFile(storagePath: fullFilePath, bytes: bytes);
 

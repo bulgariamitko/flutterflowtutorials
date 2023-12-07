@@ -7,20 +7,16 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
-DateTime? calExpireDate(
-  DateTime? date,
-  int? daysTillExpire,
-) {
+List<String> implodeStrings(String? data, String? delimiter) {
   /// MODIFY CODE ONLY BELOW THIS LINE
 
   // null safety
-  date ??= DateTime.now();
-  daysTillExpire ??= 0;
+  data ??= '';
+  delimiter ??= ', ';
 
-  Duration thirtyDays = Duration(days: daysTillExpire);
-  DateTime futureDate = date.add(thirtyDays);
+  String joinedList = data.join(delimiter);
 
-  return futureDate;
+  return joinedList;
 
   /// MODIFY CODE ONLY ABOVE THIS LINE
 }

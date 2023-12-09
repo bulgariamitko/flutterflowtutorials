@@ -12,11 +12,7 @@
 const app = require('express')();
 const admin = require('firebase-admin');
 const functions = require('firebase-functions');
-
-const serviceAccount = require('./auth.json');
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+// To avoid deployment errors, do not call admin.initializeApp() in your code
 
 app.get("/", async (req, res) => {
   const dynamicLink = "https://nufc2.page.link?apn=bg.nufc.nufc&ibi=bg.nufc.nufc&link=";
@@ -24,7 +20,7 @@ app.get("/", async (req, res) => {
   const newUrl = new URL(targetUrl);
 
   // Get the parameters from the URL
-  const params = req.query;
+  // const params = req.query;
 
   // DEBUG: Create a new document in the 'spotify' collection
   // const docRef = admin.firestore().collection('spotify').doc();

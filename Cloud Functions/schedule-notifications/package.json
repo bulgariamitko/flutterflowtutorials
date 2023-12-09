@@ -1,0 +1,16 @@
+{
+  "name": "functions",
+  "description": "Firebase Custom Cloud Functions",
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "cron": "^3.1.6",
+    "cron-parser": "^4.9.0",
+    "moment": "^2.29.4"
+  },
+  "private": true
+}

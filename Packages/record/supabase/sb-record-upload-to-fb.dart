@@ -9,6 +9,7 @@
 
 import '../../auth/supabase_auth/auth_util.dart';
 import '../../flutter_flow/upload_data.dart';
+import '../../backend/supabase/storage/storage.dart';
 
 import 'package:http/http.dart' as http;
 import 'dart:async';
@@ -21,10 +22,12 @@ class SoundRecordAndPlay extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
+    this.bucket,
   }) : super(key: key);
 
   final double? width;
   final double? height;
+  final String? bucket;
 
   @override
   _SoundRecordAndPlayState createState() => _SoundRecordAndPlayState();
@@ -38,9 +41,9 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
   String? path = '';
   Timer? _timer;
   Timer? _ampTimer;
-  final _audioRecorder = Record();
+  final _audioRecorder = AudioRecorder();
   final player = AudioPlayer();
-
+  RecordConfig config = const RecordConfig(encoder: AudioEncoder.opus);
   Amplitude? _amplitude;
 
   @override
@@ -79,13 +82,14 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
   Future<void> _start() async {
     try {
       if (await _audioRecorder.hasPermission()) {
-        await _audioRecorder.start();
+        await _audioRecorder.start(config, path: path!);
 
         bool isRecording = await _audioRecorder.isRecording();
         setState(() {
           _isRecording = isRecording;
           _recordDuration = 0;
         });
+        print('Recording started');
 
         _startTimer();
       }
@@ -102,6 +106,7 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
 
     // This is the path of the recorded file.
     path = await _audioRecorder.stop();
+    print('Recording started');
 
     setState(() => _isRecording = false);
     setState(() => _isPaused = true);
@@ -128,12 +133,12 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
 
       // Save the file to Supabase storage
       SelectedFile selectedFile = SelectedFile(
-      storagePath: storagePath, bytes: Uint8List.fromList(bytes));
+          storagePath: storagePath, bytes: Uint8List.fromList(bytes));
 
-  final String downloadUrl = await uploadSupabaseStorageFile(
-      bucketName: bucket, selectedFile: selectedFile);
+      final String downloadUrl = await uploadSupabaseStorageFile(
+          bucketName: widget.bucket ?? 'error', selectedFile: selectedFile);
 
-      FFAppState().filePath = downloadUrl ?? '';
+      FFAppState().filePath = downloadUrl;
     } else {
       print('Failed to read the recorded audio file');
     }

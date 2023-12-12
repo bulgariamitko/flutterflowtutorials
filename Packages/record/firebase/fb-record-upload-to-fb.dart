@@ -9,12 +9,13 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
+// Thanks to @serge from my Discord channel for providing the updated code
+
 import '../../auth/firebase_auth/auth_util.dart';
 import '../../backend/firebase_storage/storage.dart';
 
 import 'package:http/http.dart' as http;
 import 'dart:async';
-import 'dart:typed_data';
 import 'package:record/record.dart';
 import 'package:flutter/foundation.dart';
 import 'package:audioplayers/audioplayers.dart';
@@ -41,9 +42,9 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
   String? path = '';
   Timer? _timer;
   Timer? _ampTimer;
-  final _audioRecorder = Record();
+  final _audioRecorder = AudioRecorder();
   final player = AudioPlayer();
-
+  RecordConfig config = const RecordConfig(encoder: AudioEncoder.opus);
   Amplitude? _amplitude;
 
   @override
@@ -82,13 +83,14 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
   Future<void> _start() async {
     try {
       if (await _audioRecorder.hasPermission()) {
-        await _audioRecorder.start();
+        await _audioRecorder.start(config, path: path!);
 
         bool isRecording = await _audioRecorder.isRecording();
         setState(() {
           _isRecording = isRecording;
           _recordDuration = 0;
         });
+        print('Recording started');
 
         _startTimer();
       }
@@ -105,6 +107,7 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
 
     // This is the path of the recorded file.
     path = await _audioRecorder.stop();
+    print('Recording stopped. File path: $path');
 
     setState(() => _isRecording = false);
     setState(() => _isPaused = true);
@@ -136,8 +139,6 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
     } else {
       print('Failed to read the recorded audio file');
     }
-
-    // FFAppState().filePath = path ?? '';
   }
 
   Future<void> _play() async {
@@ -145,6 +146,7 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
     kIsWeb
         ? await player.play(UrlSource(path!))
         : await player.play(DeviceFileSource(path!));
+    print('Playback started. File path: $path');
 
     setState(() => _isPaused = false);
     setState(() => _isPlaying = true);

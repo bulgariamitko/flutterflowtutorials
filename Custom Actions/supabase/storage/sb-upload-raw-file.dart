@@ -9,6 +9,7 @@
 
 import 'dart:convert';
 import '../../flutter_flow/upload_data.dart';
+import '../../backend/supabase/storage/storage.dart';
 
 Future uploadRawFileToSB(
     String? bytes, String? bucket, String? fullFilePath) async {

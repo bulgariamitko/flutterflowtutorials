@@ -1120,5 +1120,20 @@
         "folder": "schedule-notifications",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/schedule-notifications/03-schedule-function.js",
         "id": 78
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=nC_Re2seyxs",
+        "title": "Mastering Scheduled Push Notifications: Boost User Engagement with Timed Alerts",
+        "desc": "IMPORTANT: If you are getting \"Internal Server Error\" when trying to send push notifications using the first cloud function you can fix it following this link\nhttps://stackoverflow.com/questions/72494678/an-error-occurred-when-trying-to-authenticate-to-the-fcm-servers-on-firebase-c\n\nBe a paid member. Support my work. Join the Klaturov army! \nhttps://www.youtube.com/@flutterflowexpert/join\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/schedule-notifications/\n\nWelcome to \"Mastering Scheduled Push Notifications: Boost User Engagement with Timed Alerts,\" an in-depth tutorial designed to help you harness the power of scheduled push notifications and enhance user engagement in your app.\n\nIn this comprehensive tutorial, we will cover the essential steps to set up, test, and deliver scheduled push notifications to your users, including:\n\nUtilizing Cloud Functions: Learn how to use cloud functions to manage and deliver scheduled push notifications, ensuring a seamless user experience.\nTesting Your Push Notifications: Discover how to effectively test your push notifications, guaranteeing that your alerts are delivered accurately and on time.\nConverting User Time to Server Time: Understand how to convert user time to server time, enabling precise scheduling and delivery of push notifications.\nScheduling Push Notifications with Cron: Familiarize yourself with the cron standard (* * * *) and its role in scheduling push notifications. We'll dive into the meaning of each field and how to configure it for your app's requirements.\nBy the end of this tutorial, you'll have a thorough understanding of how to implement and manage scheduled push notifications, enabling you to boost user engagement and improve communication within your app. You'll be well-equipped to use cloud functions, test push notifications, convert user time to server time, and schedule push notifications using the cron standard.\n\nJoin me on this exciting journey as we master the art of scheduled push notifications, and take your app's user engagement to new heights!\n\nTimestamps\n00:00 Introduction\n04:00 Working demo\n08:54 Part 1 - test push notifications\n14:45 Adding the cloud functions for all steps\n19:24 Part 1 - Continue the step\n21:49 Part 2 - convert user time to server time\n37:51 Part 3 - send schedule push notification\n40:16 Thank you!",
+        "embed": "https://www.youtube.com/embed/nC_Re2seyxs",
+        "widgets": "",
+        "replace": [
+            {
+                "File name": "auth.json"
+            }
+        ],
+        "folder": "schedule-notifications",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/schedule-notifications/03-send-schedule-notification.js",
+        "id": 79
     }
 ]

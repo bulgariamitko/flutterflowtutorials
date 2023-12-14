@@ -76,6 +76,6 @@ async function checkNotifications() {
   }
 }
 
-exports.scheduledFunction = functions.pubsub.schedule('every 10 minutes').onRun(async (context) => {
+exports.sendScheduledNotification = functions.pubsub.schedule('every 10 minutes').onRun(async (context) => {
    await checkNotifications();
 });

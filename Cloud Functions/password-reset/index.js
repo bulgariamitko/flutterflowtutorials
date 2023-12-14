@@ -17,9 +17,10 @@ const { URL } = require("url");
 const app = express();
 
 app.get("/", (req, res) => {
-  const dynamicLink = "https://nufc2.page.link?apn=bg.nufc.nufc&ibi=bg.nufc.nufc&link=";
-
-  const targetUrl = "https://nufc2.page.link/resetPass";
+  // example - https://myapp.page.link?apn=com.company.app&ibi=com.company.app&link="
+  const dynamicLink = "https://[PACKAGE DOMAIN]?apn=[PACKAGE]&ibi=[PACKAGE]&link=";
+  // example - https://myapp.page.link/resetPass
+  const targetUrl = "[PACKAGE DOMAIN]/[PAGE]";
   const newUrl = new URL(targetUrl);
 
   // Add mode, oobCode, apiKey, and lang as query parameters

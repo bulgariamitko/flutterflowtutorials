@@ -8,6 +8,7 @@
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
 import '../../flutter_flow/upload_data.dart';
+import '../../backend/supabase/storage/storage.dart';
 
 Future uploadAnyFileType(
   BuildContext context,

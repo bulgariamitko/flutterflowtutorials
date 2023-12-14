@@ -15,36 +15,23 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Cadet
-| Rainfall Studio
-| Romário Torres
-| Alex Pedreros
-| Heictor Hsiao
-| Marcin Wojcicki
-| Thomas Anderson
-| Sergii Shpak
-| Daniel Habibi
-| Q tech
-| Jaco Laubscher
-
 Klaturov Fanatic
+| ABDERRAHIM TIJANI
+| Cristian Regazzo
+| Oumar Mersile Atti Mahamat
 | Eduardo Petenasi
 | xzatech
 | Fernando Mendes
 | Thomas Coiner
 | Elli Grossman
 | Mindset Theory Show
-| Sezgin Cetinkol
+| s3zgin
 | Automation in 30
 | Diego Dotta
 | Yusuf A B Kuki
 | Richard Hennessey III
 | María López
 | Robert Bartelt
-| Gijs van Laarhoven
-| Sebastián Escobar
-| jose pacheco
-| Kyle Mabaso
 | Francisco Lercari
 | Edgard
 | Håkon Ulven (Goli)
@@ -63,8 +50,22 @@ Klaturov Fanatic
 | Carrilho Rubens
 | Yulian Diaz Leon
 
+Klaturov Cadet
+| Seong Marcus
+| Rainfall Studio
+| Romário Torres
+| Alex Pedreros
+| Heictor Hsiao
+| Marcin Wojcicki
+| Thomas Anderson
+| Sergii Shpak
+| Daniel Habibi
+| Q tech
+| Jaco Laubscher
+
 Klaturov Devotees
 | Manni M
 | David Mayne
 | Koya Mikami
 | JP
+

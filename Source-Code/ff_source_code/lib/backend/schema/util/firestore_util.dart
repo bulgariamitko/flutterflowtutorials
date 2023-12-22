@@ -87,12 +87,12 @@ Map<String, dynamic> mapToFirestore(Map<String, dynamic> data) =>
       }
       // Handle nested data.
       if (value is Map) {
-        value = mapFromFirestore(value as Map<String, dynamic>);
+        value = mapToFirestore(value as Map<String, dynamic>);
       }
       // Handle list of nested data.
       if (value is Iterable && value.isNotEmpty && value.first is Map) {
         value = value
-            .map((v) => mapFromFirestore(v as Map<String, dynamic>))
+            .map((v) => mapToFirestore(v as Map<String, dynamic>))
             .toList();
       }
       return MapEntry(key, value);

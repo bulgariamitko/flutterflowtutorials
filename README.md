@@ -16,12 +16,11 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Cadet
+| YouGuitar
+| arun ung
 | Soon Pau Kun
 | Seong Marcus
 | Rainfall Studio
-| Romário Torres
-| Alex Pedreros
-| Heictor Hsiao
 | Marcin Wojcicki
 | Sergii Shpak
 | Daniel Habibi
@@ -29,26 +28,22 @@ Klaturov Cadet
 | Jaco Laubscher
 
 Klaturov Fanatic
+| Eakapon Sinchai
+| Faisal831
 | Kyle Mabaso
 | Gustavo Santos
 | ABDERRAHIM TIJANI
 | Cristian Regazzo
-| Oumar Mersile Atti Mahamat
-| Eduardo Petenasi
 | xzatech
 | Fernando Mendes
-| Thomas Coiner
 | Elli Grossman
 | Mindset Theory Show
 | s3zgin
 | Automation in 30
-| Diego Dotta
 | Richard Hennessey III
 | Francisco Lercari
 | Edgard
-| Håkon Ulven (Goli)
 | Ken Martin
-| André Dias
 | Lohit Soundarajan
 | reima
 | Craig Wyhs

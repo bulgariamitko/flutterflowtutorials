@@ -15,25 +15,14 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Cadet
-| YouGuitar
-| arun ung
-| Soon Pau Kun
-| Seong Marcus
-| Rainfall Studio
-| Marcin Wojcicki
-| Sergii Shpak
-| Daniel Habibi
-| Q tech
-| Jaco Laubscher
-
 Klaturov Fanatic
+| Boomzo Comapny
+| Oliver Gold
 | Eakapon Sinchai
 | Faisal831
 | Kyle Mabaso
 | Gustavo Santos
 | ABDERRAHIM TIJANI
-| Cristian Regazzo
 | xzatech
 | Fernando Mendes
 | Elli Grossman
@@ -48,7 +37,6 @@ Klaturov Fanatic
 | reima
 | Craig Wyhs
 | Gregor Melhorn
-| Igor Santos
 | Saigin Govender
 | Herbert Riener
 | Daniel Andrade
@@ -56,6 +44,17 @@ Klaturov Fanatic
 | Vernon Penny
 | Carrilho Rubens
 | Yulian Diaz Leon
+
+Klaturov Cadet
+| YouGuitar
+| arun ung
+| Soon Pau Kun
+| Seong Marcus
+| Rainfall Studio
+| Marcin Wojcicki
+| Daniel Habibi
+| Q tech
+| Jaco Laubscher
 
 Klaturov Devotees
 | Manni M

@@ -10,6 +10,8 @@
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
 // Thanks to @serge from my Discord channel for providing the updated code
+// Thanks to @Jamis from my Discord channel for providing addition to this code
+// https://github.com/jamissonsand/flutter/blob/main/convertAndSaveBlobToFirebase.dart
 
 import '../../auth/firebase_auth/auth_util.dart';
 import '../../backend/firebase_storage/storage.dart';

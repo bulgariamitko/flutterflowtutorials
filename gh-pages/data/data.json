@@ -1135,5 +1135,34 @@
         "folder": "schedule-notifications",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Cloud%20Functions/schedule-notifications/03-send-schedule-notification.js",
         "id": 79
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=0_TIH7xT5_Y",
+        "title": "Unlocking Supabase's Power: Auth, Database, & Storage in FlutterFlow",
+        "desc": "Be a paid member. Support my work. Join the Klaturov army! \nhttps://www.youtube.com/@flutterflowexpert/join\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/tree/main/Custom%20Actions/supabase\n\nIn this video\n00:00 Introduction\n01:48 Supabase Authentification\n11:02 Supabase Database - basics\n20:48 Supabase Rules\n23:34 Supabase Database\n36:38 Supabase Storage\n44:11 3k Sub Goal\n46:30 Thank you!",
+        "embed": "https://www.youtube.com/embed/0_TIH7xT5_Y",
+        "widgets": "",
+        "replace": [],
+        "folder": "supabase",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/record/supabase/sb-record-upload.dart",
+        "id": 80
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=rrgw84My5tw",
+        "title": "@FlutterFlow Record, Play, Store: A Complete Guide to Audio Management with Firebase Storage",
+        "desc": "Be a paid member. Support my work. Join the Klaturov army! \nhttps://www.youtube.com/@flutterflowexpert/join\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/ERDVFBkJmY\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/record/\n\nWelcome to \"Record, Play, Store: A Complete Guide to Audio Management with Firebase Storage,\" a comprehensive tutorial designed to help you master the art of managing audio in your app.\n\nIn this tutorial, we'll venture into the essentials of audio recording, playback, and storage using Firebase, divided into three main sections:\n\nAudio Recording: Kick off your journey into audio management by learning how to effectively record audio within your application. I will walk you through the step-by-step process to make sure you get a grip on recording user-generated audio.\n\nAudio Playback: Once we have recorded audio, we will dive into how to play it back within your app. You will learn how to retrieve audio files and ensure seamless playback, enhancing your user's experience.\n\nSaving Audio Files to Firebase Storage: In the final part of the tutorial, we will explore how to take your recorded audio files and store them in Firebase Storage, ensuring they are safe and easily accessible for future use. I will guide you through the process of integrating Firebase Storage into your app for efficient audio file management.\n\nBy the end of this tutorial, you'll have a solid understanding of recording, playing, and storing audio using Firebase Storage, giving you the tools you need to enhance your app's audio capabilities. Join me in this exciting tutorial as we master audio management in the world of app development!\n\nCode used\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/record/record-upload-to-fb.dart\n\n00:00 Introduction\n02:12 How it works\n7:27 Record and save to FB Storage\n18:52 Thank you",
+        "embed": "https://www.youtube.com/embed/rrgw84My5tw",
+        "widgets": "Cg9Db2x1bW5fams0eDgwdjISiQEKEkNvbnRhaW5lcl9hNHB3MHlveBgBIgP6AwBiVBI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGZ2Nka2U4MhgiFgoJEQAAAAAAAFlAEgkJAAAAAADAYkAaElNvdW5kUmVjb3JkQW5kUGxheYIBElNvdW5kUmVjb3JkQW5kUGxheZgBARJJCg1UZXh0X24zenUxbXd2GAIiNBISCgtIZWxsbyBXb3JsZEAGqAEAmgEaCgICASoUCAxCECIOCgoKCGZpbGVQYXRoEAH6AwBiABI9Cg1UZXh0X2FyaTNjYTRoGAIiKBISCgtIZWxsbyBXb3JsZEAGqAEAmgEOCgICASoICAJCBAoCCAL6AwBiABgEIgUiAPoDAA==",
+        "replace": [
+            {
+                "App State name": "filePath"
+            },
+            {
+                "File audio extention": "opus"
+            }
+        ],
+        "folder": "firebase",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/record/firebase/fb-record-upload.dart",
+        "id": 81
     }
 ]

@@ -38,7 +38,8 @@ Future importFromCsvOrJson(
   if (selectedFile != null) {
     showUploadMessage(context, 'Uploading file...', showLoading: true);
 
-    final fileString = selectedFile.readAsBytesSync().toString();
+    final fileBytes = await selectedFile.bytes;
+    final fileString = String.fromCharCodes(fileBytes);
 
     List<String> rows = [];
     String fileType = 'csv';

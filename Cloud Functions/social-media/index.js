@@ -40,7 +40,7 @@ exports.newMsgTrigger = functions.https.onRequest(async (request, response) => {
     };
 
     // Create a new document in the sub-collection 'conversations'
-    await createDocumentInConversationsSubCollection(newDocumentData);
+    await createOrUpdateDocumentInConversationsSubCollection(newDocumentData);
 
     // Send a response back to the webhook initiator
     response.send({ status: 'success', data: newDocumentData });
@@ -84,20 +84,27 @@ async function makeGetRequest(endpoint, queryParams, headers) {
     }
 }
 
-// Helper function to create a document in 'conversations' sub-collection
-async function createDocumentInConversationsSubCollection(documentData) {
+// Helper function to update or create a document in 'conversations' sub-collection
+async function createOrUpdateDocumentInConversationsSubCollection(documentData) {
     const db = admin.firestore();
-    // const companyRef = db.collection('company').doc(documentData.company);
-    // const conversationsRef = companyRef.collection('conversations');
     const conversationsRef = documentData.sentfrom.collection('conversations');
 
-    try {
-        // Add a new document with a generated id.
+    const conversationSnapshot = await conversationsRef
+        .where('conversationID', '==', documentData.conversationID)
+        .limit(1)
+        .get();
+
+    if (!conversationSnapshot.empty) {
+        // Conversation exists, update it
+        const conversationDocRef = conversationSnapshot.docs[0].ref;
+        await conversationDocRef.update({
+            unreadMessages: admin.firestore.FieldValue.arrayUnion(documentData.lastmessage)
+        });
+        console.log(`Updated conversation with ID: ${conversationDocRef.id}`);
+    } else {
+        // No conversation found, create a new one
         const newDocRef = await conversationsRef.add(documentData);
-        console.log(`New document created with ID: ${newDocRef.id}`);
-    } catch (error) {
-        console.error('Error creating document in conversations sub-collection:', error);
-        throw error; // Rethrow the error to be caught by the caller
+        console.log(`New conversation created with ID: ${newDocRef.id}`);
     }
 }
 

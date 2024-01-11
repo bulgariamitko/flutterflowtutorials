@@ -45,7 +45,7 @@ Future importFromCsvOrJson(
     String fileType = 'csv';
     Map<String, dynamic> doc = {};
     // if file is json
-    if (selectedFile.path.contains('json')) {
+    if (selectedFile.filePath?.contains('json') ?? false) {
       fileType = 'json';
       List<dynamic> rows = jsonDecode(fileString);
 

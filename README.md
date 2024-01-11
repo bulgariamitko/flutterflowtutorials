@@ -14,15 +14,17 @@ If you are interested in contributing to this repository, please feel free to su
 # YouTube Paid Members
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
-
 Klaturov Fanatic
+| Akshay Dewan
+| razvanrh
+| Marco Antonio Oliveira
+| Ryan Aldred
 | Boomzo Comapny
 | Oliver Gold
 | Eakapon Sinchai
 | Faisal831
 | Kyle Mabaso
 | Gustavo Santos
-| ABDERRAHIM TIJANI
 | xzatech
 | Fernando Mendes
 | Elli Grossman
@@ -46,6 +48,7 @@ Klaturov Fanatic
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Miguel A. Martín - Informática IES Almenara
 | YouGuitar
 | arun ung
 | Soon Pau Kun

@@ -16,6 +16,7 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| traian lorent
 | Akshay Dewan
 | razvanrh
 | Marco Antonio Oliveira
@@ -24,8 +25,6 @@ Klaturov Fanatic
 | Oliver Gold
 | Eakapon Sinchai
 | Faisal831
-| Kyle Mabaso
-| Gustavo Santos
 | xzatech
 | Fernando Mendes
 | Elli Grossman
@@ -39,7 +38,6 @@ Klaturov Fanatic
 | Lohit Soundarajan
 | reima
 | Craig Wyhs
-| Gregor Melhorn
 | Saigin Govender
 | Herbert Riener
 | Daniel Andrade

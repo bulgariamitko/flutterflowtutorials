@@ -10,7 +10,7 @@
 List<double> convertLatLongToDouble(LatLng? location) {
   /// MODIFY CODE ONLY BELOW THIS LINE
 
-// null safety
+  // null safety
   location ??= LatLng(0.0, 0.0);
 
   return [location.latitude, location.longitude];

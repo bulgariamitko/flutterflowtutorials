@@ -7,7 +7,7 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
-List<double> converLatLongToDouble(LatLng? location) {
+List<double> convertLatLongToDouble(LatLng? location) {
   /// MODIFY CODE ONLY BELOW THIS LINE
 
 // null safety

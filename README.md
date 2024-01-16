@@ -16,6 +16,8 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Carrilho Rubens
+| Henrique Santos
 | traian lorent
 | Akshay Dewan
 | razvanrh
@@ -43,10 +45,10 @@ Klaturov Fanatic
 | Daniel Andrade
 | Yash SRIVASTAVA
 | Vernon Penny
-| Carrilho Rubens
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Rafael Borchardt
 | Miguel A. Martín - Informática IES Almenara
 | YouGuitar
 | arun ung

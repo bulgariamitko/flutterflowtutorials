@@ -20,7 +20,13 @@ async function processCSV(filePath) {
     crlfDelay: Infinity,
   });
 
+  let isFirstLine = true;
+
   for await (const line of rl) {
+    if (isFirstLine) {
+      isFirstLine = false;
+      continue;
+    }
     processLine(line);
   }
 
@@ -37,9 +43,7 @@ function processLine(line) {
     tiers.set(tier, []);
   }
 
-  if (name !== 'Член') {
-    tiers.get(tier).push(name);
-  }
+  tiers.get(tier).push(name);
 }
 
 function displayTiers() {
@@ -51,6 +55,7 @@ function displayTiers() {
     console.log();
   });
 }
+
 
 const filePath = 'members.csv'; // Replace with the actual file path
 processCSV(filePath);

@@ -12,12 +12,11 @@ const admin = require('firebase-admin');
 // To avoid deployment errors, do not call admin.initializeApp() in your code
 const cors = require('cors')({ origin: true });
 
-exports.fixCorsError = functions.https.onCall(
-    (data, context) => {
-        const userToDel = data.userToDel;
-        const authUser = data.authUser;
-        // Write your code below!
+exports.fixCorsError = functions.https.onRequest((data, res) => {
+    cors(data, res, async () => {
+        const userId = data.body.data.userToDel;
+        const authUserId = data.body.data.authUser;
 
-        // Write your code above!
-    }
-);
+        // add your code here
+    });
+});

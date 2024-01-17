@@ -9,7 +9,7 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
-List<dynamic> convertFBtoJSON(List<CarsRecord>? carsDocs) {
+List<dynamic> convertDocToJSON(List<CarsRecord>? carsDocs) {
   /// MODIFY CODE ONLY BELOW THIS LINE
 
   // null safety

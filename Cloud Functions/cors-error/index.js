@@ -1,5 +1,5 @@
 // YouTube channel - https://www.youtube.com/@flutterflowexpert
-// video - no
+// paid video - https://www.youtube.com/watch?v=I5zMJDnJpEU
 // Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/

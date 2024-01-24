@@ -10,6 +10,17 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/ERDVFBkJmY
 
+// requested by Konstantyn from Discord if you want to have a background color to your page. Here is a demo code
+// return pw.FullPage(
+//   ignoreMargins: true,
+//   child: pw.Container(
+//     color: PdfColors.blue, // Set your desired background color here
+//     child: pw.Center(
+//       child: pw.Text('Your content here'),
+//     ),
+//   ),
+// );
+
 import 'dart:io';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -99,7 +110,7 @@ Future pdfInvoiceDownload(
 
   final pdfSaved = await pdf.save();
 
-   // Get the current date and time
+  // Get the current date and time
   final now = DateTime.now();
 
 // Format the date and time as a string

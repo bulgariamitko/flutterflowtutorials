@@ -118,9 +118,9 @@ DateTimeRange? dateTimeRangeFromString(String dateTimeRangeStr) {
   );
 }
 
-LatLng? latLngFromString(String latLngStr) {
-  final pieces = latLngStr.split(',');
-  if (pieces.length != 2) {
+LatLng? latLngFromString(String? latLngStr) {
+  final pieces = latLngStr?.split(',');
+  if (pieces == null || pieces.length != 2) {
     return null;
   }
   return LatLng(

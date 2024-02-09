@@ -48,14 +48,14 @@ class FFButtonOptions {
 
 class FFButtonWidget extends StatefulWidget {
   const FFButtonWidget({
-    Key? key,
+    super.key,
     required this.text,
     required this.onPressed,
     this.icon,
     this.iconData,
     required this.options,
     this.showLoadingIndicator = true,
-  }) : super(key: key);
+  });
 
   final String text;
   final Widget? icon;
@@ -181,7 +181,7 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
     );
 
     if ((widget.icon != null || widget.iconData != null) && !loading) {
-      return Container(
+      return SizedBox(
         height: widget.options.height,
         width: widget.options.width,
         child: ElevatedButton.icon(

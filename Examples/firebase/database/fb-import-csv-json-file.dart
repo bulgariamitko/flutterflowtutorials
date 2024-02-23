@@ -5,7 +5,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 import 'dart:convert';
 import 'package:csv/csv.dart';
@@ -158,9 +158,8 @@ Future importFromCsvOrJson(
 
         // find the Hotel
         final collectionHotelRef = firestore.collection('Hotel');
-        final gotelDocs = await collectionHotelRef
-            .where('Name', isEqualTo: fields[9])
-            .get();
+        final gotelDocs =
+            await collectionHotelRef.where('Name', isEqualTo: fields[9]).get();
         HotelRecord hotelDoc = await gotelDocs.docs.isNotEmpty
             ? HotelRecord.fromSnapshot(gotelDocs.docs[0])
             : backupHotel;

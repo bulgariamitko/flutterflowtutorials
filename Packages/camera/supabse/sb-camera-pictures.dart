@@ -5,7 +5,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 import '../../auth/supabase_auth/auth_util.dart';
 import '../../flutter_flow/upload_data.dart';
@@ -49,13 +49,13 @@ class _CameraPhotoState extends State<CameraPhoto> {
             storagePath: dir + FFAppState().index.toString() + '.jpg',
             bytes: fileAsBytes);
         final downloadUrl = await uploadSupabaseStorageFile(
-          bucketName: 'YOUR_SUPABASE_BUCKET_NAME', selectedFile: selectedFile);
+            bucketName: 'YOUR_SUPABASE_BUCKET_NAME',
+            selectedFile: selectedFile);
         FFAppState().update(() {
           FFAppState().index = FFAppState().index + 1;
           FFAppState().filePath = downloadUrl;
         });
-      }).catchError((error) {
-      });
+      }).catchError((error) {});
     }
   }
 

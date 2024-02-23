@@ -5,7 +5,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 // source - https://community.flutterflow.io/authentication/post/check-if-user-use-google-auth-F1kIWPgHITtPz9w
 
 import 'package:firebase_auth/firebase_auth.dart';

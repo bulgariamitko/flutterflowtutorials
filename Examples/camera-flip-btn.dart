@@ -5,13 +5,14 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 class _CameraPhotoState extends State<CameraPhoto> {
   CameraController? controller;
   late Future<List<CameraDescription>> _cameras;
   List<CameraDescription>? camerasList;
-  int selectedCameraIndex = 0; // Keep track of the selected camera, 0 is the back camera, 1 is typically the front.
+  int selectedCameraIndex =
+      0; // Keep track of the selected camera, 0 is the back camera, 1 is typically the front.
 
   @override
   void initState() {
@@ -24,7 +25,8 @@ class _CameraPhotoState extends State<CameraPhoto> {
     _initCameraController(camerasList![selectedCameraIndex]);
   }
 
-  Future<void> _initCameraController(CameraDescription cameraDescription) async {
+  Future<void> _initCameraController(
+      CameraDescription cameraDescription) async {
     if (controller != null) {
       await controller!.dispose();
     }
@@ -39,7 +41,8 @@ class _CameraPhotoState extends State<CameraPhoto> {
   }
 
   void _onSwitchCamera() {
-    selectedCameraIndex = (selectedCameraIndex + 1) % camerasList!.length; // Switch between cameras.
+    selectedCameraIndex = (selectedCameraIndex + 1) %
+        camerasList!.length; // Switch between cameras.
     _initCameraController(camerasList![selectedCameraIndex]);
   }
 

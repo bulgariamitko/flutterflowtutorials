@@ -5,7 +5,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 List<UpcomingQuestsRow> shuffleOrder(List<UpcomingQuestsRow>? data) {
   /// MODIFY CODE ONLY BELOW THIS LINE

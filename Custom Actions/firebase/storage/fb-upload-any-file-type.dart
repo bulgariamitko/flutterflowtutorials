@@ -6,9 +6,9 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
-// NOTE! You do not need a custom code for that anymore using FF native actions
+// NOTE! You do not need a custom code for that anymore using FF native actions. Use that code ONLY if you want to restrict your users from uploading a spefici type/s of files
 
 import '../../backend/firebase_storage/storage.dart';
 import '../../flutter_flow/flutter_flow_widgets.dart';

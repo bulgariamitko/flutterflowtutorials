@@ -6,7 +6,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 import 'dart:ui' as ui;
 import 'package:flutter_scatter/flutter_scatter.dart';
@@ -108,12 +108,13 @@ class _WordCloudExampleState extends State<WordCloudExample> {
     Map map = {};
     List<Widget> widgets = <Widget>[];
 
-     widget.wordsToC.forEach((x) => map[x.toLowerCase()] =
-         !map.containsKey(x.toLowerCase()) ? (1) : (map[x.toLowerCase()] + 1));
+    widget.wordsToC.forEach((x) => map[x.toLowerCase()] =
+        !map.containsKey(x.toLowerCase()) ? (1) : (map[x.toLowerCase()] + 1));
 
-     map.forEach((k, v) {
-       FlutterHashtag item = FlutterHashtag(k, FlutterColors.blue, v * 15, false);
-       kFlutterHashtags.add(item);
+    map.forEach((k, v) {
+      FlutterHashtag item =
+          FlutterHashtag(k, FlutterColors.blue, v * 15, false);
+      kFlutterHashtags.add(item);
     });
 
     map.clear();

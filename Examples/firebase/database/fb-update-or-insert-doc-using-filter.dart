@@ -5,7 +5,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 Future updateOrInsertDocUsingFilter(
   String? collectionName,
@@ -40,7 +40,6 @@ Future updateOrInsertDocUsingFilter(
       'activa_byuser': false,
       'created_at': DateTime.now(),
     };
-
 
     // TODO: change fields you want to search for
     final docFilter = await collectionRef

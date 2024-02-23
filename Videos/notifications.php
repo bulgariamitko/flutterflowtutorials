@@ -7,7 +7,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 // execute this file every 10 minutes if you want to check for some new event and send a notification
 
@@ -53,8 +53,8 @@ if (php_sapi_name() == 'cli') {
 		$db = $firestore->database();
 		$users = $db->collection('users')->documents();
 		foreach ($users as $user) {
-		    if (!$user->exists()) {
-		    	continue;
+			if (!$user->exists()) {
+				continue;
 			}
 			$data = $user->data();
 			$document = $db->collection('users')->document($user->id())->collection('fcm_tokens');
@@ -62,22 +62,22 @@ if (php_sapi_name() == 'cli') {
 			$tokensCollection = $db->collection('users/' . $user->id() . '/fcm_tokens')->orderBy('created_at', 'DESC');
 			$tokens = $tokensCollection->documents();
 			foreach ($tokens as $token) {
-			    if (!$token->exists()) {
-			    	continue;
-			    }
-			    $data2 = $token->data();
-			    $time = $data2['created_at']->get()->format('Y-m-d H:i:s');
+				if (!$token->exists()) {
+					continue;
+				}
+				$data2 = $token->data();
+				$time = $data2['created_at']->get()->format('Y-m-d H:i:s');
 
-			    $notification = $MYSQL->MSelectOnly('Notifications', 'ID, Updated', "WHERE Email = '" . $user['email'] . "'");
-			    if (!empty($notification)) {
-			    	$dateFromToken = new DateTime($time);
+				$notification = $MYSQL->MSelectOnly('Notifications', 'ID, Updated', "WHERE Email = '" . $user['email'] . "'");
+				if (!empty($notification)) {
+					$dateFromToken = new DateTime($time);
 					$dateFromDB = new DateTime($notification['Updated']);
 					if ($dateFromToken > $dateFromDB) {
-					    $MYSQL->MInsertOrUpdate('Notifications', "Email = '" . $user['email'] . "', Device = '" . $data2['device_type'] . "', FcmToken = '" . $data2['fcm_token'] . "', Updated = '" . $time . "'", "WHERE Email = '" . $user['email'] . "'");
+						$MYSQL->MInsertOrUpdate('Notifications', "Email = '" . $user['email'] . "', Device = '" . $data2['device_type'] . "', FcmToken = '" . $data2['fcm_token'] . "', Updated = '" . $time . "'", "WHERE Email = '" . $user['email'] . "'");
 					}
-			    } else {
-				    $MYSQL->MInsertOrUpdate('Notifications', "Email = '" . $user['email'] . "', Device = '" . $data2['device_type'] . "', FcmToken = '" . $data2['fcm_token'] . "', Updated = '" . $time . "'", "WHERE Email = '" . $user['email'] . "'");
-			    }
+				} else {
+					$MYSQL->MInsertOrUpdate('Notifications', "Email = '" . $user['email'] . "', Device = '" . $data2['device_type'] . "', FcmToken = '" . $data2['fcm_token'] . "', Updated = '" . $time . "'", "WHERE Email = '" . $user['email'] . "'");
+				}
 			}
 		}
 	}
@@ -96,8 +96,8 @@ if (php_sapi_name() == 'cli') {
 				if (empty($predict)) {
 					$text = 'Все още не си дал прогноза за предстоящия мач. Сега е момента.';
 				} else {
-		            if ($match['At'] == 'at Home' || $match['At'] == 'at St. James\' Park') {
-		            	$text = 'Вашата прогноза е ' . $predict['Home'] . ':' . $predict['Away'] . '. Ако желаеш, сега е моментът да я промените.';
+					if ($match['At'] == 'at Home' || $match['At'] == 'at St. James\' Park') {
+						$text = 'Вашата прогноза е ' . $predict['Home'] . ':' . $predict['Away'] . '. Ако желаеш, сега е моментът да я промените.';
 					} else {
 						$text = 'Вашата прогноза е ' . $predict['Away'] . ':' . $predict['Home'] . '. Ако желаеш, сега е моментът да я промените.';
 					}
@@ -110,18 +110,18 @@ if (php_sapi_name() == 'cli') {
 				$curl = curl_init();
 
 				curl_setopt_array($curl, [
-				  CURLOPT_URL => "https://fcm.googleapis.com/fcm/send",
-				  CURLOPT_RETURNTRANSFER => true,
-				  CURLOPT_ENCODING => "",
-				  CURLOPT_MAXREDIRS => 10,
-				  CURLOPT_TIMEOUT => 30,
-				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-				  CURLOPT_CUSTOMREQUEST => "POST",
-				  CURLOPT_POSTFIELDS => $data,
-				  CURLOPT_HTTPHEADER => [
-				    "Authorization: key=[YOUR-KEY]",
-				    "Content-Type: application/json"
-				  ],
+					CURLOPT_URL => "https://fcm.googleapis.com/fcm/send",
+					CURLOPT_RETURNTRANSFER => true,
+					CURLOPT_ENCODING => "",
+					CURLOPT_MAXREDIRS => 10,
+					CURLOPT_TIMEOUT => 30,
+					CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+					CURLOPT_CUSTOMREQUEST => "POST",
+					CURLOPT_POSTFIELDS => $data,
+					CURLOPT_HTTPHEADER => [
+						"Authorization: key=[YOUR-KEY]",
+						"Content-Type: application/json"
+					],
 				]);
 
 				$response = curl_exec($curl);
@@ -130,7 +130,7 @@ if (php_sapi_name() == 'cli') {
 				curl_close($curl);
 
 				if ($err) {
-				  	file_get_contents($_ENV['telegram'] . 'NUFC|Error3232:sorryNoAccess' . $err);
+					file_get_contents($_ENV['telegram'] . 'NUFC|Error3232:sorryNoAccess' . $err);
 				} else {
 					$MYSQL->MInsert('NotificationsLog', "Email = '" . $userN['Email'] . "', Text = '" . $data . "', Response = '" . $response . "', Updated = NOW()");
 				}

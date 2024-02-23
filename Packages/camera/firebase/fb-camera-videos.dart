@@ -7,7 +7,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 import '../../auth/firebase_auth/auth_util.dart';
 import '../../backend/firebase_storage/storage.dart';
@@ -43,9 +43,7 @@ class _CameraRecordState extends State<CameraRecord> {
     super.didUpdateWidget(oldWidget);
     if (FFAppState().isRecording && !controller!.value.isRecordingVideo) {
       controller!.prepareForVideoRecording();
-      controller!.startVideoRecording().then((_) {
-      }).catchError((error) {
-      });
+      controller!.startVideoRecording().then((_) {}).catchError((error) {});
     } else if (!FFAppState().isRecording &&
         controller != null &&
         controller!.value.isRecordingVideo) {
@@ -57,8 +55,7 @@ class _CameraRecordState extends State<CameraRecord> {
         String dir = '/users/' + currentUserUid + '/';
         final downloadUrl = await uploadData(dir + file.path, fileAsBytes);
         FFAppState().recordVideoFBStorage = await downloadUrl ?? '';
-      }).catchError((error) {
-      });
+      }).catchError((error) {});
     }
   }
 

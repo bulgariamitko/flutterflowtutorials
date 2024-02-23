@@ -5,13 +5,14 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 // thanks to fabianCorrecha for this example
 
 import 'dart:async';
 
-Future<List<String>> getNombreVehiculo(List<DocumentReference> referencias) async {
+Future<List<String>> getNombreVehiculo(
+    List<DocumentReference> referencias) async {
   final nombres = <String>[];
 
   await Future.forEach(referencias, (reference) async {

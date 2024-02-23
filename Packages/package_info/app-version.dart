@@ -7,14 +7,11 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/G69hSUqEeU
 
-String twoValuesOneReturn(
-  String value1,
-  String value2,
-) {
-  // return the value that is not empty of the two
-  if (value1.isEmpty) {
-    return value2;
-  } else {
-    return value1;
-  }
+import 'package:package_info/package_info.dart';
+
+Future<String> getAppVersion() async {
+  PackageInfo packageInfo = await PackageInfo.fromPlatform();
+  String version = packageInfo.version;
+
+  return version;
 }

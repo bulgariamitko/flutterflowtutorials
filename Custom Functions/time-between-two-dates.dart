@@ -5,7 +5,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 import 'package:intl/intl.dart';
 
@@ -28,7 +28,8 @@ String timeDifference(String date1, String date2) {
   int minutes = duration.inMinutes % 60;
 
   // Format the duration into a string
-  String result = '$years years, $months months, $days days, $hours hours, $minutes minutes';
+  String result =
+      '$years years, $months months, $days days, $hours hours, $minutes minutes';
 
   return result;
 }

@@ -7,7 +7,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 import '../../auth/firebase_auth/auth_util.dart';
 import '../../backend/firebase_storage/storage.dart';
@@ -53,8 +53,7 @@ class _CameraPhotoState extends State<CameraPhoto> {
           FFAppState().index = FFAppState().index + 1;
           FFAppState().filePath = downloadUrl ?? '';
         });
-      }).catchError((error) {
-      });
+      }).catchError((error) {});
     }
   }
 

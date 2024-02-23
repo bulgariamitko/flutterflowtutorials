@@ -5,7 +5,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 import '../../auth/supabase_auth/auth_util.dart';
 import '../../flutter_flow/upload_data.dart';
@@ -41,9 +41,7 @@ class _CameraRecordState extends State<CameraRecord> {
     super.didUpdateWidget(oldWidget);
     if (FFAppState().isRecording && !controller!.value.isRecordingVideo) {
       controller!.prepareForVideoRecording();
-      controller!.startVideoRecording().then((_) {
-      }).catchError((error) {
-      });
+      controller!.startVideoRecording().then((_) {}).catchError((error) {});
     } else if (!FFAppState().isRecording &&
         controller != null &&
         controller!.value.isRecordingVideo) {
@@ -54,13 +52,12 @@ class _CameraRecordState extends State<CameraRecord> {
         });
         String dir = '/users/' + currentUserUid + '/';
         SelectedFile selectedFile = SelectedFile(
-            storagePath: dir + file.path.split('/').last,
-            bytes: fileAsBytes);
+            storagePath: dir + file.path.split('/').last, bytes: fileAsBytes);
         final downloadUrl = await uploadSupabaseStorageFile(
-          bucketName: 'YOUR_SUPABASE_BUCKET_NAME', selectedFile: selectedFile);
+            bucketName: 'YOUR_SUPABASE_BUCKET_NAME',
+            selectedFile: selectedFile);
         FFAppState().recordVideoFBStorage = downloadUrl;
-      }).catchError((error) {
-      });
+      }).catchError((error) {});
     }
   }
 

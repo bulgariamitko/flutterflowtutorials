@@ -7,7 +7,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 // Firestore Database rules
 // rules_version = '2';
@@ -39,7 +39,8 @@
 
 require 'flutterflowdata.php';
 
-function convertImg(String $source, int $id, String $path) : String {
+function convertImg(string $source, int $id, string $path): string
+{
 	// add image to the server
 	$type = strtok(pathinfo($source, PATHINFO_EXTENSION), '?');
 	$fileName = $id . '.' . $type;

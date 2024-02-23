@@ -6,7 +6,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 List<CarsRecord> convertJSONToDoc(List<dynamic>? jsonList) {
   /// MODIFY CODE ONLY BELOW THIS LINE
@@ -20,12 +20,10 @@ List<CarsRecord> convertJSONToDoc(List<dynamic>? jsonList) {
     );
 
     // Assuming you have a way to get a DocumentReference for a new document
-    final docRef =
-        FirebaseFirestore.instance.collection('cars').doc();
+    final docRef = FirebaseFirestore.instance.collection('cars').doc();
 
     // Create a new CarsRecord with the data and reference
     return CarsRecord.getDocumentFromData(data, docRef);
-
   }).toList();
 
   /// MODIFY CODE ONLY ABOVE THIS LINE

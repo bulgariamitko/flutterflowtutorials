@@ -7,7 +7,7 @@
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
-// Discord channel - https://discord.gg/ERDVFBkJmY
+// Discord channel - https://discord.gg/G69hSUqEeU
 
 import 'dart:convert';
 import 'dart:io';
@@ -99,7 +99,7 @@ Future pdfInvoiceDownload(
 
   final pdfSaved = await pdf.save();
 
-   // Get the current date and time
+  // Get the current date and time
   final now = DateTime.now();
 
 // Format the date and time as a string
@@ -114,7 +114,6 @@ Future pdfInvoiceDownload(
 
 // Combine the directory path and file name to create the full storage path
   final storagePath = '$directoryPath/$fileName';
-
 
   // SAVE TO SUPABASE
   SelectedFile selectedFile = SelectedFile(

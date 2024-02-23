@@ -15,13 +15,12 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Devotees
-| withnocode
-| David Mayne
-| Koya Mikami
-| JP
-
 Klaturov Fanatic
+| Jessen Felix
+| Hasill
+| YK Lee
+| Igor Santos
+| emm mosamm
 | PRSVR
 | Messaoudene Imed
 | Eduard Giménez
@@ -33,11 +32,8 @@ Klaturov Fanatic
 | biskett
 | Yair Peled
 | Carrilho Rubens
-| Henrique Santos
 | traian lorent
-| Akshay Dewan
 | razvanrh
-| Marco Antonio Oliveira
 | Oliver Gold
 | Eakapon Sinchai
 | Soon Pau Kun
@@ -46,7 +42,6 @@ Klaturov Fanatic
 | Elli Grossman
 | Mindset Theory Show
 | s3zgin
-| Richard Hennessey III
 | Francisco Lercari
 | Edgard
 | Ken Martin
@@ -58,10 +53,9 @@ Klaturov Fanatic
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Ratan Sagar Pandey
 | Ginjii
 | Sreyna Rath
-| Sandeep Tarte
-| Egor Danilov
 | Rafael Borchardt
 | Miguel A. Martín - Informática IES Almenara
 | YouGuitar
@@ -72,6 +66,12 @@ Klaturov Cadet
 | Daniel Habibi
 | Q tech
 | Jaco Laubscher
+
+Klaturov Devotees
+| withnocode
+| David Mayne
+| Koya Mikami
+| JP
 
 Klaturov Elite
 | Estéfano Campoverde

@@ -15,44 +15,57 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Devotees
+| withnocode
+| David Mayne
+| Koya Mikami
+| JP
+
 Klaturov Fanatic
+| PRSVR
+| Messaoudene Imed
+| Eduard Giménez
+| Ali Ziane
+| jerome houix
+| Laurent Vienne
+| Early To Arrive
+| TheDescar
+| biskett
+| Yair Peled
 | Carrilho Rubens
 | Henrique Santos
 | traian lorent
 | Akshay Dewan
 | razvanrh
 | Marco Antonio Oliveira
-| Ryan Aldred
-| Boomzo Comapny
 | Oliver Gold
 | Eakapon Sinchai
-| Faisal831
+| Soon Pau Kun
 | xzatech
 | Fernando Mendes
 | Elli Grossman
 | Mindset Theory Show
 | s3zgin
-| Automation in 30
 | Richard Hennessey III
 | Francisco Lercari
 | Edgard
 | Ken Martin
-| Lohit Soundarajan
-| reima
 | Craig Wyhs
 | Saigin Govender
 | Herbert Riener
 | Daniel Andrade
 | Yash SRIVASTAVA
-| Vernon Penny
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Ginjii
+| Sreyna Rath
+| Sandeep Tarte
+| Egor Danilov
 | Rafael Borchardt
 | Miguel A. Martín - Informática IES Almenara
 | YouGuitar
 | arun ung
-| Soon Pau Kun
 | Seong Marcus
 | Rainfall Studio
 | Marcin Wojcicki
@@ -60,8 +73,5 @@ Klaturov Cadet
 | Q tech
 | Jaco Laubscher
 
-Klaturov Devotees
-| Manni M
-| David Mayne
-| Koya Mikami
-| JP
+Klaturov Elite
+| Estéfano Campoverde

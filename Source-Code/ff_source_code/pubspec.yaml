@@ -34,6 +34,7 @@ dependencies:
   cloud_functions: 4.5.8
   cloud_functions_platform_interface: 5.5.11
   cloud_functions_web: 4.6.11
+  collection: 1.17.2
   equatable: 2.0.5
   file_picker: 6.1.1
   firebase_auth: 4.15.2
@@ -145,6 +146,7 @@ flutter:
     - assets/rive_animations/
     - assets/pdfs/
 
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -170,3 +172,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+

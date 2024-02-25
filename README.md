@@ -16,6 +16,8 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Steven Baltay
+| Domantas Jagutis
 | Jessen Felix
 | Hasill
 | YK Lee
@@ -29,7 +31,6 @@ Klaturov Fanatic
 | Laurent Vienne
 | Early To Arrive
 | TheDescar
-| biskett
 | Yair Peled
 | Carrilho Rubens
 | traian lorent
@@ -64,7 +65,6 @@ Klaturov Cadet
 | Rainfall Studio
 | Marcin Wojcicki
 | Daniel Habibi
-| Q tech
 | Jaco Laubscher
 
 Klaturov Devotees

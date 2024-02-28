@@ -15,7 +15,23 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Cadet
+| nidit
+| Ratan Sagar Pandey
+| Ginjii
+| Sreyna Rath
+| Rafael Borchardt
+| Miguel A. Martín - Informática IES Almenara
+| YouGuitar
+| arun ung
+| Seong Marcus
+| Rainfall Studio
+| Marcin Wojcicki
+| Daniel Habibi
+| Jaco Laubscher
+
 Klaturov Fanatic
+| Jechu
 | Steven Baltay
 | Domantas Jagutis
 | Jessen Felix
@@ -29,7 +45,6 @@ Klaturov Fanatic
 | Ali Ziane
 | jerome houix
 | Laurent Vienne
-| Early To Arrive
 | TheDescar
 | Yair Peled
 | Carrilho Rubens
@@ -39,7 +54,6 @@ Klaturov Fanatic
 | Eakapon Sinchai
 | Soon Pau Kun
 | xzatech
-| Fernando Mendes
 | Elli Grossman
 | Mindset Theory Show
 | s3zgin
@@ -52,20 +66,6 @@ Klaturov Fanatic
 | Daniel Andrade
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
-
-Klaturov Cadet
-| Ratan Sagar Pandey
-| Ginjii
-| Sreyna Rath
-| Rafael Borchardt
-| Miguel A. Martín - Informática IES Almenara
-| YouGuitar
-| arun ung
-| Seong Marcus
-| Rainfall Studio
-| Marcin Wojcicki
-| Daniel Habibi
-| Jaco Laubscher
 
 Klaturov Devotees
 | withnocode

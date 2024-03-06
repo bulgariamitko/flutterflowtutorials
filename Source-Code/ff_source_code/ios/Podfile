@@ -1,3 +1,4 @@
+$FirebaseSDKVersion = '10.22.0'
 # Uncomment this line to define a global platform for your project
 platform :ios, '13.0'
 

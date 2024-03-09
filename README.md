@@ -16,6 +16,8 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Staf Wynants
+| Mick van der Heijden
 | Early To Arrive
 | Jack Kane
 | Sherry Schwegmann
@@ -28,7 +30,6 @@ Klaturov Fanatic
 | YK Lee
 | Igor Santos
 | emm mosamm
-| PRSVR
 | Ginjii
 | Laurent Vienne
 | TheDescar
@@ -51,6 +52,9 @@ Klaturov Fanatic
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Mick van der Heijden
+| Rakesh Pisat
+| fabian andres correcha marin
 | Ratan Sagar Pandey
 | Sreyna Rath
 | Rafael Borchardt

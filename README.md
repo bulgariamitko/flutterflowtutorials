@@ -16,6 +16,7 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Martin Lagus
 | Staf Wynants
 | Mick van der Heijden
 | Early To Arrive
@@ -56,9 +57,9 @@ Klaturov Cadet
 | Rakesh Pisat
 | fabian andres correcha marin
 | Ratan Sagar Pandey
+| withnocode
 | Sreyna Rath
 | Rafael Borchardt
-| Miguel A. Martín - Informática IES Almenara
 | YouGuitar
 | arun ung
 | Seong Marcus
@@ -68,7 +69,6 @@ Klaturov Cadet
 | Jaco Laubscher
 
 Klaturov Devotees
-| withnocode
 | David Mayne
 | Koya Mikami
 | JP

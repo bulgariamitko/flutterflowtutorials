@@ -97,10 +97,10 @@ dependencies:
   supabase: 1.11.11
   supabase_flutter: 1.10.24
   timeago: 3.2.2
-  url_launcher: 6.1.10
-  url_launcher_android: 6.0.27
-  url_launcher_ios: 6.1.4
-  url_launcher_platform_interface: 2.1.2
+  url_launcher: 6.2.5
+  url_launcher_android: 6.3.0
+  url_launcher_ios: 6.2.5
+  url_launcher_platform_interface: 2.3.2
   video_player: 2.8.1
   video_player_android: 2.4.10
   video_player_avfoundation: 2.5.1

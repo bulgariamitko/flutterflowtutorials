@@ -16,6 +16,7 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| REPORTA.LA1
 | Martin Lagus
 | Staf Wynants
 | Mick van der Heijden
@@ -28,7 +29,6 @@ Klaturov Fanatic
 | Domantas Jagutis
 | Jessen Felix
 | Hasill
-| YK Lee
 | Igor Santos
 | emm mosamm
 | Ginjii
@@ -53,6 +53,7 @@ Klaturov Fanatic
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| aditya Khambampati
 | Mick van der Heijden
 | Rakesh Pisat
 | fabian andres correcha marin

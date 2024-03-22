@@ -28,6 +28,7 @@ else
         prerequisites_met=false
     fi
 
+
     # Check for connected devices via adb
     if adb devices | grep -q 'device$'; then
         echo "Device connected."

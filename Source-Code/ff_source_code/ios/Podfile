@@ -29,7 +29,7 @@ flutter_ios_podfile_setup
 
 target 'Runner' do
   pod 'GoogleUtilities'
-  use_frameworks!
+  use_frameworks! :linkage => :static
   use_modular_headers!
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
@@ -46,7 +46,7 @@ post_install do |installer|
 end
 
 target 'ImageNotification' do
-  use_frameworks!
+  use_frameworks! :linkage => :static
   pod 'Firebase/Messaging'
   pod 'GoogleUtilities'
 end

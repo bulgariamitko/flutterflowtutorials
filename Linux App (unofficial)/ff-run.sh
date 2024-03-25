@@ -48,7 +48,8 @@ else
         echo "Current directory after moving to 'ff-app': $(pwd)"
 
         # Find the name of the only directory created by FlutterFlow
-        project_dir_name=$(find . -maxdepth 1 -type d ! -path . | head -n 1 | cut -c 3-)
+        project_dir_name=$(find . -maxdepth 1 -type d ! -path . -printf "%T+ %p\n" | sort -r | head -n 1 | cut -d' ' -f2-)
+
         echo "Found project directory name: '$project_dir_name'"
 
         if [ -n "$project_dir_name" ] && [ -d "$project_dir_name" ]; then

@@ -16,6 +16,14 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Mindset Theory Show
+| Jechu
+| Rocco Labellarte
+| Jelle
+| Тодор Вълков
+| Willian Souza
+| ololand102
+| REPORTA.LA1
 | Martin Lagus
 | Staf Wynants
 | Mick van der Heijden
@@ -23,12 +31,8 @@ Klaturov Fanatic
 | Jack Kane
 | Sherry Schwegmann
 | nidit
-| Jechu
-| Steven Baltay
 | Domantas Jagutis
-| Jessen Felix
 | Hasill
-| YK Lee
 | Igor Santos
 | emm mosamm
 | Ginjii
@@ -42,7 +46,6 @@ Klaturov Fanatic
 | Eakapon Sinchai
 | Soon Pau Kun
 | Elli Grossman
-| Mindset Theory Show
 | s3zgin
 | Ken Martin
 | Craig Wyhs
@@ -53,6 +56,8 @@ Klaturov Fanatic
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Julius Faubel
+| aditya Khambampati
 | Mick van der Heijden
 | Rakesh Pisat
 | fabian andres correcha marin

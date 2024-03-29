@@ -1,6 +1,4 @@
-Yettel App
-
-#word cloud
+// #word cloud
 import 'dart:math' as math;
 
 List<dynamic> wordCloud(String? words) {

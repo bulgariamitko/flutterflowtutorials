@@ -144,22 +144,24 @@ class _FlutterFlowAudioPlayerState extends State<FlutterFlowAudioPlayer>
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                15, 10, 0, 0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  widget.audio.metas.title ?? 'Audio Title',
-                                  style: widget.titleTextStyle,
-                                ),
-                                Text(
-                                  playbackStateText(infos),
-                                  style: widget.playbackDurationTextStyle,
-                                )
-                              ],
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  15, 10, 0, 0),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    widget.audio.metas.title ?? 'Audio Title',
+                                    style: widget.titleTextStyle,
+                                  ),
+                                  Text(
+                                    playbackStateText(infos),
+                                    style: widget.playbackDurationTextStyle,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           ClipRRect(

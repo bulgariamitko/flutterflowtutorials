@@ -55,6 +55,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   fontFamily: 'Outfit',
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                 ),
           ),
           actions: [],
@@ -111,6 +112,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
+                        letterSpacing: 0.0,
                       ),
                   elevation: 3.0,
                   borderSide: BorderSide(
@@ -127,9 +129,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     id: 'sample3.mp3-55cd1fba',
                   ),
                 ),
-                titleTextStyle: FlutterFlowTheme.of(context).titleLarge,
+                titleTextStyle:
+                    FlutterFlowTheme.of(context).titleLarge.override(
+                          fontFamily: 'Outfit',
+                          letterSpacing: 0.0,
+                        ),
                 playbackDurationTextStyle:
-                    FlutterFlowTheme.of(context).labelMedium,
+                    FlutterFlowTheme.of(context).labelMedium.override(
+                          fontFamily: 'Readex Pro',
+                          letterSpacing: 0.0,
+                        ),
                 fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                 playbackButtonColor: FlutterFlowTheme.of(context).primary,
                 activeTrackColor: FlutterFlowTheme.of(context).alternate,

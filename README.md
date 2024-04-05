@@ -16,6 +16,9 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Paulius Sap
+| Koberry CR7
+| 오윤서
 | Mindset Theory Show
 | Jechu
 | Rocco Labellarte
@@ -27,7 +30,6 @@ Klaturov Fanatic
 | Martin Lagus
 | Staf Wynants
 | Mick van der Heijden
-| Early To Arrive
 | Jack Kane
 | Sherry Schwegmann
 | nidit
@@ -56,10 +58,10 @@ Klaturov Fanatic
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| jim vh
 | Julius Faubel
 | aditya Khambampati
 | Mick van der Heijden
-| Rakesh Pisat
 | fabian andres correcha marin
 | Ratan Sagar Pandey
 | withnocode
@@ -72,6 +74,9 @@ Klaturov Cadet
 | Marcin Wojcicki
 | Daniel Habibi
 | Jaco Laubscher
+
+Klaturov Elite
+| Mariano Montañez
 
 Klaturov Devotees
 | David Mayne

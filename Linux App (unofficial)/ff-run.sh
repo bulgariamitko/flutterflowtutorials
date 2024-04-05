@@ -1,12 +1,14 @@
 #!/bin/bash
 
-# Version 0.1
+# Version 0.2
 # Made by https://www.youtube.com/@flutterflowexpert/
 
 # The project ID is passed as the first command-line argument
 project_id=$1
 # The status of flutter run (true/false) is passed as the second command-line argument
 is_flutter_running=$2
+# Device IP and port are passed as the third command-line argument
+device_id=$3
 
 if [ -z "$project_id" ]; then
     echo "You must provide a project ID as the first parameter."
@@ -56,7 +58,14 @@ else
             echo "Changing directory to '$project_dir_name'..."
             cd "$project_dir_name" || { echo "Failed to change directory to '$project_dir_name'"; exit 1; }
             echo "Current directory: $(pwd)"
-            flutter run
+            # Use the provided device_id when running flutter run
+            if [ -n "$device_id" ]; then
+                echo "Running on specified device: $device_id"
+                flutter run -d "$device_id"
+            else
+                echo "No device specified. Running on default device."
+                flutter run
+            fi
         else
             echo "The expected project directory does not exist."
         fi

@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Version 0.3
+# Version 0.3.1
 # Made by https://www.youtube.com/@flutterflowexpert/
 
-# The project ID is passed as the first command-line argument
-project_id=$1
-# The status of flutter run (true/false) is passed as the second command-line argument
-is_flutter_running=$2
 # Device IP and port are passed as the third command-line argument
-device_id=$3
+device_id=$1
+# The project ID is passed as the first command-line argument
+project_id=$2
+# The status of flutter run (true/false) is passed as the second command-line argument
+is_flutter_running=$3
 
 if [ -z "$project_id" ]; then
     echo "You must provide a project ID as the first parameter."

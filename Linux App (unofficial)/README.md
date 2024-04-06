@@ -22,16 +22,16 @@ chmod +x ff-run.sh
 
 ## Usage
 
-To use the tool, open a terminal in the directory containing ff-run.sh and follow these instructions:
+To use this tool, open a terminal in the directory containing `ff-linux.sh` and follow these instructions:
 
-- **First Run**: If you are running the app for the first time or if the app is not currently running on your phone, execute the script with the `false` flag. Replace `[PROJECT-ID]` with your actual FlutterFlow project ID.
+- **First Run**: If you are running the app for the first time, or if the app is not currently running on your device, use the `false` flag. Replace `[PROJECT-ID]` with your actual FlutterFlow project ID and `[DEVICE-ID]` with the IP and port of your device.
 ```bash
-./ff-run.sh [PROJECT-ID] false
+./ff-run.sh [DEVICE-ID] [PROJECT-ID] false
 ```
 This command will export the project from FlutterFlow, install it on your connected device, and launch the app.
 
 - **Subsequent Runs**: If your app is already running on your phone and you want to update the code without restarting the app, use the `true` flag. This tells the script that `flutter run` is already executing, and it will only export and update the code without re-launching the app.
 ```bash
-./ff-run.sh [PROJECT-ID] true
+./ff-run.sh [DEVICE-ID] [PROJECT-ID] true
 ```
 Please note that this tool is in its alpha stage and is unofficial. Feedback and contributions are welcome to improve its functionality and coverage.

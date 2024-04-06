@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version 0.2
+# Version 0.3
 # Made by https://www.youtube.com/@flutterflowexpert/
 
 # The project ID is passed as the first command-line argument
@@ -49,8 +49,14 @@ else
         cd ff-app || { echo "Failed to change directory to ff-app"; exit 1; }
         echo "Current directory after moving to 'ff-app': $(pwd)"
 
-        # Find the name of the only directory created by FlutterFlow
-        project_dir_name=$(find . -maxdepth 1 -type d ! -path . -printf "%T+ %p\n" | sort -r | head -n 1 | cut -d' ' -f2-)
+        # Extract the part before the hyphen
+        project_prefix=$(echo "$project_id" | awk -F'-' '{print $1}')
+
+        # Find the directory that starts with the project prefix
+        project_dir_name=$(find . -maxdepth 1 -type d -name "${project_prefix}_*" | head -n 1)
+
+        # Remove the leading './' from the directory name
+        project_dir_name=${project_dir_name#./}
 
         echo "Found project directory name: '$project_dir_name'"
 

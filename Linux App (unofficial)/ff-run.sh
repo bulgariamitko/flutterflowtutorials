@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version 0.3.1
+# Version 0.3.2
 # Made by https://www.youtube.com/@flutterflowexpert/
 
 # Device IP and port are passed as the third command-line argument
@@ -49,16 +49,14 @@ else
         cd ff-app || { echo "Failed to change directory to ff-app"; exit 1; }
         echo "Current directory after moving to 'ff-app': $(pwd)"
 
-        # Extract the part before the hyphen
         project_prefix=$(echo "$project_id" | awk -F'-' '{print $1}')
-
-        # Find the directory that starts with the project prefix
-        project_dir_name=$(find . -maxdepth 1 -type d -name "${project_prefix}_*" | head -n 1)
-
-        # Remove the leading './' from the directory name
+        project_dir_name=$(find . -maxdepth 1 -type d -name "${project_prefix}*" | head -n 1)
         project_dir_name=${project_dir_name#./}
 
-        echo "Found project directory name: '$project_dir_name'"
+        if [ -z "$project_dir_name" ]; then
+            echo "No directory matching the prefix '$project_prefix' found."
+            exit 1
+        fi
 
         if [ -n "$project_dir_name" ] && [ -d "$project_dir_name" ]; then
             echo "Changing directory to '$project_dir_name'..."

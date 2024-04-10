@@ -44,6 +44,7 @@ double filterByMiles(
 
   // Calculate distance between userLocation and userRef2
   double distance = distanceInMiles(userLocation, userRef2);
+  distance = distance.round().toDouble();
 
   // Check against the threshold (if provided)
   if (distance > threshold) {

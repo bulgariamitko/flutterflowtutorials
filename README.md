@@ -16,6 +16,7 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| KELLVEM BARBOSA
 | sdd diff
 | Daniel Orkitz danielorkitz
 | thosaporn seeda
@@ -36,7 +37,6 @@ Klaturov Fanatic
 | nidit
 | Domantas Jagutis
 | Hasill
-| Igor Santos
 | emm mosamm
 | Ginjii
 | Laurent Vienne

@@ -16,6 +16,7 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| cedric cugnod
 | KELLVEM BARBOSA
 | sdd diff
 | Daniel Orkitz danielorkitz
@@ -84,3 +85,4 @@ Klaturov Devotees
 | David Mayne
 | Koya Mikami
 | JP
+

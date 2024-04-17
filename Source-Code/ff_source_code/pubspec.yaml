@@ -58,7 +58,7 @@ dependencies:
   font_awesome_flutter: 10.6.0
   from_css_color: 2.0.0
   functions_client: 1.3.2
-  go_router: 7.1.1
+  go_router: 12.1.3
   google_fonts: 6.1.0
   google_sign_in: 6.1.5
   google_sign_in_android: 6.1.20

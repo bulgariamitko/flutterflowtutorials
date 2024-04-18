@@ -1,0 +1,32 @@
+{
+    "name": "cloud-functions",
+    "description": "Firebase Cloud Functions",
+    "dependencies": {
+        "firebase-admin": "^11.11.0",
+        "firebase-functions": "^4.4.1",
+        "braintree": "^3.6.0",
+        "@mux/mux-node": "^7.3.3",
+        "stripe": "^8.0.1",
+        "axios": "1.6.0",
+        "razorpay": "^2.8.4",
+        "qs": "^6.7.0",
+        "@onesignal/node-onesignal": "^2.0.1-beta2"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-plugin-promise": "^4.2.1"
+    },
+    "scripts": {
+        "lint": "./node_modules/.bin/eslint --max-warnings=0 .",
+        "serve": "firebase -P real-engine-v1-df4d7 emulators:start --only functions",
+        "shell": "firebase -P real-engine-v1-df4d7 functions:shell",
+        "start": "npm run shell",
+        "deploy": "firebase -P real-engine-v1-df4d7 deploy --only functions:processBraintreePayment,functions:processBraintreeTestPayment",
+        "logs": "firebase -P real-engine-v1-df4d7 functions:log",
+        "compile": "cp ../../tsconfig.template.json ./tsconfig-compile.json && tsc --project tsconfig-compile.json"
+    },
+    "engines": {
+        "node": "16"
+    },
+    "private": true
+}

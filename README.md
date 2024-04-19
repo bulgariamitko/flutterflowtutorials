@@ -16,9 +16,11 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Early To Arrive
 | cedric cugnod
 | KELLVEM BARBOSA
 | sdd diff
+| darkmoon3d
 | Daniel Orkitz danielorkitz
 | thosaporn seeda
 | Paulius Sap
@@ -42,7 +44,6 @@ Klaturov Fanatic
 | Ginjii
 | Laurent Vienne
 | TheDescar
-| Yair Peled
 | Carrilho Rubens
 | traian lorent
 | razvanrh
@@ -61,7 +62,6 @@ Klaturov Fanatic
 
 Klaturov Cadet
 | Florian Gehle
-| darkmoon3d
 | jim vh
 | Julius Faubel
 | aditya Khambampati
@@ -85,4 +85,3 @@ Klaturov Devotees
 | David Mayne
 | Koya Mikami
 | JP
-

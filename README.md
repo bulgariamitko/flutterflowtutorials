@@ -16,6 +16,8 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| José Barranco Garcia
+| Vincent Ong
 | Early To Arrive
 | cedric cugnod
 | KELLVEM BARBOSA

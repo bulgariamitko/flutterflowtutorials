@@ -16,6 +16,8 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Igor Santos
+| 2P
 | José Barranco Garcia
 | Vincent Ong
 | Early To Arrive
@@ -31,10 +33,7 @@ Klaturov Fanatic
 | Mindset Theory Show
 | Jesús Vargas Arévalo
 | Rocco Labellarte
-| Jelle
 | Тодор Вълков
-| Willian Souza
-| ololand102
 | REPORTA.LA1
 | Mick van der Heijden
 | Jack Kane
@@ -45,7 +44,6 @@ Klaturov Fanatic
 | emm mosamm
 | Ginjii
 | Laurent Vienne
-| TheDescar
 | Carrilho Rubens
 | traian lorent
 | razvanrh
@@ -61,6 +59,10 @@ Klaturov Fanatic
 | Daniel Andrade
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
+
+Klaturov Elite
+| A Determined Polar Bear
+| Mariano Montañez
 
 Klaturov Cadet
 | Florian Gehle
@@ -79,9 +81,6 @@ Klaturov Cadet
 | Marcin Wojcicki
 | Daniel Habibi
 | Jaco Laubscher
-
-Klaturov Elite
-| Mariano Montañez
 
 Klaturov Devotees
 | David Mayne

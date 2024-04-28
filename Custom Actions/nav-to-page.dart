@@ -20,7 +20,7 @@ Future navToPage(
   // nav with params
   context.pushNamed(
     page,
-    queryParams: {
+    queryParameters: {
       // TODO: Change the name of the parameter - 'id'
       'id': serializeParam(
         id,

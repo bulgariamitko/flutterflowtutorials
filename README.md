@@ -15,6 +15,25 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Cadet
+| Ratan Sagar Pandey
+| דור בראל
+| Florian Gehle
+| jim vh
+| aditya Khambampati
+| Mick van der Heijden
+| fabian andres correcha marin
+| withnocode
+| Sreyna Rath
+| Rafael Borchardt
+| YouGuitar
+| arun ung
+| Seong Marcus
+| Rainfall Studio
+| Marcin Wojcicki
+| Daniel Habibi
+| Jaco Laubscher
+
 Klaturov Fanatic
 | Igor Santos
 | 2P
@@ -31,13 +50,11 @@ Klaturov Fanatic
 | Koberry CR7
 | 오윤서
 | Mindset Theory Show
-| Jesús Vargas Arévalo
 | Rocco Labellarte
 | Тодор Вълков
 | REPORTA.LA1
 | Mick van der Heijden
 | Jack Kane
-| Sherry Schwegmann
 | nidit
 | Domantas Jagutis
 | Hasill
@@ -63,24 +80,6 @@ Klaturov Fanatic
 Klaturov Elite
 | A Determined Polar Bear
 | Mariano Montañez
-
-Klaturov Cadet
-| Florian Gehle
-| jim vh
-| Julius Faubel
-| aditya Khambampati
-| Mick van der Heijden
-| fabian andres correcha marin
-| withnocode
-| Sreyna Rath
-| Rafael Borchardt
-| YouGuitar
-| arun ung
-| Seong Marcus
-| Rainfall Studio
-| Marcin Wojcicki
-| Daniel Habibi
-| Jaco Laubscher
 
 Klaturov Devotees
 | David Mayne

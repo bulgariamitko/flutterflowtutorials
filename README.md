@@ -15,26 +15,9 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Cadet
-| Ratan Sagar Pandey
-| דור בראל
-| Florian Gehle
-| jim vh
-| aditya Khambampati
-| Mick van der Heijden
-| fabian andres correcha marin
-| withnocode
-| Sreyna Rath
-| Rafael Borchardt
-| YouGuitar
-| arun ung
-| Seong Marcus
-| Rainfall Studio
-| Marcin Wojcicki
-| Daniel Habibi
-| Jaco Laubscher
-
 Klaturov Fanatic
+| Sherry Schwegmann
+| Dex
 | Igor Santos
 | 2P
 | José Barranco Garcia
@@ -54,7 +37,6 @@ Klaturov Fanatic
 | Тодор Вълков
 | REPORTA.LA1
 | Mick van der Heijden
-| Jack Kane
 | nidit
 | Domantas Jagutis
 | Hasill
@@ -77,6 +59,25 @@ Klaturov Fanatic
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
 
+Klaturov Cadet
+| Ratan Sagar Pandey
+| דור בראל
+| Florian Gehle
+| jim vh
+| aditya Khambampati
+| Mick van der Heijden
+| fabian andres correcha marin
+| withnocode
+| Sreyna Rath
+| Rafael Borchardt
+| YouGuitar
+| arun ung
+| Seong Marcus
+| Rainfall Studio
+| Marcin Wojcicki
+| Daniel Habibi
+| Jaco Laubscher
+
 Klaturov Elite
 | A Determined Polar Bear
 | Mariano Montañez
@@ -85,3 +86,4 @@ Klaturov Devotees
 | David Mayne
 | Koya Mikami
 | JP
+

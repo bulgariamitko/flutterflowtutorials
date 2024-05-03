@@ -119,6 +119,7 @@ class ApiCallResponse {
   String get bodyText =>
       response?.body ??
       (jsonBody is String ? jsonBody as String : jsonEncode(jsonBody));
+  String get exceptionMessage => exception.toString();
 
   static ApiCallResponse fromHttpResponse(
     http.Response response,

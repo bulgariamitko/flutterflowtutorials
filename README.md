@@ -16,6 +16,12 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
+| Paulius Sap
+| Jack Kane
+| Martin Fourie
+| Mats
+| Finn Allison
+| Jess
 | Sherry Schwegmann
 | Dex
 | Igor Santos
@@ -24,21 +30,16 @@ Klaturov Fanatic
 | Vincent Ong
 | Early To Arrive
 | cedric cugnod
-| KELLVEM BARBOSA
 | sdd diff
 | darkmoon3d
 | Daniel Orkitz danielorkitz
-| thosaporn seeda
-| Paulius Sap
 | Koberry CR7
-| 오윤서
 | Mindset Theory Show
 | Rocco Labellarte
 | Тодор Вълков
 | REPORTA.LA1
 | Mick van der Heijden
-| nidit
-| Domantas Jagutis
+| DJ
 | Hasill
 | emm mosamm
 | Ginjii
@@ -55,18 +56,16 @@ Klaturov Fanatic
 | Craig Wyhs
 | Saigin Govender
 | Herbert Riener
-| Daniel Andrade
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| fabian andres correcha marin
 | Ratan Sagar Pandey
 | דור בראל
-| Florian Gehle
 | jim vh
 | aditya Khambampati
 | Mick van der Heijden
-| fabian andres correcha marin
 | withnocode
 | Sreyna Rath
 | Rafael Borchardt
@@ -86,4 +85,3 @@ Klaturov Devotees
 | David Mayne
 | Koya Mikami
 | JP
-

@@ -8,10 +8,15 @@
 // Discord channel - https://discord.gg/G69hSUqEeU
 
 Future<List<String>> reorderItems(
-  List<String> list,
-  int oldIndex,
-  int newIndex,
+  List<String>? list,
+  int? oldIndex,
+  int? newIndex,
 ) async {
+  // null safety
+  list ??= [];
+  oldIndex ??= 0;
+  newIndex ??= 0;
+
   if (oldIndex < newIndex) {
     newIndex -= 1;
   }

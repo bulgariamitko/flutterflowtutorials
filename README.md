@@ -15,7 +15,35 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Cadet
+| Franto Kormanak
+| pilotosafo brasil
+| fabian andres correcha marin
+| Ratan Sagar Pandey
+| דור בראל
+| jim vh
+| aditya Khambampati
+| Mick van der Heijden
+| withnocode
+| Sreyna Rath
+| Rafael Borchardt
+| YouGuitar
+| arun ung
+| Seong Marcus
+| Marcin Wojcicki
+| Daniel Habibi
+| Jaco Laubscher
+
+Klaturov Devotees
+| Todd Stephenson
+| David Mayne
+| Koya Mikami
+| JP
+
 Klaturov Fanatic
+| Tyler Coffey
+| adrFinance
+| Георгий Джомиади
 | Early To Arrive
 | KELLVEM BARBOSA
 | Carrilho Rubens
@@ -23,18 +51,15 @@ Klaturov Fanatic
 | Paulius Sap
 | Jack Kane
 | Martin Fourie
-| Mats
 | Finn Allison
 | Jess
 | Sherry Schwegmann
-| Dex
 | Igor Santos
 | Vincent Ong
 | cedric cugnod
 | sdd diff
 | darkmoon3d
 | Daniel Orkitz danielorkitz
-| Koberry CR7
 | Mindset Theory Show
 | Rocco Labellarte
 | Тодор Вълков
@@ -59,30 +84,5 @@ Klaturov Fanatic
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
 
-Klaturov Cadet
-| pilotosafo brasil
-| fabian andres correcha marin
-| Ratan Sagar Pandey
-| דור בראל
-| jim vh
-| aditya Khambampati
-| Mick van der Heijden
-| withnocode
-| Sreyna Rath
-| Rafael Borchardt
-| YouGuitar
-| arun ung
-| Seong Marcus
-| Rainfall Studio
-| Marcin Wojcicki
-| Daniel Habibi
-| Jaco Laubscher
-
 Klaturov Elite
-| A Determined Polar Bear
-| Mariano Montañez
-
-Klaturov Devotees
-| David Mayne
-| Koya Mikami
-| JP
+| Mathias Salome

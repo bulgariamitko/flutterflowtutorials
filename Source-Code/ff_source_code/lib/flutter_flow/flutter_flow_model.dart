@@ -141,7 +141,7 @@ class FlutterFlowDynamicModels<T extends FlutterFlowModel> {
             .difference(_activeKeys!)
             // Remove and dispose of unused models since they are  not being used
             // elsewhere and would not otherwise be disposed.
-            .forEach((k) => _childrenModels.remove(k)?.dispose());
+            .forEach((k) => _childrenModels.remove(k)?.maybeDispose());
         _activeKeys = null;
       });
     }

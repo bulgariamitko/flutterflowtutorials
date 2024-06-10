@@ -14,8 +14,9 @@ const cors = require('cors')({ origin: true });
 
 exports.fixCorsError = functions.https.onRequest((data, res) => {
     cors(data, res, async () => {
-        const userId = data.body.data.userToDel;
-        const authUserId = data.body.data.authUser;
+        const userId = req.body.userId || (req.body.data && req.body.data.userId);
+        const authUserId = req.body.authUserId || (req.body.data && req.body.data.authUserId);
+
 
         // add your code here
     });

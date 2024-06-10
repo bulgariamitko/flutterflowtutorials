@@ -42,34 +42,36 @@ else
     echo "Prerequisites Met: $prerequisites_met"
     # Assuming prerequisites_met is a string 'true' or 'false'
     if [ "$prerequisites_met" = "true" ]; then
-        echo "Attempting to export code with FlutterFlow CLI..." $project_id
+        echo "Attempting to export code with FlutterFlow CLI..."
         flutterflow export-code --project $project_id --dest "ff-app" --token [TOKEN]
 
         # Assuming 'ff-app' directory is successfully created
         cd ff-app || { echo "Failed to change directory to ff-app"; exit 1; }
         echo "Current directory after moving to 'ff-app': $(pwd)"
 
-        # Find the latest directory sorted by modification date
-        project_dir_name=$(ls -dt */ | head -n 1)
+        project_prefix=$(echo "$project_id" | awk -F'-' '{print $1}')
+        project_dir_name=$(find . -maxdepth 1 -type d -name "${project_prefix}*" | head -n 1)
+        project_dir_name=${project_dir_name#./}
 
         if [ -z "$project_dir_name" ]; then
-            echo "No directories found."
+            echo "No directory matching the prefix '$project_prefix' found."
             exit 1
         fi
 
-        echo "Found latest project directory: '$project_dir_name'"
-
-        # Change to the latest directory
-        cd "$project_dir_name" || { echo "Failed to change directory to '$project_dir_name'"; exit 1; }
-        echo "Current directory after moving to the latest project directory: $(pwd)"
-
-        # Use the provided device_id when running flutter run
-        if [ -n "$device_id" ]; then
-            echo "Running on specified device: $device_id"
-            flutter run -d "$device_id"
+        if [ -n "$project_dir_name" ] && [ -d "$project_dir_name" ]; then
+            echo "Changing directory to '$project_dir_name'..."
+            cd "$project_dir_name" || { echo "Failed to change directory to '$project_dir_name'"; exit 1; }
+            echo "Current directory: $(pwd)"
+            # Use the provided device_id when running flutter run
+            if [ -n "$device_id" ]; then
+                echo "Running on specified device: $device_id"
+                flutter run -d "$device_id"
+            else
+                echo "No device specified. Running on default device."
+                flutter run
+            fi
         else
-            echo "No device specified. Running on default device."
-            flutter run
+            echo "The expected project directory does not exist."
         fi
     else
         echo "Prerequisites not met, skipping FlutterFlow export-code command."

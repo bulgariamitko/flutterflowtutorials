@@ -16,9 +16,9 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Cadet
-| Franto Kormanak
+| Mr kasax
+| Rainfall Studio
 | pilotosafo brasil
-| fabian andres correcha marin
 | Ratan Sagar Pandey
 | דור בראל
 | jim vh
@@ -34,13 +34,17 @@ Klaturov Cadet
 | Daniel Habibi
 | Jaco Laubscher
 
-Klaturov Devotees
-| Todd Stephenson
-| David Mayne
-| Koya Mikami
-| JP
+Klaturov Elite
+| gtdatagroup
+| CloudBedrock
+| Mathias Salome
 
 Klaturov Fanatic
+| Szymon Celej
+| Daniel Hoisel
+| Mats
+| Hamza Gangat
+| Franto Kormanak
 | Tyler Coffey
 | adrFinance
 | Георгий Джомиади
@@ -49,7 +53,6 @@ Klaturov Fanatic
 | Carrilho Rubens
 | Sze Wong
 | Paulius Sap
-| Jack Kane
 | Martin Fourie
 | Finn Allison
 | Jess
@@ -71,7 +74,6 @@ Klaturov Fanatic
 | Ginjii
 | Laurent Vienne
 | traian lorent
-| razvanrh
 | Oliver Gold
 | Eakapon Sinchai
 | Soon Pau Kun
@@ -84,5 +86,8 @@ Klaturov Fanatic
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
 
-Klaturov Elite
-| Mathias Salome
+Klaturov Devotees
+| Todd Stephenson
+| David Mayne
+| Koya Mikami
+| JP

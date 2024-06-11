@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version 0.4.1
+# Version 0.5
 # Made by https://www.youtube.com/@flutterflowexpert/
 
 # Device IP and port are passed as the third command-line argument
@@ -15,14 +15,9 @@ if [ -z "$project_id" ]; then
     exit 1
 fi
 
-# Get the first part of the project ID (prefix before any dash)
-project_prefix=$(echo "$project_id" | awk -F'-' '{print $1}')
-project_dir_name=$(find . -maxdepth 1 -type d -name "${project_prefix}*" | head -n 1)
-project_dir_name=${project_dir_name#./}
-
 if [ "$is_flutter_running" = "true" ]; then
     echo "Flutter is reported to be running. Only executing FlutterFlow export-code..."
-    flutterflow export-code --project $project_id --dest "ff-app" --token [TOKEN] --include-assets
+    flutterflow export-code --project $project_id --dest "ff-app/$project_id" --token [TOKEN] --include-assets --no-parent-folder
 else
     # Initialize a flag to indicate that prerequisites are met
     prerequisites_met=true
@@ -47,31 +42,19 @@ else
     # Assuming prerequisites_met is a string 'true' or 'false'
     if [ "$prerequisites_met" = "true" ]; then
         echo "Attempting to export code with FlutterFlow CLI..."
-        flutterflow export-code --project $project_id --dest "ff-app" --token [TOKEN] --include-assets
+        flutterflow export-code --project $project_id --dest "ff-app/$project_id" --token [TOKEN] --include-assets --no-parent-folder
 
-        # Assuming 'ff-app' directory is successfully created
-        cd ff-app || { echo "Failed to change directory to ff-app"; exit 1; }
-        echo "Current directory after moving to 'ff-app': $(pwd)"
+        # Assuming 'ff-app/$project_id' directory is successfully created
+        cd "ff-app/$project_id" || { echo "Failed to change directory to ff-app/$project_id"; exit 1; }
+        echo "Current directory after moving to 'ff-app/$project_id': $(pwd)"
 
-        if [ -z "$project_dir_name" ]; then
-            echo "No directory matching the prefix '$project_prefix' found."
-            exit 1
-        fi
-
-        if [ -n "$project_dir_name" ] && [ -d "$project_dir_name" ]; then
-            echo "Changing directory to '$project_dir_name'..."
-            cd "$project_dir_name" || { echo "Failed to change directory to '$project_dir_name'"; exit 1; }
-            echo "Current directory: $(pwd)"
-            # Use the provided device_id when running flutter run
-            if [ -n "$device_id" ]; then
-                echo "Running on specified device: $device_id"
-                flutter run -d "$device_id"
-            else
-                echo "No device specified. Running on default device."
-                flutter run
-            fi
+        # Use the provided device_id when running flutter run
+        if [ -n "$device_id" ]; then
+            echo "Running on specified device: $device_id"
+            flutter run -d "$device_id"
         else
-            echo "The expected project directory does not exist."
+            echo "No device specified. Running on default device."
+            flutter run
         fi
     else
         echo "Prerequisites not met, skipping FlutterFlow export-code command."

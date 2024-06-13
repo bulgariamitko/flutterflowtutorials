@@ -27,7 +27,7 @@ class FFAppState extends ChangeNotifier {
 
   String _test = '';
   String get test => _test;
-  set test(String _value) {
-    _test = _value;
+  set test(String value) {
+    _test = value;
   }
 }

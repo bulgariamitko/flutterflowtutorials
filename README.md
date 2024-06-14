@@ -15,31 +15,10 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Cadet
-| Mr kasax
-| Rainfall Studio
-| pilotosafo brasil
-| Ratan Sagar Pandey
-| דור בראל
-| jim vh
-| aditya Khambampati
-| Mick van der Heijden
-| withnocode
-| Sreyna Rath
-| Rafael Borchardt
-| YouGuitar
-| arun ung
-| Seong Marcus
-| Marcin Wojcicki
-| Daniel Habibi
-| Jaco Laubscher
-
-Klaturov Elite
-| gtdatagroup
-| CloudBedrock
-| Mathias Salome
-
 Klaturov Fanatic
+| Mary Beth
+| Bedirhan O.
+| Jordan Blackler
 | Szymon Celej
 | Daniel Hoisel
 | Mats
@@ -52,7 +31,6 @@ Klaturov Fanatic
 | KELLVEM BARBOSA
 | Carrilho Rubens
 | Sze Wong
-| Paulius Sap
 | Martin Fourie
 | Finn Allison
 | Jess
@@ -60,7 +38,6 @@ Klaturov Fanatic
 | Igor Santos
 | Vincent Ong
 | cedric cugnod
-| sdd diff
 | darkmoon3d
 | Daniel Orkitz danielorkitz
 | Mindset Theory Show
@@ -85,6 +62,30 @@ Klaturov Fanatic
 | Herbert Riener
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
+
+Klaturov Cadet
+| Mr kasax
+| Rainfall Studio
+| pilotosafo brasil
+| Ratan Sagar Pandey
+| דור בראל
+| jim vh
+| aditya Khambampati
+| Mick van der Heijden
+| withnocode
+| Sreyna Rath
+| Rafael Borchardt
+| YouGuitar
+| arun ung
+| Seong Marcus
+| Marcin Wojcicki
+| Daniel Habibi
+| Jaco Laubscher
+
+Klaturov Elite
+| gtdatagroup
+| CloudBedrock
+| Mathias Salome
 
 Klaturov Devotees
 | Todd Stephenson

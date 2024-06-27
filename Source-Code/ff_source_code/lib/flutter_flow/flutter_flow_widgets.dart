@@ -4,6 +4,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 
 class FFButtonOptions {
   const FFButtonOptions({
+    this.textAlign,
     this.textStyle,
     this.elevation,
     this.height,
@@ -25,6 +26,7 @@ class FFButtonOptions {
     this.maxLines,
   });
 
+  final TextAlign? textAlign;
   final TextStyle? textStyle;
   final double? elevation;
   final double? height;
@@ -98,6 +100,7 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
             text ?? '',
             style:
                 text == null ? null : widget.options.textStyle?.withoutColor(),
+            textAlign: widget.options.textAlign,
             maxLines: maxLines,
             overflow: TextOverflow.ellipsis,
           );

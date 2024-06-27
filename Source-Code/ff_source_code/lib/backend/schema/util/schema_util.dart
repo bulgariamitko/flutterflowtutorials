@@ -38,11 +38,3 @@ List<Color>? getColorsList(dynamic value) =>
 
 List<T>? getDataList<T>(dynamic value) =>
     value is! List ? null : value.map((e) => castToType<T>(e)!).toList();
-
-extension MapDataExtensions on Map<String, dynamic> {
-  Map<String, dynamic> get withoutNulls => Map.fromEntries(
-        entries
-            .where((e) => e.value != null)
-            .map((e) => MapEntry(e.key, e.value!)),
-      );
-}

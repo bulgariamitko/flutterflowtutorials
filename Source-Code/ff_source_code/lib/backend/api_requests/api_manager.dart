@@ -13,6 +13,8 @@ import 'package:mime_type/mime_type.dart';
 
 import '/flutter_flow/uploaded_file.dart';
 
+import 'get_streamed_response.dart';
+
 enum ApiCallType {
   GET,
   POST,
@@ -43,6 +45,7 @@ class ApiCallOptions extends Equatable {
     this.decodeUtf8 = false,
     this.alwaysAllowBody = false,
     this.cache = false,
+    this.isStreamingApi = false,
   });
 
   final String callName;
@@ -57,6 +60,7 @@ class ApiCallOptions extends Equatable {
   final bool decodeUtf8;
   final bool alwaysAllowBody;
   final bool cache;
+  final bool isStreamingApi;
 
   ApiCallOptions clone() => ApiCallOptions(
         callName: callName,
@@ -71,6 +75,7 @@ class ApiCallOptions extends Equatable {
         decodeUtf8: decodeUtf8,
         alwaysAllowBody: alwaysAllowBody,
         cache: cache,
+        isStreamingApi: isStreamingApi,
       );
 
   @override
@@ -87,6 +92,7 @@ class ApiCallOptions extends Equatable {
         decodeUtf8,
         alwaysAllowBody,
         cache,
+        isStreamingApi,
       ];
 
   static Map<String, dynamic> _cloneMap(Map<String, dynamic> map) {
@@ -104,12 +110,14 @@ class ApiCallResponse {
     this.headers,
     this.statusCode, {
     this.response,
+    this.streamedResponse,
     this.exception,
   });
   final dynamic jsonBody;
   final Map<String, String> headers;
   final int statusCode;
   final http.Response? response;
+  final http.StreamedResponse? streamedResponse;
   final Object? exception;
   // Whether we received a 2xx status (which generally marks success).
   bool get succeeded => statusCode >= 200 && statusCode < 300;
@@ -183,13 +191,27 @@ class ApiManager {
     Map<String, dynamic> headers,
     Map<String, dynamic> params,
     bool returnBody,
-    bool decodeUtf8, {
+    bool decodeUtf8,
+    bool isStreamingApi, {
     http.Client? client,
   }) async {
     if (params.isNotEmpty) {
       final specifier =
           Uri.parse(apiUrl).queryParameters.isNotEmpty ? '&' : '?';
       apiUrl = '$apiUrl$specifier${asQueryParams(params)}';
+    }
+    if (isStreamingApi) {
+      client ??= http.Client();
+      final request =
+          http.Request(callType.toString().split('.').last, Uri.parse(apiUrl))
+            ..headers.addAll(toStringMap(headers));
+      final streamedResponse = await getStreamedResponse(request);
+      return ApiCallResponse(
+        null,
+        streamedResponse.headers,
+        streamedResponse.statusCode,
+        streamedResponse: streamedResponse,
+      );
     }
     final makeRequest = callType == ApiCallType.GET
         ? (client != null ? client.get : http.get)
@@ -209,7 +231,8 @@ class ApiManager {
     bool returnBody,
     bool encodeBodyUtf8,
     bool decodeUtf8,
-    bool alwaysAllowBody, {
+    bool alwaysAllowBody,
+    bool isStreamingApi, {
     http.Client? client,
   }) async {
     assert(
@@ -219,6 +242,20 @@ class ApiManager {
     );
     final postBody =
         createBody(headers, params, body, bodyType, encodeBodyUtf8);
+    if (isStreamingApi) {
+      client ??= http.Client();
+      final request =
+          http.Request(type.toString().split('.').last, Uri.parse(apiUrl))
+            ..headers.addAll(toStringMap(headers));
+      request.body = postBody;
+      final streamedResponse = await getStreamedResponse(request);
+      return ApiCallResponse(
+        null,
+        streamedResponse.headers,
+        streamedResponse.statusCode,
+        streamedResponse: streamedResponse,
+      );
+    }
 
     if (bodyType == BodyType.MULTIPART) {
       return multipartRequest(type, apiUrl, headers, params, returnBody,
@@ -352,6 +389,7 @@ class ApiManager {
         decodeUtf8: options.decodeUtf8,
         alwaysAllowBody: options.alwaysAllowBody,
         cache: options.cache,
+        isStreamingApi: options.isStreamingApi,
         options: options,
       );
 
@@ -368,6 +406,7 @@ class ApiManager {
     bool decodeUtf8 = false,
     bool alwaysAllowBody = false,
     bool cache = false,
+    bool isStreamingApi = false,
     ApiCallOptions? options,
     http.Client? client,
   }) async {
@@ -385,6 +424,7 @@ class ApiManager {
           decodeUtf8: decodeUtf8,
           alwaysAllowBody: alwaysAllowBody,
           cache: cache,
+          isStreamingApi: isStreamingApi,
         );
     // Modify for your specific needs if this differs from your API.
     if (_accessToken != null) {
@@ -411,6 +451,7 @@ class ApiManager {
             params,
             returnBody,
             decodeUtf8,
+            isStreamingApi,
             client: client,
           );
           break;
@@ -427,6 +468,7 @@ class ApiManager {
                   encodeBodyUtf8,
                   decodeUtf8,
                   alwaysAllowBody,
+                  isStreamingApi,
                   client: client,
                 )
               : await urlRequest(
@@ -436,6 +478,7 @@ class ApiManager {
                   params,
                   returnBody,
                   decodeUtf8,
+                  isStreamingApi,
                   client: client,
                 );
           break;
@@ -453,6 +496,7 @@ class ApiManager {
             encodeBodyUtf8,
             decodeUtf8,
             alwaysAllowBody,
+            isStreamingApi,
             client: client,
           );
           break;

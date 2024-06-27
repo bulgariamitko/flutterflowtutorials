@@ -304,6 +304,14 @@ extension ListFilterExt<T> on Iterable<T?> {
   List<T> get withoutNulls => where((s) => s != null).map((e) => e!).toList();
 }
 
+extension MapFilterExtensions<T> on Map<String, T?> {
+  Map<String, T> get withoutNulls => Map.fromEntries(
+        entries
+            .where((e) => e.value != null)
+            .map((e) => MapEntry(e.key, e.value as T)),
+      );
+}
+
 extension MapListContainsExt on List<dynamic> {
   bool containsMap(dynamic map) => map is Map
       ? any((e) => e is Map && const DeepCollectionEquality().equals(e, map))

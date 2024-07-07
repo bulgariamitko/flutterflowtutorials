@@ -15,25 +15,31 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Elite
+| Js Na
+| gtdatagroup
+| CloudBedrock
+
 Klaturov Fanatic
+| Kristýna Karásková
+| Paul Paulsen
+| MooseBiscuit
+| Indy Puaar
+| trevize0101
+| Dane Blackwell
+| Bryant Davis
 | Mary Beth
 | Bedirhan O.
 | Jordan Blackler
 | Szymon Celej
 | Daniel Hoisel
-| Mats
 | Hamza Gangat
 | Franto Kormanak
 | Tyler Coffey
-| adrFinance
-| Георгий Джомиади
 | Early To Arrive
-| KELLVEM BARBOSA
 | Carrilho Rubens
-| Sze Wong
 | Martin Fourie
 | Finn Allison
-| Jess
 | Sherry Schwegmann
 | Igor Santos
 | Vincent Ong
@@ -49,7 +55,6 @@ Klaturov Fanatic
 | Hasill
 | emm mosamm
 | Ginjii
-| Laurent Vienne
 | traian lorent
 | Oliver Gold
 | Eakapon Sinchai
@@ -64,13 +69,12 @@ Klaturov Fanatic
 | Yulian Diaz Leon
 
 Klaturov Cadet
-| Mr kasax
-| Rainfall Studio
-| pilotosafo brasil
-| Ratan Sagar Pandey
-| דור בראל
-| jim vh
+| Reha Hoshanli
 | aditya Khambampati
+| the punisher
+| Mr kasax
+| Ratan Sagar Pandey
+| jim vh
 | Mick van der Heijden
 | withnocode
 | Sreyna Rath
@@ -82,13 +86,9 @@ Klaturov Cadet
 | Daniel Habibi
 | Jaco Laubscher
 
-Klaturov Elite
-| gtdatagroup
-| CloudBedrock
-| Mathias Salome
-
 Klaturov Devotees
 | Todd Stephenson
 | David Mayne
 | Koya Mikami
 | JP
+

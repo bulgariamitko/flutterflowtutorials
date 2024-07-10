@@ -50,9 +50,7 @@ abstract class FlutterFlowModel<W extends Widget> {
   // The widget associated with this model. This is useful for accessing the
   // parameters of the widget, for example.
   W? _widget;
-  // This will always be non-null when used, but is nullable to allow us to
-  // dispose of the widget in the [dispose] method (for garbage collection).
-  W get widget => _widget!;
+  W? get widget => _widget;
 
   // Dispose methods
   // Whether to dispose this model when the corresponding widget is

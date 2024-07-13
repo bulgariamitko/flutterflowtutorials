@@ -15,12 +15,28 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Elite
-| Js Na
-| gtdatagroup
-| CloudBedrock
+Klaturov Cadet
+| unga bunga
+| Rainfall Studio
+| Reha Hoshanli
+| aditya Khambampati
+| the punisher
+| Ratan Sagar Pandey
+| jim vh
+| Mick van der Heijden
+| withnocode
+| Sreyna Rath
+| Rafael Borchardt
+| YouGuitar
+| arun ung
+| Seong Marcus
+| Marcin Wojcicki
+| Daniel Habibi
+| Jaco Laubscher
 
 Klaturov Fanatic
+| Ivaylo Sekoulitchki
+| GelTutor
 | Kristýna Karásková
 | Paul Paulsen
 | MooseBiscuit
@@ -50,7 +66,6 @@ Klaturov Fanatic
 | Rocco Labellarte
 | Тодор Вълков
 | REPORTA.LA1
-| Mick van der Heijden
 | DJ
 | Hasill
 | emm mosamm
@@ -68,27 +83,12 @@ Klaturov Fanatic
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
 
-Klaturov Cadet
-| Reha Hoshanli
-| aditya Khambampati
-| the punisher
-| Mr kasax
-| Ratan Sagar Pandey
-| jim vh
-| Mick van der Heijden
-| withnocode
-| Sreyna Rath
-| Rafael Borchardt
-| YouGuitar
-| arun ung
-| Seong Marcus
-| Marcin Wojcicki
-| Daniel Habibi
-| Jaco Laubscher
+Klaturov Elite
+| CloudBedrock
+| Js Na
 
 Klaturov Devotees
 | Todd Stephenson
 | David Mayne
 | Koya Mikami
 | JP
-

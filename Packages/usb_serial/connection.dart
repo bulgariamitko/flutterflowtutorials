@@ -7,7 +7,7 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/G69hSUqEeU
 
-// code provided by - darkmoon3d (I havent tested the code)
+// code provided by - darkmoon3d (I havent tested the code yet)
 
 import 'dart:async';
 import 'dart:typed_data';

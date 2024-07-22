@@ -42,10 +42,8 @@ class _DisplayImgState extends State<DisplayImg> {
       imageProvider = NetworkImage(widget.path);
     } else {
       final file = File(widget.path);
-      // print(['FILE', file, file.path]);
       if (file.existsSync()) {
         imageProvider = FileImage(file);
-        print(['FILE', file, file.path, widget.path]);
       } else {
         imageProvider = defaultImage;
       }

@@ -15,13 +15,33 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Cadet
+| Luiz Santos
+| unga bunga
+| Rainfall Studio
+| Reha Hoshanli
+| the punisher
+| Ratan Sagar Pandey
+| jim vh
+| Mick van der Heijden
+| withnocode
+| Sreyna Rath
+| Rafael Borchardt
+| YouGuitar
+| arun ung
+| Seong Marcus
+| Marcin Wojcicki
+| Daniel Habibi
+| Jaco Laubscher
+
 Klaturov Fanatic
+| Henrique
+| Iván Odzomek
+| Camilo Peñalver
 | patternrcg
 | Ivaylo Sekoulitchki
 | GelTutor
 | Kristýna Karásková
-| Paul Paulsen
-| MooseBiscuit
 | Indy Puaar
 | trevize0101
 | Dane Blackwell
@@ -31,13 +51,11 @@ Klaturov Fanatic
 | Hamza Gangat
 | Franto Kormanak
 | Tyler Coffey
-| Early To Arrive
 | Carrilho Rubens
 | Martin Fourie
 | Finn Allison
 | Sherry Schwegmann
 | Igor Santos
-| Vincent Ong
 | cedric cugnod
 | darkmoon3d
 | Daniel Orkitz danielorkitz
@@ -61,25 +79,6 @@ Klaturov Fanatic
 | Herbert Riener
 | Yash SRIVASTAVA
 | Yulian Diaz Leon
-
-Klaturov Cadet
-| unga bunga
-| Rainfall Studio
-| Reha Hoshanli
-| aditya Khambampati
-| the punisher
-| Ratan Sagar Pandey
-| jim vh
-| Mick van der Heijden
-| withnocode
-| Sreyna Rath
-| Rafael Borchardt
-| YouGuitar
-| arun ung
-| Seong Marcus
-| Marcin Wojcicki
-| Daniel Habibi
-| Jaco Laubscher
 
 Klaturov Elite
 | CloudBedrock

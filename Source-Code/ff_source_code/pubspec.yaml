@@ -63,7 +63,7 @@ dependencies:
   google_fonts: 6.1.0
   google_sign_in: 6.1.5
   google_sign_in_android: 6.1.20
-  google_sign_in_ios: 5.6.4
+  google_sign_in_ios: 5.7.6
   google_sign_in_platform_interface: 2.4.2
   google_sign_in_web: 0.12.1
   gotrue: 1.12.6

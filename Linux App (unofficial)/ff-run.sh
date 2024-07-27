@@ -1,6 +1,11 @@
 #!/bin/bash
 
 # Version 0.5
+# Run at least version flutterflow_cli: ^0.0.21
+# How to upgrade flutterflow_cli
+# step 1. cd /path/to/flutterflow
+# step 2. dart pub global activate flutterflow_cli
+# step 3. dart pub global deactivate flutterflow_cli
 # Made by https://www.youtube.com/@flutterflowexpert/
 
 # Device IP and port are passed as the third command-line argument
@@ -17,7 +22,7 @@ fi
 
 if [ "$is_flutter_running" = "true" ]; then
     echo "Flutter is reported to be running. Only executing FlutterFlow export-code..."
-    flutterflow export-code --project $project_id --dest "ff-app/$project_id" --token [TOKEN] --include-assets --no-parent-folder
+    flutterflow export-code --project $project_id --dest "ff-app/$project_id" --token [TOKEN] --include-assets --no-parent-folder --as-debug
 else
     # Initialize a flag to indicate that prerequisites are met
     prerequisites_met=true
@@ -42,7 +47,7 @@ else
     # Assuming prerequisites_met is a string 'true' or 'false'
     if [ "$prerequisites_met" = "true" ]; then
         echo "Attempting to export code with FlutterFlow CLI..."
-        flutterflow export-code --project $project_id --dest "ff-app/$project_id" --token [TOKEN] --include-assets --no-parent-folder
+        flutterflow export-code --project $project_id --dest "ff-app/$project_id" --token [TOKEN] --include-assets --no-parent-folder --as-debug
 
         # Assuming 'ff-app/$project_id' directory is successfully created
         cd "ff-app/$project_id" || { echo "Failed to change directory to ff-app/$project_id"; exit 1; }

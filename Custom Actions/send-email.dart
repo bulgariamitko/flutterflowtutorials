@@ -15,10 +15,10 @@ Future sendEmail(
   String subject,
   String body,
 ) async {
-  final smtpServer = gmail('randy@smart-manifest.com', 'htttkkztxbfvyazj');
+  final smtpServer = gmail('name@gmail.com', 'myPassword');
 
   final message = Message()
-    ..from = Address('randy@smart-manifest.com', 'Your Name')
+    ..from = Address('name@gmail.com', 'Your Name')
     ..recipients.add(recipientEmail)
     ..subject = subject
     ..text = body;

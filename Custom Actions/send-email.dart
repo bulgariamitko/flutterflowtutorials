@@ -15,7 +15,7 @@ Future sendEmail(
   String subject,
   String body,
 ) async {
-  final smtpServer = gmail('name@gmail.com22', 'myPassword');
+  final smtpServer = gmail('name@gmail.com', 'myPassword');
 
   final message = Message()
     ..from = Address('name@gmail.com', 'Your Name')

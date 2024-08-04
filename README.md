@@ -16,7 +16,7 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Cadet
-| Luiz Santos
+| YouGuitar
 | unga bunga
 | Rainfall Studio
 | Reha Hoshanli
@@ -27,7 +27,6 @@ Klaturov Cadet
 | withnocode
 | Sreyna Rath
 | Rafael Borchardt
-| YouGuitar
 | arun ung
 | Seong Marcus
 | Marcin Wojcicki
@@ -35,13 +34,16 @@ Klaturov Cadet
 | Jaco Laubscher
 
 Klaturov Fanatic
+| Elder Marx | Flutterflow e Supabase
+| Vitória Meneses
+| Ali Reza Kohani
+| Early To Arrive
 | Henrique
 | Iván Odzomek
 | Camilo Peñalver
 | patternrcg
 | Ivaylo Sekoulitchki
 | GelTutor
-| Kristýna Karásková
 | Indy Puaar
 | trevize0101
 | Dane Blackwell
@@ -50,7 +52,6 @@ Klaturov Fanatic
 | Daniel Hoisel
 | Hamza Gangat
 | Franto Kormanak
-| Tyler Coffey
 | Carrilho Rubens
 | Martin Fourie
 | Finn Allison
@@ -59,7 +60,6 @@ Klaturov Fanatic
 | cedric cugnod
 | darkmoon3d
 | Daniel Orkitz danielorkitz
-| Mindset Theory Show
 | Rocco Labellarte
 | Тодор Вълков
 | REPORTA.LA1
@@ -68,7 +68,6 @@ Klaturov Fanatic
 | emm mosamm
 | Ginjii
 | traian lorent
-| Oliver Gold
 | Eakapon Sinchai
 | Soon Pau Kun
 | Elli Grossman

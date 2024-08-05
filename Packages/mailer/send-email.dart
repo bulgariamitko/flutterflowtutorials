@@ -9,19 +9,33 @@
 
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
+import 'dart:io';
+import 'package:path/path.dart' as path;
+import 'package:path_provider/path_provider.dart';
 
-Future sendEmail(
+Future<void> sendEmail(
   String recipientEmail,
   String subject,
   String body,
+  FFUploadedFile attachment,
 ) async {
   final smtpServer = gmail('name@gmail.com', 'myPassword');
+
+  // Create a temporary file from the FFUploadedFile
+  final tempDir = await getTemporaryDirectory();
+  final tempFile = File(path.join(tempDir.path, attachment.name));
+  await tempFile.writeAsBytes(attachment.bytes!);
 
   final message = Message()
     ..from = Address('name@gmail.com', 'Your Name')
     ..recipients.add(recipientEmail)
     ..subject = subject
-    ..text = body;
+    ..text = body
+    ..attachments = [
+      FileAttachment(tempFile)
+        ..fileName = attachment.name
+        ..contentType = attachment.contentType
+    ];
 
   try {
     final sendReport = await send(message, smtpServer);
@@ -30,6 +44,11 @@ Future sendEmail(
     print('Message not sent. \n${e.toString()}');
     for (var p in e.problems) {
       print('Problem: ${p.code}: ${p.msg}');
+    }
+  } finally {
+    // Clean up the temporary file
+    if (await tempFile.exists()) {
+      await tempFile.delete();
     }
   }
 }

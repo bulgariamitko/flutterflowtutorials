@@ -18,10 +18,10 @@ Future<String> saveFileToGallery(FFUploadedFile file) async {
         '${DateTime.now().millisecondsSinceEpoch}_${file.name}';
 
     // Save the file to the gallery
-    final result = await ImageGallerySaver.saveFile(
+    final result = await ImageGallerySaver.saveImage(
       Uint8List.fromList(file.bytes!),
       name: fileName,
-      isReturnPathOfIOS: true,
+      isReturnImagePathOfIOS: true,
     );
 
     if (result['isSuccess']) {

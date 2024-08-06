@@ -29,7 +29,7 @@ class DisplayImg extends StatefulWidget {
 
 class _DisplayImgState extends State<DisplayImg> {
   final ImageProvider defaultImage = NetworkImage(
-    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/quick-clip-pqdyn3/assets/8h1121j1nsv5/processing....png',
+    'https://images.pexels.com/photos/1037996/pexels-photo-1037996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   );
 
   @override

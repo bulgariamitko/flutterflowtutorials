@@ -8,7 +8,7 @@ const firestore = admin.firestore();
 
 const kPushNotificationRuntimeOpts = {
   timeoutSeconds: 540,
-  memory: "2GB"
+  memory: "2GB",
 };
 
 exports.addFcmToken = functions.https.onCall(async (data, context) => {
@@ -73,7 +73,6 @@ exports.sendPushNotificationsTrigger = functions
       await snapshot.ref.update({ status: "failed", error: `${e}` });
     }
   });
-
 
 async function sendPushNotifications(snapshot) {
   const notificationData = snapshot.data();
@@ -146,7 +145,7 @@ async function sendPushNotifications(snapshot) {
       },
       data: {
         initialPageName,
-        parameterData
+        parameterData,
       },
       android: {
         notification: {
@@ -170,7 +169,7 @@ async function sendPushNotifications(snapshot) {
     messageBatches.map(async (messages) => {
       const response = await admin.messaging().sendMulticast(messages);
       numSent += response.successCount;
-    })
+    }),
   );
 
   await snapshot.ref.update({ status: "succeeded", num_sent: numSent });
@@ -207,4 +206,3 @@ function getCharForIndex(charIdx) {
     return String.fromCharCode("a".charCodeAt(0) + charIdx - 36);
   }
 }
-

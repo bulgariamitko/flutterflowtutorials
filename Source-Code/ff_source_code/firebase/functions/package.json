@@ -7,7 +7,7 @@
     "braintree": "^3.6.0",
     "@mux/mux-node": "^7.3.3",
     "stripe": "^8.0.1",
-    "axios": "1.6.0",
+    "axios": "1.7.4",
     "razorpay": "^2.8.4",
     "qs": "^6.7.0",
     "@onesignal/node-onesignal": "^2.0.1-beta2"

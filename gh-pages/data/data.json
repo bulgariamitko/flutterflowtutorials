@@ -1249,5 +1249,16 @@
         "folder": "local",
         "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/camera/local/local-camera-plaer.dart",
         "id": 86
+    },
+    {
+        "video": "https://www.youtube.com/watch?v=wg4s9hE8N4k",
+        "title": "@FlutterFlow One-Click Camera Wonders: Capture Photos & Videos Effortlessly in Your App",
+        "desc": "Be a paid member. Support my work. Join the Klaturov army! \nhttps://www.youtube.com/@flutterflowexpert/join\n\nSupport my work\nhttps://github.com/sponsors/bulgariamitko\n\nWebsite\nhttps://bulgariamitko.github.io/flutterflowtutorials/\n\nYou can book me as FF mentor or support my work\nhttps://calendly.com/bulgaria_mitko\n\nGitHub repo\nhttps://github.com/bulgariamitko/flutterflowtutorials\n\nDiscord channel\nhttps://discord.gg/G69hSUqEeU\n\nYouTube channel\nhttps://www.youtube.com/@flutterflowexpert\n\nHey everyone! Welcome to \"@FlutterFlow One-Click Wonders: Capture Photos & Videos Effortlessly in Your App,\" an exciting tutorial that will guide you through the process of integrating seamless camera functionality into your app. With just one click, your users will be able to capture photos and record videos with ease.\n\nIn this comprehensive tutorial, we'll cover the following key topics:\n\nAppState Integration: Learn how to utilize AppState to take a picture within your app, streamlining the process for a smooth user experience.\nStoring Photos in Firebase Storage: I'll show you how to store the captured photos in Firebase Storage and create a document, ensuring efficient data management and easy retrieval.\nOrganizing Photos in Folders: Discover how to create folders for organizing your pictures, making it easier for users to manage their captured memories.\nRecording Videos with a Button: Find out how to record videos when a button is pressed, providing users with a seamless and straightforward way to capture videos.\nStoring Videos in Firebase Storage: I'll guide you through the process of storing the recorded videos in Firebase Storage, allowing for secure storage and easy access.\nBy the end of this tutorial, you'll have the skills and knowledge needed to effortlessly integrate one-click photo and video capturing functionality into your app. You'll understand how to use AppState, store media in Firebase Storage, and organize your content effectively.\n\nJoin me on this thrilling journey as we explore the world of one-click wonders, capturing photos and videos effortlessly in your app, and taking your app development skills to new heights!\n\nCode Used\nhttps://github.com/bulgariamitko/flutterflowtutorials/tree/main/Packages/camera\nhttps://github.com/bulgariamitko/flutterflowtutorials/blob/main/Custom%20Functions/string-to-img.dart\n\nIn this video\n00:00 Introduction\n01:25 How it works\n06:10 Camera - taking pictures\n15:51 Camera - taking videos\n19:41 Thank you!",
+        "embed": "https://www.youtube.com/embed/wg4s9hE8N4k",
+        "widgets": "",
+        "replace": [],
+        "folder": "local",
+        "file_path": "https://github.com/bulgariamitko/flutterflowtutorials/blob/main/Packages/camera/local/camera_player.dart",
+        "id": 87
     }
 ]

@@ -78,8 +78,8 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
   Widget build(BuildContext context) => _loading
       ? Center(
           child: SizedBox(
-            width: 50,
-            height: 50,
+            width: 50.0,
+            height: 50.0,
             child: CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(
                 FlutterFlowTheme.of(context).primary,

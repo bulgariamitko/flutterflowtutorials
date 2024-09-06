@@ -52,13 +52,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: Colors.white,
-                  fontSize: 22,
+                  fontSize: 22.0,
                   letterSpacing: 0.0,
                 ),
           ),
           actions: [],
           centerTitle: false,
-          elevation: 2,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
@@ -102,21 +102,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 },
                 text: 'Button',
                 options: FFButtonOptions(
-                  height: 40,
-                  padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
-                  iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                  height: 40.0,
+                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                  iconPadding:
+                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
                         letterSpacing: 0.0,
                       ),
-                  elevation: 3,
+                  elevation: 3.0,
                   borderSide: BorderSide(
                     color: Colors.transparent,
-                    width: 1,
+                    width: 1.0,
                   ),
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
               FlutterFlowAudioPlayer(
@@ -139,7 +140,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                 playbackButtonColor: FlutterFlowTheme.of(context).primary,
                 activeTrackColor: FlutterFlowTheme.of(context).alternate,
-                elevation: 4,
+                elevation: 4.0,
                 playInBackground: PlayInBackground.disabledRestoreOnForeground,
               ),
               FlutterFlowVideoPlayer(

@@ -1,6 +1,6 @@
 # Links
 
-[![My links](https://img.shields.io/badge/-My%20links?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://linktr.ee/klaturov)
+[![My links](https://img.shields.io/badge/-My%20Links-purple?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/klaturov)
 
 # FlutterFlow Tutorials
 

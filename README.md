@@ -14,34 +14,41 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Elite
+| ANOMALIES
+| CloudBedrock
+| Js Na
+
 Klaturov Fanatic
+| Early To Arrive
+| Pavel Syrtsov
+| Eugene Ki
+| 이산
+| AiContacts
+| Janakiraman K
+| Richard Hector
+| Sam Roseman
+| Eakapon Sinchai
+| 현
 | Lewis
 | Youri van den Brand
 | Rafael Borchardt
 | Anatoly Bogdanov
-| 농약먹은유리
-| Duško Ličanin
+| Dusko Licanin
 | Juan Pinzón
 | A Determined Polar Bear
 | ShotByDavid
 | Daniel Orkitz danielorkitz
-| Harsh Tonde
-| Janakiraman K
-| Gabriel Menz
-| Mindset Theory Show
-| 이산
 | Vitória Meneses
 | Ali Reza Kohani
 | Henrique
 | Camilo Peñalver
-| Ivaylo Sekoulitchki
 | Indy Puaar
 | trevize0101
 | Dane Blackwell
 | Jordan Blackler
 | Szymon Celej
 | Hamza Gangat
-| Carrilho Rubens
 | Martin Fourie
 | Finn Allison
 | Sherry Schwegmann
@@ -65,6 +72,7 @@ Klaturov Fanatic
 | Yulian Diaz Leon
 
 Klaturov Cadet
+| Nashiruddin abubakar
 | Kicgle
 | PERISCILA
 | withnocode
@@ -77,15 +85,10 @@ Klaturov Cadet
 | jim vh
 | Mick van der Heijden
 | Sreyna Rath
-| arun ung
 | Seong Marcus
 | Marcin Wojcicki
 | Daniel Habibi
 | Jaco Laubscher
-
-Klaturov Elite
-| CloudBedrock
-| Js Na
 
 Klaturov Devotees
 | Todd Stephenson

@@ -167,7 +167,7 @@ async function sendPushNotifications(snapshot) {
   var numSent = 0;
   await Promise.all(
     messageBatches.map(async (messages) => {
-      const response = await admin.messaging().sendMulticast(messages);
+      const response = await admin.messaging().sendEachForMulticast(messages);
       numSent += response.successCount;
     }),
   );

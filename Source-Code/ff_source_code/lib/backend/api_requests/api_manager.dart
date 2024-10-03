@@ -376,7 +376,11 @@ class ApiManager {
         : postBody;
   }
 
-  Future<ApiCallResponse> call(ApiCallOptions options) => makeApiCall(
+  Future<ApiCallResponse> call(
+    ApiCallOptions options, {
+    http.Client? client,
+  }) =>
+      makeApiCall(
         callName: options.callName,
         apiUrl: options.apiUrl,
         callType: options.callType,
@@ -391,6 +395,7 @@ class ApiManager {
         cache: options.cache,
         isStreamingApi: options.isStreamingApi,
         options: options,
+        client: client,
       );
 
   Future<ApiCallResponse> makeApiCall({

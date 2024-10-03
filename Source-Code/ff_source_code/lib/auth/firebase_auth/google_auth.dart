@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-final _googleSignIn = GoogleSignIn();
+final _googleSignIn = GoogleSignIn(scopes: ['profile', 'email']);
 
 Future<UserCredential?> googleSignInFunc() async {
   if (kIsWeb) {

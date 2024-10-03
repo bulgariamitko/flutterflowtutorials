@@ -14,12 +14,11 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Elite
-| ANOMALIES
-| CloudBedrock
-| Js Na
-
 Klaturov Fanatic
+| Kevin Chan
+| Brian Bagdasarian
+| shawn roden
+| Carrilho Rubens
 | Early To Arrive
 | Pavel Syrtsov
 | Eugene Ki
@@ -30,10 +29,7 @@ Klaturov Fanatic
 | Sam Roseman
 | Eakapon Sinchai
 | 현
-| Lewis
-| Youri van den Brand
 | Rafael Borchardt
-| Anatoly Bogdanov
 | Dusko Licanin
 | Juan Pinzón
 | A Determined Polar Bear
@@ -62,26 +58,21 @@ Klaturov Fanatic
 | Ginjii
 | traian lorent
 | Soon Pau Kun
-| Elli Grossman
 | s3zgin
 | Ken Martin
 | Craig Wyhs
 | Saigin Govender
 | Herbert Riener
 | Yash SRIVASTAVA
-| Yulian Diaz Leon
+| Yulian Diaz Leon (SpatialY)
 
 Klaturov Cadet
+| SamZen | سام زين
 | Nashiruddin abubakar
-| Kicgle
-| PERISCILA
-| withnocode
-| Marco Pozo Espinoza
 | FitTechStudios
 | YouGuitar
 | Rainfall Studio
 | the punisher
-| Ratan Sagar Pandey
 | jim vh
 | Mick van der Heijden
 | Sreyna Rath
@@ -90,8 +81,12 @@ Klaturov Cadet
 | Daniel Habibi
 | Jaco Laubscher
 
+Klaturov Elite
+| ANOMALIES
+| CloudBedrock
+| Js Na
+
 Klaturov Devotees
-| Todd Stephenson
 | David Mayne
 | Koya Mikami
 | JP

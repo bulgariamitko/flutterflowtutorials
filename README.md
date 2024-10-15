@@ -13,22 +13,37 @@ If you are interested in contributing to this repository, please feel free to su
 # YouTube Paid Members
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
+Klaturov Cadet
+| Alessio Dolce
+| Rainfall Studio
+| Kushal Kumar
+| SamZen | سام زين
+| Nashiruddin abubakar
+| FitTechStudios
+| the punisher
+| jim vh
+| Mick van der Heijden
+| Sreyna Rath
+| Seong Marcus
+| Marcin Wojcicki
+| Jaco Laubscher
 
 Klaturov Fanatic
+| The Slongest
+| Eakapon Sinchai
+| Joel
+| Lautaro Azócar
+| Coffee Breaks With Sophia
+| jhonier jimenez
 | Kevin Chan
 | Brian Bagdasarian
 | shawn roden
 | Carrilho Rubens
 | Early To Arrive
 | Pavel Syrtsov
-| Eugene Ki
 | 이산
 | AiContacts
-| Janakiraman K
 | Richard Hector
-| Sam Roseman
-| Eakapon Sinchai
-| 현
 | Rafael Borchardt
 | Dusko Licanin
 | Juan Pinzón
@@ -42,9 +57,6 @@ Klaturov Fanatic
 | Indy Puaar
 | trevize0101
 | Dane Blackwell
-| Jordan Blackler
-| Szymon Celej
-| Hamza Gangat
 | Martin Fourie
 | Finn Allison
 | Sherry Schwegmann
@@ -64,26 +76,11 @@ Klaturov Fanatic
 | Saigin Govender
 | Herbert Riener
 | Yash SRIVASTAVA
-| Yulian Diaz Leon (SpatialY)
-
-Klaturov Cadet
-| SamZen | سام زين
-| Nashiruddin abubakar
-| FitTechStudios
-| YouGuitar
-| Rainfall Studio
-| the punisher
-| jim vh
-| Mick van der Heijden
-| Sreyna Rath
-| Seong Marcus
-| Marcin Wojcicki
 | Daniel Habibi
-| Jaco Laubscher
+| Yulian Diaz Leon (SpatialY)
 
 Klaturov Elite
 | ANOMALIES
-| CloudBedrock
 | Js Na
 
 Klaturov Devotees

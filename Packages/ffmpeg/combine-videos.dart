@@ -1,5 +1,5 @@
 // YouTube channel - https://www.youtube.com/@flutterflowexpert
-// video - no
+// paid video - https://www.youtube.com/watch?v=LfAwHZndeWQ
 // Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
@@ -9,160 +9,138 @@
 
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
-import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
-import 'package:ffmpeg_kit_flutter/return_code.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart'
-    show consolidateHttpClientResponseBytes;
+import 'package:ffmpeg_kit_flutter_full_gpl/ffmpeg_kit.dart';
+import 'package:ffmpeg_kit_flutter_full_gpl/return_code.dart';
+import 'package:path/path.dart' as path;
+import 'package:video_thumbnail/video_thumbnail.dart';
+import 'package:video_player/video_player.dart';
+import 'package:http/http.dart' as http;
 
-Future<void> finalVideoCreator(
-  List<ClipStruct> videoUrls,
-  String videoId,
-  String userId,
-) async {
-  FFAppState().update(() {
-    FFAppState().finalVideoIsProcessing = true;
-    FFAppState().finalVideoStatus = 'Starting video processing...';
-  });
-
-  try {
-    final tempDir = await getTemporaryDirectory();
-    final List<String> intermediateVideos = [];
-
-    // Download and process each video
-    for (int i = 0; i < videoUrls.length; i++) {
-      FFAppState().update(() {
-        FFAppState().finalVideoStatus =
-            'Processing video ${i + 1} of ${videoUrls.length}';
-      });
-
-      final videoPath = '${tempDir.path}/video_$i.mp4';
-      await _downloadFile(videoUrls[i].url, videoPath);
-
-      final intermediatePath = '${tempDir.path}/intermediate_$i.mp4';
-      await _createIntermediateVideo(
-          videoPath, intermediatePath, videoUrls[i].length);
-      intermediateVideos.add(intermediatePath);
+class FileHandler {
+  static Future<String> getAppDirectory() async {
+    if (Platform.isIOS) {
+      return (await getApplicationDocumentsDirectory()).path;
+    } else if (Platform.isAndroid) {
+      return (await getExternalStorageDirectory() ??
+              await getApplicationDocumentsDirectory())
+          .path;
+    } else {
+      throw UnsupportedError('Unsupported platform');
     }
+  }
 
-    // Concatenate videos
-    FFAppState().update(() {
-      FFAppState().finalVideoStatus = 'Concatenating videos...';
-    });
+  static Future<String> getFilePath(String fileName) async {
+    final appDir = await getAppDirectory();
+    return path.join(appDir, fileName);
+  }
 
-    final finalVideoPath = '${tempDir.path}/final_video.mp4';
-    await _concatenateVideos(intermediateVideos, finalVideoPath);
+  static String getFileNameFromPath(String fullPath) {
+    return path.basename(fullPath);
+  }
 
-    // Upload final video
-    FFAppState().update(() {
-      FFAppState().finalVideoStatus = 'Uploading final video...';
-    });
+  static Future<String> getFullPath(String fileName) async {
+    return await getFilePath(fileName);
+  }
+}
 
-    final finalVideoUrl = await _uploadVideo(finalVideoPath, userId, videoId);
+Future<String> generateThumbnail(String videoPath) async {
+  try {
+    final thumbnailFileName = '${DateTime.now().millisecondsSinceEpoch}.png';
+    final thumbnailPath = await FileHandler.getFilePath(thumbnailFileName);
 
-    // Update Firestore
-    await FirebaseFirestore.instance
-        .collection('projects')
-        .doc(videoId)
-        .update({'finalVideo': finalVideoUrl});
+    // Calculate the middle of the video duration
+    final videoPlayerController = VideoPlayerController.file(File(videoPath));
+    await videoPlayerController.initialize();
+    final videoDuration = videoPlayerController.value.duration;
+    final middlePosition = videoDuration.inMilliseconds ~/ 2;
+    await videoPlayerController.dispose();
 
-    FFAppState().update(() {
-      FFAppState().finalVideoStatus =
-          'Video processing completed successfully!';
-    });
+    final thumbnail = await VideoThumbnail.thumbnailFile(
+      video: videoPath,
+      thumbnailPath: thumbnailPath,
+      imageFormat: ImageFormat.PNG,
+      maxHeight: 640,
+      maxWidth: 480,
+      quality: 100,
+      timeMs: middlePosition,
+    );
+
+    return thumbnail != null ? FileHandler.getFileNameFromPath(thumbnail) : '';
   } catch (e) {
-    FFAppState().update(() {
-      FFAppState().finalVideoStatus = 'Error: ${e.toString()}';
-    });
-  } finally {
-    FFAppState().update(() {
-      FFAppState().finalVideoIsProcessing = false;
-    });
+    print('Error generating thumbnail: $e');
+    return '';
   }
 }
 
-Future<void> _downloadFile(String url, String destPath) async {
-  final response = await HttpClient().getUrl(Uri.parse(url));
-  final HttpClientResponse httpResponse = await response.close();
-  final bytes = await consolidateHttpClientResponseBytes(httpResponse);
-  await File(destPath).writeAsBytes(bytes);
+Future<List<String>> combineVideos(
+  String video1Url,
+  String video2Url,
+) async {
+  try {
+    print("Starting combineVideos function");
+
+    // Download videos if they are URLs
+    final video1Path = await _downloadVideoIfNeeded(video1Url);
+    final video2Path = await _downloadVideoIfNeeded(video2Url);
+
+    // Prepare output file
+    final String outputFileName =
+        'combined_${DateTime.now().millisecondsSinceEpoch}.mp4';
+    final String outputPath = await FileHandler.getFilePath(outputFileName);
+
+    // Create input list file
+    final String inputListPath =
+        await FileHandler.getFilePath('input_list.txt');
+    final File inputListFile = File(inputListPath);
+    await inputListFile.writeAsString("file '$video1Path'\nfile '$video2Path'");
+
+    // FFmpeg command to combine videos
+    String command = '-y -f concat -safe 0 -i "$inputListPath" '
+        '-c:v libx264 -preset slow -crf 22 '
+        '-c:a aac -b:a 192k -ar 44100 '
+        '-vsync 1 -max_muxing_queue_size 1024 '
+        '-fflags +genpts '
+        '"$outputPath"';
+
+    print("Executing FFmpeg command: $command");
+    final session = await FFmpegKit.execute(command);
+    final returnCode = await session.getReturnCode();
+
+    if (ReturnCode.isSuccess(returnCode)) {
+      print("Video combination complete. Output file: $outputFileName");
+
+      // Generate thumbnail
+      final thumbnailFileName = await generateThumbnail(outputPath);
+
+      // Clean up temporary files
+      await inputListFile.delete();
+
+      return [outputFileName, thumbnailFileName];
+    } else {
+      print("Failed to combine videos. Return code: $returnCode");
+      final logs = await session.getLogsAsString();
+      print("FFmpeg logs: $logs");
+      throw Exception('Failed to combine videos');
+    }
+  } catch (e) {
+    print("Error in combineVideos: $e");
+    throw Exception('Failed to combine videos: $e');
+  }
 }
 
-Future<void> _createIntermediateVideo(
-    String inputPath, String outputPath, int lengthInSeconds) async {
-  final command =
-      '''-y -i "$inputPath" -t $lengthInSeconds -c:v h264 -c:a aac "$outputPath"''';
-  print("Executing FFmpeg command: $command");
-
-  final session = await FFmpegKit.execute(command);
-  final returnCode = await session.getReturnCode();
-  final log = await session.getLogs();
-
-  log.forEach((log) {
-    print(log.getMessage());
-  });
-
-  if (ReturnCode.isSuccess(returnCode)) {
-    print("FFmpeg process completed successfully.");
-    print("Return code: ${returnCode?.getValue()}");
-    print("Duration: ${await session.getDuration()}");
+Future<String> _downloadVideoIfNeeded(String videoUrl) async {
+  if (videoUrl.startsWith('http://') || videoUrl.startsWith('https://')) {
+    // Download the video
+    final response = await http.get(Uri.parse(videoUrl));
+    final bytes = response.bodyBytes;
+    final String fileName =
+        'downloaded_${DateTime.now().millisecondsSinceEpoch}.mp4';
+    final String filePath = await FileHandler.getFilePath(fileName);
+    final File file = File(filePath);
+    await file.writeAsBytes(bytes);
+    return filePath;
   } else {
-    final failStackTrace = await session.getFailStackTrace();
-    print("FFmpeg process failed. Return code: ${returnCode?.getValue()}");
-    print("Fail stack trace: $failStackTrace");
-    throw Exception(
-        "FFmpeg process failed with return code ${returnCode?.getValue()}");
+    // It's already a local path
+    return videoUrl;
   }
-}
-
-Future<void> _concatenateVideos(
-    List<String> inputPaths, String outputPath) async {
-  final tempDir = await getTemporaryDirectory();
-  final inputFile = '${tempDir.path}/input.txt';
-  await File(inputFile).writeAsString(
-      inputPaths.map((p) => "file '${p.replaceAll("'", "\\'")}'").join('\n'));
-
-  final command =
-      '''-y -f concat -safe 0 -i "$inputFile" -c copy "$outputPath"''';
-  print("Executing FFmpeg command: $command");
-
-  final session = await FFmpegKit.execute(command);
-  final returnCode = await session.getReturnCode();
-  final log = await session.getLogs();
-
-  log.forEach((log) {
-    print(log.getMessage());
-  });
-
-  if (ReturnCode.isSuccess(returnCode)) {
-    print("FFmpeg process completed successfully.");
-    print("Return code: ${returnCode?.getValue()}");
-    print("Duration: ${await session.getDuration()}");
-  } else {
-    final failStackTrace = await session.getFailStackTrace();
-    print("FFmpeg process failed. Return code: ${returnCode?.getValue()}");
-    print("Fail stack trace: $failStackTrace");
-    throw Exception(
-        "FFmpeg process failed with return code ${returnCode?.getValue()}");
-  }
-}
-
-Future<void> checkFfmpegCapabilities() async {
-  final encodersSession = await FFmpegKit.execute('-encoders');
-  final encodersOutput = await encodersSession.getOutput();
-  print("Available encoders:\n$encodersOutput");
-
-  final formatsSession = await FFmpegKit.execute('-formats');
-  final formatsOutput = await formatsSession.getOutput();
-  print("Supported formats:\n$formatsOutput");
-}
-
-Future<String> _uploadVideo(
-    String videoPath, String userId, String videoId) async {
-  final fileName = 'users/$userId/uploads/final-video/$videoId/final-video.mp4';
-  final ref = FirebaseStorage.instance.ref().child(fileName);
-  final uploadTask = ref.putFile(File(videoPath));
-  final snapshot = await uploadTask.whenComplete(() {});
-  return await snapshot.ref.getDownloadURL();
 }

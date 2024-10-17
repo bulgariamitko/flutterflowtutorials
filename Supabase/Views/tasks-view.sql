@@ -1,0 +1,1 @@
+CREATE VIEW public.viewtask AS SELECT * FROM public.tasks;

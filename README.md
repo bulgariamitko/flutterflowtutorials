@@ -13,6 +13,11 @@ If you are interested in contributing to this repository, please feel free to su
 # YouTube Paid Members
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
+
+Klaturov Elite
+| CloudBedrock
+| Js Na
+
 Klaturov Cadet
 | Alessio Dolce
 | Rainfall Studio
@@ -39,14 +44,12 @@ Klaturov Fanatic
 | Brian Bagdasarian
 | shawn roden
 | Carrilho Rubens
-| Early To Arrive
 | Pavel Syrtsov
 | 이산
 | AiContacts
 | Richard Hector
 | Rafael Borchardt
 | Dusko Licanin
-| Juan Pinzón
 | A Determined Polar Bear
 | ShotByDavid
 | Daniel Orkitz danielorkitz
@@ -75,13 +78,9 @@ Klaturov Fanatic
 | Craig Wyhs
 | Saigin Govender
 | Herbert Riener
-| Yash SRIVASTAVA
+|
 | Daniel Habibi
 | Yulian Diaz Leon (SpatialY)
-
-Klaturov Elite
-| ANOMALIES
-| Js Na
 
 Klaturov Devotees
 | David Mayne

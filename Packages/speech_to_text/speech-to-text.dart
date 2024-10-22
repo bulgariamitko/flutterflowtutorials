@@ -8,57 +8,69 @@
 // Discord channel - https://discord.gg/G69hSUqEeU
 
 import 'dart:async';
+import 'dart:math';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
-Future speechToText() async {
-  String output = '';
+Future<void> speechToText(
+  Future Function(String words) listeningCallback,
+  Future Function(String words) finalCallback,
+) async {
   bool _onDevice = false;
-  final TextEditingController _pauseForController =
-      TextEditingController(text: '3');
-  final TextEditingController _listenForController =
-      TextEditingController(text: '30');
+  final int listenForSeconds = 30;
+  final int pauseForSeconds = 3;
   double minSoundLevel = 50000;
   double maxSoundLevel = -50000;
-  String _currentLocaleId = '';
   final SpeechToText speech = SpeechToText();
 
-  bool isInitialized = await speech.initialize();
+  try {
+    bool isInitialized = await speech.initialize(
+      onError: (error) {
+        print('Speech recognition error: ${error.errorMsg}');
+      },
+      onStatus: (status) {
+        print('Speech recognition status: $status');
+      },
+    );
 
-  if (isInitialized) {
+    if (!isInitialized) {
+      print('Speech recognition initialization failed');
+      return;
+    }
+
     var systemLocale = await speech.systemLocale();
-    _currentLocaleId = systemLocale?.localeId ?? '';
-    final pauseFor = int.tryParse(_pauseForController.text);
-    final listenFor = int.tryParse(_listenForController.text);
-    speech.listen(
-      onResult: (result) {
+    String currentLocaleId = systemLocale?.localeId ?? '';
+
+    if (!speech.isAvailable) {
+      print('Speech recognition is not available');
+      return;
+    }
+
+    await speech.listen(
+      onResult: (SpeechRecognitionResult result) async {
         if (!result.finalResult) {
-          FFAppState().update(() {
-            FFAppState().btnTalk = 'listening...';
-            FFAppState().stt = '${result.recognizedWords}';
-          });
+          // Partial results - listening
+          await listeningCallback(result.recognizedWords);
         } else {
-          FFAppState().update(() {
-            output = '${result.recognizedWords}';
-            FFAppState().sstSendText = '${result.recognizedWords}';
-            FFAppState().btnTalk = 'Talk';
-          });
+          // Final results
+          await finalCallback(result.recognizedWords);
         }
       },
-      listenFor: Duration(seconds: listenFor ?? 30),
-      pauseFor: Duration(seconds: pauseFor ?? 3),
+      listenFor: Duration(seconds: listenForSeconds),
+      pauseFor: Duration(seconds: pauseForSeconds),
       partialResults: true,
-      localeId: _currentLocaleId,
+      localeId: currentLocaleId,
       onSoundLevelChange: (level) {
         minSoundLevel = min(minSoundLevel, level);
         maxSoundLevel = max(maxSoundLevel, level);
-        print('sound level $level: $minSoundLevel - $maxSoundLevel ');
-        level = level;
+        print('Sound level $level: $minSoundLevel - $maxSoundLevel');
       },
       cancelOnError: true,
       listenMode: ListenMode.confirmation,
       onDevice: _onDevice,
     );
+  } catch (e) {
+    print('Error in speech recognition: $e');
   }
 }

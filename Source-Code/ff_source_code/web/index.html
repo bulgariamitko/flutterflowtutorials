@@ -46,12 +46,6 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#1d2428">
 
   <link rel="manifest" href="manifest.json">
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
   
 </head>
 <body>
@@ -61,22 +55,7 @@
   
   
   <script>
-    window.addEventListener('load', function (ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        entrypointUrl: 'main.dart.js',
-        serviceWorker: {
-          serviceWorkerUrl: 'flutter_service_worker.js?v=',
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: async function(engineInitializer) {
-          // Initialize the Flutter engine
-          let appRunner = await engineInitializer.initializeEngine({});
-          // Run the app
-          await appRunner.runApp();
-        }
-      });
-    });
+    {{flutter_bootstrap_js}}
   </script>
 </body>
 </html>

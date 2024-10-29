@@ -1,6 +1,59 @@
-ff-tutorials.sublime-project
-ff-tutorials.sublime-workspace
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# macOS directories
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# IDE - Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# IDE - VS Code
+*.code-workspace
+.vscode/
+
+# Project specific files
 /Paid Members/*.csv
-flutterflowtutorials.code-workspace
-YT/token.json
-YT/credentials.json
+/YT/token.json
+/YT/credentials.json
+
+# Node modules and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build directories
+dist/
+build/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock

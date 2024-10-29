@@ -1,0 +1,4 @@
+curl --request POST \
+  --url https://YOUR_WORKER_URL.workers.dev/ \
+  --header 'content-type: multipart/form-data' \
+  --form file=@/path/to/your/file.png

@@ -27,8 +27,8 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  app_links: 3.4.1
-  app_links_platform_interface: 1.1.0
+  app_links: 6.3.2
+  app_links_platform_interface: 2.0.2
   assets_audio_player: 3.1.1
   assets_audio_player_web: 3.1.1
   auto_size_text: 3.0.0
@@ -63,7 +63,7 @@ dependencies:
   flutter_plugin_android_lifecycle: 2.0.20
   font_awesome_flutter: 10.7.0
   from_css_color: 2.0.0
-  functions_client: 1.3.2
+  functions_client: 2.3.2
   go_router: 12.1.3
   google_fonts: 6.1.0
   google_sign_in: 6.2.1
@@ -71,7 +71,7 @@ dependencies:
   google_sign_in_ios: 5.7.7
   google_sign_in_platform_interface: 2.4.5
   google_sign_in_web: 0.12.4+2
-  gotrue: 1.12.6
+  gotrue: 2.8.4
   hive: 2.2.3
   html: 0.15.4
   http: 1.2.2
@@ -94,9 +94,9 @@ dependencies:
   path_provider_platform_interface: 2.1.2
   path_provider_windows: 2.2.1
   plugin_platform_interface: 2.1.8
-  postgrest: 1.5.2
+  postgrest: 2.1.4
   provider: 6.1.2
-  realtime_client: 1.4.0
+  realtime_client: 2.2.1
   rxdart: 0.27.7
   shared_preferences: 2.3.2
   shared_preferences_android: 2.3.2
@@ -110,10 +110,10 @@ dependencies:
   sign_in_with_apple_web: 2.1.0
   sqflite: 2.3.3+1
   sqflite_common: 2.5.4+3
-  storage_client: 1.5.4
+  storage_client: 2.0.3
   stream_transform: 2.1.0
-  supabase: 1.11.11
-  supabase_flutter: 1.10.24
+  supabase: 2.3.0
+  supabase_flutter: 2.6.0
   timeago: 3.6.1
   url_launcher: 6.3.0
   url_launcher_android: 6.3.10
@@ -140,9 +140,6 @@ dependencies:
 dependency_overrides:
   http: 1.2.2
   rxdart: 0.27.7
-  sign_in_with_apple: 6.1.2
-  sign_in_with_apple_platform_interface: 1.1.0
-  sign_in_with_apple_web: 2.1.0
   uuid: ^4.0.0
   win32: 5.5.1
 

@@ -129,7 +129,7 @@ Contributions are welcome! Please feel free to submit pull requests or create is
 
 ## License
 
-[Add your license information here]
+GPL-3.0 license
 
 ## Acknowledgments
 

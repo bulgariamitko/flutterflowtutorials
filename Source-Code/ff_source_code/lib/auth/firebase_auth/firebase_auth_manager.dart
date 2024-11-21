@@ -104,6 +104,27 @@ class FirebaseAuthManager extends AuthManager
   }
 
   @override
+  Future updatePassword({
+    required String newPassword,
+    required BuildContext context,
+  }) async {
+    try {
+      if (!loggedIn) {
+        print('Error: update password attempted with no logged in user!');
+        return;
+      }
+      await currentUser?.updatePassword(newPassword);
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'requires-recent-login') {
+        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error: ${e.message!}')),
+        );
+      }
+    }
+  }
+
+  @override
   Future resetPassword({
     required String email,
     required BuildContext context,

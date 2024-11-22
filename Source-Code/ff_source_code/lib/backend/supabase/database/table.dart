@@ -62,6 +62,74 @@ abstract class SupabaseTable<T extends SupabaseDataRow> {
   }
 }
 
+extension NullSafePostgrestFilters on PostgrestFilterBuilder {
+  PostgrestFilterBuilder eqOrNull(String column, dynamic value) {
+    return value != null ? eq(column, value) : this;
+  }
+
+  PostgrestFilterBuilder neqOrNull(String column, dynamic value) {
+    return value != null ? neq(column, value) : this;
+  }
+
+  PostgrestFilterBuilder ltOrNull(String column, dynamic value) {
+    return value != null ? lt(column, value) : this;
+  }
+
+  PostgrestFilterBuilder lteOrNull(String column, dynamic value) {
+    return value != null ? lte(column, value) : this;
+  }
+
+  PostgrestFilterBuilder gtOrNull(String column, dynamic value) {
+    return value != null ? gt(column, value) : this;
+  }
+
+  PostgrestFilterBuilder gteOrNull(String column, dynamic value) {
+    return value != null ? gte(column, value) : this;
+  }
+
+  PostgrestFilterBuilder containsOrNull(String column, dynamic value) {
+    return value != null ? contains(column, value) : this;
+  }
+
+  PostgrestFilterBuilder overlapsOrNull(String column, dynamic value) {
+    return value != null ? overlaps(column, value) : this;
+  }
+
+  PostgrestFilterBuilder inFilterOrNull(String column, List<dynamic>? values) {
+    return values != null ? inFilter(column, values) : this;
+  }
+}
+
+extension NullSafeSupabaseStreamFilters on SupabaseStreamFilterBuilder {
+  SupabaseStreamBuilder eqOrNull(String column, dynamic value) {
+    return value != null ? eq(column, value) : this;
+  }
+
+  SupabaseStreamBuilder neqOrNull(String column, dynamic value) {
+    return value != null ? neq(column, value) : this;
+  }
+
+  SupabaseStreamBuilder ltOrNull(String column, dynamic value) {
+    return value != null ? lt(column, value) : this;
+  }
+
+  SupabaseStreamBuilder lteOrNull(String column, dynamic value) {
+    return value != null ? lte(column, value) : this;
+  }
+
+  SupabaseStreamBuilder gtOrNull(String column, dynamic value) {
+    return value != null ? gt(column, value) : this;
+  }
+
+  SupabaseStreamBuilder gteOrNull(String column, dynamic value) {
+    return value != null ? gte(column, value) : this;
+  }
+
+  SupabaseStreamBuilder inFilterOrNull(String column, List<Object>? values) {
+    return values != null ? inFilter(column, values) : this;
+  }
+}
+
 class PostgresTime {
   PostgresTime(this.time);
   DateTime? time;

@@ -22,6 +22,7 @@ abstract class BaseAuthUser {
 
   Future? delete();
   Future? updateEmail(String email);
+  Future? updatePassword(String newPassword);
   Future? sendEmailVerification();
   Future refreshUser() async {}
 

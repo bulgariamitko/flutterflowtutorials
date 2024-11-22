@@ -1,6 +1,5 @@
 // YouTube channel - https://www.youtube.com/@flutterflowexpert
-// paid video - https://www.youtube.com/watch?v=oJDkoYfVA1g
-// widgets - Cg9Db2x1bW5fd2ZjOWVlcHUS0AEKD0J1dHRvbl9qNTZ4MTN4bhgJIn1KeAoZCg1HZXQgUGhvbmUgbG9nOgYI/////w9ABRkAAAAAAAAIQDEAAAAAAABEQEkAAAAAAADwP1ICEAFaAggAciQJAAAAAAAAIEARAAAAAAAAIEAZAAAAAAAAIEAhAAAAAAAAIEB6EgkAAAAAAAA4QBkAAAAAAAA4QPoDAGIAigE5EjMKCHRvbDhyaDF2EifSARkKFQoMcmVhZFBob25lTG9nEgV4ZDhyYiIAqgIIN3ZiZmlxY2waAggBEkUKDVRleHRfdzkxNDVtMngYAiIwEhIKC0hlbGxvIFdvcmxkQAaoAQCaARYKAgIBKhAIDEIMIgoKBgoEdHlwZRAB+gMAYgASRwoNVGV4dF9jcW4zY241YRgCIjISEgoLSGVsbG8gV29ybGRABqgBAJoBGAoCAgEqEggMQg4iDAoICgZudW1iZXIQAfoDAGIAEkkKDVRleHRfamZ6bTc5cDQYAiI0EhIKC0hlbGxvIFdvcmxkQAaoAQCaARoKAgIBKhQIDEIQIg4KCgoIZHVyYXRpb24QAfoDAGIAEkoKDVRleHRfY2FsNHZ5N2QYAiI1EhIKC0hlbGxvIFdvcmxkQAaoAQCaARsKAgIBKhUIDEIRIg8KCwoJdGltZXN0YW1wEAH6AwBiABKfBAoPQnV0dG9uX2xrbDJldzdzGAkijgJKggEKIwoXc3RhcnQgYmFja2dyb3VuZCBhY3Rpb246Bgj/////D0AFGQAAAAAAAAhAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQHoSCQAAAAAAADhAGQAAAAAAADhAmgGCAQoDCQEBKnsIClJ3OnUKUAowCApSLBIcEhoIDEIWIhQKEAoOc2VydmljZVJ1bm5pbmcQARIICgYSBHRydWUiAggBEhwKGhIYU3RvcCBiYWNrZ3JvdW5kIHNlcnZpY2VzEh0KGxIZU3RhcnQgYmFja2dyb3VuZCBzZXJ2aWNlcxoCEAP6AwBiAIoB9QES7gEKCGNhdzdmeXVkGq4BGjwKCG54eXJrMWtyEjDiASJCHAoQCg5zZXJ2aWNlUnVubmluZxIICgYSBHRydWVQAlgBqgIIMjZhYXIzcTYibAoyCjAIClIsEhwSGggMQhYiFAoQCg5zZXJ2aWNlUnVubmluZxABEggKBhIEdHJ1ZSICCAESNgoIenE0OGJobGkSKuIBHEIWChAKDnNlcnZpY2VSdW5uaW5nEgIKAFACWAGqAgh0NzRmaWtseCgAKjEKCHJjOHczeGYxEiXSARcKEwoKbWFpbkFjdGlvbhIFNXV3amciAKoCCHR6a2l6cWN5GgIIARgEIgciAhAB+gMA
+// paid video - https://www.youtube.com/watch?v=idXHYU0co5Y
 // Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
@@ -11,27 +10,51 @@
 import 'package:call_log/call_log.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-Future readPhoneLog() async {
-  if (await Permission.phone.request().isGranted) {
+Future<void> getOldPhoneCalls(
+    Future Function(PhoneCallStruct oldCall) oldPhoneCall) async {
+  print('Starting to retrieve old phone calls...');
+
+  // Initialize Flutter binding
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Request permission if not already granted
+  print('Checking phone permission...');
+  var status = await Permission.phone.status;
+  if (!status.isGranted) {
+    status = await Permission.phone.request();
+    print('Permission status after request: $status');
+    if (!status.isGranted) {
+      print('Phone permission denied');
+      return;
+    }
+  }
+  print('Phone permission granted');
+
+  try {
+    // Get all call log entries
+    print('Retrieving call log entries...');
     Iterable<CallLogEntry> entries = await CallLog.get();
+    print('Found ${entries.length} call log entries');
 
-    entries.forEach((entry) {
-      // Converting enum to string
-      String callType =
-          CallType.values[entry.callType!.index].toString().split('.').last;
+    // Process each call log entry
+    for (final entry in entries) {
+      print('Processing call entry: ${entry.number}');
 
-      // Converting the integer timestamp (milliseconds since epoch) to DateTime
-      DateTime date = DateTime.fromMillisecondsSinceEpoch(entry.timestamp ?? 0);
+      final oldCallData = PhoneCallStruct(
+        type: CallType.values[entry.callType!.index].toString().split('.').last,
+        number: entry.number ?? '',
+        timestamp: entry.timestamp.toString(),
+        duration: entry.duration.toString(),
+      );
 
-      // Formatting timestamp to string
-      String timestamp = DateFormat('yyyy-MM-dd – kk:mm').format(date);
+      print(
+          'Executing callback for call: ${oldCallData.type} - ${oldCallData.number}');
+      await oldPhoneCall(oldCallData);
+    }
 
-      FFAppState().update(() {
-        FFAppState().type = callType;
-        FFAppState().number = entry.number ?? '';
-        FFAppState().duration = entry.duration.toString();
-        FFAppState().timestamp = timestamp;
-      });
-    });
+    print('Finished processing all old calls');
+  } catch (e) {
+    print('Error retrieving old calls: $e');
+    rethrow;
   }
 }

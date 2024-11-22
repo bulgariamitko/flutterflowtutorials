@@ -1,6 +1,5 @@
 // YouTube channel - https://www.youtube.com/@flutterflowexpert
-// paid video - https://www.youtube.com/watch?v=oJDkoYfVA1g
-// widgets - Cg9Db2x1bW5fd2ZjOWVlcHUS0AEKD0J1dHRvbl9qNTZ4MTN4bhgJIn1KeAoZCg1HZXQgUGhvbmUgbG9nOgYI/////w9ABRkAAAAAAAAIQDEAAAAAAABEQEkAAAAAAADwP1ICEAFaAggAciQJAAAAAAAAIEARAAAAAAAAIEAZAAAAAAAAIEAhAAAAAAAAIEB6EgkAAAAAAAA4QBkAAAAAAAA4QPoDAGIAigE5EjMKCHRvbDhyaDF2EifSARkKFQoMcmVhZFBob25lTG9nEgV4ZDhyYiIAqgIIN3ZiZmlxY2waAggBEkUKDVRleHRfdzkxNDVtMngYAiIwEhIKC0hlbGxvIFdvcmxkQAaoAQCaARYKAgIBKhAIDEIMIgoKBgoEdHlwZRAB+gMAYgASRwoNVGV4dF9jcW4zY241YRgCIjISEgoLSGVsbG8gV29ybGRABqgBAJoBGAoCAgEqEggMQg4iDAoICgZudW1iZXIQAfoDAGIAEkkKDVRleHRfamZ6bTc5cDQYAiI0EhIKC0hlbGxvIFdvcmxkQAaoAQCaARoKAgIBKhQIDEIQIg4KCgoIZHVyYXRpb24QAfoDAGIAEkoKDVRleHRfY2FsNHZ5N2QYAiI1EhIKC0hlbGxvIFdvcmxkQAaoAQCaARsKAgIBKhUIDEIRIg8KCwoJdGltZXN0YW1wEAH6AwBiABKfBAoPQnV0dG9uX2xrbDJldzdzGAkijgJKggEKIwoXc3RhcnQgYmFja2dyb3VuZCBhY3Rpb246Bgj/////D0AFGQAAAAAAAAhAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQHoSCQAAAAAAADhAGQAAAAAAADhAmgGCAQoDCQEBKnsIClJ3OnUKUAowCApSLBIcEhoIDEIWIhQKEAoOc2VydmljZVJ1bm5pbmcQARIICgYSBHRydWUiAggBEhwKGhIYU3RvcCBiYWNrZ3JvdW5kIHNlcnZpY2VzEh0KGxIZU3RhcnQgYmFja2dyb3VuZCBzZXJ2aWNlcxoCEAP6AwBiAIoB9QES7gEKCGNhdzdmeXVkGq4BGjwKCG54eXJrMWtyEjDiASJCHAoQCg5zZXJ2aWNlUnVubmluZxIICgYSBHRydWVQAlgBqgIIMjZhYXIzcTYibAoyCjAIClIsEhwSGggMQhYiFAoQCg5zZXJ2aWNlUnVubmluZxABEggKBhIEdHJ1ZSICCAESNgoIenE0OGJobGkSKuIBHEIWChAKDnNlcnZpY2VSdW5uaW5nEgIKAFACWAGqAgh0NzRmaWtseCgAKjEKCHJjOHczeGYxEiXSARcKEwoKbWFpbkFjdGlvbhIFNXV3amciAKoCCHR6a2l6cWN5GgIIARgEIgciAhAB+gMA
+// paid video - https://www.youtube.com/watch?v=idXHYU0co5Y
 // Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
@@ -10,150 +9,241 @@
 
 import 'dart:isolate';
 import 'dart:ui';
-
-// import '../../backend/api_requests/api_calls.dart';
-
-import 'package:shared_preferences/shared_preferences.dart';
-
 import 'package:call_log/call_log.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:telephony/telephony.dart';
 
-Future mainAction() async {
-  WidgetsFlutterBinding.ensureInitialized();
+// Global callback storage
+Future Function(PhoneCallStruct)? _globalPhoneCallback;
+Future Function(SmsStruct)? _globalSmsCallback;
 
-  // Request permission before starting the service
-  await requestPhonePermission();
+// Create notification channel
+Future<void> setupNotificationChannel() async {
+  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+      FlutterLocalNotificationsPlugin();
 
-  await initializeService();
-}
+  const AndroidInitializationSettings initializationSettingsAndroid =
+      AndroidInitializationSettings('@mipmap/ic_launcher');
 
-Future<void> initializeService() async {
-  if (isAndroid) {
-    const AndroidNotificationChannel channel = AndroidNotificationChannel(
-      'your_notification_channel_id', // id
-      'Your Notification Channel', // title
-      importance: Importance.high,
-    );
+  const InitializationSettings initializationSettings =
+      InitializationSettings(android: initializationSettingsAndroid);
 
-    final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-        FlutterLocalNotificationsPlugin();
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
-    // Initialise the plugin. app_icon needs to be a added as a drawable resource to the Android head project
-    await flutterLocalNotificationsPlugin
-        .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>()
-        ?.createNotificationChannel(channel);
-  }
-
-  final service = FlutterBackgroundService();
-
-  // Configure the service as necessary
-  await service.configure(
-    iosConfiguration: IosConfiguration(),
-    androidConfiguration: AndroidConfiguration(
-      // This will be executed when the app is in foreground or background in a separate isolate
-      onStart: onStart,
-
-      // Auto start service
-      autoStart: true,
-      isForegroundMode: true,
-
-      // Add necessary notification details
-      notificationChannelId: 'your_notification_channel_id',
-      initialNotificationTitle: 'Your Service Title',
-      initialNotificationContent: 'Your Service Content',
-      foregroundServiceNotificationId: 1,
-    ),
+  const AndroidNotificationChannel channel = AndroidNotificationChannel(
+    'phone_monitor_channel',
+    'Phone & SMS Monitor',
+    description: 'Monitors for phone calls and SMS messages',
+    importance: Importance.high,
   );
+
+  await flutterLocalNotificationsPlugin
+      .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>()
+      ?.createNotificationChannel(channel);
 }
 
-Future<void> onStart(ServiceInstance service) async {
+// Top-level function for background service
+@pragma('vm:entry-point')
+void onStart(ServiceInstance service) async {
+  print('Background service started!');
+
+  // Set up communication port
   ReceivePort receivePort = ReceivePort();
   IsolateNameServer.removePortNameMapping('ServiceRunningPort');
   IsolateNameServer.registerPortWithName(
       receivePort.sendPort, 'ServiceRunningPort');
+
   receivePort.listen((message) {
+    print('Received message in background: $message');
     if (message == 'STOP') {
       service.stopSelf();
       IsolateNameServer.removePortNameMapping('ServiceRunningPort');
     }
   });
 
+  // Initialize Telephony instance for SMS monitoring
+  final telephony = Telephony.instance;
+
+  // Get initial timestamps to only process new events
+  int startCallTimestamp = DateTime.now().millisecondsSinceEpoch;
+  int startSmsTimestamp = startCallTimestamp;
+  print('Initial timestamp: $startCallTimestamp');
+
   while (true) {
-    final now = DateTime.now();
-    if (now.hour >= 8 && now.hour <= 19) {
-      await readPhoneLog();
+    try {
+      // Check for new calls
+      print('Checking for new calls...');
+      Iterable<CallLogEntry> callEntries = await CallLog.get();
+      print('Found ${callEntries.length} call log entries');
+
+      for (final entry in callEntries) {
+        if (entry.timestamp != null && entry.timestamp! > startCallTimestamp) {
+          print('New call detected! Timestamp: ${entry.timestamp}');
+
+          final newCall = PhoneCallStruct(
+            type: CallType.values[entry.callType!.index]
+                .toString()
+                .split('.')
+                .last,
+            number: entry.number ?? '',
+            timestamp: entry.timestamp.toString(),
+            duration: entry.duration.toString(),
+          );
+
+          print(
+              'Sending call data to main isolate: ${newCall.type} - ${newCall.number}');
+          service.invoke(
+            'onNewCall',
+            {
+              'type': newCall.type,
+              'number': newCall.number,
+              'timestamp': newCall.timestamp,
+              'duration': newCall.duration,
+            },
+          );
+
+          startCallTimestamp = entry.timestamp!;
+        }
+      }
+
+      // Check for new SMS messages
+      print('Checking for new SMS messages...');
+      List<SmsMessage> smsMessages = await telephony.getInboxSms(
+        columns: [
+          SmsColumn.ID,
+          SmsColumn.ADDRESS,
+          SmsColumn.BODY,
+          SmsColumn.DATE,
+          SmsColumn.DATE_SENT,
+          SmsColumn.READ,
+          SmsColumn.SEEN,
+          SmsColumn.STATUS,
+          SmsColumn.TYPE,
+        ],
+      );
+
+      for (final sms in smsMessages) {
+        if (sms.date != null && sms.date! > startSmsTimestamp) {
+          print('New SMS detected! Timestamp: ${sms.date}');
+
+          service.invoke(
+            'onNewSms',
+            {
+              'id': sms.id ?? 0,
+              'address': sms.address ?? '',
+              'body': sms.body ?? '',
+              'date': sms.date ?? 0,
+              'dateSent': sms.dateSent ?? 0,
+              'read': sms.read ?? false,
+              'seen': sms.seen ?? false,
+              'status': sms.status?.name ?? 'none',
+              'type': sms.type?.name ?? 'received',
+            },
+          );
+
+          startSmsTimestamp = sms.date!;
+        }
+      }
+
+      await Future.delayed(Duration(seconds: 30));
+    } catch (e) {
+      print('Error monitoring events: $e');
+      await Future.delayed(Duration(seconds: 30));
     }
-    await Future.delayed(Duration(minutes: 1));
   }
 }
 
-List<String> phoneLogs = [];
-List<String> types = [];
-List<String> numbers = [];
-List<String> durations = [];
-List<String> timestamps = [];
+Future startPhoneCallMonitor(
+  Future Function(PhoneCallStruct callData) phoneCallData,
+  Future Function(SmsStruct smsData) smsCallData,
+) async {
+  print('Starting phone and SMS monitor...');
 
-Future readPhoneLog() async {
-  Iterable<CallLogEntry> entries = await CallLog.get();
+  WidgetsFlutterBinding.ensureInitialized();
+  _globalPhoneCallback = phoneCallData;
+  _globalSmsCallback = smsCallData;
 
-  for (final entry in entries) {
-    // Converting enum to string
-    String callType =
-        CallType.values[entry.callType!.index].toString().split('.').last;
+  // Setup notification channel
+  print('Setting up notification channel...');
+  await setupNotificationChannel();
 
-    // Converting the integer timestamp (milliseconds since epoch) to DateTime
-    DateTime date = DateTime.fromMillisecondsSinceEpoch(entry.timestamp ?? 0);
+  // Request permissions
+  print('Requesting permissions...');
+  var phoneStatus = await Permission.phone.status;
+  var smsStatus = await Permission.sms.status;
 
-    // Formatting timestamp to string
-    String timestamp = DateFormat('yyyy-MM-dd – kk:mm').format(date);
+  if (!phoneStatus.isGranted) {
+    phoneStatus = await Permission.phone.request();
+  }
 
-    String phoneLog =
-        callType + (entry.number ?? '') + entry.duration.toString() + timestamp;
+  if (!smsStatus.isGranted) {
+    smsStatus = await Permission.sms.request();
+  }
 
-    // If this phone log is not in the set yet, add it to the set and process it.
-    if (!phoneLogs.contains(phoneLog)) {
-      phoneLogs.add(phoneLog);
+  // Request notification permission
+  var notificationStatus = await Permission.notification.status;
+  if (!notificationStatus.isGranted) {
+    await Permission.notification.request();
+  }
 
-      types.add(callType);
-      numbers.add(entry.number ?? '');
-      durations.add(entry.duration.toString());
-      timestamps.add(timestamp);
+  // Initialize and start background service
+  final service = FlutterBackgroundService();
 
-      FFAppState().update(() {
-        FFAppState().type = callType;
-        FFAppState().number = entry.number ?? '';
-        FFAppState().duration = entry.duration.toString();
-        FFAppState().timestamp = timestamp;
-      });
+  // Set up event listeners
+  service.on('onNewCall').listen((event) async {
+    print('Received call event in main isolate: $event');
+    if (event != null && _globalPhoneCallback != null) {
+      final newCall = PhoneCallStruct(
+        type: event['type'] as String,
+        number: event['number'] as String,
+        timestamp: event['timestamp'] as String,
+        duration: event['duration'] as String,
+      );
+      print(
+          'Executing callback with call data: ${newCall.type} - ${newCall.number}');
+      await _globalPhoneCallback!(newCall);
     }
-  }
-  if (types.isNotEmpty) {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String phone = prefs.getString('phone') ?? '';
+  });
 
-    // await SendPhoneCallsCall.call(
-    //     typesList: types,
-    //     numbersList: numbers,
-    //     durationsList: durations,
-    //     timestampsList: timestamps,
-    //     phone: phone);
-  }
-
-  types = [];
-  numbers = [];
-  durations = [];
-  timestamps = [];
-}
-
-Future<void> requestPhonePermission() async {
-  var status = await Permission.phone.status;
-  if (!status.isGranted) {
-    status = await Permission.phone.request();
-    if (!status.isGranted) {
-      // Optionally, you can prompt a dialog here to inform user about the necessity of the permission
+  service.on('onNewSms').listen((event) async {
+    print('Received SMS event in main isolate: $event');
+    if (event != null && _globalSmsCallback != null) {
+      final newSms = SmsStruct(
+        id: event['id'] as int,
+        address: event['address'] as String,
+        body: event['body'] as String,
+        date: event['date'] as int,
+        dateSent: event['dateSent'] as int,
+        read: event['read'] as bool,
+        seen: event['seen'] as bool,
+        status: event['status'] as String,
+        type: event['type'] as String,
+      );
+      print(
+          'Executing callback with SMS data: ${newSms.address} - ${newSms.body.substring(0, min(20, newSms.body.length))}...');
+      await _globalSmsCallback!(newSms);
     }
-  }
+  });
+
+  print('Configuring background service...');
+  await service.configure(
+    androidConfiguration: AndroidConfiguration(
+      onStart: onStart,
+      autoStart: true,
+      isForegroundMode: true,
+      notificationChannelId: 'phone_monitor_channel',
+      initialNotificationTitle: 'Phone & SMS Monitor',
+      initialNotificationContent: 'Monitoring for new calls and messages',
+      foregroundServiceNotificationId: 888,
+    ),
+    iosConfiguration: IosConfiguration(),
+  );
+
+  bool isRunning = await service.isRunning();
+  print('Background service running status: $isRunning');
+
+  return isRunning;
 }

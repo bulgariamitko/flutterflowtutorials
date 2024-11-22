@@ -8,27 +8,22 @@
 // Discord channel - https://discord.gg/G69hSUqEeU
 
 import '../../main.dart' as main;
-
 import 'package:sentry_flutter/sentry_flutter.dart';
+import 'package:provider/provider.dart';
 
-Future setupSentry() async {
-  print(['SENTRY SETUP v1']);
+Future sentrySetup() async {
+  final appState = FFAppState(); // Initialize FFAppState
+  await appState.initializePersistedState();
 
   await SentryFlutter.init(
     (options) {
-      options.dsn =
-          'https://3a8fe8f42ea9f2147242f072d3d431e3@o390943.ingest.sentry.io/4505702385123328';
+      options.dsn = '[YOUR-URL]';
       options.tracesSampleRate = 1.0;
+      options.profilesSampleRate = 1.0;
     },
-    appRunner: () {
-      // Wrap your app with a custom error handler that captures uncaught errors
-      FlutterError.onError = (details) {
-        Sentry.captureException(
-          details.exception,
-          stackTrace: details.stack,
-        );
-      };
-      runApp(main.MyApp());
-    },
+    appRunner: () => runApp(ChangeNotifierProvider(
+      create: (context) => appState,
+      child: main.MyApp(),
+    )),
   );
 }

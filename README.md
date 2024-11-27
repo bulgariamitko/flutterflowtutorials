@@ -13,61 +13,9 @@ If you are interested in contributing to this repository, please feel free to su
 # YouTube Paid Members
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
-Klaturov Fanatic
-| Wellington Santiago
-| Moustafa Al-Haroon
-| Lilliana Maya
-| Tom Watson
-| Roméo Adeida
-| The New Leader
-| Phuong Nguyen
-| Juan Manuel Verges
-| s3zgin
-| Carrilho Rubens
-| Early To Arrive
-| Doğal GÜZELSOY
-| The Slongest
-| Lautaro Azócar
-| Brian Bagdasarian
-| shawn roden
-| Pavel Syrtsov
-| AiContacts
-| Richard Hector
-| Rafael Borchardt
-| Dusko Licanin
-| A Determined Polar Bear
-| ShotByDavid
-| Stigmata
-| Ali Reza Kohani
-| Henrique
-| Camilo Peñalver
-| Indy Puaar
-| trevize0101
-| Dane Blackwell
-| Martin Fourie
-| Finn Allison
-| Sherry Schwegmann
-| darkmoon3d
-| Rocco Labellarte
-| Тодор Вълков
-| REPORTA.LA1
-| DJ
-| Hasill
-| emm mosamm
-| Ginjii
-| Soon Pau Kun
-| Ken Martin
-| Craig Wyhs
-| Saigin Govender
-| Herbert Riener
-| Daniel Habibi
-| Yulian Diaz Leon (SpatialY)
-
-Klaturov Elite
-| CloudBedrock
 
 Klaturov Cadet
-| Alessio Dolce
+| the punisher
 | Rainfall Studio
 | SamZen | سام زين
 | Nashiruddin abubakar
@@ -79,7 +27,49 @@ Klaturov Cadet
 | Marcin Wojcicki
 | Jaco Laubscher
 
+Klaturov Fanatic
+| ChaplainCare
+| Wellington Santiago
+| Moustafa Al-Haroon
+| Lilliana Maya
+| Tom Watson
+| Roméo Adeida
+| The New Leader
+| Phuong Nguyen
+| s3zgin
+| Doğal GÜZELSOY
+| Lautaro Azócar
+| Brian Bagdasarian
+| shawn roden
+| Pavel Syrtsov
+| AiContacts
+| Richard Hector
+| Rafael Borchardt
+| A Determined Polar Bear
+| ShotByDavid
+| Stigmata
+| Henrique
+| Camilo Peñalver
+| Indy Puaar
+| trevize0101
+| Dane Blackwell
+| Martin Fourie
+| Finn Allison
+| Sherry Schwegmann
+| darkmoon3d
+| Тодор Вълков
+| REPORTA.LA1
+| Hasill
+| emm mosamm
+| Ginjii
+| Soon Pau Kun
+| Ken Martin
+| Craig Wyhs
+| Saigin Govender
+| Herbert Riener
+| Daniel Habibi
+| Yulian Diaz Leon (SpatialY)
+
 Klaturov Devotees
-| David Mayne
 | Koya Mikami
 | JP

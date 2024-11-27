@@ -13,7 +13,7 @@ import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 
 File? _tempFile;
-Future<void> playSoundFromBytes(BuildContext context, String bytes) async {
+Future<void> playSoundFromBytes(String bytes) async {
   try {
     // Convert the String of bytes to Uint8List
     Uint8List audioBytes = Uint8List.fromList(bytes.codeUnits);

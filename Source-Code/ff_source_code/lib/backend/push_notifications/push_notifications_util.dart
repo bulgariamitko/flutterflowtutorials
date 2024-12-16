@@ -33,6 +33,7 @@ Stream<UserTokenInfo> getFcmTokenStream(String userPath) =>
             .merge(FirebaseMessaging.instance.onTokenRefresh))
         .where((fcmToken) => fcmToken != null && fcmToken.isNotEmpty)
         .map((token) => UserTokenInfo(userPath, token!));
+
 final fcmTokenUserStream = authenticatedUserStream
     .where((user) => user != null)
     .map((user) => user!.reference.path)

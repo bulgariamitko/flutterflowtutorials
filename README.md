@@ -14,19 +14,12 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Cadet
-| Amit Hambar
-| Rainfall Studio
-| the punisher
-| SamZen | سام زين
-| jim vh
-| Mick van der Heijden
-| Sreyna Rath
-| Seong Marcus
-| Marcin Wojcicki
-| Jaco Laubscher
-
 Klaturov Fanatic
+| Eirene: Your Christian Mental Well-being Assistant
+| Eakapon Sinchai
+| Clubhub
+| Rakan ALYahya
+| Javier Alberto Arias
 | AiContacts
 | andersonprivate
 | Stigmata
@@ -37,15 +30,12 @@ Klaturov Fanatic
 | IMALI
 | DM
 | Giyu
-| Eakapon Sinchai
 | Carrilho Rubens
 | Mehmet OGUL
 | ChaplainCare
-| Phuong Nguyen
 | s3zgin
 | Doğal GÜZELSOY
 | Brian Bagdasarian
-| shawn roden
 | Pavel Syrtsov
 | Richard Hector
 | Rafael Borchardt
@@ -71,6 +61,18 @@ Klaturov Fanatic
 | Herbert Riener
 | Daniel Habibi
 | Yulian Diaz Leon (SpatialY)
+
+Klaturov Cadet
+| 1600 times a day
+| FitTechStudios
+| Amit Hambar
+| Rainfall Studio
+| the punisher
+| Mick van der Heijden
+| Sreyna Rath
+| Seong Marcus
+| Marcin Wojcicki
+| Jaco Laubscher
 
 Klaturov Devotees
 | Koya Mikami

@@ -14,7 +14,12 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
+Klaturov Elite
+| Javier Castro
+
 Klaturov Fanatic
+| lipo army
+| Aaron
 | Eirene: Your Christian Mental Well-being Assistant
 | Eakapon Sinchai
 | Clubhub
@@ -26,8 +31,6 @@ Klaturov Fanatic
 | Wong Kenny
 | Mr kasax
 | Yorgo Hoebeke
-| Frycrosoft
-| IMALI
 | DM
 | Giyu
 | Carrilho Rubens

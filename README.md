@@ -14,10 +14,10 @@ If you are interested in contributing to this repository, please feel free to su
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
-Klaturov Elite
-| Javier Castro
-
 Klaturov Fanatic
+| Andrés M.O.
+| Benni
+| Eric Schlossberg
 | lipo army
 | Aaron
 | Eirene: Your Christian Mental Well-being Assistant
@@ -25,12 +25,9 @@ Klaturov Fanatic
 | Clubhub
 | Rakan ALYahya
 | Javier Alberto Arias
-| AiContacts
 | andersonprivate
 | Stigmata
-| Wong Kenny
 | Mr kasax
-| Yorgo Hoebeke
 | DM
 | Giyu
 | Carrilho Rubens
@@ -66,16 +63,20 @@ Klaturov Fanatic
 | Yulian Diaz Leon (SpatialY)
 
 Klaturov Cadet
+| Farhaan Fazalbhoy
+| Alick Wong
+| Rainfall Studio
 | 1600 times a day
 | FitTechStudios
-| Amit Hambar
-| Rainfall Studio
 | the punisher
 | Mick van der Heijden
 | Sreyna Rath
 | Seong Marcus
 | Marcin Wojcicki
 | Jaco Laubscher
+
+Klaturov Elite
+| Javier Castro
 
 Klaturov Devotees
 | Koya Mikami

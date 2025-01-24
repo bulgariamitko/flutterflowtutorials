@@ -54,7 +54,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           title: Text(
             'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.outfit(),
+                  fontFamily: 'Outfit',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
@@ -112,7 +112,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        font: GoogleFonts.readexPro(),
+                        fontFamily: 'Readex Pro',
                         color: Colors.white,
                         letterSpacing: 0.0,
                       ),
@@ -133,12 +133,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 ),
                 titleTextStyle:
                     FlutterFlowTheme.of(context).titleLarge.override(
-                          font: GoogleFonts.outfit(),
+                          fontFamily: 'Outfit',
                           letterSpacing: 0.0,
                         ),
                 playbackDurationTextStyle:
                     FlutterFlowTheme.of(context).labelMedium.override(
-                          font: GoogleFonts.readexPro(),
+                          fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
                 fillColor: FlutterFlowTheme.of(context).secondaryBackground,

@@ -51,7 +51,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           title: Text(
             'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.outfit(),
+                  fontFamily: 'Outfit',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,

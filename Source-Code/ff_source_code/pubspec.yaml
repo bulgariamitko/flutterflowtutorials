@@ -29,7 +29,10 @@ dependencies:
     sdk: flutter
   app_links: 6.3.2
   app_links_platform_interface: 2.0.2
-  assets_audio_player: 3.1.1
+  assets_audio_player: 
+    git:
+      url: https://github.com/florent37/Flutter-AssetsAudioPlayer
+      ref: 28a7f52db65fd8b8ac0bdc39013d3de978c8a375
   assets_audio_player_web: 3.1.1
   auto_size_text: 3.0.0
   cached_network_image: 3.4.1
@@ -42,7 +45,7 @@ dependencies:
   cloud_functions: 5.1.5
   cloud_functions_platform_interface: 5.5.39
   cloud_functions_web: 4.10.4
-  collection: 1.18.0
+  collection: 1.19.0
   csslib: 0.17.3
   equatable: 2.0.5
   file_picker: 8.1.2

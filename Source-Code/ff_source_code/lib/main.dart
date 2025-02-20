@@ -59,6 +59,11 @@ class _MyAppState extends State<MyApp> {
     return matchList.uri.toString();
   }
 
+  List<String> getRouteStack() =>
+      _router.routerDelegate.currentConfiguration.matches
+          .map((e) => getRoute(e))
+          .toList();
+
   late Stream<BaseAuthUser> userStream;
 
   final fcmTokenSub = fcmTokenUserStream.listen((_) {});

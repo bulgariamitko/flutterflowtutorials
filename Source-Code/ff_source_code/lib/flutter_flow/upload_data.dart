@@ -93,7 +93,7 @@ Future<List<SelectedFile>?> selectMediaWithSourceBottomSheet({
                     textAlign: TextAlign.center,
                     style: GoogleFonts.getFont(
                       pickerFontFamily,
-                      color: textColor.withOpacity(0.65),
+                      color: textColor.applyAlpha(0.65),
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
                     ),

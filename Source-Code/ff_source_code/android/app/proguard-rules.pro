@@ -8,5 +8,7 @@
 -dontwarn javax.annotation.concurrent.GuardedBy
 -dontwarn org.bouncycastle.jce.provider.BouncyCastleProvider
 -dontwarn org.bouncycastle.pqc.jcajce.provider.BouncyCastlePQCProvider
+-keep class org.xmlpull.v1.** { *; }
+
 
 

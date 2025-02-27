@@ -7,6 +7,10 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/G69hSUqEeU
 
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/services.dart' show SystemNavigator;
+import 'dart:html' as html;
+
 Future<void> closeTab() async {
   if (Navigator.canPop(context)) {
     Navigator.pop(context);

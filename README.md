@@ -15,19 +15,22 @@ If you are interested in contributing to this repository, please feel free to su
 Join the list - https://www.youtube.com/@flutterflowexpert/join
 
 Klaturov Fanatic
-| Andrés M.O.
-| Benni
-| Eric Schlossberg
-| lipo army
-| Aaron
-| Eirene: Your Christian Mental Well-being Assistant
+| JORGEVNZLA
+| Anthony Pocock
+| James Walker
+| 이슬기
+| Alex CJ
+| Andres Dominicci
+| Soon Pau Kun
+| Lucas Souza
+| YourBook
+| Cédric
+| Cairo Greco
+| Ali Dawlad
+| Лев Лев
 | Eakapon Sinchai
-| Clubhub
-| Rakan ALYahya
-| Javier Alberto Arias
 | andersonprivate
 | Stigmata
-| Mr kasax
 | DM
 | Giyu
 | Carrilho Rubens
@@ -38,45 +41,34 @@ Klaturov Fanatic
 | Brian Bagdasarian
 | Pavel Syrtsov
 | Richard Hector
-| Rafael Borchardt
 | A Determined Polar Bear
-| ShotByDavid
-| Henrique
 | Camilo Peñalver
 | Indy Puaar
 | trevize0101
 | Dane Blackwell
 | Martin Fourie
-| Finn Allison
 | Sherry Schwegmann
 | darkmoon3d
-| Тодор Вълков
-| REPORTA.LA1
 | Hasill
 | emm mosamm
-| Soon Pau Kun
 | Ken Martin
 | Craig Wyhs
-| Saigin Govender
 | Herbert Riener
 | Daniel Habibi
 | Yulian Diaz Leon (SpatialY)
 
 Klaturov Cadet
-| Farhaan Fazalbhoy
-| Alick Wong
+| FitTechStudios
+| Will M
+| Sanket Sharma
+| the punisher
 | Rainfall Studio
 | 1600 times a day
-| FitTechStudios
-| the punisher
 | Mick van der Heijden
 | Sreyna Rath
 | Seong Marcus
 | Marcin Wojcicki
 | Jaco Laubscher
-
-Klaturov Elite
-| Javier Castro
 
 Klaturov Devotees
 | Koya Mikami

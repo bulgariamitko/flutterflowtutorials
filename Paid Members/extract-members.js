@@ -47,15 +47,39 @@ function processLine(line) {
 }
 
 function displayTiers() {
+  // Define the order of tiers
+  const tierOrder = [
+    'Klaturov Cadet',
+    'Klaturov Fanatic',
+    'Klaturov Devotees',
+    'Klaturov Elite'
+  ];
+
+  // Display tiers in the specified order
+  tierOrder.forEach(tier => {
+    if (tiers.has(tier)) {
+      console.log(tier);
+      // Sort names alphabetically within each tier
+      const sortedNames = tiers.get(tier).sort();
+      sortedNames.forEach(name => {
+        console.log(`| ${name}`);
+      });
+      console.log();
+    }
+  });
+
+  // Display any tiers not in the specified order (if they exist)
   tiers.forEach((names, tier) => {
-    console.log(tier);
-    names.forEach((name) => {
-      console.log(`| ${name}`);
-    });
-    console.log();
+    if (!tierOrder.includes(tier)) {
+      console.log(`Unspecified Tier: ${tier}`);
+      const sortedNames = names.sort();
+      sortedNames.forEach(name => {
+        console.log(`| ${name}`);
+      });
+      console.log();
+    }
   });
 }
-
 
 const filePath = 'members.csv'; // Replace with the actual file path
 processCSV(filePath);

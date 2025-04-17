@@ -63,6 +63,43 @@ class ApiCallOptions extends Equatable {
   final bool cache;
   final bool isStreamingApi;
 
+  /// Creates a new [ApiCallOptions] with optionally updated parameters.
+  ///
+  /// This helper function allows creating a copy of the current options while
+  /// selectively modifying specific fields. Any parameter that is not provided
+  /// will retain its original value from the current instance.
+  ApiCallOptions copyWith({
+    String? callName,
+    ApiCallType? callType,
+    String? apiUrl,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? params,
+    BodyType? bodyType,
+    String? body,
+    bool? returnBody,
+    bool? encodeBodyUtf8,
+    bool? decodeUtf8,
+    bool? alwaysAllowBody,
+    bool? cache,
+    bool? isStreamingApi,
+  }) {
+    return ApiCallOptions(
+      callName: callName ?? this.callName,
+      callType: callType ?? this.callType,
+      apiUrl: apiUrl ?? this.apiUrl,
+      headers: headers ?? _cloneMap(this.headers),
+      params: params ?? _cloneMap(this.params),
+      bodyType: bodyType ?? this.bodyType,
+      body: body ?? this.body,
+      returnBody: returnBody ?? this.returnBody,
+      encodeBodyUtf8: encodeBodyUtf8 ?? this.encodeBodyUtf8,
+      decodeUtf8: decodeUtf8 ?? this.decodeUtf8,
+      alwaysAllowBody: alwaysAllowBody ?? this.alwaysAllowBody,
+      cache: cache ?? this.cache,
+      isStreamingApi: isStreamingApi ?? this.isStreamingApi,
+    );
+  }
+
   ApiCallOptions clone() => ApiCallOptions(
         callName: callName,
         callType: callType,
@@ -129,6 +166,29 @@ class ApiCallResponse {
       response?.body ??
       (jsonBody is String ? jsonBody as String : jsonEncode(jsonBody));
   String get exceptionMessage => exception.toString();
+
+  /// Creates a new [ApiCallResponse] with optionally updated parameters.
+  ///
+  /// This helper function allows creating a copy of the current response while
+  /// selectively modifying specific fields. Any parameter that is not provided
+  /// will retain its original value from the current instance.
+  ApiCallResponse copyWith({
+    dynamic jsonBody,
+    Map<String, String>? headers,
+    int? statusCode,
+    http.Response? response,
+    http.StreamedResponse? streamedResponse,
+    Object? exception,
+  }) {
+    return ApiCallResponse(
+      jsonBody ?? this.jsonBody,
+      headers ?? this.headers,
+      statusCode ?? this.statusCode,
+      response: response ?? this.response,
+      streamedResponse: streamedResponse ?? this.streamedResponse,
+      exception: exception ?? this.exception,
+    );
+  }
 
   static ApiCallResponse fromHttpResponse(
     http.Response response,

@@ -131,6 +131,8 @@ dependencies:
   video_player_avfoundation: 2.6.2
   video_player_platform_interface: 6.2.3
   video_player_web: 2.3.2
+  wakelock_plus: 1.2.8
+  wakelock_plus_platform_interface: 1.2.1
   webview_flutter: 4.9.0
   webview_flutter_android: 3.16.7
   webview_flutter_platform_interface: 2.10.0

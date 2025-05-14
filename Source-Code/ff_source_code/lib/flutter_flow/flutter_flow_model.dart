@@ -52,6 +52,9 @@ abstract class FlutterFlowModel<W extends Widget> {
   // parameters of the widget, for example.
   W? _widget;
   W? get widget => _widget;
+  void set widget(W? newWidget) {
+    _widget = newWidget;
+  }
 
   // The context associated with this model.
   BuildContext? _context;

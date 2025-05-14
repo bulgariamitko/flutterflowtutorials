@@ -7,7 +7,7 @@
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/G69hSUqEeU
 
-Future hideKeyboard(BuildContext context) async {
+Future hideKeyboard() async {
   // This will hide the keyboard by removing focus from the current input field
   FocusScope.of(context).unfocus();
 }

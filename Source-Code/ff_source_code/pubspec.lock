@@ -1300,7 +1300,7 @@ packages:
     source: hosted
     version: "14.3.0"
   wakelock_plus:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: wakelock_plus
       sha256: bf4ee6f17a2fa373ed3753ad0e602b7603f8c75af006d5b9bdade263928c0484
@@ -1308,7 +1308,7 @@ packages:
     source: hosted
     version: "1.2.8"
   wakelock_plus_platform_interface:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: wakelock_plus_platform_interface
       sha256: "422d1cdbb448079a8a62a5a770b69baa489f8f7ca21aef47800c726d404f9d16"

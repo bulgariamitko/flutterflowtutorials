@@ -186,6 +186,19 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
           return widget.options.elevation ?? 2.0;
         },
       ),
+      iconColor: MaterialStateProperty.resolveWith<Color?>(
+        (states) {
+          if (states.contains(MaterialState.disabled) &&
+              widget.options.disabledTextColor != null) {
+            return widget.options.disabledTextColor;
+          }
+          if (states.contains(MaterialState.hovered) &&
+              widget.options.hoverTextColor != null) {
+            return widget.options.hoverTextColor;
+          }
+          return widget.options.iconColor;
+        },
+      ),
     );
 
     if ((widget.icon != null || widget.iconData != null) && !loading) {

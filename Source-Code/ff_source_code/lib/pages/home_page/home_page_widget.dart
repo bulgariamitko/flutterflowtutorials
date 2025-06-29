@@ -90,7 +90,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   if (selectedMedia != null &&
                       selectedMedia.every(
                           (m) => validateFileFormat(m.storagePath, context))) {
-                    safeSetState(() => _model.isDataUploading = true);
+                    safeSetState(
+                        () => _model.isDataUploading_uploadDataYxl = true);
                     var selectedUploadedFiles = <FFUploadedFile>[];
 
                     try {
@@ -104,11 +105,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               ))
                           .toList();
                     } finally {
-                      _model.isDataUploading = false;
+                      _model.isDataUploading_uploadDataYxl = false;
                     }
                     if (selectedUploadedFiles.length == selectedMedia.length) {
                       safeSetState(() {
-                        _model.uploadedLocalFile = selectedUploadedFiles.first;
+                        _model.uploadedLocalFile_uploadDataYxl =
+                            selectedUploadedFiles.first;
                       });
                     } else {
                       safeSetState(() {});

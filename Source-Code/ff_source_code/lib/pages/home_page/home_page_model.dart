@@ -13,8 +13,8 @@ import 'package:provider/provider.dart';
 class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   ///  State fields for stateful widgets in this page.
 
-  bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
+  bool isDataUploading_uploadDataYxl = false;
+  FFUploadedFile uploadedLocalFile_uploadDataYxl =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
   @override

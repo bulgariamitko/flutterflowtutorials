@@ -32,7 +32,7 @@ dependencies:
   assets_audio_player: 
     git:
       url: https://github.com/florent37/Flutter-AssetsAudioPlayer
-      ref: 28a7f52db65fd8b8ac0bdc39013d3de978c8a375
+      ref: 4998f22f4f1621c79aa170c09dedde1d25fc23ee
   assets_audio_player_web: 3.1.1
   auto_size_text: 3.0.0
   cached_network_image: 3.4.1

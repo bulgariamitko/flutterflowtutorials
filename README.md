@@ -13,61 +13,55 @@ If you are interested in contributing to this repository, please feel free to su
 # YouTube Paid Members
 
 Join the list - https://www.youtube.com/@flutterflowexpert/join
+
 Klaturov Cadet
-| Carlos Junior
-| Educar Technology
 | FitTechStudios
+| Ideabien
 | Jaco Laubscher
-| Marcin Wojcicki
 | Mick van der Heijden
+| Mr Buenix
 | Rainfall Studio
 | Seong Marcus
 | Sreyna Rath
-| Stratégie mobile 1M
+| jr novera
 | the punisher
 
 Klaturov Fanatic
 | A Determined Polar Bear
-| Abe Matamoros
 | Ali Dawlad
 | Belal Kamara
 | Brian Bagdasarian
 | Cairo Greco
-| Camilo Peñalver
 | ChaplainCare
-| Christian Luengo
 | Craig Wyhs
-| DM
 | Dane Blackwell
 | Daniel Habibi
+| Dev PRINCIPAL
 | Doğal GÜZELSOY
-| Eakapon Sinchai
+| Emily Bardsley
 | Hasill
 | Herbert Riener
 | Indy Puaar
-| JORGEVNZLA
 | Justin Beaudry
 | Ken Martin
-| Martin Fourie
-| Matthew Fusco
+| Lautaro Azócar
+| Loukas Ioannidis
 | Mehmet OGUL
+| Melissa Thamires
+| Nikos Ioannidis
 | Pavel Syrtsov
+| Rajeev Sharma
 | Richard Hector
-| Ryan Guedes
 | Sherry Schwegmann
 | Soon Pau Kun
-| Sparta
-| Steyn Jacobs
-| Stigmata
-| Systems Unihelper
-| Wong Kenny
 | Yulian Diaz Leon (SpatialY)
 | andersonprivate
+| client demoapp
 | darkmoon3d
 | emm mosamm
 | s3zgin
+| scosda
 | trevize0101
-| Лев Лев
 
 Klaturov Devotees
 | JP
@@ -75,4 +69,3 @@ Klaturov Devotees
 
 Klaturov Elite
 | Mark Ciccarelli
-| Микола Бучко

@@ -25,6 +25,8 @@ class FFButtonOptions {
     this.hoverTextColor,
     this.hoverElevation,
     this.maxLines,
+    this.focusBorderSide,
+    this.focusBorderRadius,
   });
 
   final TextAlign? textAlign;
@@ -48,6 +50,8 @@ class FFButtonOptions {
   final BorderSide? hoverBorderSide;
   final Color? hoverTextColor;
   final double? hoverElevation;
+  final BorderSide? focusBorderSide;
+  final BorderRadius? focusBorderRadius;
 }
 
 class FFButtonWidget extends StatefulWidget {
@@ -126,79 +130,79 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
         : null;
 
     ButtonStyle style = ButtonStyle(
-      shape: MaterialStateProperty.resolveWith<OutlinedBorder>(
-        (states) {
-          if (states.contains(MaterialState.hovered) &&
-              widget.options.hoverBorderSide != null) {
-            return RoundedRectangleBorder(
-              borderRadius:
-                  widget.options.borderRadius ?? BorderRadius.circular(8),
-              side: widget.options.hoverBorderSide!,
-            );
-          }
+      shape: MaterialStateProperty.resolveWith<OutlinedBorder>((states) {
+        if (states.contains(MaterialState.hovered) &&
+            widget.options.hoverBorderSide != null) {
           return RoundedRectangleBorder(
             borderRadius:
                 widget.options.borderRadius ?? BorderRadius.circular(8),
-            side: widget.options.borderSide ?? BorderSide.none,
+            side: widget.options.hoverBorderSide!,
           );
-        },
-      ),
-      foregroundColor: MaterialStateProperty.resolveWith<Color?>(
-        (states) {
-          if (states.contains(MaterialState.disabled) &&
-              widget.options.disabledTextColor != null) {
-            return widget.options.disabledTextColor;
-          }
-          if (states.contains(MaterialState.hovered) &&
-              widget.options.hoverTextColor != null) {
-            return widget.options.hoverTextColor;
-          }
-          return widget.options.textStyle?.color ?? Colors.white;
-        },
-      ),
-      backgroundColor: MaterialStateProperty.resolveWith<Color?>(
-        (states) {
-          if (states.contains(MaterialState.disabled) &&
-              widget.options.disabledColor != null) {
-            return widget.options.disabledColor;
-          }
-          if (states.contains(MaterialState.hovered) &&
-              widget.options.hoverColor != null) {
-            return widget.options.hoverColor;
-          }
-          return widget.options.color;
-        },
-      ),
+        }
+        if (states.contains(WidgetState.focused) &&
+            widget.options.focusBorderSide != null) {
+          return RoundedRectangleBorder(
+            borderRadius: widget.options.focusBorderRadius ??
+                widget.options.borderRadius ??
+                BorderRadius.circular(8),
+            side: widget.options.focusBorderSide!,
+          );
+        }
+        return RoundedRectangleBorder(
+          borderRadius: widget.options.borderRadius ?? BorderRadius.circular(8),
+          side: widget.options.borderSide ?? BorderSide.none,
+        );
+      }),
+      foregroundColor: MaterialStateProperty.resolveWith<Color?>((states) {
+        if (states.contains(MaterialState.disabled) &&
+            widget.options.disabledTextColor != null) {
+          return widget.options.disabledTextColor;
+        }
+        if (states.contains(MaterialState.hovered) &&
+            widget.options.hoverTextColor != null) {
+          return widget.options.hoverTextColor;
+        }
+        return widget.options.textStyle?.color ?? Colors.white;
+      }),
+      backgroundColor: MaterialStateProperty.resolveWith<Color?>((states) {
+        if (states.contains(MaterialState.disabled) &&
+            widget.options.disabledColor != null) {
+          return widget.options.disabledColor;
+        }
+        if (states.contains(MaterialState.hovered) &&
+            widget.options.hoverColor != null) {
+          return widget.options.hoverColor;
+        }
+        return widget.options.color;
+      }),
       overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
         if (states.contains(MaterialState.pressed)) {
           return widget.options.splashColor;
         }
         return widget.options.hoverColor == null ? null : Colors.transparent;
       }),
-      padding: MaterialStateProperty.all(widget.options.padding ??
-          const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0)),
-      elevation: MaterialStateProperty.resolveWith<double?>(
-        (states) {
-          if (states.contains(MaterialState.hovered) &&
-              widget.options.hoverElevation != null) {
-            return widget.options.hoverElevation!;
-          }
-          return widget.options.elevation ?? 2.0;
-        },
+      padding: MaterialStateProperty.all(
+        widget.options.padding ??
+            const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0),
       ),
-      iconColor: MaterialStateProperty.resolveWith<Color?>(
-        (states) {
-          if (states.contains(MaterialState.disabled) &&
-              widget.options.disabledTextColor != null) {
-            return widget.options.disabledTextColor;
-          }
-          if (states.contains(MaterialState.hovered) &&
-              widget.options.hoverTextColor != null) {
-            return widget.options.hoverTextColor;
-          }
-          return widget.options.iconColor;
-        },
-      ),
+      elevation: MaterialStateProperty.resolveWith<double?>((states) {
+        if (states.contains(MaterialState.hovered) &&
+            widget.options.hoverElevation != null) {
+          return widget.options.hoverElevation!;
+        }
+        return widget.options.elevation ?? 2.0;
+      }),
+      iconColor: MaterialStateProperty.resolveWith<Color?>((states) {
+        if (states.contains(MaterialState.disabled) &&
+            widget.options.disabledTextColor != null) {
+          return widget.options.disabledTextColor;
+        }
+        if (states.contains(MaterialState.hovered) &&
+            widget.options.hoverTextColor != null) {
+          return widget.options.hoverTextColor;
+        }
+        return widget.options.iconColor;
+      }),
     );
 
     if ((widget.icon != null || widget.iconData != null) && !loading) {
@@ -302,3 +306,76 @@ double? _getTextWidth(String? text, TextStyle? style, int maxLines) =>
             .size
             .width
         : null;
+
+class FFFocusIndicator extends StatefulWidget {
+  final Widget child;
+  final Border? border;
+  final BorderRadius? borderRadius;
+  final EdgeInsetsGeometry? padding;
+  final void Function()? onTap;
+  final void Function()? onLongPress;
+  final void Function()? onDoubleTap;
+
+  const FFFocusIndicator({
+    Key? key,
+    required this.child,
+    this.border,
+    this.borderRadius,
+    this.padding,
+    this.onTap,
+    this.onLongPress,
+    this.onDoubleTap,
+  }) : super(key: key);
+
+  @override
+  State<FFFocusIndicator> createState() => _FFFocusIndicatorState();
+}
+
+class _FFFocusIndicatorState extends State<FFFocusIndicator> {
+  late FocusNode _focusNode;
+  bool _hasFocus = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _focusNode = FocusNode();
+    _focusNode.addListener(_onFocusChange);
+  }
+
+  @override
+  void dispose() {
+    _focusNode.removeListener(_onFocusChange);
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  void _onFocusChange() {
+    if (mounted) {
+      setState(() {
+        _hasFocus = _focusNode.hasFocus;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 200),
+      padding: widget.padding,
+      decoration: BoxDecoration(
+        border: _hasFocus ? widget.border : null,
+        borderRadius: widget.borderRadius ?? BorderRadius.circular(4),
+      ),
+      child: InkWell(
+        splashColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        focusNode: _focusNode,
+        onTap: widget.onTap,
+        onLongPress: widget.onLongPress,
+        onDoubleTap: widget.onDoubleTap,
+        child: widget.child,
+      ),
+    );
+  }
+}

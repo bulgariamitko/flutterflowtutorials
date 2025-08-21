@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -10,7 +10,7 @@
 int convertDecimalToInteger(double? value) {
   /// MODIFY CODE ONLY BELOW THIS LINE
 
-// null safety
+  // null safety
   value ??= 0.0;
 
   return value.toInt();

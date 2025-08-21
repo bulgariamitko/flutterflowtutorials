@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=0_TIH7xT5_Y
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -12,11 +12,7 @@ import '../../flutter_flow/upload_data.dart';
 import 'package:camera/camera.dart';
 
 class CameraPhoto extends StatefulWidget {
-  const CameraPhoto({
-    Key? key,
-    this.width,
-    this.height,
-  }) : super(key: key);
+  const CameraPhoto({Key? key, this.width, this.height}) : super(key: key);
 
   final double? width;
   final double? height;
@@ -39,23 +35,28 @@ class _CameraPhotoState extends State<CameraPhoto> {
   void didUpdateWidget(covariant CameraPhoto oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (FFAppState().makePhoto) {
-      controller!.takePicture().then((file) async {
-        Uint8List fileAsBytes = await file.readAsBytes();
-        FFAppState().update(() {
-          FFAppState().makePhoto = false;
-        });
-        String dir = '/users/' + currentUserUid + '/';
-        SelectedFile selectedFile = SelectedFile(
-            storagePath: dir + FFAppState().index.toString() + '.jpg',
-            bytes: fileAsBytes);
-        final downloadUrl = await uploadSupabaseStorageFile(
-            bucketName: 'YOUR_SUPABASE_BUCKET_NAME',
-            selectedFile: selectedFile);
-        FFAppState().update(() {
-          FFAppState().index = FFAppState().index + 1;
-          FFAppState().filePath = downloadUrl;
-        });
-      }).catchError((error) {});
+      controller!
+          .takePicture()
+          .then((file) async {
+            Uint8List fileAsBytes = await file.readAsBytes();
+            FFAppState().update(() {
+              FFAppState().makePhoto = false;
+            });
+            String dir = '/users/' + currentUserUid + '/';
+            SelectedFile selectedFile = SelectedFile(
+              storagePath: dir + FFAppState().index.toString() + '.jpg',
+              bytes: fileAsBytes,
+            );
+            final downloadUrl = await uploadSupabaseStorageFile(
+              bucketName: 'YOUR_SUPABASE_BUCKET_NAME',
+              selectedFile: selectedFile,
+            );
+            FFAppState().update(() {
+              FFAppState().index = FFAppState().index + 1;
+              FFAppState().filePath = downloadUrl;
+            });
+          })
+          .catchError((error) {});
     }
   }
 
@@ -73,8 +74,10 @@ class _CameraPhotoState extends State<CameraPhoto> {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasData && snapshot.data!.isNotEmpty) {
             if (controller == null) {
-              controller =
-                  CameraController(snapshot.data![0], ResolutionPreset.max);
+              controller = CameraController(
+                snapshot.data![0],
+                ResolutionPreset.max,
+              );
               controller!.initialize().then((_) {
                 if (!mounted) {
                   return;
@@ -83,9 +86,7 @@ class _CameraPhotoState extends State<CameraPhoto> {
               });
             }
             return controller!.value.isInitialized
-                ? MaterialApp(
-                    home: CameraPreview(controller!),
-                  )
+                ? MaterialApp(home: CameraPreview(controller!))
                 : Container();
           } else {
             return Center(child: Text('No cameras available.'));

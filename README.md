@@ -12,7 +12,7 @@ If you are interested in contributing to this repository, please feel free to su
 
 # YouTube Paid Members
 
-Join the list - https://www.youtube.com/@flutterflowexpert/join
+Join the list - https://www.youtube.com/@dimitarklaturov/join
 
 Klaturov Cadet
 | FitTechStudios

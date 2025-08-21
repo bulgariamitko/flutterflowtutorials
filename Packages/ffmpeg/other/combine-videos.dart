@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=LfAwHZndeWQ
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -42,7 +42,10 @@ Future<void> finalVideoCreator(
 
       final intermediatePath = '${tempDir.path}/intermediate_$i.mp4';
       await _createIntermediateVideo(
-          videoPath, intermediatePath, videoUrls[i].length);
+        videoPath,
+        intermediatePath,
+        videoUrls[i].length,
+      );
       intermediateVideos.add(intermediatePath);
     }
 
@@ -62,10 +65,9 @@ Future<void> finalVideoCreator(
     final finalVideoUrl = await _uploadVideo(finalVideoPath, userId, videoId);
 
     // Update Firestore
-    await FirebaseFirestore.instance
-        .collection('projects')
-        .doc(videoId)
-        .update({'finalVideo': finalVideoUrl});
+    await FirebaseFirestore.instance.collection('projects').doc(videoId).update(
+      {'finalVideo': finalVideoUrl},
+    );
 
     FFAppState().update(() {
       FFAppState().finalVideoStatus =
@@ -90,7 +92,10 @@ Future<void> _downloadFile(String url, String destPath) async {
 }
 
 Future<void> _createIntermediateVideo(
-    String inputPath, String outputPath, int lengthInSeconds) async {
+  String inputPath,
+  String outputPath,
+  int lengthInSeconds,
+) async {
   final command =
       '''-y -i "$inputPath" -t $lengthInSeconds -c:v h264 -c:a aac "$outputPath"''';
   print("Executing FFmpeg command: $command");
@@ -112,16 +117,20 @@ Future<void> _createIntermediateVideo(
     print("FFmpeg process failed. Return code: ${returnCode?.getValue()}");
     print("Fail stack trace: $failStackTrace");
     throw Exception(
-        "FFmpeg process failed with return code ${returnCode?.getValue()}");
+      "FFmpeg process failed with return code ${returnCode?.getValue()}",
+    );
   }
 }
 
 Future<void> _concatenateVideos(
-    List<String> inputPaths, String outputPath) async {
+  List<String> inputPaths,
+  String outputPath,
+) async {
   final tempDir = await getTemporaryDirectory();
   final inputFile = '${tempDir.path}/input.txt';
   await File(inputFile).writeAsString(
-      inputPaths.map((p) => "file '${p.replaceAll("'", "\\'")}'").join('\n'));
+    inputPaths.map((p) => "file '${p.replaceAll("'", "\\'")}'").join('\n'),
+  );
 
   final command =
       '''-y -f concat -safe 0 -i "$inputFile" -c copy "$outputPath"''';
@@ -144,7 +153,8 @@ Future<void> _concatenateVideos(
     print("FFmpeg process failed. Return code: ${returnCode?.getValue()}");
     print("Fail stack trace: $failStackTrace");
     throw Exception(
-        "FFmpeg process failed with return code ${returnCode?.getValue()}");
+      "FFmpeg process failed with return code ${returnCode?.getValue()}",
+    );
   }
 }
 
@@ -159,7 +169,10 @@ Future<void> checkFfmpegCapabilities() async {
 }
 
 Future<String> _uploadVideo(
-    String videoPath, String userId, String videoId) async {
+  String videoPath,
+  String userId,
+  String videoId,
+) async {
   final fileName = 'users/$userId/uploads/final-video/$videoId/final-video.mp4';
   final ref = FirebaseStorage.instance.ref().child(fileName);
   final uploadTask = ref.putFile(File(videoPath));

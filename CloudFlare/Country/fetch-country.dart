@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://youtu.be/Y82DsIHiPNI
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -10,8 +10,9 @@
 import 'package:http/http.dart' as http;
 
 Future<dynamic> fetchCountry() async {
-  final response = await http
-      .get(Uri.parse('https://location-country.bulgaria-mitko.workers.dev/'));
+  final response = await http.get(
+    Uri.parse('https://location-country.bulgaria-mitko.workers.dev/'),
+  );
 
   dynamic data = {'country': 'no location'};
 

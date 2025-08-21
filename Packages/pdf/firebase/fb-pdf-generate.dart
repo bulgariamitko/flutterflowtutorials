@@ -1,9 +1,9 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://www.youtube.com/watch?v=9HngDsCIJPY
 // video 2 include images - https://youtube.com/watch?v=YcHR_bMSIPw
 // video 3 save custom pdf to firebase storage - https://youtube.com/watch?v=y5GfG-eX1QM
 // widgets - Cg9Db2x1bW5fN3Q4cWpyaHgSgAIKD0J1dHRvbl8xMXY5YmZjNBgJIo0BSnQKIAoIRG93bmxvYWQ6Bgj/////D0AFegoSCGR6em9xdGplGQAAAAAAAABAKQAAAAAAQGBAMQAAAAAAAERASQAAAAAAAPA/UgIQAVoCCAByJAkAAAAAAAAgQBEAAAAAAAAgQBkAAAAAAAAgQCEAAAAAAAAgQFoSEQAAAAAAADRAIQAAAAAAADRA+gMAYgCKAVgSUgoIeW1qamxqYjcSRtIBOAobChJwZGZJbnZvaWNlRG93bmxvYWQSBTR3bXg2EgwKChIITXkgdGl0bGUSCwoJEgdNeSBib2R5qgIIMTd6cWVsNW8aAggBEncKEkNvbnRhaW5lcl8yNGNiODhjaRgBIgP6AwBiSxI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGY3VrcmltMhgiFgoJEQAAAAAAAFlAEgkJAAAAAAAAeUAaCUFzc2V0c0ltZ4IBCUFzc2V0c0ltZ5gBARJcChJQZGZWaWV3ZXJfeGtmM2cxdDQYOSJC8gM8CiVodHRwOi8vd3d3LnBkZjk5NS5jb20vc2FtcGxlcy9wZGYucGRmEAEaDQoAEgkJAAAAAADAckAgACgA+gMAYgAYBCIFIgD6AwA=
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -45,8 +45,9 @@ Future pdfInvoiceDownload(
   final netImage = await networkImage('https://www.nfet.net/nfet.jpg');
 
   // add asset image, IMPORTANT! Using assets will not work in Test/Run mode you can only test it using Web Publishing mode or using an actual device!
-  final bytes =
-      (await rootBundle.load('assets/images/demo.png')).buffer.asUint8List();
+  final bytes = (await rootBundle.load(
+    'assets/images/demo.png',
+  )).buffer.asUint8List();
   final image = pw.MemoryImage(bytes);
 
   pdf.addPage(
@@ -81,17 +82,11 @@ Future pdfInvoiceDownload(
             pw.SizedBox(height: 20),
             pw.Row(
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-              children: [
-                pw.Text('Subtotal:'),
-                pw.Text('120'),
-              ],
+              children: [pw.Text('Subtotal:'), pw.Text('120')],
             ),
             pw.Row(
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-              children: [
-                pw.Text('Tax (5%):'),
-                pw.Text('6'),
-              ],
+              children: [pw.Text('Tax (5%):'), pw.Text('6')],
             ),
             pw.Row(
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
@@ -113,17 +108,17 @@ Future pdfInvoiceDownload(
   // Get the current date and time
   final now = DateTime.now();
 
-// Format the date and time as a string
+  // Format the date and time as a string
   final formattedDateTime =
       '${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}_${now.hour.toString().padLeft(2, '0')}-${now.minute.toString().padLeft(2, '0')}-${now.second.toString().padLeft(2, '0')}';
 
-// Set the file name to the formatted date and time string
+  // Set the file name to the formatted date and time string
   final fileName = '$formattedDateTime.pdf';
 
-// Set the directory where you want to store the file (e.g., a folder named 'pdfs' in your storage)
+  // Set the directory where you want to store the file (e.g., a folder named 'pdfs' in your storage)
   String directoryPath = '/users/' + currentUserUid + '/pdfs';
 
-// Combine the directory path and file name to create the full storage path
+  // Combine the directory path and file name to create the full storage path
   final storagePath = '$directoryPath/$fileName';
 
   // SAVE IT TO FIREBASE STORE

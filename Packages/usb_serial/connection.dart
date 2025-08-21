@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -44,18 +44,19 @@ class _USBSerialWidgetState extends State<USBSerialWidget> {
   Transaction<String>? _transaction;
   UsbDevice? _device;
 
-////////////
+  ////////////
 
   String getTimestamp() {
     DateTime now = DateTime.now();
-    String timestamp = '[${now.hour.toString().padLeft(2, '0')}:'
+    String timestamp =
+        '[${now.hour.toString().padLeft(2, '0')}:'
         '${now.minute.toString().padLeft(2, '0')}:'
         '${now.second.toString().padLeft(2, '0')}.'
         '${now.millisecond.toString().padLeft(3, '0')}] - ';
     return timestamp;
   }
 
-////////////
+  ////////////
 
   Future<bool> _connectTo(device) async {
     _serialDataString = "";
@@ -110,7 +111,9 @@ class _USBSerialWidgetState extends State<USBSerialWidget> {
     );
 
     _transaction = Transaction.stringTerminated(
-        _port!.inputStream as Stream<Uint8List>, Uint8List.fromList([13, 10]));
+      _port!.inputStream as Stream<Uint8List>,
+      Uint8List.fromList([13, 10]),
+    );
 
     _subscription = _transaction!.stream.listen((String line) {
       setState(() {
@@ -136,7 +139,7 @@ class _USBSerialWidgetState extends State<USBSerialWidget> {
     return true;
   }
 
-////////////
+  ////////////
 
   void _getPorts() async {
     _ports = [];
@@ -156,10 +159,7 @@ class _USBSerialWidgetState extends State<USBSerialWidget> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(
-                color: Colors.black,
-                width: 1,
-              ),
+              border: Border.all(color: Colors.black, width: 1),
             ),
             child: Align(
               alignment: AlignmentDirectional(0, 0),
@@ -224,12 +224,14 @@ class _USBSerialWidgetState extends State<USBSerialWidget> {
                         ),
                       ),
                       child: Icon(
-                          _device == device ? Icons.link_off : Icons.link,
-                          color: Colors.white,
-                          size: 25),
+                        _device == device ? Icons.link_off : Icons.link,
+                        color: Colors.white,
+                        size: 25,
+                      ),
                       onPressed: () {
-                        _connectTo(_device == device ? device : null)
-                            .then((res) {
+                        _connectTo(_device == device ? device : null).then((
+                          res,
+                        ) {
                           _getPorts();
                         });
                       },
@@ -246,7 +248,7 @@ class _USBSerialWidgetState extends State<USBSerialWidget> {
     setState(() {});
   }
 
-////////////
+  ////////////
 
   @override
   void initState() {
@@ -273,13 +275,7 @@ class _USBSerialWidgetState extends State<USBSerialWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            ..._ports,
-          ],
-        ),
-      ),
+      body: Center(child: Column(children: <Widget>[..._ports])),
     );
   }
 }

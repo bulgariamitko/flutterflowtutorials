@@ -1,16 +1,13 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://youtube.com/watch?v=x-kivZ7ChD8
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
 // GitHub repo - https://github.com/bulgariamitko/flutterflowtutorials
 // Discord channel - https://discord.gg/G69hSUqEeU
 
-List<dynamic> sortJson(
-  List<dynamic> data,
-  String? sortBy,
-) {
+List<dynamic> sortJson(List<dynamic> data, String? sortBy) {
   /// MODIFY CODE ONLY BELOW THIS LINE
 
   // null safety

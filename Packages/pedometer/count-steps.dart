@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -27,8 +27,9 @@ Future countSteps() async {
   _stepCountSubscription.onError(_onStepCountError);
 
   // Listen to the pedestrian status stream and handle errors separately
-  _pedestrianStatusSubscription =
-      _pedestrianStatusStream.listen(_onPedestrianStatusChanged);
+  _pedestrianStatusSubscription = _pedestrianStatusStream.listen(
+    _onPedestrianStatusChanged,
+  );
   _pedestrianStatusSubscription.onError(_onPedestrianStatusError);
 
   // Add disposal logic as needed, for example:

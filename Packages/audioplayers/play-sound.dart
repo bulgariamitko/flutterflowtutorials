@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -32,10 +32,9 @@ Future<void> playSoundFromBytes(String bytes) async {
     });
 
     // Listen to player state changes
-    FFAppState()
-        .audioPlayerPlayingMsg!
-        .onPlayerStateChanged
-        .listen((PlayerState state) {
+    FFAppState().audioPlayerPlayingMsg!.onPlayerStateChanged.listen((
+      PlayerState state,
+    ) {
       if (state == PlayerState.completed || state == PlayerState.stopped) {
         print('completed - FFAppState().audioPlaying = false;');
         FFAppState().update(() {
@@ -50,9 +49,9 @@ Future<void> playSoundFromBytes(String bytes) async {
     });
 
     // Play the audio from the temporary file
-    await FFAppState()
-        .audioPlayerPlayingMsg!
-        .play(DeviceFileSource(_tempFile!.path));
+    await FFAppState().audioPlayerPlayingMsg!.play(
+      DeviceFileSource(_tempFile!.path),
+    );
 
     // Wait for the audio to finish playing
     await FFAppState().audioPlayerPlayingMsg!.onPlayerComplete.first;

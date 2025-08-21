@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -17,7 +17,7 @@ Future<dynamic> prepareAnOrder() async {
       "id": "1",
       "bagCount": FFAppState().wdf,
       "itemCount": 0,
-      "name": "Dry Cleaning"
+      "name": "Dry Cleaning",
     };
 
     FFAppState().totalBags =
@@ -31,7 +31,7 @@ Future<dynamic> prepareAnOrder() async {
       "id": "2",
       "bagCount": FFAppState().wdi,
       "itemCount": 0,
-      "name": "Wash and Fold"
+      "name": "Wash and Fold",
     };
     FFAppState().totalBags =
         (int.parse(FFAppState().totalBags) + int.parse(FFAppState().wdi))
@@ -44,7 +44,7 @@ Future<dynamic> prepareAnOrder() async {
       "id": "3",
       "bagCount": 0,
       "itemCount": FFAppState().dc,
-      "name": "Wash and Iron"
+      "name": "Wash and Iron",
     };
     FFAppState().totalItems =
         (int.parse(FFAppState().totalItems) + int.parse(FFAppState().dc))
@@ -58,7 +58,7 @@ Future<dynamic> prepareAnOrder() async {
       "id": "4",
       "bagCount": 0,
       "itemCount": FFAppState().ra,
-      "name": "R A"
+      "name": "R A",
     };
     FFAppState().totalItems =
         (int.parse(FFAppState().totalItems) + int.parse(FFAppState().ra))

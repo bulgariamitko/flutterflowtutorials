@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -68,49 +68,49 @@ List<dynamic> wordCloud(String? words) {
         "word": wordsCount[i].toUpperCase(),
         "count": wordsCountInt[i],
         "color": mainColor,
-        "font": 136
+        "font": 136,
       };
     } else if (allCounters[1] == wordsCountInt[i]) {
       second = {
         "word": wordsCount[i].toUpperCase(),
         "count": wordsCountInt[i],
         "color": mainColor,
-        "font": 118
+        "font": 118,
       };
     } else if (allCounters[2] == wordsCountInt[i]) {
       third = {
         "word": wordsCount[i].toUpperCase(),
         "count": wordsCountInt[i],
         "color": mainColor,
-        "font": 100
+        "font": 100,
       };
     } else if (allCounters[3] == wordsCountInt[i]) {
       forth = {
         "word": wordsCount[i].toUpperCase(),
         "count": wordsCountInt[i],
         "color": mainColor,
-        "font": 96
+        "font": 96,
       };
     } else if (allCounters[4] == wordsCountInt[i]) {
       fifth = {
         "word": wordsCount[i].toUpperCase(),
         "count": wordsCountInt[i],
         "color": mainColor,
-        "font": 78
+        "font": 78,
       };
     } else if (allCounters[5] == wordsCountInt[i]) {
       sixth = {
         "word": wordsCount[i].toUpperCase(),
         "count": wordsCountInt[i],
         "color": mainColor,
-        "font": 62
+        "font": 62,
       };
     } else if (allCounters[6] == wordsCountInt[i]) {
       seven = {
         "word": wordsCount[i].toUpperCase(),
         "count": wordsCountInt[i],
         "color": mainColor,
-        "font": 48
+        "font": 48,
       };
     }
   }
@@ -140,7 +140,7 @@ List<dynamic> wordCloud(String? words) {
     seven,
     seven,
     seven,
-    seven
+    seven,
   ];
   int repreatingWordsCounter = 1;
   int midList = (wordsCount.length / 2).round();
@@ -169,7 +169,7 @@ List<dynamic> wordCloud(String? words) {
         "word": wordsCount[i].toUpperCase(),
         "count": wordsCountInt[i],
         "color": mainColor,
-        "font": 32
+        "font": 32,
       });
     }
 

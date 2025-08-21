@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://www.youtube.com/watch?v=0_TIH7xT5_Y
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -18,12 +18,8 @@ import 'package:flutter/foundation.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class SoundRecordAndPlay extends StatefulWidget {
-  const SoundRecordAndPlay({
-    Key? key,
-    this.width,
-    this.height,
-    this.bucket,
-  }) : super(key: key);
+  const SoundRecordAndPlay({Key? key, this.width, this.height, this.bucket})
+    : super(key: key);
 
   final double? width;
   final double? height;
@@ -133,10 +129,14 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
 
       // Save the file to Supabase storage
       SelectedFile selectedFile = SelectedFile(
-          storagePath: storagePath, bytes: Uint8List.fromList(bytes));
+        storagePath: storagePath,
+        bytes: Uint8List.fromList(bytes),
+      );
 
       final String downloadUrl = await uploadSupabaseStorageFile(
-          bucketName: widget.bucket ?? 'error', selectedFile: selectedFile);
+        bucketName: widget.bucket ?? 'error',
+        selectedFile: selectedFile,
+      );
 
       FFAppState().filePath = downloadUrl;
     } else {
@@ -197,12 +197,7 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
   Widget _buildSubHeader() {
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          _buildText(),
-        ],
-      ),
+      child: Column(mainAxisSize: MainAxisSize.max, children: [_buildText()]),
     );
   }
 
@@ -315,8 +310,9 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
       setState(() => _recordDuration++);
     });
 
-    _ampTimer =
-        Timer.periodic(const Duration(milliseconds: 200), (Timer t) async {
+    _ampTimer = Timer.periodic(const Duration(milliseconds: 200), (
+      Timer t,
+    ) async {
       _amplitude = await _audioRecorder.getAmplitude();
       setState(() {});
     });
@@ -335,10 +331,7 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
           Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _buildRecorder(),
-              _buildSubHeader(),
-            ],
+            children: [_buildRecorder(), _buildSubHeader()],
           ),
         ],
       ),

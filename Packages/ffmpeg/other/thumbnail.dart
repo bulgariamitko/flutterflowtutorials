@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=LfAwHZndeWQ
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -20,11 +20,15 @@ import '../../backend/firebase_storage/storage.dart';
 final FlutterFFmpeg _flutterFFmpeg = FlutterFFmpeg();
 
 Future<String> generateAndUploadThumbnail(
-    String videoPath, String videoId) async {
+  String videoPath,
+  String videoId,
+) async {
   final thumbnailPath = await _generateThumbnail(videoPath);
   if (thumbnailPath.isNotEmpty) {
-    final downloadUrl =
-        await _uploadThumbnailToFirebase(thumbnailPath, videoId);
+    final downloadUrl = await _uploadThumbnailToFirebase(
+      thumbnailPath,
+      videoId,
+    );
     return downloadUrl ?? '';
   } else {
     return '';
@@ -47,7 +51,7 @@ Future<String> _generateThumbnail(String videoPath) async {
     '-i', videoPath,
     '-ss', '00:00:02', // Take a screenshot at 5 seconds
     '-vframes', '1',
-    thumbnailPath
+    thumbnailPath,
   ];
 
   final int result = await _flutterFFmpeg.executeWithArguments(arguments);
@@ -62,7 +66,9 @@ Future<String> _generateThumbnail(String videoPath) async {
 }
 
 Future<String?> _uploadThumbnailToFirebase(
-    String filePath, String videoId) async {
+  String filePath,
+  String videoId,
+) async {
   final file = File(filePath);
   if (!await file.exists()) {
     print('Thumbnail file does not exist: $filePath');

@@ -1,8 +1,8 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://www.youtube.com/watch?v=rrgw84My5tw
 // widgets - Cg9Db2x1bW5fams0eDgwdjISiQEKEkNvbnRhaW5lcl9hNHB3MHlveBgBIgP6AwBiVBI+CgpkaW1lbnNpb25zEjAKFAoKZGltZW5zaW9ucxIGZ2Nka2U4MhgiFgoJEQAAAAAAAFlAEgkJAAAAAADAYkAaElNvdW5kUmVjb3JkQW5kUGxheYIBElNvdW5kUmVjb3JkQW5kUGxheZgBARJJCg1UZXh0X24zenUxbXd2GAIiNBISCgtIZWxsbyBXb3JsZEAGqAEAmgEaCgICASoUCAxCECIOCgoKCGZpbGVQYXRoEAH6AwBiABI9Cg1UZXh0X2FyaTNjYTRoGAIiKBISCgtIZWxsbyBXb3JsZEAGqAEAmgEOCgICASoICAJCBAoCCAL6AwBiABgEIgUiAPoDAA==
 // replace - [{"App State name": "filePath"}, {"File audio extention": "opus"}]
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -23,11 +23,8 @@ import 'package:flutter/foundation.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class SoundRecordAndPlay extends StatefulWidget {
-  const SoundRecordAndPlay({
-    Key? key,
-    this.width,
-    this.height,
-  }) : super(key: key);
+  const SoundRecordAndPlay({Key? key, this.width, this.height})
+    : super(key: key);
 
   final double? width;
   final double? height;
@@ -195,12 +192,7 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
   Widget _buildSubHeader() {
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          _buildText(),
-        ],
-      ),
+      child: Column(mainAxisSize: MainAxisSize.max, children: [_buildText()]),
     );
   }
 
@@ -313,8 +305,9 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
       setState(() => _recordDuration++);
     });
 
-    _ampTimer =
-        Timer.periodic(const Duration(milliseconds: 200), (Timer t) async {
+    _ampTimer = Timer.periodic(const Duration(milliseconds: 200), (
+      Timer t,
+    ) async {
       _amplitude = await _audioRecorder.getAmplitude();
       setState(() {});
     });
@@ -333,10 +326,7 @@ class _SoundRecordAndPlayState extends State<SoundRecordAndPlay> {
           Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _buildRecorder(),
-              _buildSubHeader(),
-            ],
+            children: [_buildRecorder(), _buildSubHeader()],
           ),
         ],
       ),

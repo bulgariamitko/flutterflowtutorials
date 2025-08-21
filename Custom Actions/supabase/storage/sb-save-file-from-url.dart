@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=0_TIH7xT5_Y&t=1s
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -22,10 +22,8 @@ Future saveFileFromUrl(
   bucket ??= 'error';
   fullFilePath ??= 'error';
 
-// Download the file from the URL as bytes
-  final fileAsBytes = await DownloadFileCall.call(
-    url: url,
-  );
+  // Download the file from the URL as bytes
+  final fileAsBytes = await DownloadFileCall.call(url: url);
   final Uint8List bytes = fileAsBytes.response!.bodyBytes;
 
   // Get file size
@@ -39,11 +37,15 @@ Future saveFileFromUrl(
     return FFUploadedFile(bytes: bytes, name: 'error');
   }
 
-  SelectedFile selectedFile =
-      SelectedFile(storagePath: fullFilePath, bytes: bytes);
+  SelectedFile selectedFile = SelectedFile(
+    storagePath: fullFilePath,
+    bytes: bytes,
+  );
 
   final String downloadUrl = await uploadSupabaseStorageFile(
-      bucketName: bucket, selectedFile: selectedFile);
+    bucketName: bucket,
+    selectedFile: selectedFile,
+  );
 
   FFAppState().update(() {
     FFAppState().filePath = downloadUrl;

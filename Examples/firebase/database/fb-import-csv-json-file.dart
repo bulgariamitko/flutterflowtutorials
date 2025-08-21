@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -45,10 +45,12 @@ Future importFromCsvOrJson(
   fieldName10 ??= 'error';
   fieldName11 ??= 'error';
   hotelRef ??= FirebaseFirestore.instance.doc('/Hotel/exNu4mnK9GAtZGGG7jYf');
-  DocumentReference houseRef =
-      FirebaseFirestore.instance.doc('/House/3VCdIroGPemdrqNnFupj');
-  DocumentReference villaRef =
-      FirebaseFirestore.instance.doc('/Villa/QK3FEFrbO7oHqLDGZGNF');
+  DocumentReference houseRef = FirebaseFirestore.instance.doc(
+    '/House/3VCdIroGPemdrqNnFupj',
+  );
+  DocumentReference villaRef = FirebaseFirestore.instance.doc(
+    '/Villa/QK3FEFrbO7oHqLDGZGNF',
+  );
 
   HotelRecord backupHotel = await HotelRecord.getDocumentOnce(hotelRef);
   HouseRecord backupHouse = await HouseRecord.getDocumentOnce(houseRef);
@@ -63,11 +65,7 @@ Future importFromCsvOrJson(
   final selectedFile = await selectFile(allowedExtensions: ['csv', 'json']);
 
   if (selectedFile != null) {
-    showUploadMessage(
-      context,
-      'Uploading file...',
-      showLoading: true,
-    );
+    showUploadMessage(context, 'Uploading file...', showLoading: true);
 
     final fileString = utf8.decode(selectedFile.bytes);
 
@@ -158,8 +156,9 @@ Future importFromCsvOrJson(
 
         // find the Hotel
         final collectionHotelRef = firestore.collection('Hotel');
-        final gotelDocs =
-            await collectionHotelRef.where('Name', isEqualTo: fields[9]).get();
+        final gotelDocs = await collectionHotelRef
+            .where('Name', isEqualTo: fields[9])
+            .get();
         HotelRecord hotelDoc = await gotelDocs.docs.isNotEmpty
             ? HotelRecord.fromSnapshot(gotelDocs.docs[0])
             : backupHotel;
@@ -181,10 +180,7 @@ Future importFromCsvOrJson(
       }
     }
 
-    showUploadMessage(
-      context,
-      'Success!',
-    );
+    showUploadMessage(context, 'Success!');
   }
 }
 // Set your action name, define your arguments and return parameter,

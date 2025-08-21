@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=rrgw84My5tw
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -18,12 +18,8 @@ import '../actions/widget_to_image.dart';
 import '../actions/add_to_num.dart';
 
 class QRCodeDownloader extends StatefulWidget {
-  const QRCodeDownloader({
-    Key? key,
-    this.width,
-    this.height,
-    this.data,
-  }) : super(key: key);
+  const QRCodeDownloader({Key? key, this.width, this.height, this.data})
+    : super(key: key);
 
   final double? width;
   final double? height;

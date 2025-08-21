@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=0_TIH7xT5_Y&t=1s
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -12,17 +12,24 @@ import '../../flutter_flow/upload_data.dart';
 import '../../backend/supabase/storage/storage.dart';
 
 Future uploadRawFileToSB(
-    String? bytes, String? bucket, String? fullFilePath) async {
+  String? bytes,
+  String? bucket,
+  String? fullFilePath,
+) async {
   // null safety
   bytes ??= '';
   bucket ??= 'error';
   fullFilePath ??= 'error';
 
   SelectedFile selectedFile = SelectedFile(
-      storagePath: fullFilePath, bytes: Uint8List.fromList(utf8.encode(bytes)));
+    storagePath: fullFilePath,
+    bytes: Uint8List.fromList(utf8.encode(bytes)),
+  );
 
   final String downloadUrl = await uploadSupabaseStorageFile(
-      bucketName: bucket, selectedFile: selectedFile);
+    bucketName: bucket,
+    selectedFile: selectedFile,
+  );
 
   FFAppState().update(() {
     FFAppState().filePath = downloadUrl;

@@ -2,7 +2,7 @@
 
 # Version 1.0
 # Run at least version flutterflow_cli: ^0.0.24 /dart pub global activate flutterflow_cli/
-# Made by https://www.youtube.com/@flutterflowexpert/
+# Made by https://www.youtube.com/@dimitarklaturov/
 
 # Token storage configuration
 TOKEN_FILE="$HOME/.ff_token"

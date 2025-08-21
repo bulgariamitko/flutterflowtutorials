@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=idXHYU0co5Y
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -27,8 +27,9 @@ Future<void> setupNotificationChannel() async {
   const AndroidInitializationSettings initializationSettingsAndroid =
       AndroidInitializationSettings('@mipmap/ic_launcher');
 
-  const InitializationSettings initializationSettings =
-      InitializationSettings(android: initializationSettingsAndroid);
+  const InitializationSettings initializationSettings = InitializationSettings(
+    android: initializationSettingsAndroid,
+  );
 
   await flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
@@ -41,7 +42,8 @@ Future<void> setupNotificationChannel() async {
 
   await flutterLocalNotificationsPlugin
       .resolvePlatformSpecificImplementation<
-          AndroidFlutterLocalNotificationsPlugin>()
+        AndroidFlutterLocalNotificationsPlugin
+      >()
       ?.createNotificationChannel(channel);
 }
 
@@ -54,7 +56,9 @@ void onStart(ServiceInstance service) async {
   ReceivePort receivePort = ReceivePort();
   IsolateNameServer.removePortNameMapping('ServiceRunningPort');
   IsolateNameServer.registerPortWithName(
-      receivePort.sendPort, 'ServiceRunningPort');
+    receivePort.sendPort,
+    'ServiceRunningPort',
+  );
 
   receivePort.listen((message) {
     print('Received message in background: $message');
@@ -94,16 +98,14 @@ void onStart(ServiceInstance service) async {
           );
 
           print(
-              'Sending call data to main isolate: ${newCall.type} - ${newCall.number}');
-          service.invoke(
-            'onNewCall',
-            {
-              'type': newCall.type,
-              'number': newCall.number,
-              'timestamp': newCall.timestamp,
-              'duration': newCall.duration,
-            },
+            'Sending call data to main isolate: ${newCall.type} - ${newCall.number}',
           );
+          service.invoke('onNewCall', {
+            'type': newCall.type,
+            'number': newCall.number,
+            'timestamp': newCall.timestamp,
+            'duration': newCall.duration,
+          });
 
           startCallTimestamp = entry.timestamp!;
         }
@@ -129,20 +131,17 @@ void onStart(ServiceInstance service) async {
         if (sms.date != null && sms.date! > startSmsTimestamp) {
           print('New SMS detected! Timestamp: ${sms.date}');
 
-          service.invoke(
-            'onNewSms',
-            {
-              'id': sms.id ?? 0,
-              'address': sms.address ?? '',
-              'body': sms.body ?? '',
-              'date': sms.date ?? 0,
-              'dateSent': sms.dateSent ?? 0,
-              'read': sms.read ?? false,
-              'seen': sms.seen ?? false,
-              'status': sms.status?.name ?? 'none',
-              'type': sms.type?.name ?? 'received',
-            },
-          );
+          service.invoke('onNewSms', {
+            'id': sms.id ?? 0,
+            'address': sms.address ?? '',
+            'body': sms.body ?? '',
+            'date': sms.date ?? 0,
+            'dateSent': sms.dateSent ?? 0,
+            'read': sms.read ?? false,
+            'seen': sms.seen ?? false,
+            'status': sms.status?.name ?? 'none',
+            'type': sms.type?.name ?? 'received',
+          });
 
           startSmsTimestamp = sms.date!;
         }
@@ -203,7 +202,8 @@ Future startPhoneCallMonitor(
         duration: event['duration'] as String,
       );
       print(
-          'Executing callback with call data: ${newCall.type} - ${newCall.number}');
+        'Executing callback with call data: ${newCall.type} - ${newCall.number}',
+      );
       await _globalPhoneCallback!(newCall);
     }
   });
@@ -223,7 +223,8 @@ Future startPhoneCallMonitor(
         type: event['type'] as String,
       );
       print(
-          'Executing callback with SMS data: ${newSms.address} - ${newSms.body.substring(0, min(20, newSms.body.length))}...');
+        'Executing callback with SMS data: ${newSms.address} - ${newSms.body.substring(0, min(20, newSms.body.length))}...',
+      );
       await _globalSmsCallback!(newSms);
     }
   });

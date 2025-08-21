@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://www.youtube.com/watch?v=wg4s9hE8N4k
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -196,7 +196,8 @@ class _CameraAppState extends State<CameraApp> {
       final fileStream = newVideoFile.openRead();
       final fileToUpload = FFUploadedFile(
         bytes: await fileStream.toList().then(
-            (chunks) => Uint8List.fromList(chunks.expand((x) => x).toList())),
+          (chunks) => Uint8List.fromList(chunks.expand((x) => x).toList()),
+        ),
         name: p.basename(newVideoFile.path),
       );
 
@@ -219,17 +220,17 @@ class _CameraAppState extends State<CameraApp> {
     return Scaffold(
       body: _videoFile == null
           ? _cameras == null || _controller == null || _isSwitchingCamera
-              ? Center(child: CircularProgressIndicator())
-              : FutureBuilder<void>(
-                  future: _initializeControllerFuture,
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.done) {
-                      return CameraPreview(_controller!);
-                    } else {
-                      return Center(child: CircularProgressIndicator());
-                    }
-                  },
-                )
+                ? Center(child: CircularProgressIndicator())
+                : FutureBuilder<void>(
+                    future: _initializeControllerFuture,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.done) {
+                        return CameraPreview(_controller!);
+                      } else {
+                        return Center(child: CircularProgressIndicator());
+                      }
+                    },
+                  )
           : VideoPlayerWidget(videoFile: _videoFile!),
     );
   }

@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - TBA
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -13,11 +13,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:rxdart/rxdart.dart';
 
 class MyAudioPlayer extends StatefulWidget {
-  const MyAudioPlayer({
-    super.key,
-    this.width,
-    this.height,
-  });
+  const MyAudioPlayer({super.key, this.width, this.height});
 
   final double? width;
   final double? height;
@@ -36,39 +32,41 @@ class _MyAudioPlayerState extends State<MyAudioPlayer>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.black,
-    ));
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.black),
+    );
     _init();
   }
 
   Future<void> _init() async {
     final session = await AudioSession.instance;
-    await session.configure(const AudioSessionConfiguration(
-      avAudioSessionCategory: AVAudioSessionCategory.playback,
-      avAudioSessionCategoryOptions:
-          AVAudioSessionCategoryOptions.mixWithOthers,
-      avAudioSessionMode: AVAudioSessionMode.defaultMode,
-      avAudioSessionRouteSharingPolicy:
-          AVAudioSessionRouteSharingPolicy.defaultPolicy,
-      avAudioSessionSetActiveOptions: AVAudioSessionSetActiveOptions.none,
-      androidAudioAttributes: AndroidAudioAttributes(
-        contentType: AndroidAudioContentType.music,
-        flags: AndroidAudioFlags.none,
-        usage: AndroidAudioUsage.media,
+    await session.configure(
+      const AudioSessionConfiguration(
+        avAudioSessionCategory: AVAudioSessionCategory.playback,
+        avAudioSessionCategoryOptions:
+            AVAudioSessionCategoryOptions.mixWithOthers,
+        avAudioSessionMode: AVAudioSessionMode.defaultMode,
+        avAudioSessionRouteSharingPolicy:
+            AVAudioSessionRouteSharingPolicy.defaultPolicy,
+        avAudioSessionSetActiveOptions: AVAudioSessionSetActiveOptions.none,
+        androidAudioAttributes: AndroidAudioAttributes(
+          contentType: AndroidAudioContentType.music,
+          flags: AndroidAudioFlags.none,
+          usage: AndroidAudioUsage.media,
+        ),
+        androidAudioFocusGainType: AndroidAudioFocusGainType.gain,
+        androidWillPauseWhenDucked: true,
       ),
-      androidAudioFocusGainType: AndroidAudioFocusGainType.gain,
-      androidWillPauseWhenDucked: true,
-    ));
+    );
 
-    final playlist = FFAppState()
-        .playlistDT
+    final playlist = FFAppState().playlistDT
         .map((url) => AudioSource.uri(Uri.parse(url.audio)))
         .toList();
 
     // Find the index of the active song in the playlist
-    final activeIndex =
-        FFAppState().playlistDT.indexWhere((track) => track.active);
+    final activeIndex = FFAppState().playlistDT.indexWhere(
+      (track) => track.active,
+    );
 
     // Set the initial index of the player to the active song index
     final initialIndex = activeIndex != -1 ? activeIndex : 0;
@@ -108,11 +106,12 @@ class _MyAudioPlayerState extends State<MyAudioPlayer>
 
   Stream<PositionData> get _positionDataStream =>
       Rx.combineLatest3<Duration, Duration, Duration?, PositionData>(
-          _player.positionStream,
-          _player.bufferedPositionStream,
-          _player.durationStream,
-          (position, bufferedPosition, duration) => PositionData(
-              position, bufferedPosition, duration ?? Duration.zero));
+        _player.positionStream,
+        _player.bufferedPositionStream,
+        _player.durationStream,
+        (position, bufferedPosition, duration) =>
+            PositionData(position, bufferedPosition, duration ?? Duration.zero),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -242,8 +241,9 @@ class _ControlButtonsState extends State<ControlButtons> {
                 _loopMode == LoopMode.off
                     ? Icons.repeat_outlined
                     : Icons.repeat,
-                color:
-                    _loopMode == LoopMode.off ? null : const Color(0xFFf76a43),
+                color: _loopMode == LoopMode.off
+                    ? null
+                    : const Color(0xFFf76a43),
               ),
               if (_loopMode == LoopMode.one)
                 Container(
@@ -282,11 +282,7 @@ class _ControlButtonsState extends State<ControlButtons> {
 }
 
 class PositionData {
-  const PositionData(
-    this.position,
-    this.bufferedPosition,
-    this.duration,
-  );
+  const PositionData(this.position, this.bufferedPosition, this.duration);
 
   final Duration position;
   final Duration bufferedPosition;
@@ -313,11 +309,14 @@ void showSliderDialog({
           height: 100.0,
           child: Column(
             children: [
-              Text('${snapshot.data?.toStringAsFixed(1)}',
-                  style: const TextStyle(
-                      fontFamily: 'Fixed',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24.0)),
+              Text(
+                '${snapshot.data?.toStringAsFixed(1)}',
+                style: const TextStyle(
+                  fontFamily: 'Fixed',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24.0,
+                ),
+              ),
               Slider(
                 divisions: divisions,
                 min: min,
@@ -360,9 +359,7 @@ class SeekBarState extends State<SeekBar> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _sliderThemeData = SliderTheme.of(context).copyWith(
-      trackHeight: 2.0,
-    );
+    _sliderThemeData = SliderTheme.of(context).copyWith(trackHeight: 2.0);
   }
 
   @override
@@ -432,9 +429,9 @@ class SeekBarState extends State<SeekBar> {
           right: 16.0,
           bottom: 0.0,
           child: Text(
-            RegExp(r'((^0*[1-9]\d*:)?\d{2}:\d{2})\.\d+$')
-                    .firstMatch("$_remaining")
-                    ?.group(1) ??
+            RegExp(
+                  r'((^0*[1-9]\d*:)?\d{2}:\d{2})\.\d+$',
+                ).firstMatch("$_remaining")?.group(1) ??
                 '$_remaining',
             style: Theme.of(context).textTheme.bodySmall,
           ),

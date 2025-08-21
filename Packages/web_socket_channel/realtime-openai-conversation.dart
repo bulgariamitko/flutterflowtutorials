@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video -
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -72,7 +72,8 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
     try {
       // Correct WebSocket URL for the realtime API
       final wsUrl = Uri.parse(
-          'wss://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview-2024-10-01');
+        'wss://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview-2024-10-01',
+      );
 
       print('Connecting to WebSocket URL: $wsUrl');
 
@@ -156,9 +157,9 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
             "type": "server_vad",
             "threshold": 0.5,
             "prefix_padding_ms": 300,
-            "silence_duration_ms": 500
-          }
-        }
+            "silence_duration_ms": 500,
+          },
+        },
       };
 
       print('Session config object created: ${jsonEncode(sessionConfig)}');
@@ -236,7 +237,7 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
       final audioMessage = {
         "event_id": "ev_audio_${DateTime.now().millisecondsSinceEpoch}",
         "type": "input_audio_buffer.append",
-        "audio": base64Encode(audioData)
+        "audio": base64Encode(audioData),
       };
 
       print('Sending audio message');
@@ -245,7 +246,7 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
       // Second message: Commit the audio
       final commitMessage = {
         "event_id": "ev_commit_${DateTime.now().millisecondsSinceEpoch}",
-        "type": "input_audio_buffer.commit"
+        "type": "input_audio_buffer.commit",
       };
 
       print('Sending commit message');
@@ -257,7 +258,7 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
       // Third message: Create response with minimum required fields
       final responseMessage = {
         "event_id": "ev_response_${DateTime.now().millisecondsSinceEpoch}",
-        "type": "response.create"
+        "type": "response.create",
       };
 
       print('Sending response create message');
@@ -328,8 +329,10 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
       }
 
       // Combine all audio chunks
-      int totalLength =
-          _audioBuffer.fold<int>(0, (sum, chunk) => sum + chunk.length);
+      int totalLength = _audioBuffer.fold<int>(
+        0,
+        (sum, chunk) => sum + chunk.length,
+      );
       print('Total audio length: $totalLength bytes');
 
       final combinedAudio = Uint8List(totalLength);
@@ -345,7 +348,8 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
       // Save to temporary file
       final tempDir = await getTemporaryDirectory();
       final tempFile = File(
-          '${tempDir.path}/response_${DateTime.now().millisecondsSinceEpoch}.wav');
+        '${tempDir.path}/response_${DateTime.now().millisecondsSinceEpoch}.wav',
+      );
       await tempFile.writeAsBytes(wavData);
       print('Audio saved to: ${tempFile.path}');
 
@@ -390,7 +394,8 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
           !_isConnected &&
           _reconnectAttempts < maxReconnectAttempts) {
         print(
-            'Reconnection attempt ${_reconnectAttempts + 1} of $maxReconnectAttempts');
+          'Reconnection attempt ${_reconnectAttempts + 1} of $maxReconnectAttempts',
+        );
         _reconnectAttempts++;
         _initializeOpenAI();
       }
@@ -445,9 +450,7 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
             ),
             child: Text(
               _isConnected ? 'Connected' : 'Disconnected',
-              style: TextStyle(
-                color: _isConnected ? Colors.green : Colors.red,
-              ),
+              style: TextStyle(color: _isConnected ? Colors.green : Colors.red),
             ),
           ),
           const SizedBox(height: 16),
@@ -484,8 +487,10 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('You said:',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Text(
+                    'You said:',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   Text(_lastTranscript),
                 ],
               ),
@@ -504,8 +509,10 @@ class _RealtimeOpenAIAudioConState extends State<RealtimeOpenAIAudioCon> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Assistant:',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Text(
+                    'Assistant:',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   Text(_assistantResponse),
                 ],
               ),

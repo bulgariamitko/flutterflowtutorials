@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=LfAwHZndeWQ
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -34,8 +34,9 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
   @override
   void initState() {
     super.initState();
-    _isLocalFile = !(widget.videoPathOrUrl.startsWith('http') ||
-        widget.videoPathOrUrl.startsWith('https'));
+    _isLocalFile =
+        !(widget.videoPathOrUrl.startsWith('http') ||
+            widget.videoPathOrUrl.startsWith('https'));
     if (!_isLocalFile) {
       _videoPlayerController =
           VideoPlayerController.networkUrl(Uri.parse(widget.videoPathOrUrl))

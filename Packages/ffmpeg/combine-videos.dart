@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=LfAwHZndeWQ
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -72,10 +72,7 @@ Future<String> generateThumbnail(String videoPath) async {
   }
 }
 
-Future<List<String>> combineVideos(
-  String video1Url,
-  String video2Url,
-) async {
+Future<List<String>> combineVideos(String video1Url, String video2Url) async {
   try {
     print("Starting combineVideos function");
 
@@ -89,13 +86,15 @@ Future<List<String>> combineVideos(
     final String outputPath = await FileHandler.getFilePath(outputFileName);
 
     // Create input list file
-    final String inputListPath =
-        await FileHandler.getFilePath('input_list.txt');
+    final String inputListPath = await FileHandler.getFilePath(
+      'input_list.txt',
+    );
     final File inputListFile = File(inputListPath);
     await inputListFile.writeAsString("file '$video1Path'\nfile '$video2Path'");
 
     // FFmpeg command to combine videos
-    String command = '-y -f concat -safe 0 -i "$inputListPath" '
+    String command =
+        '-y -f concat -safe 0 -i "$inputListPath" '
         '-c:v libx264 -preset slow -crf 22 '
         '-c:a aac -b:a 192k -ar 44100 '
         '-vsync 1 -max_muxing_queue_size 1024 '

@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://youtube.com/watch?v=rAw5riRVHuc
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -24,7 +24,9 @@ Future uploadRawFileToFB(String bytes) async {
     String directoryPath = '/users/' + currentUserUid + '/pdfs';
 
     downloadUrl = await uploadData(
-        directoryPath + '/demo.pdf', Uint8List.fromList(utf8.encode(bytes)));
+      directoryPath + '/demo.pdf',
+      Uint8List.fromList(utf8.encode(bytes)),
+    );
   } finally {
     FFAppState().update(() {
       FFAppState().isDataUploading = false;

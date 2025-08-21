@@ -1,7 +1,7 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://www.youtube.com/watch?v=nHz5o78L0x0
 // update code video - https://youtube.com/watch?v=tWsr7dMKPcA
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -33,8 +33,6 @@ Future updateAllDocsInCollection(
     final docRef = querySnapshot.docs[i].reference;
 
     // Update the "name" field of the document with the corresponding value from fieldValue
-    await docRef.update({
-      fieldName: fieldValue,
-    });
+    await docRef.update({fieldName: fieldValue});
   }
 }

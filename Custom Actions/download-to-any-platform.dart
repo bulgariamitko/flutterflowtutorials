@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=JSgDuKIxNg0
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -14,9 +14,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:path_provider/path_provider.dart';
 import 'package:download/download.dart';
 
-Future<List<dynamic>> downloadToAnyPlatfromCSV(
-  List<CarStruct>? docs,
-) async {
+Future<List<dynamic>> downloadToAnyPlatfromCSV(List<CarStruct>? docs) async {
   docs = docs ?? [];
 
   // Add the company name and address as a header
@@ -26,11 +24,14 @@ Future<List<dynamic>> downloadToAnyPlatfromCSV(
 
   String fileContent = header + "name, brand";
 
-  docs.asMap().forEach((index, record) => fileContent = fileContent +
-      "\n" +
-      record.name.toString() +
-      "," +
-      record.brand.toString());
+  docs.asMap().forEach(
+    (index, record) => fileContent =
+        fileContent +
+        "\n" +
+        record.name.toString() +
+        "," +
+        record.brand.toString(),
+  );
 
   final fileName = "FF" + DateTime.now().toString() + ".csv";
 
@@ -45,7 +46,7 @@ Future<List<dynamic>> downloadToAnyPlatfromCSV(
     await download(stream, fileName);
     return [
       {'fileName': fileName},
-      {'filePath': fileName}
+      {'filePath': fileName},
     ];
   } else if (Platform.isAndroid) {
     appDir = await getExternalStorageDirectory();
@@ -55,26 +56,32 @@ Future<List<dynamic>> downloadToAnyPlatfromCSV(
     appDir = await getDownloadsDirectory();
   }
   String pathName = appDir?.path ?? "";
-  String destinationPath = await getDestinationPathName(fileName, pathName,
-      isBackwardSlash: Platform.isWindows);
+  String destinationPath = await getDestinationPathName(
+    fileName,
+    pathName,
+    isBackwardSlash: Platform.isWindows,
+  );
   await download(stream, destinationPath);
 
   return [
     {'fileName': fileName},
-    {'filePath': destinationPath}
+    {'filePath': destinationPath},
   ];
 }
 
-Future<String> getDestinationPathName(String fileName, String pathName,
-    {bool isBackwardSlash = true}) async {
+Future<String> getDestinationPathName(
+  String fileName,
+  String pathName, {
+  bool isBackwardSlash = true,
+}) async {
   String destinationPath =
       pathName + "${isBackwardSlash ? "\\" : "/"}${fileName}";
   int i = 1;
   bool _isFileExists = await File(destinationPath).exists();
   while (_isFileExists) {
-    _isFileExists =
-        await File(pathName + "${isBackwardSlash ? "\\" : "/"}($i)${fileName}")
-            .exists();
+    _isFileExists = await File(
+      pathName + "${isBackwardSlash ? "\\" : "/"}($i)${fileName}",
+    ).exists();
     if (_isFileExists == false) {
       destinationPath =
           pathName + "${isBackwardSlash ? "\\" : "/"}($i)${fileName}";

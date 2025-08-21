@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -13,8 +13,11 @@ List<dynamic> combineVideosByDate(List<VideoStruct>? videos) {
   Map<DateTime, List<VideoStruct>> groupedVideos = {};
 
   videos?.forEach((video) {
-    DateTime date =
-        DateTime(video.date!.year, video.date!.month, video.date!.day);
+    DateTime date = DateTime(
+      video.date!.year,
+      video.date!.month,
+      video.date!.day,
+    );
     if (!groupedVideos.containsKey(date)) {
       groupedVideos[date] = [];
     }
@@ -26,12 +29,14 @@ List<dynamic> combineVideosByDate(List<VideoStruct>? videos) {
     videosByDate.add({
       'date': date.toIso8601String().split('T').first,
       'videos': videos
-          .map((v) => {
-                'name': v.name,
-                'path': v.path,
-                'date': v.date!.toIso8601String(),
-                'merged': v.merged,
-              })
+          .map(
+            (v) => {
+              'name': v.name,
+              'path': v.path,
+              'date': v.date!.toIso8601String(),
+              'merged': v.merged,
+            },
+          )
           .toList(),
     });
   });

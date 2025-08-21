@@ -1,7 +1,7 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://www.youtube.com/watch?v=_ik4paDX6VI
 // widgets - Cg9Db2x1bW5fazRncjZ2bnoSRQoNVGV4dF92ZXV1b2xsaxgCIjASEgoLSGVsbG8gV29ybGRABqgBAJoBFgoCAgEqEAgMQgwiCgoGCgRuYW1lEAH6AwBiABK3AQoPQnV0dG9uXzNyM3VoMmJpGAkiYkpdChIKBkJ1dHRvbjoGCP////8PQAUpAAAAAABAYEAxAAAAAAAAREBJAAAAAAAA8D9SAhABWgIIAHIkCQAAAAAAACBAEQAAAAAAACBAGQAAAAAAACBAIQAAAAAAACBA+gMAYgCKATsSNQoIZXdueTY5MzYSKeIBG0IVCgYKBG5hbWUSCwoJEgdkZW1vMTIzUAJYAaoCCDIxMWlzdTRtGgIIARgEIgUiAPoDAA==
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -31,8 +31,9 @@ class _ReachText2State extends State<ReachText2> {
   Widget build(BuildContext context) {
     var myJSON = jsonDecode(widget.currentText ?? '');
     QuillController _controller = QuillController(
-        document: Document.fromJson(myJSON),
-        selection: TextSelection.collapsed(offset: 0));
+      document: Document.fromJson(myJSON),
+      selection: TextSelection.collapsed(offset: 0),
+    );
     print(_controller.toString());
     return Column(
       mainAxisSize: MainAxisSize.max,
@@ -60,15 +61,13 @@ class _ReachText2State extends State<ReachText2> {
             height: 40,
             color: FlutterFlowTheme.of(context).primaryColor,
             textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                  fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
-                  color: Colors.white,
-                  useGoogleFonts: GoogleFonts.asMap().containsKey(
-                      FlutterFlowTheme.of(context).subtitle2Family),
-                ),
-            borderSide: BorderSide(
-              color: Colors.transparent,
-              width: 1,
+              fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
+              color: Colors.white,
+              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                FlutterFlowTheme.of(context).subtitle2Family,
+              ),
             ),
+            borderSide: BorderSide(color: Colors.transparent, width: 1),
             borderRadius: BorderRadius.circular(8),
           ),
         ),

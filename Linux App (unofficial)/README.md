@@ -46,6 +46,7 @@ Simply run without arguments for the best experience:
 ```
 
 This mode will:
+
 - Prompt for your FlutterFlow API token (first time only)
 - Show available devices to select from
 - Display recent project IDs or allow entering new ones
@@ -74,6 +75,7 @@ This mode will:
 ## Interactive Controls
 
 While running:
+
 - **`r`**: Download latest code and hot restart
 - **`q`**: Quit application and cleanup
 - **Other keys**: Forwarded to Flutter
@@ -81,6 +83,7 @@ While running:
 ## Token Management
 
 On first run, you'll be prompted for your FlutterFlow API token:
+
 - Find your token at: https://app.flutterflow.io/settings/api
 - Token is stored securely in `~/.ff_token` with restricted permissions
 - Use `--reset-token` to clear and re-enter token
@@ -88,6 +91,7 @@ On first run, you'll be prompted for your FlutterFlow API token:
 ## Project History
 
 The tool maintains a history of your last 10 projects in `~/.ff_projects`:
+
 - Recent projects shown as numbered list
 - Most recently used appears first
 - Easy selection by number or enter new project ID
@@ -95,6 +99,7 @@ The tool maintains a history of your last 10 projects in `~/.ff_projects`:
 ## Device Mirroring (Android Only)
 
 For Android devices, scrcpy automatically starts for device mirroring:
+
 - Provides real-time screen mirroring
 - Handles cleanup on exit
 - Shows warning if scrcpy not installed
@@ -110,16 +115,19 @@ For Android devices, scrcpy automatically starts for device mirroring:
 ## Advanced Features
 
 ### Branch Support
+
 ```bash
 ./ff-run.sh --branch feature-branch
 ```
 
 ### Token Reset
+
 ```bash
 ./ff-run.sh --reset-token
 ```
 
 ### Help Documentation
+
 ```bash
 ./ff-run.sh --help
 ```
@@ -127,6 +135,7 @@ For Android devices, scrcpy automatically starts for device mirroring:
 ## Error Handling
 
 Comprehensive checks for:
+
 - FlutterFlow CLI installation
 - Device connectivity
 - Token validation
@@ -136,17 +145,20 @@ Comprehensive checks for:
 ## Troubleshooting
 
 ### Device Issues
+
 - Enable USB debugging on your device
 - Check connection with `flutter devices`
 - For Android: Ensure ADB drivers are installed
 
 ### Export Issues
+
 - Verify FlutterFlow API token is valid
 - Check project ID spelling
 - Ensure you have project access permissions
 - Verify branch name if using `--branch`
 
 ### Mirroring Issues
+
 - Install scrcpy for Android mirroring
 - Check USB connection stability
 - Grant necessary permissions on device
@@ -154,14 +166,17 @@ Comprehensive checks for:
 ## OS-Specific Notes
 
 ### macOS
+
 - Uses native `open` command for URLs
 - Integrated with system keyboard events
 
 ### Linux
+
 - Requires `xdg-open` for URL handling
 - Falls back to common browsers if needed
 
 ### Windows
+
 - Uses `cmd.exe` for URL opening
 - Supports standard Windows conventions
 
@@ -169,7 +184,7 @@ Comprehensive checks for:
 
 - **Version**: 1.0
 - **Minimum FlutterFlow CLI**: 0.0.24
-- **Created by**: [FlutterFlow Expert YouTube Channel](https://www.youtube.com/@flutterflowexpert)
+- **Created by**: [FlutterFlow Expert YouTube Channel](https://www.youtube.com/@dimitarklaturov)
 
 ## Contributing
 

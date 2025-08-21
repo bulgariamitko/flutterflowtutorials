@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -20,16 +20,17 @@ Future downloadAndZipMp3sv2(
 ) async {
   //Or download multiple files
   final List<File?> result = await FileDownloader.downloadFiles(
-      urls: urls,
-      isParallel:
-          true, //if this is set to true, your download list will request to be downloaded all at once
-      //if your downloading queue fits them all, they all will start downloading
-      //if it's set to false, it will download every file individually
-      //default is true
-      onAllDownloaded: () {
-        callbackAction.call();
-        //This callback will be fired when all files are downloaded
-      });
+    urls: urls,
+    isParallel:
+        true, //if this is set to true, your download list will request to be downloaded all at once
+    //if your downloading queue fits them all, they all will start downloading
+    //if it's set to false, it will download every file individually
+    //default is true
+    onAllDownloaded: () {
+      callbackAction.call();
+      //This callback will be fired when all files are downloaded
+    },
+  );
   //This method will return a list of File? in the same order as the urls,
   //so if the url[2] failed to download,
   //then result[2] will be null

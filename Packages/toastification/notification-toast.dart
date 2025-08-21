@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -43,23 +43,11 @@ class _NotificationToastState extends State<NotificationToast> {
   Widget _getToastIcon(ToastType type) {
     switch (type) {
       case ToastType.info:
-        return const Icon(
-          Icons.info_rounded,
-          color: Colors.white,
-          size: 24,
-        );
+        return const Icon(Icons.info_rounded, color: Colors.white, size: 24);
       case ToastType.warning:
-        return const Icon(
-          Icons.warning_rounded,
-          color: Colors.white,
-          size: 24,
-        );
+        return const Icon(Icons.warning_rounded, color: Colors.white, size: 24);
       case ToastType.error:
-        return const Icon(
-          Icons.error_rounded,
-          color: Colors.white,
-          size: 24,
-        );
+        return const Icon(Icons.error_rounded, color: Colors.white, size: 24);
       case ToastType.success:
         return const Icon(
           Icons.check_circle_rounded,
@@ -109,8 +97,9 @@ class _NotificationToastState extends State<NotificationToast> {
 
   void _showToast() {
     final notification = widget.notificationData;
-    final title =
-        notification.title.isEmpty ? "Notification" : notification.title;
+    final title = notification.title.isEmpty
+        ? "Notification"
+        : notification.title;
 
     toastification.show(
       context: context,
@@ -120,25 +109,13 @@ class _NotificationToastState extends State<NotificationToast> {
       description: Text(notification.description),
       alignment: _getAlignment(notification.position),
       autoCloseDuration: const Duration(seconds: 4),
-      animationBuilder: (
-        context,
-        animation,
-        alignment,
-        child,
-      ) {
-        return ScaleTransition(
-          scale: animation,
-          child: child,
-        );
+      animationBuilder: (context, animation, alignment, child) {
+        return ScaleTransition(scale: animation, child: child);
       },
       icon: _getToastIcon(notification.type),
       borderRadius: BorderRadius.circular(12.0),
       boxShadow: const [
-        BoxShadow(
-          color: Colors.black26,
-          blurRadius: 10,
-          offset: Offset(0, 4),
-        ),
+        BoxShadow(color: Colors.black26, blurRadius: 10, offset: Offset(0, 4)),
       ],
       showProgressBar: notification.progressBar,
       dragToClose: notification.dragToClose,

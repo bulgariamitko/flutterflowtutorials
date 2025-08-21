@@ -1,7 +1,7 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://www.youtube.com/watch?v=IwhSbx1yN1M
 // widgets - Cg9Db2x1bW5feDUweThqaWcSmgIKEkNvbnRhaW5lcl9ybW93OG12aRLYAQoSQ29udGFpbmVyX29hcnpqejB0GAEiHHISCQAAAAAAAAAAEQAAAAAAAAAA+gMA8gQCCgBilgESNgoKZGltZW5zaW9ucxIoCgwKCmRpbWVuc2lvbnMyGCIWCgkRAAAAAAAAWUASCREAAAAAAABZQBJVCgV3b3JkcxJMCgcKBXdvcmRzIkEIBBIRU2NhZmZvbGRfaWNmeWp1N2ZCAhIASiZ6JAoiCA1CEXoPCg0QBxoHCgV3b3JkcyABSguCAQgKBgoEd29yZBoFV29yZHOCAQVXb3Jkc5gBARgBIiUKIAoWCgkRAAAAAAAAWUASCREAAAAAAABZQBIEWgBiACIA+gMAYgAYBCIOIgQIABgF+gMA8gQCCgA=
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -12,12 +12,8 @@ import 'dart:ui' as ui;
 import 'package:flutter_scatter/flutter_scatter.dart';
 
 class Words extends StatefulWidget {
-  const Words({
-    Key? key,
-    this.width,
-    this.height,
-    this.words,
-  }) : super(key: key);
+  const Words({Key? key, this.width, this.height, this.words})
+    : super(key: key);
 
   final double? width;
   final double? height;
@@ -44,11 +40,7 @@ class _WordsState extends State<Words> {
 }
 
 class SimpleScaffold extends StatelessWidget {
-  const SimpleScaffold({
-    Key? key,
-    this.title,
-    this.child,
-  }) : super(key: key);
+  const SimpleScaffold({Key? key, this.title, this.child}) : super(key: key);
 
   final String? title;
 
@@ -57,21 +49,14 @@ class SimpleScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title!),
-      ),
+      appBar: AppBar(title: Text(title!)),
       body: child,
     );
   }
 }
 
 class FlutterHashtag {
-  const FlutterHashtag(
-    this.hashtag,
-    this.color,
-    this.size,
-    this.rotated,
-  );
+  const FlutterHashtag(this.hashtag, this.color, this.size, this.rotated);
   final String hashtag;
   final Color color;
   final int size;
@@ -108,12 +93,19 @@ class _WordCloudExampleState extends State<WordCloudExample> {
     Map map = {};
     List<Widget> widgets = <Widget>[];
 
-    widget.wordsToC.forEach((x) => map[x.toLowerCase()] =
-        !map.containsKey(x.toLowerCase()) ? (1) : (map[x.toLowerCase()] + 1));
+    widget.wordsToC.forEach(
+      (x) => map[x.toLowerCase()] = !map.containsKey(x.toLowerCase())
+          ? (1)
+          : (map[x.toLowerCase()] + 1),
+    );
 
     map.forEach((k, v) {
-      FlutterHashtag item =
-          FlutterHashtag(k, FlutterColors.blue, v * 15, false);
+      FlutterHashtag item = FlutterHashtag(
+        k,
+        FlutterColors.blue,
+        v * 15,
+        false,
+      );
       kFlutterHashtags.add(item);
     });
 
@@ -149,16 +141,13 @@ class ScatterItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextStyle? style = Theme.of(context).textTheme.bodyMedium?.copyWith(
-          fontSize: hashtag.size.toDouble(),
-          color: hashtag.color,
-        );
+      fontSize: hashtag.size.toDouble(),
+      color: hashtag.color,
+    );
 
     return RotatedBox(
       quarterTurns: hashtag.rotated ? 1 : 0,
-      child: Text(
-        hashtag.hashtag,
-        style: style,
-      ),
+      child: Text(hashtag.hashtag, style: style),
     );
   }
 }

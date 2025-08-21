@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -280,10 +280,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage>
         bytesPerRow: image.planes[0].bytesPerRow,
       );
 
-      return InputImage.fromBytes(
-        bytes: bytes,
-        metadata: inputImageMetadata,
-      );
+      return InputImage.fromBytes(bytes: bytes, metadata: inputImageMetadata);
     } catch (e) {
       print('Error processing camera image: $e');
       return null;
@@ -293,7 +290,8 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage>
   void _startImageStream() {
     if (_cameraController == null ||
         !_cameraController!.value.isInitialized ||
-        _cameraController!.value.isStreamingImages) return;
+        _cameraController!.value.isStreamingImages)
+      return;
 
     try {
       _cameraController!.startImageStream((CameraImage image) async {
@@ -354,9 +352,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage>
     if (_cameraController == null ||
         !mounted ||
         !_cameraController!.value.isInitialized) {
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     final displayValue = _formatDisplayValue(_barcodeValue);
@@ -387,8 +383,11 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage>
             top: 40,
             left: 16,
             child: IconButton(
-              icon: const Icon(Icons.flip_camera_ios,
-                  color: Colors.white, size: 30),
+              icon: const Icon(
+                Icons.flip_camera_ios,
+                color: Colors.white,
+                size: 30,
+              ),
               onPressed: _switchCamera,
             ),
           ),
@@ -398,18 +397,17 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage>
               left: 0,
               right: 0,
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 16,
+                  horizontal: 24,
+                ),
                 color: Colors.black54,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
                       'Barcode: $displayValue',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 16),
@@ -442,7 +440,8 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage>
 
                             // Small delay to ensure cleanup
                             await Future.delayed(
-                                const Duration(milliseconds: 300));
+                              const Duration(milliseconds: 300),
+                            );
 
                             // Now execute the callback
                             await widget.barcodeDetectedCallback(displayValue);

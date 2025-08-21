@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -14,10 +14,12 @@ int? newNoticeCount(
 ) {
   /// MODIFY CODE ONLY BELOW THIS LINE
 
-  var uidDocumentsInRecipientList =
-      recipientList?.where((doc) => doc.contains(uid ?? ''));
-  var uidDocumentsInReaderList =
-      readerList?.where((doc) => doc.contains(uid ?? ''));
+  var uidDocumentsInRecipientList = recipientList?.where(
+    (doc) => doc.contains(uid ?? ''),
+  );
+  var uidDocumentsInReaderList = readerList?.where(
+    (doc) => doc.contains(uid ?? ''),
+  );
 
   // count the number of documents in each list and return the sum
   var count1 = uidDocumentsInRecipientList?.length ?? 0;

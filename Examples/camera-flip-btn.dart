@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - no
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -26,7 +26,8 @@ class _CameraPhotoState extends State<CameraPhoto> {
   }
 
   Future<void> _initCameraController(
-      CameraDescription cameraDescription) async {
+    CameraDescription cameraDescription,
+  ) async {
     if (controller != null) {
       await controller!.dispose();
     }
@@ -41,7 +42,8 @@ class _CameraPhotoState extends State<CameraPhoto> {
   }
 
   void _onSwitchCamera() {
-    selectedCameraIndex = (selectedCameraIndex + 1) %
+    selectedCameraIndex =
+        (selectedCameraIndex + 1) %
         camerasList!.length; // Switch between cameras.
     _initCameraController(camerasList![selectedCameraIndex]);
   }
@@ -58,9 +60,7 @@ class _CameraPhotoState extends State<CameraPhoto> {
             return controller!.value.isInitialized
                 ? Stack(
                     children: [
-                      MaterialApp(
-                        home: CameraPreview(controller!),
-                      ),
+                      MaterialApp(home: CameraPreview(controller!)),
                       Positioned(
                         top: 30,
                         right: 30,
@@ -68,7 +68,7 @@ class _CameraPhotoState extends State<CameraPhoto> {
                           child: Icon(Icons.flip_camera_android),
                           onPressed: _onSwitchCamera,
                         ),
-                      )
+                      ),
                     ],
                   )
                 : Container();

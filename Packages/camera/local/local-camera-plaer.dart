@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // video - https://www.youtube.com/watch?v=wg4s9hE8N4k
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -66,10 +66,7 @@ class _CameraAppState extends State<CameraApp> {
     final frontCamera = _cameras.firstWhere(
       (camera) => camera.lensDirection == CameraLensDirection.front,
     );
-    _controller = CameraController(
-      frontCamera,
-      ResolutionPreset.high,
-    );
+    _controller = CameraController(frontCamera, ResolutionPreset.high);
     _initializeControllerFuture = _controller.initialize();
     setState(() {});
   }
@@ -109,8 +106,10 @@ class _CameraAppState extends State<CameraApp> {
       });
 
       Uint8List? recordedVideoBytes = await newVideoFile.readAsBytes();
-      FFUploadedFile fileToUpload =
-          FFUploadedFile(bytes: recordedVideoBytes, name: newVideoFile.path);
+      FFUploadedFile fileToUpload = FFUploadedFile(
+        bytes: recordedVideoBytes,
+        name: newVideoFile.path,
+      );
       widget.saveVideoAction.call(fileToUpload);
 
       print("Video recorded to: ${newVideoFile.path}");
@@ -132,17 +131,17 @@ class _CameraAppState extends State<CameraApp> {
     return Scaffold(
       body: _videoFile == null
           ? _initializeControllerFuture == null
-              ? Center(child: CircularProgressIndicator())
-              : FutureBuilder<void>(
-                  future: _initializeControllerFuture,
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.done) {
-                      return CameraPreview(_controller);
-                    } else {
-                      return Center(child: CircularProgressIndicator());
-                    }
-                  },
-                )
+                ? Center(child: CircularProgressIndicator())
+                : FutureBuilder<void>(
+                    future: _initializeControllerFuture,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.done) {
+                        return CameraPreview(_controller);
+                      } else {
+                        return Center(child: CircularProgressIndicator());
+                      }
+                    },
+                  )
           : VideoPlayerWidget(videoFile: _videoFile!),
     );
   }

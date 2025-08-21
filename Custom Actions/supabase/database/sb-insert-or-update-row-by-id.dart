@@ -1,6 +1,6 @@
-// YouTube channel - https://www.youtube.com/@flutterflowexpert
+// YouTube channel - https://www.youtube.com/@dimitarklaturov
 // paid video - https://www.youtube.com/watch?v=0_TIH7xT5_Y&t=1s
-// Join the Klaturov army - https://www.youtube.com/@flutterflowexpert/join
+// Join the Klaturov army - https://www.youtube.com/@dimitarklaturov/join
 // Support my work - https://github.com/sponsors/bulgariamitko
 // Website - https://bulgariamitko.github.io/flutterflowtutorials/
 // You can book me as FF mentor - https://calendly.com/bulgaria_mitko
@@ -26,10 +26,8 @@ Future<VideosRow> insertOrUpdateRowById(
   fieldValue3 ??= 'error';
 
   List<VideosRow> videos = await VideosTable().querySingleRow(
-      queryFn: (q) => q.eq(
-            'id',
-            id,
-          ));
+    queryFn: (q) => q.eq('id', id),
+  );
 
   if (videos.length != 0) {
     List<VideosRow> returnedVideos = await VideosTable().update(
@@ -38,10 +36,7 @@ Future<VideosRow> insertOrUpdateRowById(
         fieldName2: fieldValue2,
         fieldName3: fieldValue3,
       },
-      matchingRows: (row) => row.eq(
-        'id',
-        videos[0].id,
-      ),
+      matchingRows: (row) => row.eq('id', videos[0].id),
     );
 
     videos.addAll(returnedVideos);

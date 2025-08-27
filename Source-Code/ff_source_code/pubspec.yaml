@@ -31,11 +31,11 @@ dependencies:
   app_links_platform_interface: 2.0.2
   assets_audio_player: 
     git:
-      url: https://github.com/wenkaifan0720/Flutter-AssetsAudioPlayer.git
+      url: https://github.com/FlutterFlow/Flutter-AssetsAudioPlayer.git
       ref: 243f9533279b73fa9dae345cc96e5d7d84cac0ac
   assets_audio_player_web: 
     git:
-      url: https://github.com/wenkaifan0720/Flutter-AssetsAudioPlayerWeb.git
+      url: https://github.com/FlutterFlow/Flutter-AssetsAudioPlayerWeb.git
       ref: cae7ceb6af99f4da1ec27136d312d0ef045c83d9
   auto_size_text: 3.0.0
   cached_network_image: 3.4.1

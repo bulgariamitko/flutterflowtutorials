@@ -15,7 +15,7 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
 
   bool isDataUploading_uploadDataYxl = false;
   FFUploadedFile uploadedLocalFile_uploadDataYxl =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
+      FFUploadedFile(bytes: Uint8List.fromList([]), originalFilename: '');
 
   @override
   void initState(BuildContext context) {}

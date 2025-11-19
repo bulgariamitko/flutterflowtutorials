@@ -2,6 +2,14 @@
 
 [![My links](https://img.shields.io/badge/-My%20Links-purple?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/klaturov)
 
+# Important Update
+
+I no longer use FlutterFlow and have shifted my focus to CLI tools like **Claude Code**, **Codex**, and **Gemini**. However, I haven't stopped posting amazing tools to speed up your app development!
+
+You can find my new repository with cutting-edge development tools and resources here: [klaturov-yt-channel](https://github.com/bulgariamitko/klaturov-yt-channel)
+
+⭐ **Please star it** so more people can discover these powerful development tools!
+
 # FlutterFlow Tutorials
 
 This repository is designed to serve as a central hub for all custom code that can be used to enhance the functionality of the FlutterFlow platform. Here, you will find a wide range of solutions for various use cases that have been developed by the community. Whether you are a beginner or an experienced developer, you can benefit from the code that is shared here.
